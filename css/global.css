@@ -2,3 +2,43 @@ body {
     width: 100%;
     margin: 0;
 }
+
+/* form styles */
+input {
+    height: 5%;
+    margin-top: 0.5vh;
+    padding: 0.8vw;
+    width: 24vw;
+    font-size: 2vh;
+    font-family: Raleway;
+    border: 0.1vw solid #aaaaaa;
+    border-radius: 0.5vw;
+}
+
+label {
+    margin-top: 2vh;
+}
+
+#button-container {
+    overflow: auto;
+}
+
+#buttons {
+    display: flex; 
+    flex-direction:row; 
+    justify-content: center;
+}
+
+button {
+    width: 9vw;
+    background-color: #C54040;
+    border: none;
+    margin-top: 0.5vh;
+    color: #fff;
+    padding: 1.4vh 2vw;
+    border-radius: 0.5vw;
+    text-decoration: none;
+}
+
+
+  
