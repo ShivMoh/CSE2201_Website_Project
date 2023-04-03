@@ -24,6 +24,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
+    opacity: 0.5;
     height: 100%;
     object-fit: cover;
 }
@@ -33,7 +34,7 @@ header {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #fff;
+    color: rgb(0, 0, 0);
     font-size: 4rem;
 }
 
