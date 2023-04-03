@@ -1,0 +1,157 @@
+/* Reset Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.hero img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 4rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.dropdown ul {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown:hover ul {
+    display: block;
+}
+
+.search form {
+    display: flex;
+}
+
+.search input[type="text"] {
+    padding: 0.5rem;
+    border: none;
+    border-bottom: 2px solid #000;
+}
+
+.search button {
+    padding: 0.5rem;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+/* Main Styles */
+main {
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.grid-item img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
+}
+
+.grid-item h2 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.price {
+    font-weight: bold;
+}
+
+/* Pagination Styles */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.pagination ul {
+    display: flex;
+    list-style: none;
+}
+
+.pagination ul li {
+    margin: 0 0.5rem;
+}
+
+.pagination ul li a {
+    text-decoration: none;
+    color: #000;
+    padding: 0.5rem;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+.pagination ul li a:hover {
+    background-color: #000;
+    color: #fff;
+}
