@@ -1,0 +1,67 @@
+footer {
+    margin-top: 50px;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.top-rectangle {
+    background-color: #1D1F2F;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.top-rectangle a {
+    text-decoration: none;
+}
+
+
+.top-rectangle-column-head {
+    text-align: center;
+    font-size: 26px;
+    color: white;
+}
+
+.top-rectangle-column-sub-menu {
+    display: block;
+    line-height: 36px;
+    text-align: center;
+    font-size: 16px;
+    color: rgb(185, 207, 214);
+}
+
+.bottom-rectangle {
+    background-color: #23253B;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+    height: 300px;
+}
+
+.email,
+.call-or-whatsapp,
+.follow-us,
+.find-us-at {
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.phone-number,
+.email-address,
+.address {
+    line-height: 8px;
+}
+
+.social-media-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.social-media-button {
+    border-style: none;
+    border-radius: 20px;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    cursor: pointer;
+}
