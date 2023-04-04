@@ -1,4 +1,5 @@
 /*Include either section in the internal CSS*/
+/*Remember to also include the links thats necesssary for the social icons*/
 
 /*--------------This block is the blue background one--------------*/
 /*
@@ -47,7 +48,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -125,19 +126,25 @@ body {
   }
   
   .social-links {
+  display: flex;
+  align-items: center;
   padding-left: 0;
+  padding-top: 0.2vw;
+  padding-bottom: 0.2vw;
+
   }
   
   .icons img {
+    display: block;
     height: 2vw;
-    margin: 0 1vw;
     transition: all 0.3s ease;
-    margin-top: 0.2vw;
-    margin-bottom: 0.2vw;
   }
-  
-  .icons:last-child {
-    margin-right: 1.5vw;
+
+  .icons {
+    width: 10.5%;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 2vw;
   }
   
   .dropdown {

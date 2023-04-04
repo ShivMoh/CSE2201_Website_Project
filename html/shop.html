@@ -3,28 +3,25 @@
 
 <head>
     <title>Shop Page</title>
-    <link rel="stylesheet"
-        href="C:\Users\kzass\OneDrive\Desktop\CSE2201_Website_Project\CSE2201_Website_Project\css\shop.css">
+    <link rel="stylesheet" href="../css\shop.css">
 </head>
 
 <body>
     <header>
         <div class="hero">
-            <img src="C:\Users\kzass\OneDrive\Desktop\CSE2201_Website_Project\CSE2201_Website_Project\Resources\Images\slide02.jpg"
-                alt="Hero Image">
+            <img src="../Resources\Images\slide02.jpg" alt="Hero Image">
             <h1>Shop</h1>
         </div>
         <nav>
             <ul>
-                <li class="dropdown">
-                    <a href="#">Sort By</a>
-                    <ul>
-                        <li><a href="#">Price: Low to High</a></li>
-                        <li><a href="#">Price: High to Low</a></li>
-                        <li><a href="#">Newest Arrivals</a></li>
-                        <li><a href="#">Most Popular</a></li>
-                    </ul>
-                </li>
+                <label for="sort">Sort by:</label>
+                <select id="sort">
+                    <option value="name-asc">Name (A-Z)</option>
+                    <option value="name-desc">Name (Z-A)</option>
+                    <option value="price-asc">Price (Low to High)</option>
+                    <option value="price-desc">Price (High to Low)</option>
+                </select>
+
                 <li class="dropdown">
                     <a href="#">Categories</a>
                     <ul>
@@ -45,55 +42,53 @@
     </header>
     <main>
         <div class="grid-container">
-            <div class="grid-item">
-                <img src="C:\Users\kzass\OneDrive\Desktop\CSE2201_Website_Project\CSE2201_Website_Project\Resources\Images\placeholder-image-500x500.png"
-                    alt="Item Image">
-                <h2>Product Name</h2>
-                <p class="price">$50.00</p>
-            </div>
-            <div class="grid-item">
-                <img src="C:\Users\kzass\OneDrive\Desktop\CSE2201_Website_Project\CSE2201_Website_Project\Resources\Images\placeholder-image-500x500.png"
-                    alt="Item Image">
-                <h2>Product Name</h2>
-                <p class="price">$50.00</p>
-            </div>
-            <div class="grid-item">
-                <img src="C:\Users\kzass\OneDrive\Desktop\CSE2201_Website_Project\CSE2201_Website_Project\Resources\Images\placeholder-image-500x500.png"
-                    alt="Item Image">
-                <h2>Product Name</h2>
-                <p class="price">$50.00</p>
-            </div>
-            <div class="grid-item">
-                <img src="C:\Users\kzass\OneDrive\Desktop\CSE2201_Website_Project\CSE2201_Website_Project\Resources\Images\placeholder-image-500x500.png"
-                    alt="Item Image">
-                <h2>Product Name</h2>
-                <p class="price">$50.00</p>
-            </div>
-            <div class="grid-item">
-                <img src="C:\Users\kzass\OneDrive\Desktop\CSE2201_Website_Project\CSE2201_Website_Project\Resources\Images\placeholder-image-500x500.png"
-                    alt="Item Image">
-                <h2>Product Name</h2>
-                <p class="price">$50.00</p>
-            </div>
-            <div class="grid-item">
-                <img src="C:\Users\kzass\OneDrive\Desktop\CSE2201_Website_Project\CSE2201_Website_Project\Resources\Images\placeholder-image-500x500.png"
-                    alt="Item Image">
-                <h2>Product Name</h2>
-                <p class="price">$50.00</p>
-            </div>
-            <div class="grid-item">
-                <img src="C:\Users\kzass\OneDrive\Desktop\CSE2201_Website_Project\CSE2201_Website_Project\Resources\Images\placeholder-image-500x500.png"
-                    alt="Item Image">
-                <h2>Product Name</h2>
-                <p class="price">$50.00</p>
-            </div>
-            <div class="grid-item">
-                <img src="C:\Users\kzass\OneDrive\Desktop\CSE2201_Website_Project\CSE2201_Website_Project\Resources\Images\placeholder-image-500x500.png"
-                    alt="Item Image">
-                <h2>Product Name</h2>
-                <p class="price">$50.00</p>
-            </div>
+            <a href="product1.html" class="grid-item">
+                <img src="../Resources\Images\placeholder-image-500x500.png" alt="Item Image">
+                <h2>Graphic T-Shirt</h2>
+                <p class="price">$19.99</p>
+            </a>
+            <a href="product1.html" class="grid-item">
+                <img src="../Resources\Images\placeholder-image-500x500.png" alt="Item Image">
+                <h2>Hoodie</h2>
+                <p class="price">$34.99</p>
+            </a>
+            <a href="product1.html" class="grid-item">
+                <img src="../Resources\Images\placeholder-image-500x500.png" alt="Item Image">
+                <h2>Jeans</h2>
+                <p class="price">$49.99</p>
+            </a>
+            <a href="product1.html" class="grid-item">
+                <img src="../Resources\Images\placeholder-image-500x500.png" alt="Item Image">
+                <h2>Joggers</h2>
+                <p class="price">$29.99</p>
+            </a>
+            <a href="product1.html" class="grid-item">
+                <img src="../Resources\Images\placeholder-image-500x500.png" alt="Item Image">
+                <h2>Bomber Jacket</h2>
+                <p class="price">$59.99</p>
+            </a>
+            <a href="product1.html" class="grid-item">
+                <img src="../Resources\Images\placeholder-image-500x500.png" alt="Item Image">
+                <h2>Sneakers</h2>
+                <p class="price">$69.99</p>
+            </a>
+            <a href="product1.html" class="grid-item">
+                <img src="../Resources\Images\placeholder-image-500x500.png" alt="Item Image">
+                <h2>Backpack</h2>
+                <p class="price">$24.99</p>
+            </a>
+            <a href="product1.html" class="grid-item">
+                <img src="../Resources\Images\placeholder-image-500x500.png" alt="Item Image">
+                <h2>Sunglasses</h2>
+                <p class="price">$14.99</p>
+            </a>
+            <a href="product1.html" class="grid-item">
+                <img src="../Resources\Images\placeholder-image-500x500.png" alt="Item Image">
+                <h2>Watch</h2>
+                <p class="price">$39.99</p>
+            </a>
         </div>
+        <!--
         <nav class="pagination">
             <ul>
                 <li><a href="#">1</a></li>
@@ -101,10 +96,10 @@
                 <li><a href="#">3</a></li>
                 <li><a href="#">4</a></li>
                 <li><a href="#">5</a></li>
-            </ul>
-        </nav>
+            
+        </nav> </ul> -->>
     </main>
-    <script src="script.js"></script>
+    <script src="../javascript/shop.js"></script>
 </body>
 
 </html>
