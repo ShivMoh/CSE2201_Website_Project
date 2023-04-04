@@ -4,15 +4,15 @@ var current_tab = 0;
 var step = 0;
 var current_status = 0;
 
-// arrange the code so that multistage simply moves from stage to stage
-// and have the substages like shipping simply be controlled by the switchTabs
+
+
 stepTransition(0);
 function stepTransition(n)
 {   
 
    
     current_status+=n;
-    console.log("Current Status", current_status)
+    console.log("Current Status", step)
 
     if(current_status == 0) {
         sub_stage = document.getElementsByClassName("shipping");
@@ -92,8 +92,9 @@ function progress(n) {
     if(n==0) {
         stage[step].style.display = "flex";
     } else if(step < (stage.length - 1) || n < 0) {
-       
-        if((step == 1 && current_tab < 2) || (step == 3)) {
+
+
+        if((step == 1 && current_tab < 2 && n > 0) || (step == 3)) {
             n+=n;
         }
 
@@ -105,20 +106,19 @@ function progress(n) {
         stage[step].style.display = "none";
         step+=n;
         stage[step].style.display = "flex";
-    
     } else {
         return;
     }
 
     
     // changes button text appropriately to suit the current stage of the form
-    // if (currentTab == 0) {
-    //   document.getElementById("prevBtn").style.display = "none"
-    //   document.getElementById("back-to-cart").style.display = "inline"
-    // } else {
-    //   document.getElementById("prevBtn").style.display = "inline"
-    //   document.getElementById("back-to-cart").style.display = "none"
-    // } 
+    if (step == 0) {
+        document.getElementById("prev-btn").style.display = "none"
+        document.getElementById("back-to-cart").style.display = "inline"
+    } else {
+        document.getElementById("prev-btn").style.display = "inline"
+        document.getElementById("back-to-cart").style.display = "none"
+    } 
 
     // // this handles the final confirm (submit) button
     // if (currentTab == (x.length - 1)) {

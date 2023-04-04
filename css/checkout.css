@@ -1,6 +1,12 @@
+#back-to-cart {
+    background-color: #C54040;
+    margin-right: 1vw;
+}
+
 #prev-btn {
     background-color: #C54040;
     margin-right: 1vw;
+    display: none;
 }
 
 #next-btn {
@@ -15,6 +21,11 @@
 
 #next-btn:hover {
     background-color: #5bd667;
+    transform: scale(1.02);
+}
+
+#back-to-cart:hover {
+    background-color: #d16464;
     transform: scale(1.02);
 }
 
