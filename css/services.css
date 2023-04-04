@@ -1,0 +1,43 @@
+.navigation-bar {
+    height: 5vw;
+    background-color: red;
+}
+
+.services,
+.customer-rewards {
+    margin-top: 6vw;
+    text-align: center;
+    line-height: 8px;
+    color: rgb(43, 140, 172);
+}
+
+.service-grid,
+.rewards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+}
+
+.service-item,
+.rewards-item {
+    color: black;
+}
+
+.service-img,
+.rewards-img {
+    height: 300px;
+    border-radius: 150px;
+}
+
+.request-services-button,
+.sign-up-button {
+    height: 40px;
+    width: 150px;
+    background-color: rgb(40, 149, 40);
+    color: white;
+    border-style: none;
+    border-radius: 20px;
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
+}
