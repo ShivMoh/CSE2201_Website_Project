@@ -23,7 +23,7 @@ span {
     margin-right: 1vw;
     margin-left: 1vw;
     width: 100%;
-    height: 6vh;
+    height: 6vw;
     border: solid black 0.1vw;
     border-radius: 2vw 0 0 2vw;
     text-align: center;
@@ -33,7 +33,7 @@ span {
 #box-container-2 {
     margin-left: 1vw;
     width: 100%;
-    height: 6vh;
+    height: 6vw;
     border: solid black 0.1vw;
     border-radius: 0 2vw 2vw 0;
     text-align: center;
@@ -59,11 +59,10 @@ span {
 }
 
 .shipping {
+    width: 100%;
     display: none;
-    /* width: 100%;
-    display: flex;
     flex-direction: column;
-    align-items: start; */
+    align-items: start;
 }
 
 #checkout-container {
@@ -74,10 +73,10 @@ span {
 }
 
 .multi-stage-form {
+    width: 88%;
     display: none;
-    /* display: flex;
     flex-direction: column;
-    align-items: center; */
+    align-items: flex-start;
 }
 
 #form-content {
@@ -109,7 +108,7 @@ span {
     position: relative; 
     padding-left: 2vw;
     cursor: pointer;
-    font-size: 2vh;
+    font-size: 0.8vw;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -128,10 +127,10 @@ span {
   /* Create a custom checkbox */
   .checkmark {
     position: absolute;
-    top: 0.1vh;
+    top: 0.1vw;
     left: 0.5vw;
-    height: 2vh;
-    width: 2vh;
+    height: 1.2vw;
+    width: 1.2vw;
     background-color: #746c6c;
     border-radius: 0.1vw;
   }
@@ -151,11 +150,11 @@ span {
   /* Style the checkmark/indicator */
 .container .checkmark:after {
     left: 0.25vw;
-    top: 0.4vh;
-    width: 0.8vh;
-    height: 0.5vh;
+    top: 0.2vw;
+    width: 0.5vw;
+    height: 0.3vw;
     border: solid white;
-    border-width: 0vh 0.4vh 0.4vh 0vh;
+    border-width: 0vw 0.2vw 0.2vw 0vw;
     /* -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg); */
     transform: rotate(145deg) scaleY(-1); 

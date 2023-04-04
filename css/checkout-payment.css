@@ -17,6 +17,64 @@
     column-gap: 2vw;
 }
 
-/* #payment {
-    width: 90%;
-} */
+#payment-options {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    column-gap: 1vw;
+}
+
+#payment-options img {
+    width: 4vw;
+    height: 3vw;
+}
+
+#payment-options #cash {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#payment-options #cash #move-up {
+    position: relative;
+    margin-top: -0.6vw;
+}
+
+#payment-options #cash p {
+    position: relative;
+    margin-top: 0vw;
+}
+
+#payment-options *:hover {
+    transform: scale(1.04);
+}
+
+.payment {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: start;
+}
+
+#cash-on-arrival {
+    display: none;
+}
+
+#payment-option {
+    display: none;
+}
+
+.payment-confirm {
+    width: 100%;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.payment-confirm h2 {
+    text-align: center;
+}

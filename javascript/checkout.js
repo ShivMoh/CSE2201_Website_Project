@@ -1,5 +1,5 @@
 var stage = document.getElementsByClassName("multi-stage-form")
-var sub_stage;
+var sub_stage = "";
 var current_tab = 0;
 var step = 0;
 var current_status = 0;
@@ -10,8 +10,12 @@ stepTransition(0);
 function stepTransition(n)
 {   
 
+   
+    current_status+=n;
+    console.log("Current Status", current_status)
+
     if(current_status == 0) {
-        sub_stage = document.getElementsByClassName("payment");
+        sub_stage = document.getElementsByClassName("shipping");
         switchTabs(0);
     } else if (current_status == 1) {
         sub_stage = document.getElementsByClassName("payment");
@@ -22,15 +26,63 @@ function stepTransition(n)
         sub_stage = document.getElementsByClassName("review");
     }
 
-    progress(n)
+    progress(n)  
+}
+
+function reset() 
+{
+    for(var x = 0; x < sub_stage.length; x++) {
+        sub_stage[x].style.display = "none";
+    }
+    switchTabs(0);
 }
 
 function switchTabs(n) {
     sub_stage[current_tab].style.display = "none";
-    sub_stage[n].style.width = "100%";
     sub_stage[n].style.display = "flex";
-    sub_stage[n].style.flexDirection = "column";
-    sub_stage[n].style.alignItems = "flex-start";
+    current_tab = n;
+
+    if(current_status == 2) {
+        var paymentOption = document.getElementById("payment-selected")
+
+        if(current_tab == 0) {
+            paymentOption.src = '../Resources/Logos/paypal.png';
+            paymentOption.alt = "paypal";
+        } else {
+            paymentOption.src = '../Resources/Logos/wipay.png';
+            paymentOption.alt = "wipay";
+        }
+    }
+
+    if(current_status == 1) {
+        arr = ['../Resources/Logos/visa.png', '../Resources/Logos/paypal.png', '../Resources/Logos/wipay.png']
+
+        if(current_tab == 0) {
+            document.getElementById("payment-option").style.display = "none"
+           document.getElementById("cash-on-arrival").style.display = "inline" 
+        } else {
+            document.getElementById("cash-on-arrival").style.display = "none"
+            var paymentOption = document.getElementById("payment-option")
+            paymentOption.style.display = "inline"
+
+            switch(current_tab) {
+                case 1:
+                    paymentOption.src = arr[0]
+                    paymentOption.alt = "Visa"
+                break;
+                case 2:
+                    paymentOption.src = arr[1]
+                    paymentOption.alt = "paypal"
+                break;
+                default:
+                    paymentOption.src = arr[2]
+                    paymentOption.alt = "wipay"
+                break;
+            }
+        }
+    }
+
+    
 }
 
 // the unmodified version of this code was sourced from w3schools. 
@@ -39,19 +91,26 @@ function switchTabs(n) {
 function progress(n) {
     if(n==0) {
         stage[step].style.display = "flex";
-        stage[step].style.width = "88%";
-        stage[step].style.flexDirection = "column";
-        stage[step].style.alignItems = "flex-start";
     } else if(step < (stage.length - 1) || n < 0) {
+       
+        if((step == 1 && current_tab < 2) || (step == 3)) {
+            n+=n;
+        }
+
+        if(step == 1 && (current_tab == 2 || current_tab == 3)) {
+            current_tab = (current_tab - 2);
+            switchTabs(current_tab);
+        } 
+        reset()
         stage[step].style.display = "none";
         step+=n;
         stage[step].style.display = "flex";
-        stage[step].style.flexDirection = "column";
-        stage[step].style.alignItems = "flex-start";
+    
     } else {
         return;
     }
 
+    
     // changes button text appropriately to suit the current stage of the form
     // if (currentTab == 0) {
     //   document.getElementById("prevBtn").style.display = "none"

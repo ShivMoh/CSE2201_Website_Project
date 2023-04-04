@@ -25,68 +25,21 @@
                 <p class="progress-state">Review</p>
             </div>
 
-            <div class="multi-stage-form">
-                <div id="instructions-guide-options">
-                    <h3>Please select your payment options</h3>
-                    <div id="shipping-options">
-                        <div id="box-container-1" onclick="switchTabs(0)">
-                            <p>I'd like it delivered!</p>
-                        </div>
-                        <div id="box-container-2" onclick="switchTabs(1)">
-                            <p>I'll pick it up</p>
-                        </div>
-                    </div>
-                    <h3>Please fill in the required information below: </h3>
-                    <div id="option-selected">
-                        Visa
-                    </div>
-                </div>
+            <!-- <div class="payment">
+                    
+                <label for="email">Email <span>*</span></label>
+                <input title="email" type="email" name="email" placeholder="e.g johndoe@gmail.com">
 
-                <div class="payment">
-                    <label for="cardHolder">Card Holder Name<span>*</span></label>
-                    <input title="cardHolder" type="text" name="cardHolder" placeholder="e.g. John Doe">
+                <label for="password">Password <span>*</span></label>
+                <input title="password" type="password" name="password" placeholder="">
 
-                    <label for="cardNumber">Card Number<span>*</span></label>
-                    <input title="cardNumber" type="number" name="cardNumber" placeholder="e.g. 2424 2424 2424">
+                <label class="container">  Save my details for later
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                </label>
+            </div> -->
 
-                    <div id="card-details">
-                        <div id="details-container">
-                            <label for="cardNumber">Security Pin<span>*</span></label>
-                            <input title="cardNumber" type="number" name="cardNumber" placeholder="e.g. 2424 2424 2424">
-                        </div>
-                      
-                        <div id="details-container">
-                            <label for="expiraryDate">Expirary Date<span>*</span></label>
-                            <input title="pickUpDate" type="date" name="expiraryDate" placeholder="yy/mm/dd">
-                        </div>
-
-                    </div>
-
-                    <label for="billingAddressLine1">Billing Address Line 1 <span>*</span></label>
-                    <input title="billingAddressLine1" type="text" name="billingAddressLine1" placeholder="Billing Address Line 1">
-
-                    <label for="billingAddressLine2">Billing Address Line 2 <span>*</span></label>
-                    <input title="billingAddressLine2" type="text" name="billingAddressLine2" placeholder="Billing Address Line 2">
-
-                    <label for="cityVillage">City/Village <span>*</span></label>
-                    <input title="cityVillage" type="text" name="cityVillage" placeholder="City/Village">
-
-                    <label for="region">Region (Optional) </label>
-                    <input title="region" list="regions" type="text" name="region" placeholder="Region">
-                    <datalist id="regions">
-                        <option value="1: Barima-Waini">
-                        <option value="2: Pomeroon-Supenaam">
-                        <option value="3: Essequibo Islands-West Demerara">
-                        <option value="4: Demerara-Mahaica">
-                        <option value="5: Mahaica-Berbice">
-                        <option value="6: East Berbice-Corentyne">
-                        <option value="7: Cuyuni-Mazaruni">
-                        <option value="8: Potaro-Siparuni">
-                        <option value="9: Upper Takutu-Upper Essequibo">
-                        <option value="10: Upper Demerara-Berbice">
-                    </datalist>
-                </div>
-            </div>
+  
 
             <div class="multi-stage-form">
                 <div id="instructions-guide-options">
@@ -147,24 +100,23 @@
 
                 <div class="shipping">
                     <label for="lastName">First Name<span>*</span></label>
-                    <input title="firstName" type="text" name="firstName" placeholder="First Name" required>
+                    <input title="firstName" type="text" name="firstName" placeholder="First Name">
 
                     <label for="lastName">Last Name<span>*</span></label>
-                    <input title="lastName" type="text" name="lastName" placeholder="Last Name" required>
+                    <input title="lastName" type="text" name="lastName" placeholder="Last Name">
 
                     <label for="email">Email <span>*</span></label>
-                    <input title="email" type="email" name="email" placeholder="e.g johndoe@gmail.com" required>
+                    <input title="email" type="email" name="email" placeholder="e.g johndoe@gmail.com">
 
                     <label for="phoneNumber">Phone Number (Optional)</label>
                     <input title="email" type="number" name="phoneNumber" placeholder="e.g 634 2442">
 
                     <label for="pickUpDate">Pickup Date<span>*</span></label>
-                    <input title="pickUpDate" type="date" name="pickUpDate" placeholder="Pickup Date" required>
+                    <input title="pickUpDate" type="date" name="pickUpDate" placeholder="Pickup Date">
 
                     <label for="pickUpTime">Pickup Time<span>*</span></label>
-                    <input title="pickUpTime" type="time" name="pickUpTime" placeholder="Pickup Time" required>
+                    <input title="pickUpTime" type="time" name="pickUpTime" placeholder="Pickup Time">
 
-                    
                     <label class="container">  Save my details for later
                         <input type="checkbox" checked="checked">
                         <span class="checkmark"></span>
@@ -173,13 +125,162 @@
                 </div>
             </div>
 
+            <div class="multi-stage-form">
+                <div id="instructions-guide-options">
+                    <h3>Please select your payment options</h3>
+                    <div id="payment-options">
+                        <div id="cash" onclick="switchTabs(0)">
+                            <p>Cash on </p>
+                            <p id="move-up">delivery/pickup</p>
+                        </div>
+                        <img src="../Resources/Logos/visa.png" alt="visa"  onclick="switchTabs(1)">
+                        <img src="../Resources/Logos/paypal.png" alt="paypal"  onclick="switchTabs(2)">
+                        <img src="../Resources/Logos/wipay.png" alt="wipay"  onclick="switchTabs(3)">
+       
+                    </div>
+                    <h3>Please fill in the required information below: </h3>
+                    <div id="option-selected">
+                        <p id="cash-on-arrival">Cash On Arrival</p>
+                        <img id="payment-option" src="" alt="">
+                    </div>
+                </div>
+         
+
+                <div class="payment">
+                    <label for="lastName">First Name<span>*</span></label>
+                    <input title="firstName" type="text" name="firstName" placeholder="First Name">
+
+                    <label for="lastName">Last Name<span>*</span></label>
+                    <input title="lastName" type="text" name="lastName" placeholder="Last Name">
+
+                    <label for="email">Email <span>*</span></label>
+                    <input title="email" type="email" name="email" placeholder="e.g johndoe@gmail.com">
+
+                    <label for="phoneNumber">Phone Number (Optional)</label>
+                    <input title="email" type="number" name="phoneNumber" placeholder="e.g 634 2442">
+
+                    <label class="container">  Save my details for later
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+
+                <div class="payment">
+                    <label for="cardHolder">Card Holder Name<span>*</span></label>
+                    <input title="cardHolder" type="text" name="cardHolder" placeholder="e.g. John Doe">
+
+                    <label for="cardNumber">Card Number<span>*</span></label>
+                    <input title="cardNumber" type="number" name="cardNumber" placeholder="e.g. 2424 2424 2424">
+
+                    <div id="card-details">
+                        <div id="details-container">
+                            <label for="cardNumber">Security Pin<span>*</span></label>
+                            <input title="cardNumber" type="number" name="cardNumber" placeholder="e.g. 2424 2424 2424">
+                        </div>
+                      
+                        <div id="details-container">
+                            <label for="expiraryDate">Expirary Date<span>*</span></label>
+                            <input title="pickUpDate" type="date" name="expiraryDate" placeholder="yy/mm/dd">
+                        </div>
+
+                    </div>
+
+                    <label for="billingAddressLine1">Billing Address Line 1 <span>*</span></label>
+                    <input title="billingAddressLine1" type="text" name="billingAddressLine1" placeholder="Billing Address Line 1">
+
+                    <label for="billingAddressLine2">Billing Address Line 2 <span>*</span></label>
+                    <input title="billingAddressLine2" type="text" name="billingAddressLine2" placeholder="Billing Address Line 2">
+
+                    <label for="cityVillage">City/Village <span>*</span></label>
+                    <input title="cityVillage" type="text" name="cityVillage" placeholder="City/Village">
+
+                    <label for="region">Region (Optional) </label>
+                    <input title="region" list="regions" type="text" name="region" placeholder="Region">
+                    <datalist id="regions">
+                        <option value="1: Barima-Waini">
+                        <option value="2: Pomeroon-Supenaam">
+                        <option value="3: Essequibo Islands-West Demerara">
+                        <option value="4: Demerara-Mahaica">
+                        <option value="5: Mahaica-Berbice">
+                        <option value="6: East Berbice-Corentyne">
+                        <option value="7: Cuyuni-Mazaruni">
+                        <option value="8: Potaro-Siparuni">
+                        <option value="9: Upper Takutu-Upper Essequibo">
+                        <option value="10: Upper Demerara-Berbice">
+                    </datalist>
+                    <label class="container">  Save my details for later
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+
+                <div class="payment">
+                    
+                    <label for="email">Email <span>*</span></label>
+                    <input title="email" type="email" name="email" placeholder="e.g johndoe@gmail.com">
+
+                    <label for="password">Password <span>*</span></label>
+                    <input title="password" type="password" name="password" placeholder="">
+
+                    <label class="container">  Save my details for later
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+
+                <div class="payment">
+                    
+                    <label for="email">Email <span>*</span></label>
+                    <input title="email" type="email" name="email" placeholder="e.g johndoe@gmail.com">
+
+                    <label for="password">Password <span>*</span></label>
+                    <input title="password" type="password" name="password" placeholder="">
+
+                    <label class="container">  Save my details for later
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="multi-stage-form">
+                <div id="instructions-guide-options">
+                    <h3>Please select your payment options</h3>
+                    <div id="payment-options">
+                        <div id="cash">
+                            <p>Cash on </p>
+                            <p id="move-up">delivery/pickup</p>
+                        </div>
+                        <img src="../Resources/Logos/visa.png" alt="visa">
+                        <img src="../Resources/Logos/paypal.png" alt="paypal">
+                        <img src="../Resources/Logos/wipay.png" alt="wipay">
+                    </div>
+                    <div id="option-selected">
+                        <img id="payment-selected" src="" alt="">
+                    </div>
+                </div>
+
+                <div class="payment-confirm">
+                    <h2>Login Authentication Successful</h2>
+                </div>
+
+                <div class="payment-confirm">
+                    <h2>Login Authentication Successful</h2>
+                </div>
+            </div>
+
+            <div class="multi-stage-form">
+                <p>This is the review section</p>
+                <div class="review"></div>
+            </div>
+
         
     
             <div id="button-container">
                 <div id="buttons">
                     <!-- <button type="button" id="back-to-cart" onclick="cartCheckoutTransition(1)">Back To Cart</button> -->
                     <button type="button" id="prev-btn" onclick="stepTransition(-1)">Back</button>
-                    <button type="submit" id="next-btn" onclick="stepTransition(1)">Next</button>
+                    <button type="button" id="next-btn" onclick="stepTransition(1)">Next</button>
                 </div>
             </div>
         </form>
