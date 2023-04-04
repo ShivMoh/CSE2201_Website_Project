@@ -40,6 +40,12 @@ span {
     background-color: #F5FDFF;
 }
 
+#box-container-1 p, #box-container-2 p {
+    font-family: 'Abhaya Libre', 'Times New Roman';
+    font-weight: 500;
+    letter-spacing: 0.02vw;
+}
+
 #box-container-1:hover {
     transform: scale(1.04);
     margin-left: 0;
@@ -52,11 +58,12 @@ span {
     border-left: 0.3vw solid black;
 }
 
-#shipping-form {
+.shipping {
+    display: none;
+    /* width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: start; */
 }
 
 #checkout-container {
@@ -66,23 +73,92 @@ span {
     align-items: center;
 }
 
+.multi-stage-form {
+    display: none;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+}
+
 #form-content {
     width: 30%;
     border: solid black 0.1vw;
+    border-radius: 0.5vw;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.shipping {
+#instructions-guide-options {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: start;
-}
-
-.multi-stage-form {
-    display: flex;
-    flex-direction: column;
     align-items: center;
 }
+
+#checkbox {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+/* W3schools custom checkbox code */
+.container {
+    width: 100%;
+    display: flex;
+    position: relative; 
+    padding-left: 2vw;
+    cursor: pointer;
+    font-size: 2vh;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0.1vh;
+    left: 0.5vw;
+    height: 2vh;
+    width: 2vh;
+    background-color: #746c6c;
+    border-radius: 0.1vw;
+  }
+
+  /* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  /* Style the checkmark/indicator */
+.container .checkmark:after {
+    left: 0.25vw;
+    top: 0.4vh;
+    width: 0.8vh;
+    height: 0.5vh;
+    border: solid white;
+    border-width: 0vh 0.4vh 0.4vh 0vh;
+    /* -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg); */
+    transform: rotate(145deg) scaleY(-1); 
+    /* transform: scaleY(-1); */
+    /* transform: rotateX(180deg); */
+  }

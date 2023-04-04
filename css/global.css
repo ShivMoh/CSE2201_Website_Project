@@ -19,16 +19,6 @@ label {
     margin-top: 2vh;
 }
 
-#button-container {
-    overflow: auto;
-}
-
-#buttons {
-    display: flex; 
-    flex-direction:row; 
-    justify-content: center;
-}
-
 button {
     width: 9vw;
     background-color: #C54040;

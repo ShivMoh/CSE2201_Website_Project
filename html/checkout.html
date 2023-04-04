@@ -1,16 +1,22 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joe's Store</title>
+    <link rel="stylesheet" href="../css/checkout-payment.css">
     <link rel="stylesheet" href="../css/checkout-shipping.css">
     <link rel="stylesheet" href="../css/checkout.css">
     <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abhaya+Libre">
+    <!-- Abhaya Libre -->
 </head>
 <body>
     <section id="checkout-container">
-        <div id="form-content">
+        <form id="form-content">
             <div id="progress-status">
                 <p class="progress-state">Shipping</p>
                 <span> > </span>
@@ -18,43 +24,55 @@
                 <span> > </span>
                 <p class="progress-state">Review</p>
             </div>
+
             <div class="multi-stage-form">
-                <div >
-                    <h3>How would you like to get your order?</h3>
+                <div id="instructions-guide-options">
+                    <h3>Please select your payment options</h3>
                     <div id="shipping-options">
-                        <div id="box-container-1">
+                        <div id="box-container-1" onclick="switchTabs(0)">
                             <p>I'd like it delivered!</p>
                         </div>
-                        <div id="box-container-2">
+                        <div id="box-container-2" onclick="switchTabs(1)">
                             <p>I'll pick it up</p>
                         </div>
                     </div>
+                    <h3>Please fill in the required information below: </h3>
+                    <div id="option-selected">
+                        Visa
+                    </div>
                 </div>
 
-                <form class="shipping">
-                    <label for="lastName">First Name</label>
-                    <input title="firstName" type="text" name="firstName">
+                <div class="payment">
+                    <label for="cardHolder">Card Holder Name<span>*</span></label>
+                    <input title="cardHolder" type="text" name="cardHolder" placeholder="e.g. John Doe">
 
-                    <label for="lastName">Last Name</label>
-                    <input title="lastName" type="text" name="lastName">
+                    <label for="cardNumber">Card Number<span>*</span></label>
+                    <input title="cardNumber" type="number" name="cardNumber" placeholder="e.g. 2424 2424 2424">
 
-                    <label for="email">Email</label>
-                    <input title="email" type="email" name="email">
+                    <div id="card-details">
+                        <div id="details-container">
+                            <label for="cardNumber">Security Pin<span>*</span></label>
+                            <input title="cardNumber" type="number" name="cardNumber" placeholder="e.g. 2424 2424 2424">
+                        </div>
+                      
+                        <div id="details-container">
+                            <label for="expiraryDate">Expirary Date<span>*</span></label>
+                            <input title="pickUpDate" type="date" name="expiraryDate" placeholder="yy/mm/dd">
+                        </div>
 
-                    <label for="phoneNumber">Phone Number (Optional)</label>
-                    <input title="email" type="number" name="phoneNumber">
+                    </div>
 
-                    <label for="addressLine1">Address Line 1</label>
-                    <input title="addressLine1" type="text" name="addressLine1">
+                    <label for="billingAddressLine1">Billing Address Line 1 <span>*</span></label>
+                    <input title="billingAddressLine1" type="text" name="billingAddressLine1" placeholder="Billing Address Line 1">
 
-                    <label for="addressLine2">Address Line 2</label>
-                    <input title="addressLine2" type="text" name="addressLine2">
+                    <label for="billingAddressLine2">Billing Address Line 2 <span>*</span></label>
+                    <input title="billingAddressLine2" type="text" name="billingAddressLine2" placeholder="Billing Address Line 2">
 
-                    <label for="cityVillage">City/Village</label>
-                    <input title="cityVillage" type="text" name="cityVillage">
+                    <label for="cityVillage">City/Village <span>*</span></label>
+                    <input title="cityVillage" type="text" name="cityVillage" placeholder="City/Village">
 
-                    <label for="region">Region</label>
-                    <input title="region" list="regions" type="text" name="region" placeholder="Number">
+                    <label for="region">Region (Optional) </label>
+                    <input title="region" list="regions" type="text" name="region" placeholder="Region">
                     <datalist id="regions">
                         <option value="1: Barima-Waini">
                         <option value="2: Pomeroon-Supenaam">
@@ -67,17 +85,105 @@
                         <option value="9: Upper Takutu-Upper Essequibo">
                         <option value="10: Upper Demerara-Berbice">
                     </datalist>
-                </form>
+                </div>
             </div>
+
+            <div class="multi-stage-form">
+                <div id="instructions-guide-options">
+                    <h3>How would you like to get your order?</h3>
+                    <div id="shipping-options">
+                        <div id="box-container-1" onclick="switchTabs(0)">
+                            <p>I'd like it delivered!</p>
+                        </div>
+                        <div id="box-container-2" onclick="switchTabs(1)">
+                            <p>I'll pick it up</p>
+                        </div>
+                    </div>
+                    <h3>Please fill in the required information below: </h3>
+                </div>
+
+                <div class="shipping">
+                    <label for="lastName">First Name<span>*</span></label>
+                    <input title="firstName" type="text" name="firstName" placeholder="First Name">
+
+                    <label for="lastName">Last Name<span>*</span></label>
+                    <input title="lastName" type="text" name="lastName" placeholder="Last Name">
+
+                    <label for="email">Email <span>*</span></label>
+                    <input title="email" type="email" name="email" placeholder="e.g johndoe@gmail.com">
+
+                    <label for="phoneNumber">Phone Number (Optional)</label>
+                    <input title="email" type="number" name="phoneNumber" placeholder="e.g 634 2442">
+
+                    <label for="addressLine1">Address Line 1 <span>*</span></label>
+                    <input title="addressLine1" type="text" name="addressLine1" placeholder="Address Line 1">
+
+                    <label for="addressLine2">Address Line 2 <span>*</span></label>
+                    <input title="addressLine2" type="text" name="addressLine2" placeholder="Address Line 2">
+
+                    <label for="cityVillage">City/Village <span>*</span></label>
+                    <input title="cityVillage" type="text" name="cityVillage" placeholder="City/Village">
+
+                    <label for="region">Region (Optional) </label>
+                    <input title="region" list="regions" type="text" name="region" placeholder="Region">
+                    <datalist id="regions">
+                        <option value="1: Barima-Waini">
+                        <option value="2: Pomeroon-Supenaam">
+                        <option value="3: Essequibo Islands-West Demerara">
+                        <option value="4: Demerara-Mahaica">
+                        <option value="5: Mahaica-Berbice">
+                        <option value="6: East Berbice-Corentyne">
+                        <option value="7: Cuyuni-Mazaruni">
+                        <option value="8: Potaro-Siparuni">
+                        <option value="9: Upper Takutu-Upper Essequibo">
+                        <option value="10: Upper Demerara-Berbice">
+                    </datalist>
+
+                    <label class="container">  Save my details for later
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+
+                <div class="shipping">
+                    <label for="lastName">First Name<span>*</span></label>
+                    <input title="firstName" type="text" name="firstName" placeholder="First Name" required>
+
+                    <label for="lastName">Last Name<span>*</span></label>
+                    <input title="lastName" type="text" name="lastName" placeholder="Last Name" required>
+
+                    <label for="email">Email <span>*</span></label>
+                    <input title="email" type="email" name="email" placeholder="e.g johndoe@gmail.com" required>
+
+                    <label for="phoneNumber">Phone Number (Optional)</label>
+                    <input title="email" type="number" name="phoneNumber" placeholder="e.g 634 2442">
+
+                    <label for="pickUpDate">Pickup Date<span>*</span></label>
+                    <input title="pickUpDate" type="date" name="pickUpDate" placeholder="Pickup Date" required>
+
+                    <label for="pickUpTime">Pickup Time<span>*</span></label>
+                    <input title="pickUpTime" type="time" name="pickUpTime" placeholder="Pickup Time" required>
+
+                    
+                    <label class="container">  Save my details for later
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                    </label>
+                   
+                </div>
+            </div>
+
+        
     
             <div id="button-container">
                 <div id="buttons">
                     <!-- <button type="button" id="back-to-cart" onclick="cartCheckoutTransition(1)">Back To Cart</button> -->
-                    <button type="button" id="prev-btn" onclick="showTab(-1)">Back</button>
-                    <button type="button" id="next-btn" onclick="showTab(1)">Next</button>
+                    <button type="button" id="prev-btn" onclick="stepTransition(-1)">Back</button>
+                    <button type="submit" id="next-btn" onclick="stepTransition(1)">Next</button>
                 </div>
             </div>
-        </div>
+        </form>
     </section>
+    <script src="../javascript/checkout.js"></script>
 </body>
 </html>
