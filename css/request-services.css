@@ -1,0 +1,76 @@
+.navigation-bar {
+    background-color: #0581F4;
+}
+
+.menu a {
+    color: white;
+}
+
+.dropbtn {
+    color: white;
+}
+
+ul {
+    display: inline;
+    list-style: none;
+}
+
+li {
+    float: left;
+    margin: 20px;
+}
+
+.title-with-location {
+    margin-top: 9vw;
+    text-align: center;
+    line-height: 8px;
+    color: grey;
+}
+
+h2 {
+    font-size: 30px;
+    color: #45a1f6; 
+}
+
+span {
+    color: black;
+    font-weight: 600;
+}
+
+.request-form {
+    margin: 5vh 30vw 5vh 30vw;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.form-head-text {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+label {
+    font-size: 20px;
+    display: block;
+}
+
+select {
+    height: 5%;
+    margin-top: 0.5vw;
+    padding: 0.8vw;
+    width: 25.5vw;
+    font-size: 1vw;
+    font-family: Raleway;
+    border: 0.1vw solid #aaaaaa;
+    border-radius: 0.5vw;
+}
+
+input#request-details {
+    height: 13vh;
+}
+
+button {
+    background-color: rgb(27, 167, 27);
+    margin: 30px 0 30px 0
+}

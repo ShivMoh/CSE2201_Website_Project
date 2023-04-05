@@ -64,4 +64,6 @@ footer {
     padding: 0;
     background-color: black;
     cursor: pointer;
+    width: auto;
+    height: auto;
 }
