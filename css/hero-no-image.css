@@ -25,3 +25,13 @@ header #hero {
     position: relative;
     top: 8vw;
 }
+
+
+#page-location span img {
+    width: 2vw;
+    height: 2vw;
+    position: relative;
+    top: 0.5vw;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+}
