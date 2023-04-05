@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abhaya+Libre&display=swap">
     <link rel="stylesheet" type="text/css" href="../CSS/navigation.css">
     <link rel="stylesheet" type="text/css" href="../CSS/home.css">
+    <link rel ="stylesheet" href="../css/modal-styles.css">
     <style>
         .navigation-bar::before {
             content: "";
@@ -81,7 +82,23 @@
                         </div>
                     </div> 
                     <a href="#"><img src="..\Resources\Navigation-Bar\cart-icon.png" alt="Cart"></a>
-                    <a href="#"><img src="..\Resources\Navigation-Bar\profile-icon.png" alt="Profile"></a>
+                    <a href="#"><img src="..\Resources\Navigation-Bar\profile-icon.png" alt="Profile" id = "modal-trigger"></a>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div id="login-modal" class="modal">
+                <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Login</h2>
+                <form>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+            
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+            
+                    <button type="submit">Login</button>
+                </form>
                 </div>
             </div>
         </nav>			
@@ -107,6 +124,22 @@
             </div>
         </div>
     </section>
+    <script>
+        // Get the modal and the trigger element
+        var modal = document.getElementById("login-modal");
+        var trigger = document.getElementById("modal-trigger");
+
+        // When the user clicks the trigger, show the modal
+        trigger.addEventListener("click", function() {
+        modal.style.display = "block";
+        });
+
+        // When the user clicks the close button, hide the modal
+        var close = document.getElementsByClassName("close")[0];
+        close.addEventListener("click", function() {
+        modal.style.display = "none";
+        });
+    </script>
 </body>
 <script type="text/javascript" src="../Javascript/slideshow.js"></script>
 </html>
