@@ -1,267 +1,173 @@
-    #what-we-do {
+.header-image {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+.header-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #e5e5e5a0;
+  opacity: 0.2;
+}
+
+.header-image img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  object-fit: cover;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.header-image img.active {
+  opacity: 1;
+  z-index: 0;
+}
+
+.slideshow-buttons {
+  position: absolute;
+  top: 45vh;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.slideshow-buttons button.next {
+  transform: rotateY(180deg);
+}
+
+.slideshow-buttons img{
+  height: 12vh;
+  margin: 0 1.7vw;
+}
+
+.slideshow-buttons button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+#who-we-are {
     position: relative;
     text-align: center;
   }
   
-  #what-we-do h2::after {
+  #who-we-are h2::after {
     content: '';
     position: absolute;
-    top: 7vw;
+    top: 6vw;
     left: 0;
     right: 0;
-    width: 22vw;
+    width: 20vw;
     margin: 0 auto;
-    border-bottom: 0.5vw solid #1C79CE;
+    border-bottom: 0.4vw solid #1C79CE;
   }
   
-  #what-we-do h2 {
+  #who-we-are h2 {
     margin-top: 5vw;
     margin-bottom: 0;
     font-family: 'Ubuntu', sans-serif;
     font-weight: bold;
     color: #0581F4;
-    font-size: 4vw;
+    font-size: 3.5vw;
     line-height: 1.5;
     position: relative;
     letter-spacing: 0.1em;
-    padding-bottom: 2.5vh;
+    padding-bottom: 1.7vh;
   }
   
-  #what-we-do p {
-    margin: 3vw 6vw;
+  #who-we-are p {
+    margin: 4vw 6vw;
     margin-bottom: 0;
     font-family: 'Open Sans', sans-serif;
-    font-weight:normal;
+    font-weight:lighter;
     font-size: 1.5vw;
     line-height: 1.5;
+    letter-spacing: 0.1em;
   }
 
-  #what-we-do button {
+  #who-we-are button {
     background-color: #29D53A;
     color: white;
     font-family: 'Ubuntu', sans-serif;
     font-weight: bold;
-    font-size: 2vw;
+    font-size: 1.8vw;
     letter-spacing: 0.1em;
     border: none;
-    padding: 1.5vw 3.5vw 1.5vw 3.5vw;
-    border-radius: 1.7vw;
+    padding: 1.1vw 3.1vw 1.1vw 3.1vw;
+    border-radius: 1.2vw;
+    margin-top: 3.5vw;
   }
-  /*
-  #what-we-do .images,
-  #and-much-much-more .gallery-row-1,
-  #and-much-much-more .gallery-row-2 {
-    display: flex;
-    justify-content: center;
+
+  #browse-our-collection {
+    position: relative;
+    text-align: center;
   }
-  
-  #what-we-do .images img {
-    width: calc((100% - 20px) / 2);
-    margin: 0 10px;
-    height: auto;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-  }
-  
-  #browse-our-collection h3,
-  #and-much-much-more h4,
-  #for-more-information h3 {
+
+  #browse-our-collection h2 {
+    margin-top: 5vw;
+    margin-bottom: 0;
     font-family: 'Ubuntu', sans-serif;
-    font-weight: bold;
-    color: #F572A1;
-    line-height: 1.5;
-  }
-  
-  #browse-our-collection h3 {
-    font-size: 25px;
-    padding-top: 0;
-    padding-bottom: 110px;
-    position: relative;
-  }
-  
-  #and-much-much-more h4 {
-    font-size: 40px;
-    display: block;
-    padding-bottom: 20px;
-  }
-  
-  #for-more-information h3 {
-    padding-top: 0px;
-    padding-bottom: 40px;
+    font-weight:bolder;
+    color: #0581F4;
+    font-size: 3.8vw;
     line-height: 1.5;
     position: relative;
-  }
-  
-  #and-much-much-more .gallery-row-1 img,
-  #and-much-much-more .gallery-row-2 img {
-    height: 375px;
-    object-fit: cover;
-    padding-right: 15px;
-  }
-  
-  #and-much-much-more .gallery-row-1 img {
-    width: calc((100%) / 2);
-    padding-bottom: 15px;
-  }
-  
-  #and-much-much-more .gallery-row-2 img {
-    width: calc((100%) / 3);
-  }
-  
-  #and-much-much-more .gallery-row-2 img:nth-child(3),
-  #and-much-much-more .gallery-row-1 img:nth-child(2) {
-    padding-right: 0;
-  }
-  
-  #and-much-much-more button,
-  #for-more-information button {
-    display: inline-block;
-    background-color: #F572A1;
-    color: white;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 20px;
-    font-weight: bold;
     letter-spacing: 0.1em;
-    border: 2pt solid white;
-    padding: 20px 30px 20px 30px;
-    margin-top: 35px;
-    border-radius: 20px;
   }
-  
-  #for-more-information img {
-    width: 450px;
-    height: 450px;
-    border-radius: 40px;
-  }
-  
-  .slide-container02-01,
-  .slide-container02-02,
-  .slide-container03-01,
-  .slide-container03-02 {
+
+  #browse-our-collection h3 {
+    font-family: 'Abhaya Libre', serif;
+    font-weight: normal;
+    color: #1C79CE;
+    line-height: 1.5;
+    letter-spacing: 0.1em;
+    margin-top: 0;
+    font-size: 2.3vw;
     position: relative;
-    width: 1200px;
-    height: 550px;
+  }
+  
+  .men-and-women {
+    margin-top: 4vw;
+  }
+
+  .container01 {
+    position: relative;
+    width: 78vw;
+    height: 37.3vw;
     margin: 0 auto;
     display: flex;
-    z-index: 2;
+    justify-content: space-between;
   }
   
-  .slide-container02-01,
-  .slide-container03-01 {
-    overflow: hidden;
-  }
-  
-  .slide-container02-02,
-  .slide-container03-02 {
-    position: absolute;
-    left: 50%;
-    top: 0;
-    transform: translateX(-50%);
-    z-index: 1;
-  }
-  
-  .popular-slideshow,
-  .recent-slideshow {
-    position: relative;
-  }
-  
-  .slide-container02-01,
-  .slide-container02-02 {
-    margin-bottom: 150px;
-  }
-  
-  .slide-container03-01,
-  .slide-container03-02 {
-    margin-bottom: 90px;
-  }
-  
-  .slide-container02-02 h4,
-  .slide-container03-02 h4 {
-    position: absolute;
-    z-index: 3;
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: bold;
-    font-size: 40px;
-    color: #F572A1;
-    line-height: 1.5;
-    top: -75px;
-  }
-  
-  .slide-container02-02 h4 {
-    left: 22px;
-  }
-  
-  .slide-container03-02 h4 {
-    right: 22px;
-  }
-  
-  .slides02,
-  .slides03 {
-    display: flex;
-    flex-wrap: nowrap;
-    transition: transform 0.5s ease-in-out;
-  }
-  
-  .slides02 img,
-  .slides03 img {
-    position: relative;
-    width: 550px;
-    height: 550px;
-    margin-right: 25px;
-    margin-left: 25px;
-    opacity: 1;
+  .container01 img {
+    width: 37.3vw;
+    height: 37.3vw;
     object-fit: cover;
   }
-  
-  .slider-buttons02,
-  .slider-buttons03 {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    z-index: 1;
-  }
-  
-  .prev02,
-  .prev03 {
-    margin-left: 50px;
-  }
-  
-  .next02,
-  .next03 {
-    margin-right: 50px;
-    transform: scaleX(-1);
-  }
-  
-  .slide-item-container02,
-  .slide-item-container03 {
+
+  .item-container01 {
     position: relative;
-    display: inline-block;
   }
   
-  .order-now02,
-  .order-now03 {
+  .shop-now {
     position: absolute;
-    bottom: 45px;
+    bottom: 3vw;
     left: 50%;
     transform: translateX(-50%);
-    background-color: none;
+    background-color: transparent;
     color: white;
     font-family: 'Open Sans', sans-serif;
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 1.6vw;
+    font-weight:normal;
     letter-spacing: 0.1em;
-    padding: 20px 20px;
-    border: 2pt solid white;
-    border-radius: 20px;
+    padding: 1.4vw 3vw;
+    border: 0.4vw solid white;
+    border-radius: 10vw;
     margin-top: 10px;
   }
-  
-  .order-now02:hover,
-  .order-now03:hover {
-    background-color: rgba(128, 128, 128, 0.6);
-  }
-  
