@@ -1,5 +1,5 @@
 .navigation-bar {
-    background-color: 0581F4;
+    background-color: #0581F4;
 }
 
 .menu a {
@@ -22,11 +22,12 @@ li {
 
 h2 {
     font-size: 30px;
+    color: #45a1f6
 }
 
 .services,
 .customer-rewards {
-    margin-top: 8vw;
+    margin-top: 9vw;
     text-align: center;
     line-height: 8px;
     color: rgb(43, 140, 172);
