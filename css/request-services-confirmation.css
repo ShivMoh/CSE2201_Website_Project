@@ -1,0 +1,26 @@
+.confirmation-div {
+    margin: 8vh 30vw;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 20px;
+    height: 22.5vh;
+}
+
+.thank-you-text {
+    color: black;
+    font-size: 26px;
+    font-weight: bold;
+    margin: 30px;
+}
+
+p {
+    color: black;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.back-to-home {
+    text-decoration: none;
+    color: rgb(62, 172, 172);
+    font-size: 18px;
+}
