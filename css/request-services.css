@@ -46,11 +46,19 @@ span {
 }
 
 .form-head-text {
+    color: black;
     font-size: 24px;
     font-weight: bold;
 }
 
+.inner-request-form {
+    text-align: left;
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
 label {
+    color: black;
     font-size: 20px;
     display: block;
 }
@@ -59,7 +67,7 @@ select {
     height: 5%;
     margin-top: 0.5vw;
     padding: 0.8vw;
-    width: 25.5vw;
+    width: 25.75vw;
     font-size: 1vw;
     font-family: Raleway;
     border: 0.1vw solid #aaaaaa;
