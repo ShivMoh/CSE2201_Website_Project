@@ -18,9 +18,49 @@
 
 </style>
 <body>
-    <div class="navigation-bar">
-        <p>Temporary header</p>
-    </div>
+    <nav>
+        <div class="navigation-bar">
+            <div class="logo">
+                <img src="..\Resources\Navigation-Bar\logo.png"  alt="Cakes R Us logo">
+            </div>  
+            <div class="menu">
+                <a href="#">Home</a>
+                <div class="dropdown">
+                    <div class="dropbtn">About
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                    <div class="dropdown-content about-dropdown">
+                        <a href="#">Who We Are</a>
+                        <a href="#">Our History</a>
+                    </div>
+                </div> 
+                <a href="#">Shop</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+            </div>
+            
+            <ul>
+                <li><a href="#"><img src="/Resources/Header-Assets/facebook-icon.png" alt=""></a></li>
+                <li><a href="#"><img src="/Resources/Header-Assets/twitter-icon.png" alt=""></a></li>
+                <li><a href="#"><img src="/Resources/Header-Assets/instagram-icon.png" alt=""></a></li>
+            </ul>
+            <div class="icons">
+                <div class="dropdown">
+                    <a><img src="..\Resources\Navigation-Bar\search-icon.png"  alt="search"></a>
+                    <div class="dropdown-content ">
+                        <div id="search-container">
+                            <input title="search" type="text" name="search" id="search-bar">
+                            <button title="search button">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div> 
+                <a href="#"><img src="..\Resources\Navigation-Bar\cart-icon.png" alt="Cart"></a>
+                <a href="#"><img src="..\Resources\Navigation-Bar\profile-icon.png" alt="Profile"></a>
+            </div>
+        </div>
+    </nav>
 
     <div class="customer-rewards">
         <h2>Customer Rewards</h2>
@@ -28,17 +68,17 @@
 
         <div class="rewards-grid">
             <div class="rewards-item">
-                <img class = rewards-img src="../Resources/Images/placeholder-image-500x500.png" alt="Reward 1">
+                <img class = rewards-img src="../Resources/Images/reward-discount.jpg" alt="Reward 1">
                 <p>Frequent Sales!</p>
             </div>
 
             <div class="rewards-item">
-                <img class = rewards-img src="../Resources/Images/placeholder-image-500x500.png" alt="Reward 2">
+                <img class = rewards-img src="../Resources/Images/reward-cashback.png" alt="Reward 2">
                 <p>Cashback on Purchases!</p>
             </div>
 
             <div class="rewards-item">
-                <img class = rewards-img src="../Resources/Images/placeholder-image-500x500.png" alt="Reward 3">
+                <img class = rewards-img src="../Resources/Images/reward-home-delivery.jpeg" alt="Reward 3">
                 <p>Home Delivery!</p>
             </div>
         </div>
@@ -52,17 +92,17 @@
 
         <div class="service-grid">
             <div class="service-item">
-                <img class = service-img src="../Resources/Images/placeholder-image-500x500.png" alt="Service 1">
+                <img class = service-img src="../Resources/Images/service-size-adjustment.jpg" alt="Service 1">
                 <p>Size Adjustments</p>
             </div>
 
             <div class="service-item">
-                <img class = service-img src="../Resources/Images/placeholder-image-500x500.png" alt="Service 2">
+                <img class = service-img src="../Resources/Images/service-custom-clothing.jpg" alt="Service 2">
                 <p>Custom Clothing</p>
             </div>
 
             <div class="service-item">
-                <img class = service-img src="../Resources/Images/placeholder-image-500x500.png" alt="Service 3">
+                <img class = service-img src="../Resources/Images/service-embroidery.jpg" alt="Service 3">
                 <p>Embroidery</p>
             </div>
         </div>
