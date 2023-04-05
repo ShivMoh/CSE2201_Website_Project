@@ -5,9 +5,177 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../css/cart.css">
+    <link rel="stylesheet" href="../css/hero-no-image.css">
+    <link rel="stylesheet" href="../css/navigation.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abhaya+Libre">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .navigation-bar {
+            background-color: #0581F4;
+        }
+
+        .menu a {
+            color: white;
+        }
+
+        .dropbtn {
+            color: white;
+        }
+
+    </style>
 </head>
 <body>
+    <header>
+      
+        <div id="hero">
+            <p id="page-title">Cart</p>
+            <p id="page-location">Home <span>></span> Shop <span>></span> Cart</p>
+        </div>
+
+        <nav>
+            <div class="navigation-bar">
+                <div class="logo">
+                    <img src="..\Resources\Navigation-Bar\logo.png"  alt="Cakes R Us logo">
+                </div>
+                <div class="menu">
+                    <a href="#">Home</a>
+                    <div class="dropdown">
+                        <div class="dropbtn">About
+                            <i class="fa fa-caret-down"></i>
+                        </div>
+                        <div class="dropdown-content about-dropdown">
+                            <a href="#">Who We Are</a>
+                            <a href="#">Our History</a>
+                        </div>
+                    </div> 
+                    <a href="#">Shop</a>
+                    <a href="#">Services</a>
+                    <a href="#">Contact</a>
+                </div>
+                <ul class="social-links">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+                <div class="icons">
+                    <div class="dropdown">
+                        <a><img src="..\Resources\Navigation-Bar\search-icon.png"  alt="search"></a>
+                        <div class="dropdown-content ">
+                            <div id="search-container">
+                                <input title="search" type="text" name="search" id="search-bar">
+                                <button title="search button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div> 
+                    <a href="#"><img src="..\Resources\Navigation-Bar\cart-icon.png" alt="Cart"></a>
+                    <a href="#"><img src="..\Resources\Navigation-Bar\profile-icon.png" alt="Profile"></a>
+                </div>
+            </div>
+        </nav>
+ 
+    </header>
+    <div id="cart">
+        <div id="cart-items">
+            <div class="cart-item">
+                <img  src="../Resources/Images/product3.png" alt="product 1">
+                <div id="item-details" style="grid-area: auto;" >
+                    <img class="exit" src="../Resources/Icons/cross.png" alt="exit" style="width: 20px; height: 20px; margin-left: 90%;" data-id="0">
+                    <h2 style="margin-top: -20px;">Fruit Cake</h2>
+                    <h4>GYD $15 000</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. id.</p>
+                    <p>QTY:      
+                        <select style="margin-left: 20px" title="quantity" name="quantity" id="quantity">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">Custom Input</option>
+                        </select>  
+                    </p>
+                </div>
+            </div>
+
+            <div class="cart-item">
+                <img  src="../Resources/Images/product2.png" alt="product 2">
+                <div id="item-details" style="grid-area: auto;">
+                    <img class="exit" src="../Resources/Icons/cross.png" alt="exit" style="width: 20px; height: 20px; margin-left: 90%;" data-id="1">
+                    <h2 style="margin-top: -20px;">Red Velvet Cake</h2>
+                    <h4>GYD $10 000</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. id.</p>
+                    <p>QTY:      
+                        <select style="margin-left: 20px" title="quantity" name="quantity" id="quantity">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">Custom Input</option>
+                        </select>  
+                    </p>
+                    <button id="checkout-item">Proceed Item to Checkout</button>
+                </div>
+            </div>
+
+            <div class="cart-item">
+                <img  src="../Resources/Images/product1.png" alt="product 3">
+                <div  id="item-details" style="grid-area: auto;">
+                    <img class="exit" src="../Resources/Icons/cross.png" alt="exit" style="width: 20px; height: 20px; margin-left: 90%;" data-id="2">
+                    <h2 style="margin-top: -20px;">Vanilla CupCakes</h2>
+                    <h4>GYD $1 000</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. id.</p>
+                    <p>QTY:      
+                        <select style="margin-left: 20px" title="quantity" name="quantity" id="quantity">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">Custom Input</option>
+                        </select>  
+                    </p>
+                    <button id="checkout-item">Proceed Item to Checkout</button>
+                </div>
+            </div>
+
+        </div>
+          <div id="cart-details-container">
+            <div id="cart-details">
+                <p style="grid-column: span 2;">Total: $26 000 </p>
+            </div>
+            <button id="checkout-btn" type="button" onclick="cartCheckoutTransition(0)">Proceed to checkout</button>
+            </div>
+    </div>
+    
     <button onclick="cartCheckoutTransition(0)"></button>
+        <!-- <script>
+
+        // this script helps to make the cart a litte more interactive
+        // get all elements with the "exit" class
+        const exitButtons = document.querySelectorAll('.exit');
+
+        // add click event listener to all "exit" buttons
+        exitButtons.forEach((exitButton) => {
+
+        // this function will essentially allow you to remove a element from the cart
+        // when the exit button is clicked
+        exitButton.addEventListener('click', (event) => {
+            // get the parent element of the "exit" button that has the "items" class
+            const itemElement = event.target.parentNode.parentNode
+            
+            // remove the parent element
+            console.log(itemElement.children[0])
+            itemElement.style.display = "none"
+        });
+        });
+
+
+        // exit_button[x].parentNode.parentNode.style.display = "none"
+            
+       
+    </script> -->
     <script src="../javascript/cart.js"></script>
 </body>
 </html>

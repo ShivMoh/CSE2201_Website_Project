@@ -1,0 +1,65 @@
+#cart-items
+
+#divider {
+    /* Applies a solid border at the bottom and adds padding to the element with the ID "divider" */
+    border-bottom: solid #3f3d3d 1px;
+    padding: 3%;
+}
+
+#cart-items {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-item  img {
+    /* Styles all images inside elements with the class "cart-item" */
+    width: 20em;
+    height: 20em;
+    background-color: red;
+    border-radius: 3em;
+}
+
+.cart-item {
+    /* Styles all elements with the class "cart-item" */
+    width: 60%;
+    display: grid;
+    grid-template-columns: 2vw auto;
+    column-gap: 20em;
+    /* background-color: #e4d7e2; */
+    border-top: solid #3f3d3d 0.1vw;
+    border-bottom: solid #3f3d3d 0.1vw;
+    padding: 3em;
+}
+
+select {
+    /* Styles all select elements */
+    width: 50px;
+    border-radius: 0.5em;
+    font-size: medium;
+    border: solid grey 1px;
+}
+
+#cart-review {
+    /* Styles the element with the ID "cart-review" */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#cart-review-section h1 {
+    /* Styles all h1 elements inside the element with the ID "cart-review-section" */
+    width: 100%;
+    text-align: center;
+   
+}
+
+#cart-review-section h5 {
+    /* Styles all h5 elements inside the element with the ID "cart-review-section" */
+    width: 100%;
+    text-align: center;
+   
+}
