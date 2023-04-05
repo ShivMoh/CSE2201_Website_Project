@@ -60,21 +60,21 @@
   #who-we-are h2::after {
     content: '';
     position: absolute;
-    top: 6vw;
+    top: 5vw;
     left: 0;
     right: 0;
-    width: 20vw;
+    width: 15vw;
     margin: 0 auto;
     border-bottom: 0.4vw solid #1C79CE;
   }
   
   #who-we-are h2 {
-    margin-top: 5vw;
+    margin-top: 4vw;
     margin-bottom: 0;
     font-family: 'Ubuntu', sans-serif;
     font-weight: bold;
     color: #0581F4;
-    font-size: 3.5vw;
+    font-size: 3vw;
     line-height: 1.5;
     position: relative;
     letter-spacing: 0.1em;
@@ -82,11 +82,11 @@
   }
   
   #who-we-are p {
-    margin: 4vw 6vw;
+    margin: 2.3vw 6vw;
     margin-bottom: 0;
     font-family: 'Open Sans', sans-serif;
     font-weight:lighter;
-    font-size: 1.5vw;
+    font-size: 1.3vw;
     line-height: 1.5;
     letter-spacing: 0.1em;
   }
@@ -96,12 +96,12 @@
     color: white;
     font-family: 'Ubuntu', sans-serif;
     font-weight: bold;
-    font-size: 1.8vw;
+    font-size: 1.3vw;
     letter-spacing: 0.1em;
     border: none;
     padding: 1.1vw 3.1vw 1.1vw 3.1vw;
     border-radius: 1.2vw;
-    margin-top: 3.5vw;
+    margin-top: 2.5vw;
   }
 
   #browse-our-collection {
@@ -115,7 +115,7 @@
     font-family: 'Ubuntu', sans-serif;
     font-weight:bolder;
     color: #0581F4;
-    font-size: 3.8vw;
+    font-size: 3vw;
     line-height: 1.5;
     position: relative;
     letter-spacing: 0.1em;
@@ -128,12 +128,12 @@
     line-height: 1.5;
     letter-spacing: 0.1em;
     margin-top: 0;
-    font-size: 2.3vw;
+    font-size: 2vw;
     position: relative;
   }
   
   .men-and-women {
-    margin-top: 4vw;
+    margin-top: 3vw;
   }
 
   .container01 {
@@ -163,7 +163,7 @@
     background-color: transparent;
     color: white;
     font-family: 'Open Sans', sans-serif;
-    font-size: 1.6vw;
+    font-size: 1.3vw;
     font-weight:normal;
     letter-spacing: 0.1em;
     padding: 1.4vw 3vw;
@@ -174,7 +174,6 @@
 
   #new-arrivals,
   #sales {
-    margin-top: 4vw;
     position: relative;
     text-align: center;
   }
@@ -185,7 +184,7 @@
     width: 78vw;
     height: 37.3vw;
     margin: 0 auto;
-    margin-top: 13vw;
+    margin-top: 11vw;
     display: flex;
     overflow: hidden;
   }
@@ -219,11 +218,11 @@
   z-index: 3;
   font-family: 'Ubuntu', sans-serif;
   font-weight: bold;
-  font-size: 3.4vw;
+  font-size: 2.8vw;
   color: #0581F4;
   line-height: 1.5;
   letter-spacing: 0.1em;
-  margin-top: -7.6vw;
+  margin-top: -6.8vw;
   margin-left: -0.34vw;
 }
 
@@ -232,26 +231,100 @@
   z-index: 3;
   font-family: 'Ubuntu', sans-serif;
   font-weight: bold;
-  font-size: 3.4vw;
+  font-size: 2.8vw;
   color: #0581F4;
   line-height: 1.5;
   letter-spacing: 0.1em;
-  margin-top: -7.6vw;
+  margin-top: -6.8vw;
   right: -0.6vw;
   text-align: right; /* added property */
 }
 
-.double-container01 h4::after,
+.double-container01 h4::after{
+  content: '';
+  position: absolute;
+  top: 4.6vw;
+  width: 19vw;
+  left: 0.2vw;
+  border-bottom: 0.4vw solid #1C79CE;
+}
+
 .double-container02 h4::after {
   content: '';
   position: absolute;
-  top: 5.4vw;
-  width: 22vw;
+  top: 4.6vw;
+  width: 21vw;
   right: 0.5vw;
   border-bottom: 0.4vw solid #1C79CE;
 }
 
+#our-services {
+  position: relative;
+  text-align: center;
+}
 
+#our-services h2 {
+  margin-top: 5vw;
+  margin-bottom: 0;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight:bolder;
+  color: #0581F4;
+  font-size: 3vw;
+  line-height: 1.5;
+  position: relative;
+  letter-spacing: 0.1em;
+}
+
+#our-services h3 {
+  font-family: 'Abhaya Libre', serif;
+  font-weight: normal;
+  color: #1C79CE;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  margin-top: 0;
+  font-size: 2vw;
+  position: relative;
+}
+
+#our-services {
+  position: relative;
+  text-align: center;
+}
+
+.services {
+  position: relative;
+  width: 80vw;
+  margin: 0 auto;
+  margin-top: 4vw;
+  display: flex;
+  overflow: hidden;
+}
+
+.services {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.service {
+  text-align: center;
+}
+
+.service img {
+  width: 18vw;
+  height: 18vw;
+  border-radius: 50%;
+}
+
+.service p {
+  margin-top: 1.5vw;
+    font-family: 'Open Sans', sans-serif;
+    font-weight:normal;
+    font-size: 1.3vw;
+    line-height: 1.5;
+    letter-spacing: 0.1em;
+}
+
+  
 /*
 .slider-buttons02,
 .slider-buttons03 {
