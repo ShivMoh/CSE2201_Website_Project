@@ -1,14 +1,39 @@
 .navigation-bar {
-    height: 5vw;
-    background-color: red;
+    background-color: 0581F4;
+}
+
+.menu a {
+    color: white;
+}
+
+.dropbtn {
+    color: white;
+}
+
+ul {
+    display: inline;
+    list-style: none;
+}
+
+li {
+    float: left;
+    margin: 20px;
+}
+
+h2 {
+    font-size: 30px;
 }
 
 .services,
 .customer-rewards {
-    margin-top: 6vw;
+    margin-top: 8vw;
     text-align: center;
     line-height: 8px;
     color: rgb(43, 140, 172);
+}
+
+.services {
+    margin-top: 5vw;
 }
 
 .service-grid,
@@ -26,6 +51,8 @@
 .service-img,
 .rewards-img {
     height: 300px;
+    width: 300px;
+    object-fit: cover;
     border-radius: 150px;
 }
 
