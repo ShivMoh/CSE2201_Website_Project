@@ -312,19 +312,156 @@
 .service img {
   width: 18vw;
   height: 18vw;
+  object-fit: cover;
   border-radius: 50%;
 }
 
 .service p {
-  margin-top: 1.5vw;
-    font-family: 'Open Sans', sans-serif;
-    font-weight:normal;
-    font-size: 1.3vw;
-    line-height: 1.5;
-    letter-spacing: 0.1em;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: normal;
+  color: #000000;
+  font-size: 1.5vw;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  margin-top: 1vw;
+    
 }
 
-  
+#our-services button {
+  background-color: #29D53A;
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  font-size: 1.3vw;
+  letter-spacing: 0.1em;
+  border: none;
+  padding: 1.1vw 3.1vw 1.1vw 3.1vw;
+  border-radius: 1.2vw;
+  margin-top: 2.1vw;
+}
+
+#some-more-about-us {
+  position: relative;
+  text-align: center;
+}
+
+#some-more-about-us h2 {
+  margin-top: 5vw;
+  margin-bottom: 0;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight:bolder;
+  color: #0581F4;
+  font-size: 3vw;
+  line-height: 1.5;
+  position: relative;
+  letter-spacing: 0.1em;
+}
+
+#some-more-about-us h3 {
+  font-family: 'Abhaya Libre', serif;
+  font-weight: normal;
+  color: #1C79CE;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  margin-top: 0;
+  font-size: 2vw;
+  position: relative;
+  margin-bottom: 0;
+}
+
+#some-more-about-us p {
+  margin: 2vw 6vw;
+  color: #000000;
+  margin-bottom: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-weight:lighter;
+  font-size: 1.3vw;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+}
+
+#some-more-about-us button {
+  background-color: #29D53A;
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  font-size: 1.3vw;
+  letter-spacing: 0.1em;
+  border: none;
+  padding: 1.1vw 3.1vw 1.1vw 3.1vw;
+  border-radius: 1.2vw;
+  margin-top: 3vw;
+}
+
+#for-more-information {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#for-more-information h2 {
+  margin-top: 5vw;
+  margin-bottom: 0;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight:bolder;
+  color: #0581F4;
+  font-size: 3vw;
+  line-height: 1.5;
+  position: relative;
+  letter-spacing: 0.1em;
+}
+
+#for-more-information h2::after {
+  content: '';
+  position: absolute;
+  top: 5vw;
+  left: 0;
+  right: 0;
+  width: 35vw;
+  margin: 0 auto;
+  border-bottom: 0.4vw solid #1C79CE;
+}
+
+.content h3 {
+  font-family: 'Abhaya Libre', serif;
+  font-weight: normal;
+  color: #1C79CE;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  margin-top: 2.4vw;
+  font-size: 2vw;
+  position: relative;
+  margin-bottom: -2vw;
+}
+
+#for-more-information img {
+  width: 30vw;
+  height: auto;
+  margin-bottom: -1vw;
+}
+
+#for-more-information button {
+  background-color: #29D53A;
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  font-size: 1.3vw;
+  letter-spacing: 0.1em;
+  border: none;
+  padding: 1.1vw 3.1vw 1.1vw 3.1vw;
+  border-radius: 1.2vw;
+  margin-top: 2.5vw;
+}
+
+
+
+
 /*
 .slider-buttons02,
 .slider-buttons03 {
