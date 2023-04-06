@@ -29,10 +29,9 @@ main {
 
 .cart-item img {
     /* Styles all images inside elements with the class "cart-item" */
-    width: 20em;
-    height: 20em;
+    width: 20vw;
+    height: 20vw;
     background-color: red;
-    border-radius: 3em;
 }
 /* 
 .cart-item img:hover {
@@ -147,12 +146,12 @@ main {
    
 }
 
-#button-container {
+#cart #button-container {
     overflow: auto;
     width: 100%;
 }
 
-#buttons {
+#cart-button {
     width: 80%;
     display: flex; 
     flex-direction:row; 
@@ -160,7 +159,7 @@ main {
     margin-bottom: 2vw;
 }
 
-#button-container #buttons button {
+#button-container #cart-button button {
     width: 25vw;
     background-color: #29D53A;
     font-family: 'Ubuntu', 'Ariel', sans-serif;

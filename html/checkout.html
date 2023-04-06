@@ -5,17 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joe's Store</title>
+
+    <link rel="stylesheet" href="../css/checkout-review.css">
     <link rel="stylesheet" href="../css/checkout-payment.css">
     <link rel="stylesheet" href="../css/checkout-shipping.css">
     <link rel="stylesheet" href="../css/checkout.css">
     <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/cart.css">
     <link rel="stylesheet" href="../css/navigation.css">
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abhaya+Libre">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-    <!-- Abhaya Libre -->
     <style>
         .navigation-bar {
             background-color: #0581F4;
@@ -75,14 +78,15 @@
         </div>
     </nav>
     <section id="checkout-container">
+        <div id="progress-status">
+            <p class="progress-state">Shipping</p>
+            <span> > </span>
+            <p class="progress-state">Payment</p>
+            <span> > </span>
+            <p class="progress-state">Review</p>
+        </div>
         <form id="form-content">
-            <div id="progress-status">
-                <p class="progress-state">Shipping</p>
-                <span> > </span>
-                <p class="progress-state">Payment</p>
-                <span> > </span>
-                <p class="progress-state">Review</p>
-            </div>
+            
 
             <!-- <div class="payment">
                     
@@ -97,7 +101,145 @@
                     <span class="checkmark"></span>
                 </label>
             </div> -->
-
+            <div class="multi-stage-form">
+                <div id="cart-review">
+                    <p>Cart</p>
+                    <span id="divider"></span>
+                    <div class="cart-item">
+                        <img  src="../Resources/Images/product3.png" alt="product 1">
+                        <div id="item-details" style="grid-area: auto;">
+                            <!-- <img class="exit" src="../Resources/Icons/cross.png" alt="exit"> -->
+                            <h2>$5200</h2>
+                            <h4>Checkered Shirt</h4>
+                            <div id="selectors">  
+                                <select title="color" name="color" id="color">
+                                    <option value="Blue">Blue</option>
+                                    <option value="Green">Green</option>
+                                    <option value="Red">Red</option>
+                                    <option value="Yellow">Yellow</option>
+                                    <option value="Black">Black</option>
+                                    <option value="Black">White</option>
+                                </select>  
+                                <span id="vertical-divider"></span>
+                                <select title="size" name="size" id="size">
+                                    <option value="S">S</option>
+                                    <option value="M">M</option>
+                                    <option value="L">L</option>
+                                    <option value="Xl">XL</option>
+                                </select>  
+                                <span id="vertical-divider"></span>
+                                <select title="quantity" name="quantity" id="quantity">
+                                    <option value="1">Qty 1</option>
+                                    <option value="2">Qty 2</option>
+                                    <option value="3">Qty 3</option>
+                                    <option value="4">Qty 4</option>
+                                    <option value="5">Custom Input</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <span id="divider"></span>
+                        
+                    <div class="cart-item">
+                        <img  src="../Resources/Images/product3.png" alt="product 1">
+                        <div id="item-details" style="grid-area: auto;">
+                            <!-- <img class="exit" src="../Resources/Icons/cross.png" alt="exit"> -->
+                            <h2>$5200</h2>
+                            <h4>Checkered Shirt</h4>
+                            <div id="selectors">  
+                                <select title="color" name="color" id="color">
+                                    <option value="Blue">Blue</option>
+                                    <option value="Green">Green</option>
+                                    <option value="Red">Red</option>
+                                    <option value="Yellow">Yellow</option>
+                                    <option value="Black">Black</option>
+                                    <option value="Black">White</option>
+                                </select>  
+                                <span id="vertical-divider"></span>
+                                <select title="size" name="size" id="size">
+                                    <option value="S">S</option>
+                                    <option value="M">M</option>
+                                    <option value="L">L</option>
+                                    <option value="Xl">XL</option>
+                                </select>  
+                                <span id="vertical-divider"></span>
+                                <select title="quantity" name="quantity" id="quantity">
+                                    <option value="1">Qty 1</option>
+                                    <option value="2">Qty 2</option>
+                                    <option value="3">Qty 3</option>
+                                    <option value="4">Qty 4</option>
+                                    <option value="5">Custom Input</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <span id="divider"></span>
+                    <p>Edit Cart</p>
+                    <span id="divider"></span>
+                    <div id="shipping">
+                        <div id="shipping-details">
+                            <h3>Shipping details</h3>
+                            <p>Change</p>
+                        </div>
+                        <div id="delivers-to">
+                            <h3>Delivers To</h3>
+                            <p>John Doe </p>
+                            <p>123 Twinkle Toes Drive,</p>
+                            <p>West Promenade</p>
+                            <p>Juice State, Narnia</p>
+                        </div>
+                        <div id="contact-information">
+                            <h3>Contact information</h3>
+                            <p>j*********6@gmail.com</p>
+                            <p>*** *****92</p> 
+                        </div>
+                    </div>
+                    <span id="divider"></span>
+                    <div id="payment">
+                        <div id="payment-details">
+                            <h3>Payment details</h3>
+                            <p>Change</p>
+                        </div>
+                        <div id="pay-in-full-with">
+                            <h3>Pay in full with</h3>
+                            <div id="payment-method">
+                                <img src="../Resources/Logos/visa.png" alt="payment method"> 
+                                <p>**** 2011 </p>
+                               
+                            </div>
+                           
+                        </div>
+                        <div id="billing-address">
+                            <h3>Billing Address</h3>
+                            <p>John Doe </p>
+                            <p>123 Twinkle Toes Drive,</p>
+                            <p>West Promenade</p>
+                            <p>Juice State, Narnia</p>
+                        </div>
+                        </div>
+                    </div>
+                    <span id="divider" style="width: 95%;"></span>
+                    <div id="summary">
+                        <h2>Your Total</h2>
+                        <div id="summary-details">
+                            <div id="cost-details">
+                                <p>Subtotal</p>
+                                <p>Shipping</p>
+                                <p>Estimated Tax</p>
+                                <h3>Total</h3>
+                            </div>
+    
+                            <div>
+                                <p>$xxxx</p>
+                                <p>$xxxx</p>
+                                <p>$xxxx</p>
+                                <p>$xxxx</p>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
   
 
             <div class="multi-stage-form">
