@@ -23,7 +23,7 @@ span {
     margin-right: 1vw;
     margin-left: 1vw;
     width: 100%;
-    height: 6vw;
+    height: 4vw;
     border: solid black 0.1vw;
     border-radius: 2vw 0 0 2vw;
     text-align: center;
@@ -33,7 +33,7 @@ span {
 #box-container-2 {
     margin-left: 1vw;
     width: 100%;
-    height: 6vw;
+    height: 4vw;
     border: solid black 0.1vw;
     border-radius: 0 2vw 2vw 0;
     text-align: center;

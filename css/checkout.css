@@ -61,3 +61,12 @@ label span {
     font-size: 0.9vw;
 
 }
+
+.progress-state {
+    color: grey;
+}
+
+#progress-status span img {
+    width: 2vw;
+    height: auto;
+}

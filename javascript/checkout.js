@@ -1,33 +1,79 @@
 var stage = document.getElementsByClassName("multi-stage-form")
+var state = document.getElementsByClassName("progress-state")
 var sub_stage = "";
 var current_tab = 0;
 var step = 0;
 var current_status = 0;
 
+function editReview(n) {
+    if(n == 0) {
+        stage[step].style.display = "none"
+        current_status=n;
+        step=n;
+        stepTransition(0);
+    } else {
+        stage[step].style.display = "none"
+        current_status=n-1;
+        step=n-1;
+        stepTransition(1);
+    }
+}
 
+myFunction = function(e) {
+    // prevents default action to happen
+    e.preventDefault();
+    
+    // do what ever you want to do here
+    // i.e. perform a AJAX call
+}
 
 stepTransition(0);
 function stepTransition(n)
 {   
-
-   
+    // if(n>0) {
+    //     console.log("Hello?")
+    //     if(!validateForm()) return;
+    // }
+ 
     current_status+=n;
-    console.log("Current Status", step)
-
+    
     if(current_status == 0) {
+        if(sub_stage!="") removeValidate();
         sub_stage = document.getElementsByClassName("shipping");
+        // state[0].style.color = "black";
+        manageState(0);
+        addValidate();
         switchTabs(0);
     } else if (current_status == 1) {
+        if(sub_stage.className == "shipping") removeValidate();
         sub_stage = document.getElementsByClassName("payment");
+        // state[1].style.color = "black";
+        manageState(1);
+        addValidate();
         switchTabs(0);
     } else if (current_status == 2) {
         sub_stage = document.getElementsByClassName("payment-confirm");
     } else {
         sub_stage = document.getElementsByClassName("review");
+        // state[2].style.color = "black";
+        manageState(2);
     }
 
+   
     progress(n)  
 }
+
+function manageState(n)
+{
+    for(var x = 0; x < state.length; x++)
+    {
+        if(x != n) {
+            state[x].style.color = "grey"
+        } else {
+            state[x].style.color = "black"
+        }
+    }
+} 
 
 function reset() 
 {
@@ -37,6 +83,25 @@ function reset()
     switchTabs(0);
 }
 
+function addValidate() {
+    const inputs = sub_stage[current_tab].getElementsByTagName("input");
+    const labels = sub_stage[current_tab].getElementsByTagName("label")
+    for (let j = 0; j < inputs.length; j++) {
+      if (labels[j].innerText.includes("*")) {
+        inputs[j].required = true;
+      }
+    }
+}
+
+function removeValidate() {
+    const inputs = sub_stage[current_tab].getElementsByTagName("input");
+    const labels = sub_stage[current_tab].getElementsByTagName("label")
+    for (let j = 0; j < inputs.length; j++) {
+      if (labels[j].innerText.includes("*")) {
+        inputs[j].required = false;
+      }
+    }
+}
 function switchTabs(n) {
     sub_stage[current_tab].style.display = "none";
     sub_stage[n].style.display = "flex";
@@ -90,10 +155,9 @@ function switchTabs(n) {
 // W3Schools. (n.d.). How To Create a Form With Multiple Steps. Retrieved March 29, 2023, from https://www.w3schools.com/howto/howto_js_form_steps.asp
 function progress(n) {
     if(n==0) {
+       
         stage[step].style.display = "flex";
     } else if(step < (stage.length - 1) || n < 0) {
-
-
         if((step == 1 && current_tab < 2 && n > 0) || (step == 3)) {
             n+=n;
         }
@@ -106,6 +170,7 @@ function progress(n) {
         stage[step].style.display = "none";
         step+=n;
         stage[step].style.display = "flex";
+     
     } else {
         return;
     }
@@ -139,3 +204,39 @@ function progress(n) {
 
 }
 // step(1);
+
+// validates form by checking that required fields are inputted before proceeding
+// function validateForm(n) {
+//     var x, y, i, valid = true;
+//     x = sub_stage[current_tab];
+//     y = sub_stage[current_tab].getElementsByTagName("label");
+//     z = sub_stage[current_tab].getElementsByTagName("input")
+
+//     if(n < 0) return valid
+   
+//     // A loop that checks every input field in the current tab:
+//     for (i = 0; i < y.length; i++) {
+//       // If a field is empty...
+//       if((y[i].innerText).includes("*")) {
+     
+//         if (z[i].value == "") {
+//             // add an "invalid" class to the field:
+//             z[i].className += "invalid";
+
+//             // and set the current valid status to false:
+//             valid = false;
+//           }
+//         }
+//     } 
+
+//     // checks for required fields and adds invalid if not filled
+//     if(valid) {
+//         for (i = 0; i < y.length; i++) {
+//             if((y[i].innerText).includes("*")) {
+//                 z[i].classList.remove("invalid")
+//             }
+//         } 
+//     }
+
+//     return valid; // return the valid status
+//   }
