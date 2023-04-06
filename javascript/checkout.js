@@ -30,36 +30,25 @@ myFunction = function(e) {
 stepTransition(0);
 function stepTransition(n)
 {   
-    // if(n>0) {
-    //     console.log("Hello?")
-    //     if(!validateForm()) return;
-    // }
- 
     current_status+=n;
     
     if(current_status == 0) {
         if(sub_stage!="") removeValidate();
         sub_stage = document.getElementsByClassName("shipping");
-        // state[0].style.color = "black";
         manageState(0);
-        addValidate();
         switchTabs(0);
     } else if (current_status == 1) {
         if(sub_stage.className == "shipping") removeValidate();
         sub_stage = document.getElementsByClassName("payment");
-        // state[1].style.color = "black";
         manageState(1);
-        addValidate();
         switchTabs(0);
     } else if (current_status == 2) {
         sub_stage = document.getElementsByClassName("payment-confirm");
     } else {
         sub_stage = document.getElementsByClassName("review");
-        // state[2].style.color = "black";
         manageState(2);
     }
 
-   
     progress(n)  
 }
 
@@ -103,6 +92,9 @@ function removeValidate() {
     }
 }
 function switchTabs(n) {
+
+    removeValidate();
+
     sub_stage[current_tab].style.display = "none";
     sub_stage[n].style.display = "flex";
     current_tab = n;
@@ -147,7 +139,7 @@ function switchTabs(n) {
         }
     }
 
-    
+    addValidate();
 }
 
 // the unmodified version of this code was sourced from w3schools. 
