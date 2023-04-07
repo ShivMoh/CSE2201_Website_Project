@@ -93,6 +93,14 @@
   margin-top: 20px;
 }
 
+.cart-delivery p {
+  font-weight: bold;
+  margin-right: 10px;
+  color: black;
+  font-family: Ubuntu, Arial;
+  font-size: 110%;
+}
+
 .delivery-type {
   font-weight: bold;
   margin-right: 10px;
@@ -108,6 +116,7 @@
   border-radius: 3px;
   font-size: 14px;
   margin-bottom: 10px;
+  font-family: Ubuntu, Arial;
 }
 
 .checkout-btn {
@@ -121,6 +130,7 @@
   margin-left: 100px;
   font-weight: bold;
   font-size: 115%;
+  margin-bottom: 20px;
 }
 
 .checkout-btn:hover {
@@ -142,6 +152,7 @@
   left: 50%;
   transform: translateX(-50%);
   padding: 5px;
+  margin-left: -12px;
   border-radius: 5px;
   background-color: #333;
   color: #fff;
@@ -152,3 +163,10 @@
 .info-icon:hover .tooltip {
   visibility: visible;
 }
+
+.payment-options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
