@@ -1,4 +1,3 @@
-
 /* Style for the modal */
 .modal {
     display: none; /* Hidden by default */
@@ -10,33 +9,65 @@
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgba(0,0,0,0.4); /* Black with opacity */
-}
-
-/* Modal Content/Box */
-.modal-content {
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
     background-color: #fefefe;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
     max-width: 500px;
-}
-
-/* Close button */
-.close {
+  }
+  
+  /* Close button */
+  .close {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
+  }
+  
+  .close:hover,
+  .close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
-}
+  }
+  
+  /* Signup link */
+  .signup {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .signup a {
+    color: blue;
+  }
 
+  .signup-confirmation {
+    display: none;
+    position: relative;
+  }
 
+  #login-btn {
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: green;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  #login-btn:hover {
+    background-color: darkgreen;
+  }
 
 

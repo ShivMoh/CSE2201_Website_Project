@@ -25,11 +25,20 @@ li {
     text-align: center;
     line-height: 8px;
     color: grey;
+    height: 70px;
 }
 
 h2 {
     font-size: 30px;
-    color: #45a1f6; 
+    color: #45a1f6;
+    font-family: Ubuntu, Arial; 
+}
+
+.page-location-text {
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: Open Sans, Arial; 
 }
 
 span {
@@ -49,6 +58,7 @@ span {
     color: black;
     font-size: 24px;
     font-weight: bold;
+    font-family: Ubuntu, Arial;
 }
 
 .inner-request-form {
@@ -61,6 +71,7 @@ label {
     color: black;
     font-size: 20px;
     display: block;
+    font-family: Open Sans;
 }
 
 select {
@@ -79,6 +90,5 @@ input#request-details {
 }
 
 button {
-    background-color: rgb(27, 167, 27);
-    margin: 30px 0 30px 0
+    margin: 20px;
 }
