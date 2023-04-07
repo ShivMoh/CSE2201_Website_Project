@@ -78,6 +78,7 @@ p {
 #timeline img {
     width: 25vw;
     height: 25vw;
+    z-index: 4;
 }
 
 #timeline p {
@@ -89,7 +90,7 @@ p {
     width: 80%;
     display: flex;
     flex-direction: column;
-    margin-top: -5.6vw;
+    margin-top: -8.5vw;
     z-index: 1;
 }
 
