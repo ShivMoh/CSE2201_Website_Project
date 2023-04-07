@@ -1,0 +1,94 @@
+.cart-link {
+  display: inline-block;
+  position: relative;
+  margin: 0 20px;
+}
+
+.cart-icon {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ff4500;
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.cart-details {
+  visibility: hidden;
+  position: absolute;
+  top: 60px;
+  right: -40px;
+  min-width: 280px;
+  max-width: 360px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+}
+
+.cart-link:hover .cart-details {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0s;
+}
+
+.cart-summary {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.cart-summary span {
+  display: block;
+}
+
+.subtotal-label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.delivery-label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.cart-delivery {
+  margin-top: 20px;
+}
+
+.delivery-type {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.delivery-options {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.checkout-btn {
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.checkout-btn:hover {
+  background-color: darkgreen;
+}

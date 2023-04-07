@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../CSS/home.css">
     <link rel ="stylesheet" href="../css/scroll-to-top.css">
     <link rel ="stylesheet" href="../css/modal-styles.css">
+    <link rel = "stylesheet" href="../css/cart-hover-and-dropdown.css">
     <style>
         .navigation-bar::before {
             content: "";
@@ -81,7 +82,29 @@
                             </div>
                         </div>
                     </div> 
-                    <a href="../Html/cart.html"><img src="..\Resources\Navigation-Bar\cart-icon.png" alt="Cart"></a>
+                    <a href="../Html/cart.html" class="cart-link" title="Subtotal: $50.00, Delivery Option: Standard (free)">
+                      <div class="cart-icon">
+                        <img src="..\Resources\Navigation-Bar\cart-icon.png" alt="Cart">
+                        <span class="cart-count">2</span>
+                      </div>
+                      <div class="cart-details">
+                        <div class="cart-summary">
+                          <span class="subtotal-label">Subtotal:</span>
+                          <span class="subtotal-value">$50.00</span>
+                          <br>
+                          <span class="delivery-label">Delivery Option:</span>
+                          <span class="delivery-value">Standard (free)</span>
+                        </div>
+                        <div class="cart-delivery">
+                          <span class="delivery-type">Delivery Type:</span>
+                          <select class="delivery-options">
+                            <option value="standard">Standard (FREE) </option>
+                            <option value="express">Express ($25000.00)</option>
+                          </select>
+                          <button type="button" onclick="window.location.href='../Html/cart.html'" class="checkout-btn">Checkout</button>
+                        </div>
+                      </div>
+                    </a>
                     <a href="#"><img src="..\Resources\Navigation-Bar\profile-icon.png" alt="Profile" id = "modal-trigger"></a>
                 </div>
             </div>
@@ -257,5 +280,22 @@
         close.addEventListener("click", function() {
         modal.style.display = "none";
         });
-    </script>
+
+        const cartLink = document.querySelector('.cart-link');
+        const deliveryDropdown = document.querySelector('.cart-delivery');
+
+      deliveryDropdown.addEventListener('mouseenter', () => {
+        cartLink.dataset.hovering = 'true';
+      });
+
+      deliveryDropdown.addEventListener('mouseleave', () => {
+        cartLink.dataset.hovering = 'false';
+      });
+
+      cartLink.addEventListener('click', (event) => {
+        if (cartLink.dataset.hovering === 'true') {
+          event.preventDefault();
+        }
+      });
+</script>
 </html>
