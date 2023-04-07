@@ -109,19 +109,41 @@
             </div>
             <!-- Modal -->
             <div id="login-modal" class="modal">
-                <div class="modal-content">
+              <div class="modal-content">
                 <span class="close">&times;</span>
                 <h2>Login</h2>
                 <form>
-                    <label for="username">Username:</label>
-                    <input type="text" id="username" name="username" required>
-
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" required>
-
-                    <button type="submit">Login</button>
+                  <label for="username">Username:</label>
+                  <input type="text" id="username" name="username" required>
+            
+                  <label for="password">Password:</label>
+                  <input type="password" id="password" name="password" required>
+            
+                  <button type="submit">Login</button>
                 </form>
+                <div id = "signup-link" class="signup">
+                  <p>Don't have an account? <a href="#" id="signup-btn">Sign Up</a></p>
                 </div>
+              </div>
+            </div>
+            
+            <div id="signup-modal" class="modal">
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Sign Up</h2>
+                <form>
+                  <label for="new-username">Username:</label>
+                  <input type="text" id="new-username" name="new-username" required>
+            
+                  <label for="new-password">Password:</label>
+                  <input type="password" id="new-password" name="new-password" required>
+            
+                  <button type="submit">Sign Up</button>
+                </form>
+                <div class="signup-confirmation">
+                  <p>Your account has been created successfully. Please click OKAY <a href="#" id="login-btn">OKAY</a> to return to the login page.</p>
+                </div>
+              </div>
             </div>
         </nav>			
     </section>
@@ -260,37 +282,6 @@
 <script type="text/javascript" src="../Javascript/slideshow.js"></script>
 <script type="text/javascript" src="../Javascript/scroll-to-top-button.js"></script>
 <script type="text/javascript" src="../Javascript/sliders.js"></script>
-<script>
-        // Get the modal and the trigger element
-        var modal = document.getElementById("login-modal");
-        var trigger = document.getElementById("modal-trigger");
-
-        // When the user clicks the trigger, show the modal
-        trigger.addEventListener("click", function() {
-        modal.style.display = "block";
-        });
-
-        // When the user clicks the close button, hide the modal
-        var close = document.getElementsByClassName("close")[0];
-        close.addEventListener("click", function() {
-        modal.style.display = "none";
-        });
-
-        const cartLink = document.querySelector('.cart-link');
-        const deliveryDropdown = document.querySelector('.cart-delivery');
-
-      deliveryDropdown.addEventListener('mouseenter', () => {
-        cartLink.dataset.hovering = 'true';
-      });
-
-      deliveryDropdown.addEventListener('mouseleave', () => {
-        cartLink.dataset.hovering = 'false';
-      });
-
-      cartLink.addEventListener('click', (event) => {
-        if (cartLink.dataset.hovering === 'true') {
-          event.preventDefault();
-        }
-      });
-</script>
+<script type="text/javascript" src="../Javascript/cart-hover-over.js"></script>
+<script type="text/javascript" src="../Javascript/login-modal.js"></script>
 </html>
