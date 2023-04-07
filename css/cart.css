@@ -31,7 +31,7 @@ main {
     /* Styles all images inside elements with the class "cart-item" */
     width: 20vw;
     height: 20vw;
-    background-color: red;
+    background-color: red; 
 }
 /* 
 .cart-item img:hover {
