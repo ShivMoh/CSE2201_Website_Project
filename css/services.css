@@ -29,12 +29,13 @@ h2 {
 .customer-rewards {
     margin-top: 9vw;
     text-align: center;
-    line-height: 8px;
+    line-height: 10px;
     color: rgb(43, 140, 172);
+    font-family: Ubuntu, Arial;
 }
 
 .services {
-    margin-top: 5vw;
+    margin-top: 15vh;
 }
 
 .service-grid,
@@ -42,11 +43,14 @@ h2 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 10px;
+    margin-top: 65px;
+    font-family: Open Sans, Arial;
 }
 
 .service-item,
 .rewards-item {
     color: black;
+    line-height: 20px;
 }
 
 .service-img,
@@ -59,7 +63,7 @@ h2 {
 
 .request-services-button,
 .sign-up-button {
-    height: 40px;
+    height: 50px;
     width: 150px;
     background-color: rgb(40, 149, 40);
     color: white;
@@ -68,4 +72,5 @@ h2 {
     margin: 0 auto;
     display: block;
     cursor: pointer;
+    font-family: Ubuntu;
 }

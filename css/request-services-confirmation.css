@@ -4,6 +4,7 @@
     border-width: 2px;
     border-radius: 20px;
     height: 22.5vh;
+    display: block;
 }
 
 .thank-you-text {
@@ -11,16 +12,26 @@
     font-size: 26px;
     font-weight: bold;
     margin: 30px;
+    font-family: Ubuntu, Arial;
 }
 
 p {
     color: black;
     font-size: 20px;
     line-height: 24px;
+    font-family: Open Sans, Arial;
 }
 
 .back-to-home {
     text-decoration: none;
     color: rgb(62, 172, 172);
     font-size: 18px;
+    font-family: Open Sans, Arial;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
