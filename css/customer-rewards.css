@@ -1,0 +1,17 @@
+.condition2,
+.condition1 {
+    display: flex;
+    margin-top: 8px;
+}
+
+.condition-text {
+    font-size: 16px;
+    font-family: Open Sans, Arial;
+    color: black;
+    display: inline-block;
+}
+
+.condition-checkbox {
+    width: 20px;
+    height: 20px;
+}

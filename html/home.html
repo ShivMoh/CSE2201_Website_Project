@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abhaya+Libre&display=swap">
     <link rel="stylesheet" type="text/css" href="../CSS/navigation.css">
     <link rel="stylesheet" type="text/css" href="../CSS/home.css">
-    <link rel ="stylesheet" href="../css/scroll-to-top.css">
     <link rel ="stylesheet" href="../css/modal-styles.css">
     <link rel = "stylesheet" href="../css/cart-hover-and-dropdown.css">
     <style>
@@ -35,16 +34,16 @@
 </head>
     <section id="header">
         <div class="header-image">
-			<img src="../Resources/Images/slide01.jpg" alt="Slide 1" class="active">
-			<img src="../Resources/Images/slide02.jpg" alt="Slide 2">
-			<img src="../Resources/Images/slide03.jpg" alt="Slide 3">
-			<img src="../Resources/Images/slide04.jpg" alt="Slide 4">
-			<img src="../Resources/Images/slide05.jpg" alt="Slide 5">
-      	</div>
-		<div class="slideshow-buttons">
-			<button class="prev"><img src="../Resources/Icons/white-arrow.png" alt="Previous"></button>
-			<button class="next"><img src="../Resources/Icons/white-arrow.png" alt="Next"></button>
-		</div>
+        <img src="../Resources/Images/slide01.jpg" alt="Slide 1" class="active">
+        <img src="../Resources/Images/slide02.jpg" alt="Slide 2">
+        <img src="../Resources/Images/slide03.jpg" alt="Slide 3">
+        <img src="../Resources/Images/slide04.jpg" alt="Slide 4">
+        <img src="../Resources/Images/slide05.jpg" alt="Slide 5">
+    </div>
+    <div class="slideshow-buttons">
+        <button class="prev"><img src="../Resources/Icons/white-arrow.png" alt="Previous"></button>
+        <button class="next"><img src="../Resources/Icons/white-arrow.png" alt="Next"></button>
+    </div>
         <nav>
             <div class="navigation-bar">
                 <div class="logo">
@@ -82,18 +81,21 @@
                             </div>
                         </div>
                     </div> 
-                    <a href="../Html/cart.html" class="cart-link" title="Subtotal: $50.00, Delivery Option: Standard (free)">
+                    <a href="../Html/cart.html" class="cart-link">
                       <div class="cart-icon">
                         <img src="..\Resources\Navigation-Bar\cart-icon.png" alt="Cart">
                         <span class="cart-count">2</span>
                       </div>
                       <div class="cart-details">
                         <div class="cart-summary">
-                          <span class="subtotal-label">Subtotal:</span>
-                          <span class="subtotal-value">$50.00</span>
+                          <h2>TOTAL</h2>
+                          <span class="subtotal-label">Subtotal<p>$10,500.00</p></span>
                           <br>
-                          <span class="delivery-label">Delivery Option:</span>
-                          <span class="delivery-value">Standard (free)</span>
+                          <span class="delivery-label">Delivery <span class = "info-icon">
+                            <i class = "fas fa-info-circle"></i>
+                            <span class = "tooltip">Express delivery gurantees your order arrives in 1-3 days.</span>
+                          </span>
+                          </span>
                         </div>
                         <div class="cart-delivery">
                           <span class="delivery-type">Delivery Type:</span>
@@ -102,6 +104,12 @@
                             <option value="express">Express ($25000.00)</option>
                           </select>
                           <button type="button" onclick="window.location.href='../Html/cart.html'" class="checkout-btn">Checkout</button>
+                          <p>We Accept:</p>
+                          <div class = "payment-options">
+                            <img class = "visa" src = "../Resources/Logos/visa.png" alt="Visa Logo">
+                            <img class = "wipay" src = "../Resources/Logos/wipay.png" alt ="Wipay Logo">
+                            <img class = "paypal" src = "../Resources/Logos/paypal.png" alt ="Paypal Logo"> 
+                          </div>
                         </div>
                       </div>
                     </a>
@@ -110,124 +118,143 @@
             </div>
             <!-- Modal -->
             <div id="login-modal" class="modal">
-                <div class="modal-content">
+              <div class="modal-content">
                 <span class="close">&times;</span>
                 <h2>Login</h2>
                 <form>
-                    <label for="username">Username:</label>
-                    <input type="text" id="username" name="username" required>
-
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" required>
-
-                    <button type="submit">Login</button>
+                  <label for="username">Username:</label>
+                  <input type="text" id="username" name="username" required>
+            
+                  <label for="password">Password:</label>
+                  <input type="password" id="password" name="password" required>
+            
+                  <button type="submit">Login</button>
                 </form>
+                <div id = "signup-link" class="signup">
+                  <p>Don't have an account? <a href="#" id="signup-btn">Sign Up</a></p>
                 </div>
+              </div>
             </div>
-            <div>
-              <button id="scroll-to-top" class="circle">
-                <img src="../Resources/Icons/scroll-up.jpg" alt="scroll-to-top">
-              </button>
+            
+            <div id="signup-modal" class="modal">
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Sign Up</h2>
+                <form>
+                  <label for="new-username">Username:</label>
+                  <input type="text" id="new-username" name="new-username" required>
+            
+                  <label for="new-password">Password:</label>
+                  <input type="password" id="new-password" name="new-password" required>
+            
+                  <button type="submit">Sign Up</button>
+                </form>
+                <div class="signup-confirmation">
+                  <p>Your account has been created successfully. Please click OKAY <a href="#" id="login-btn">OKAY</a> to return to the login page.</p>
+                </div>
+              </div>
             </div>
         </nav>			
     </section>
-
     <section id="who-we-are">
         <h2>WHO WE ARE</h2>
         <p>At Cakes R Us, we specialize in creating beautiful and delicious cakes for all of life's special occasions! Whether you're looking for an elegant wedding cake, a fun and whimsical birthday cake, or anything in between, our expert bakers and decorators are here to bring your vision to life. We use only the freshest and highest quality ingredients to ensure that every cake we create is not only beautiful but also absolutely delicious. From classic flavors like vanilla and chocolate to unique combinations like lavender honey and raspberry lemonade, we offer a wide variety of flavors and designs to suit every taste and style. Contact us today to place an order for your next celebration!</p>
         <a href="#"><button class="green-button">Read More</button></a>
     </section>
-
     <section id="browse-our-collection">
         <h2>BROWSE OUR COLLECTION</h2>
         <h3>See What's In Store For You</h3>
         <div class="men-and-women">
-          	<div class="container01">
-				<div class="item-container01">
-					<img src="../Resources/Images/men.jpg" alt="Men">
-					<a class="overlay"></a>
-					<a class="category">FOR MEN</a>
-					<a href="../Html/product.html"><button class="shop-now">Shop Now</button></a>
-				</div>
-				<div class="item-container01">
-					<img src="../Resources/Images/women.jpg" alt="Women">
-					<a class="overlay"></a>
-					<a class="category">FOR WOMEN</a>
-					<a href="../Html/product.html"><button class="shop-now">Shop Now</button></a>
-				</div>
+          <div class="container01">
+              <div class="item-container01">
+                <img src="../Resources/Images/men.jpg" alt="Men">
+                <a class="overlay"></a>
+                <a class="category">FOR MEN</a>
+                <a href="../Html/product.html"><button class="shop-now">Shop Now</button></a>
+              </div>
+              <div class="item-container01">
+                <img src="../Resources/Images/women.jpg" alt="Women">
+                <a class="overlay"></a>
+                <a class="category">FOR WOMEN</a>
+                <a href="../Html/product.html"><button class="shop-now">Shop Now</button></a>
+              </div>
             </div>
         </div>
     </section>
-
-    <section id="new-arrivals">
-		<div class="slides01-container">	
-			<div class="slider-buttons02">
-				<button class="prev02"><img src="../Resources/Icons/white-arrow.png" alt="Previous"></button>
-				<button class="next02"><img src="../Resources/Icons/white-arrow.png" alt="Next"></button>
-			</div>
-			<div class="slides01">
-				<div class="item-container02">
-					<img src="../Resources/Images/new01.jpg" alt="New-1">
-					<a href="../Html/product.html"><button class="shop-now">Shop Now</button></a>
-				</div>
-				<div class="item-container02">
-					<img src="../Resources/Images/new02.jpg" alt="New-2">
-					<a href="../Html/product.html"><button class="shop-now">Shop Now</button></a>
-				</div>
-				<div class="item-container02">
-					<img src="../Resources/Images/new03.jpg" alt="New-3">
-					<a href="../Html/product.html"><button class="shop-now">Shop Now</button></a>
-				</div>
-				<div class="item-container02">
-					<img src="../Resources/Images/new04.jpg" alt="New-4">
-					<a href="../Html/product.html"><button class="shop-now">Shop Now</button></a>
-				</div>
-				<div class="item-container02">
-					<img src="../Resources/Images/new05.jpg" alt="New-5">
-					<a href="../Html/product.html"><button class="shop-now">Shop Now</button></a>
-				</div>
-        	</div>
+     <section id="new-arrivals">
+            <div class="slides01-container">	
+              <div class="slider-buttons02">
+                <button class="prev02"><img src="../Resources/Icons/white-arrow.png" alt="Previous"></button>
+                <button class="next02"><img src="../Resources/Icons/white-arrow.png" alt="Next"></button>
+              </div>
+              <div class="slides01">
+                <div class="item-container02">
+        	        <img src="../Resources/Images/new01.jpg" alt="New-1">
+                	<a href="../Html/product.html"><button class="shop-now">Shop Now</button></a>
+                </div>
+                <div class="item-container02">
+                  <img src="../Resources/Images/new02.jpg" alt="New-2">
+                  <a href="../Html/product.html"><button class="shop-now">Shop Now</button></a>
+                </div>
+                <div class="item-container02">
+                  <img src="../Resources/Images/new03.jpg" alt="New-3">
+                  <a href="../Html/product.html"><button class="shop-now">Shop Now</button></a>
+                </div>
+                <div class="item-container02">
+                  <img src="../Resources/Images/new04.jpg" alt="New-4">
+                  <a href="../Html/product.html"><button class="shop-now">Shop Now</button></a>
+                </div>
+                <div class="item-container02">
+                  <img src="../Resources/Images/new05.jpg" alt="New-5">
+                  <a href="../Html/product.html"><button class="shop-now">Shop Now</button></a>
+              </div>
         </div>
+        </div>
+        
         <div class="double-container01">
             <h4>NEW ARRIVALS</h4>
-		</div>
-    </section>
+</div>
+              
 
-    <section id="sales">
-		<div class="slides02-container">
-			<div class="slider-buttons03">
-				<button class="prev03"><img src="../Resources/Icons/white-arrow.png" alt="Previous"></button>
-				<button class="next03"><img src="../Resources/Icons/white-arrow.png" alt="Next"></button>
-			</div>
+          </section>
+          <section id="sales">
+            <div class="slides02-container">
+              <div class="slider-buttons03">
+                <button class="prev03"><img src="../Resources/Icons/white-arrow.png" alt="Previous"></button>
+                <button class="next03"><img src="../Resources/Icons/white-arrow.png" alt="Next"></button>
+              </div>
             <div class="slides02">	
                 <div class="item-container03">
         	        <img src="../Resources/Images/sale01.jpg" alt="Sale-1">
                 	<a href="../Html/product.html"><button class="shop-now">Shop Now</button></a>
                 </div>
                 <div class="item-container03">
-					<img src="../Resources/Images/sale02.jpg" alt="Sale-2">
-					<a href="../Html/product.html"><button class="shop-now">Shop Now</button></a>
+                  <img src="../Resources/Images/sale02.jpg" alt="Sale-2">
+                  <a href="../Html/product.html"><button class="shop-now">Shop Now</button></a>
                 </div>
                 <div class="item-container03">
-					<img src="../Resources/Images/sale03.jpg" alt="Sale-3">
-					<a href="../Html/product.html"><button class="shop-now">Shop Now</button></a>
+                  <img src="../Resources/Images/sale03.jpg" alt="Sale-3">
+                  <a href="../Html/product.html"><button class="shop-now">Shop Now</button></a>
                 </div>
                 <div class="item-container03">
-					<img src="../Resources/Images/sale04.jpg" alt="Sale-4">
-					<a href="../Html/product.html"><button class="shop-now">Shop Now</button></a>
+                  <img src="../Resources/Images/sale04.jpg" alt="Sale-4">
+                  <a href="../Html/product.html"><button class="shop-now">Shop Now</button></a>
                 </div>
                 <div class="item-container03">
-					<img src="../Resources/Images/sale05.jpg" alt="Sale-5">
-					<a href="../Html/product.html"><button class="shop-now">Shop Now</button></a>
-              	</div>
-        	</div>
-        </div> 
+                  <img src="../Resources/Images/sale05.jpg" alt="Sale-5">
+                  <a href="../Html/product.html"><button class="shop-now">Shop Now</button></a>
+              </div>
+        </div>
+        
+        </div>
+         
+      </div>
         <div class="double-container02">
             <h4>ONGOING SALES</h4>
-		</div>
-    </section>
-
-    <section id="our-services">
+</div>
+              
+          </section>
+          <section id="our-services">
             <h2>OUR SERVICES</h2>
             <h3>We Aim To Serve Our Customer's Every Need</h3>
             <div class="services">
@@ -264,38 +291,6 @@
 <script type="text/javascript" src="../Javascript/slideshow.js"></script>
 <script type="text/javascript" src="../Javascript/scroll-to-top-button.js"></script>
 <script type="text/javascript" src="../Javascript/sliders.js"></script>
-<script type="text/javascript" src="../Javascript/scroll-to-top-button.js"></script>
-<script>
-        // Get the modal and the trigger element
-        var modal = document.getElementById("login-modal");
-        var trigger = document.getElementById("modal-trigger");
-
-        // When the user clicks the trigger, show the modal
-        trigger.addEventListener("click", function() {
-        modal.style.display = "block";
-        });
-
-        // When the user clicks the close button, hide the modal
-        var close = document.getElementsByClassName("close")[0];
-        close.addEventListener("click", function() {
-        modal.style.display = "none";
-        });
-
-        const cartLink = document.querySelector('.cart-link');
-        const deliveryDropdown = document.querySelector('.cart-delivery');
-
-      deliveryDropdown.addEventListener('mouseenter', () => {
-        cartLink.dataset.hovering = 'true';
-      });
-
-      deliveryDropdown.addEventListener('mouseleave', () => {
-        cartLink.dataset.hovering = 'false';
-      });
-
-      cartLink.addEventListener('click', (event) => {
-        if (cartLink.dataset.hovering === 'true') {
-          event.preventDefault();
-        }
-      });
-</script>
+<script type="text/javascript" src="../Javascript/cart-hover-over.js"></script>
+<script type="text/javascript" src="../Javascript/login-modal.js"></script>
 </html>

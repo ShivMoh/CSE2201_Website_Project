@@ -1,0 +1,34 @@
+        .navigation-bar {
+            background-color: #0581F4;
+        }
+
+        .menu a {
+            color: white;
+        } 
+
+        .dropbtn {
+            color: white;
+        }
+
+        .dropdown-content a{
+            color: #000000;
+        }
+
+        #hero {
+            background: none;
+            height: 30vw;
+            margin-bottom: -10vw;
+        }
+        #hero #page-title {
+            font-family: 'Ubuntu', 'Ariel', sans-serif;
+            font-size: 4vw;
+            letter-spacing: 0.2vw;
+            color: #0581F4;
+        }
+
+        #hero #page-location {
+            font-family: 'Outfit', 'Ariel', sans-serif;
+            top: -1vw;
+            font-size: 1.3vw;
+            color: #65707A;
+        }
