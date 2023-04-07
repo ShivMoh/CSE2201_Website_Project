@@ -97,10 +97,10 @@
                         <div class="cart-delivery">
                           <span class="delivery-type">Delivery Type:</span>
                           <select class="delivery-options">
-                            <option value="standard">Standard (free)</option>
-                            <option value="express">$25000.00 - Express</option>
+                            <option value="standard">Standard (FREE) </option>
+                            <option value="express">Express ($25000.00)</option>
                           </select>
-                          <button class="checkout-btn">Checkout</button>
+                          <button type="button" onclick="window.location.href='../Html/cart.html'" class="checkout-btn">Checkout</button>
                         </div>
                       </div>
                     </a>
@@ -275,5 +275,22 @@
         close.addEventListener("click", function() {
         modal.style.display = "none";
         });
-    </script>
+
+        const cartLink = document.querySelector('.cart-link');
+        const deliveryDropdown = document.querySelector('.cart-delivery');
+
+      deliveryDropdown.addEventListener('mouseenter', () => {
+        cartLink.dataset.hovering = 'true';
+      });
+
+      deliveryDropdown.addEventListener('mouseleave', () => {
+        cartLink.dataset.hovering = 'false';
+      });
+
+      cartLink.addEventListener('click', (event) => {
+        if (cartLink.dataset.hovering === 'true') {
+          event.preventDefault();
+        }
+      });
+</script>
 </html>
