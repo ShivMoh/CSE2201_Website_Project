@@ -63,8 +63,8 @@ nav ul li a {
 }
 
 .search button {
-    padding: 0.5rem;
-    background-color: #000;
+    padding: 0.25rem;
+    background-color: rgb(255, 255, 255);
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -117,6 +117,18 @@ main {
     font-family: 'Ubuntu', sans-serif;
 }
 
+.star-rating {
+    font-size: 24px;
+    color: #000000;
+}
+
+.star {
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+
 /* Pagination Styles */
 .pagination {
     display: flex;
@@ -145,4 +157,40 @@ main {
 .pagination ul li a:hover {
     background-color: #000;
     color: #fff;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.prev-page,
+.next-page {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.2s ease-out;
+}
+
+.prev-page:hover,
+.next-page:hover {
+    background-color: #f5f5f5;
+}
+
+.prev-page {
+    margin-right: 10px;
+}
+
+.next-page {
+    margin-left: 10px;
+}
+
+.next-page img {
+    height: 20px;
+    width: 20px;
+    margin-left: 5px;
 }

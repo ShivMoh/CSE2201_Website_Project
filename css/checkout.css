@@ -16,17 +16,10 @@
 
 #prev-btn:hover {
     background-color: #d16464;
-    transform: scale(1.02);
-}
-
-#next-btn:hover {
-    background-color: #5bd667;
-    transform: scale(1.02);
 }
 
 #back-to-cart:hover {
     background-color: #d16464;
-    transform: scale(1.02);
 }
 
 

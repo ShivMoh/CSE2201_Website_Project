@@ -168,7 +168,7 @@ main {
     letter-spacing: 0.2vw;
 }
 
-#button-container #buttons button:hover {
+#button-container #cart-button button:hover {
     background-color: #5bd667;
     transform: scale(1.02);
 }
