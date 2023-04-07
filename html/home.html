@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="../CSS/navigation.css">
     <link rel="stylesheet" type="text/css" href="../CSS/home.css">
     <link rel ="stylesheet" href="../css/modal-styles.css">
+    <link rel = "stylesheet" href="../css/cart-hover-and-dropdown.css">
     <style>
         .navigation-bar::before {
             content: "";
@@ -80,7 +81,29 @@
                             </div>
                         </div>
                     </div> 
-                    <a href="../Html/cart.html"><img src="..\Resources\Navigation-Bar\cart-icon.png" alt="Cart"></a>
+                    <a href="../Html/cart.html" class="cart-link" title="Subtotal: $50.00, Delivery Option: Standard (free)">
+                      <div class="cart-icon">
+                        <img src="..\Resources\Navigation-Bar\cart-icon.png" alt="Cart">
+                        <span class="cart-count">2</span>
+                      </div>
+                      <div class="cart-details">
+                        <div class="cart-summary">
+                          <span class="subtotal-label">Subtotal:</span>
+                          <span class="subtotal-value">$50.00</span>
+                          <br>
+                          <span class="delivery-label">Delivery Option:</span>
+                          <span class="delivery-value">Standard (free)</span>
+                        </div>
+                        <div class="cart-delivery">
+                          <span class="delivery-type">Delivery Type:</span>
+                          <select class="delivery-options">
+                            <option value="standard">Standard (free)</option>
+                            <option value="express">$25000.00 - Express</option>
+                          </select>
+                          <button class="checkout-btn">Checkout</button>
+                        </div>
+                      </div>
+                    </a>
                     <a href="#"><img src="..\Resources\Navigation-Bar\profile-icon.png" alt="Profile" id = "modal-trigger"></a>
                 </div>
             </div>
