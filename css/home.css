@@ -233,12 +233,12 @@ button:hover {
     display: flex;
     flex-wrap: nowrap;
     transition: transform 0.5s ease-in-out;
-    justify-content: space-between; !important
+    justify-content: space-between;
   }
   
   .slides01 img,
   .slides02 img {
-margin-right: 3.4vw;
+  margin-right: 3.4vw;
     position: relative;
     width: 37.3vw;
     height: 37.3vw;

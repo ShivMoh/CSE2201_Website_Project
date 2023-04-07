@@ -109,7 +109,7 @@ color: black;
         </div>
     <main>
         <div class="grid-container">
-            <a href="product1.html" class="grid-item">
+            <a class="grid-item" data-id="1">
                 <img src="../Resources\Images\graphic tee.jpg" alt="Item Image">
                 <h2>Graphic T-Shirt</h2>
                 <p class="price">$4000</p>
@@ -121,7 +121,7 @@ color: black;
                     <span class="star">&#9734;</span>
                 </div>
             </a>
-            <a href="product1.html" class="grid-item">
+            <a class="grid-item" data-id="2">
                 <img src="../Resources\Images\Stock-Hoodie-Grey-1-500x500.jpg" alt="Item Image">
                 <h2>Hoodie</h2>
                 <p class="price">$7000</p>
@@ -133,7 +133,7 @@ color: black;
                     <span class="star">&#9734;</span>
                 </div>
             </a>
-            <a href="product1.html" class="grid-item">
+            <a class="grid-item" data-id="3">
                 <img src="../Resources\Images\jeans.jpeg" alt="Item Image">
                 <h2>Jeans</h2>
                 <p class="price">$10000</p>
@@ -145,7 +145,7 @@ color: black;
                     <span class="star">&#9734;</span>
                 </div>
             </a>
-            <a href="product1.html" class="grid-item">
+            <a class="grid-item" data-id="4">
                 <img src="../Resources\Images\plain-joggers-pants-500x500.jpg" alt="Item Image">
                 <h2>Joggers</h2>
                 <p class="price">$6000</p>
@@ -157,7 +157,7 @@ color: black;
                     <span class="star">&#9734;</span>
                 </div>
             </a>
-            <a href="product1.html" class="grid-item">
+            <a class="grid-item" data-id="5">
                 <img src="../Resources\Images\bomber jacket.jpg" alt="Item Image">
                 <h2>Bomber Jacket</h2>
                 <p class="price">$12000</p>
@@ -169,7 +169,7 @@ color: black;
                     <span class="star">&#9734;</span>
                 </div>
             </a>
-            <a href="product1.html" class="grid-item">
+            <a class="grid-item" data-id="6">
                 <img src="../Resources\Images\sneakers.jpg" alt="Item Image">
                 <h2>Sneakers</h2>
                 <p class="price">$14000</p>
@@ -181,7 +181,7 @@ color: black;
                     <span class="star">&#9734;</span>
                 </div>
             </a>
-            <a href="product1.html" class="grid-item">
+            <a class="grid-item" data-id="7">
                 <img src="../Resources\Images\backpack.jpg" alt="Item Image">
                 <h2>Backpack</h2>
                 <p class="price">$5000</p>
@@ -193,7 +193,7 @@ color: black;
                     <span class="star">&#9734;</span>
                 </div>
             </a>
-            <a href="product1.html" class="grid-item">
+            <a class="grid-item" data-id="8">
                 <img src="../Resources\Images\sunglasses.jpg" alt="Item Image">
                 <h2>Sunglasses</h2>
                 <p class="price">$3000</p>
@@ -205,7 +205,7 @@ color: black;
                     <span class="star">&#9734;</span>
                 </div>
             </a>
-            <a href="product1.html" class="grid-item">
+            <a class="grid-item" data-id="9">
                 <img src="../Resources\Images\watch.jpg" alt="Item Image">
                 <h2>Watch</h2>
                 <p class="price">$8000</p>
@@ -229,7 +229,28 @@ color: black;
         </nav>
         </ul>
     </main>
-    <script src="../javascript/shop.js"></script>
+    <script>
+
+const items = document.querySelectorAll('.grid-item');
+items.forEach(item => {
+  const id = item.getAttribute('data-id');
+  const image = item.querySelector('img').getAttribute('src');
+  const title = item.querySelector('h2').innerHTML;
+  const price = item.querySelector('.price').innerHTML;
+  item.querySelector('img').setAttribute('onclick', `viewItem(${id},'${encodeURIComponent(image)}','${encodeURIComponent(title)}','${encodeURIComponent(price)}')`);
+  item.querySelector('h2').setAttribute('onclick', `viewItem(${id},'${encodeURIComponent(image)}','${encodeURIComponent(title)}','${encodeURIComponent(price)}')`);
+  item.querySelector('p').setAttribute('onclick', `viewItem(${id},'${encodeURIComponent(image)}','${encodeURIComponent(title)}','${encodeURIComponent(price)}')`);
+});
+
+        function viewItem(id) {
+  const item = document.querySelector(`[data-id="${id}"]`);
+  const image = item.querySelector('img').getAttribute('src');
+  const title = item.querySelector('h2').innerHTML;
+  const price = item.querySelector('.price').innerHTML;
+  window.location.href = `product.html?id=${id}&image=${encodeURIComponent(image)}&title=${encodeURIComponent(title)}&price=${encodeURIComponent(price)}`;
+}
+
+    </script>
 </body>
 
 </html>
