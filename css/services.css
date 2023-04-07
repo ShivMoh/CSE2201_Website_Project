@@ -35,7 +35,7 @@ h2 {
 }
 
 .services {
-    margin-top: 15vw;
+    margin-top: 8vw;
 }
 
 .service-grid,
@@ -55,10 +55,10 @@ h2 {
 
 .service-img,
 .rewards-img {
-    height: 300px;
-    width: 300px;
+    height: 400px;
+    width: 400px;
     object-fit: cover;
-    border-radius: 150px;
+    border-radius: 200px;
 }
 
 .request-services-button,
