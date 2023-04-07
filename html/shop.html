@@ -120,6 +120,9 @@ color: black;
                     <span class="star">&#9734;</span>
                     <span class="star">&#9734;</span>
                 </div>
+                <p class="description" style="display: none;">This soft and comfortable t-shirt features a minimalist design that's perfect for everyday wear. Made from high-quality cotton, it's easy to care for and will keep you looking stylish all year round.</p>
+                <p class="category" style="display: none;">Clothing</p>
+                <p class="tags" style="display: none;">t-shirt, casual, men's</p>
             </a>
             <a class="grid-item" data-id="2">
                 <img src="../Resources\Images\Stock-Hoodie-Grey-1-500x500.jpg" alt="Item Image">
@@ -230,24 +233,21 @@ color: black;
         </ul>
     </main>
     <script>
-
 const items = document.querySelectorAll('.grid-item');
 items.forEach(item => {
   const id = item.getAttribute('data-id');
   const image = item.querySelector('img').getAttribute('src');
   const title = item.querySelector('h2').innerHTML;
   const price = item.querySelector('.price').innerHTML;
-  item.querySelector('img').setAttribute('onclick', `viewItem(${id},'${encodeURIComponent(image)}','${encodeURIComponent(title)}','${encodeURIComponent(price)}')`);
-  item.querySelector('h2').setAttribute('onclick', `viewItem(${id},'${encodeURIComponent(image)}','${encodeURIComponent(title)}','${encodeURIComponent(price)}')`);
-  item.querySelector('p').setAttribute('onclick', `viewItem(${id},'${encodeURIComponent(image)}','${encodeURIComponent(title)}','${encodeURIComponent(price)}')`);
+  const description = item.querySelector('.description').innerHTML;
+  const category = item.querySelector('.category').innerHTML;
+  const tags = item.querySelector('.tags').innerHTML;
+  item.querySelector('img').addEventListener('click', () => viewItem(id, encodeURIComponent(image), encodeURIComponent(title), encodeURIComponent(price), encodeURIComponent(description), encodeURIComponent(category), encodeURIComponent(tags)));
+  item.querySelector('h2').addEventListener('click', () => viewItem(id, encodeURIComponent(image), encodeURIComponent(title), encodeURIComponent(price), encodeURIComponent(description), encodeURIComponent(category), encodeURIComponent(tags)));
 });
 
-        function viewItem(id) {
-  const item = document.querySelector(`[data-id="${id}"]`);
-  const image = item.querySelector('img').getAttribute('src');
-  const title = item.querySelector('h2').innerHTML;
-  const price = item.querySelector('.price').innerHTML;
-  window.location.href = `product.html?id=${id}&image=${encodeURIComponent(image)}&title=${encodeURIComponent(title)}&price=${encodeURIComponent(price)}`;
+function viewItem(id, image, title, price, description, category, tags) {
+  window.location.href = `product.html?id=${id}&image=${image}&title=${title}&price=${price}&description=${description}&category=${category}&tags=${tags}`;
 }
 
     </script>

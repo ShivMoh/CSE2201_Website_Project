@@ -1,0 +1,143 @@
+.product-page {
+    margin-top: 1.5vw;
+    width: 100%;
+    height:70vh;
+    display: flex;
+  }
+  
+  .product-image-mini {
+    margin-left: 3.7vw;
+    border: 1pt solid black;
+    align-items: center;
+    width: 8vw;
+    height: 8vw;
+  }
+  
+  .product-image-mini img {
+    width: 8vw;
+    height: 8vw;
+  }
+
+  .product-image {
+    margin-left: 2.5vw;
+    display: flex;
+    align-items: center;
+    width: 32vw;
+    height: 32vw;
+  }
+
+  .product-image img {
+    height: 32vw;
+    width: 32vw;
+
+  }
+  
+  .product-info {
+    width: 45vw;
+    padding-left: 3.5vw;
+  }
+  
+  #product-title {
+    margin-top: 0.5vw;
+    margin-bottom: 0vw;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bolder;
+    color: #000000;
+    line-height: 1.5;
+    font-size: 2.7vw;
+    letter-spacing: 0.07em;
+  }
+
+  .product-rating {
+    margin-top: -0.4vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 2.3vw;
+  }
+
+  
+  #product-description {
+    margin-top: 1.5vw;
+    margin-bottom: 3vw;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2vw;
+    font-weight: normal;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+  }
+  
+  .product-dropdowns {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  
+  .product-dropdowns select,
+  label {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1vw;
+    font-weight: normal;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+border: none;
+    color: #676363;
+    margin-right: 0.5vw;
+  }
+
+  #color {
+    margin-left: -0.2vw;
+  }
+
+  .dropdown-separator {
+    color: #676363;
+    margin-right: 0.5vw;
+    margin-top: -0.3vw;
+  }
+
+  .add-to-cart {
+    background-color: #29D53A;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 1.1vw;
+    letter-spacing: 0.1em;
+    border: none;
+    padding: 1vw 3vw 1vw 3vw;
+    border-radius: 2vw;
+    margin-top: 1vw;
+    margin-bottom: 3vw;
+  }
+
+
+  .category-heading, .tags-heading {
+    font-weight: bold;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.1vw;
+    line-height: 2;
+    letter-spacing: 0.05em;
+    margin-right: 0.5vw;
+  }
+  
+  .product-category-listing a {
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1vw;
+    font-weight: normal;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+  }
+  
+  .product-path {
+    color: #000000;
+    margin-left: 3.7vw;
+    margin-top: 10vw;
+    font-weight: bold;
+
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.2vw;
+    line-height: 2;
+    letter-spacing: 0.1em;
+  }
