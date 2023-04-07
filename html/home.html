@@ -81,18 +81,21 @@
                             </div>
                         </div>
                     </div> 
-                    <a href="../Html/cart.html" class="cart-link" title="Subtotal: $50.00, Delivery Option: Standard (free)">
+                    <a href="../Html/cart.html" class="cart-link">
                       <div class="cart-icon">
                         <img src="..\Resources\Navigation-Bar\cart-icon.png" alt="Cart">
                         <span class="cart-count">2</span>
                       </div>
                       <div class="cart-details">
                         <div class="cart-summary">
-                          <span class="subtotal-label">Subtotal:</span>
-                          <span class="subtotal-value">$50.00</span>
+                          <h2>TOTAL</h2>
+                          <span class="subtotal-label">Subtotal<p>$10,500.00</p></span>
                           <br>
-                          <span class="delivery-label">Delivery Option:</span>
-                          <span class="delivery-value">Standard (free)</span>
+                          <span class="delivery-label">Delivery <span class = "info-icon">
+                            <i class = "fas fa-info-circle"></i>
+                            <span class = "tooltip">Express delivery gurantees your order arrives in 1-3 days.</span>
+                          </span>
+                          </span>
                         </div>
                         <div class="cart-delivery">
                           <span class="delivery-type">Delivery Type:</span>
@@ -101,6 +104,12 @@
                             <option value="express">Express ($25000.00)</option>
                           </select>
                           <button type="button" onclick="window.location.href='../Html/cart.html'" class="checkout-btn">Checkout</button>
+                          <p>We Accept:</p>
+                          <div class = "payment-options">
+                            <img class = "visa" src = "../Resources/Logos/visa.png" alt="Visa Logo">
+                            <img class = "wipay" src = "../Resources/Logos/wipay.png" alt ="Wipay Logo">
+                            <img class = "paypal" src = "../Resources/Logos/paypal.png" alt ="Paypal Logo"> 
+                          </div>
                         </div>
                       </div>
                     </a>
