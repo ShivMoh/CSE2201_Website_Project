@@ -6,6 +6,7 @@ body {
   
 }
 
+
 .divider {
     height: 0.5vw;
     width: 10vw;
@@ -54,8 +55,8 @@ p {
 }
 
 #synopsis-image-container img{
-    width: 30vw;
-    height: 30vw;
+    width: 40vw;
+    height: 40vw;
 }
 
 #timeline-title h2 {
