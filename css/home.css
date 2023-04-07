@@ -278,8 +278,8 @@
   
   .slider-buttons02 img,
   .slider-buttons03 img {
-    width: auto;
-    height: 100%;
+    width: 5vw;
+    height: 9vw;
   }
   
   .next02,
