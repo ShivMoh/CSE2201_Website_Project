@@ -44,9 +44,13 @@ h3 {
 }
 
 label {
+    width: 62%;
     font-family: 'Roboto', 'Ariel Narrow';
     font-size: 0.9vw;
+    text-align: left;
+
 }
+
 
 label span {
     color: red;

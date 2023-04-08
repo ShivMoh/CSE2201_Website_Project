@@ -5,79 +5,84 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joe's Store</title>
-
-    <!-- <link rel="stylesheet" href="../css/checkout-review.css"> -->
     <link rel="stylesheet" href="../css/checkout-payment.css">
     <link rel="stylesheet" href="../css/checkout-shipping.css">
+ 
     <link rel="stylesheet" href="../css/checkout.css">
     <link rel="stylesheet" href="../css/form-elements.css">
     <link rel="stylesheet" href="../css/cart.css">
+    <link rel="stylesheet" href="../css/checkout-review.css">
+    <link rel="stylesheet" href="../css/hero.css">
     <link rel="stylesheet" href="../css/navigation.css">
-
+    <link rel="stylesheet" href="../css/header-blue-no-image.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abhaya+Libre">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
     <style>
-        .navigation-bar {
-            background-color: #0581F4;
+        /* modifies the margin top to better suite this page */
+        nav {
+            margin-bottom: -12vw;
         }
-
-        .menu a {
-            color: white;
-        }
-
-        .dropbtn {
-            color: white;
-        }
-
     </style>
 </head>
 <body>
-    <nav>
-        <div class="navigation-bar">
-            <div class="logo">
-                <img src="..\Resources\Navigation-Bar\logo.png"  alt="Cakes R Us logo">
-            </div>
-            <div class="menu">
-                <a href="#">Home</a>
-                <div class="dropdown">
-                    <div class="dropbtn">About
-                        <i class="fa fa-caret-down"></i>
-                    </div>
-                    <div class="dropdown-content about-dropdown">
-                        <a href="#">Who We Are</a>
-                        <a href="#">Our History</a>
-                    </div>
-                </div> 
-                <a href="#">Shop</a>
-                <a href="#">Services</a>
-                <a href="#">Contact</a>
-            </div>
-            <ul class="social-links">
-                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-            </ul>
-            <div class="icons">
-                <div class="dropdown">
-                    <a><img src="..\Resources\Navigation-Bar\search-icon.png"  alt="search"></a>
-                    <div class="dropdown-content ">
-                        <div id="search-container">
-                            <input title="search" type="text" name="search" id="search-bar">
-                            <button title="search button">
-                                <i class="fa fa-search"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div> 
-                <a href="#"><img src="..\Resources\Navigation-Bar\cart-icon.png" alt="Cart"></a>
-                <a href="#"><img src="..\Resources\Navigation-Bar\profile-icon.png" alt="Profile"></a>
-            </div>
+    <header>
+        <div id="hero">
+            <h1 id="page-title">CHECKOUT</h1>
+            <p id="page-location">
+                Home 
+                <span><img src="../Resources/Icons/arrow-grey.png" alt="arrow"></span> 
+                Shop 
+                <span><img src="../Resources/Icons/arrow-grey.png" alt="arrow"></span> 
+                Checkout
+            </p>
         </div>
-    </nav>
+        <nav>
+            <div class="navigation-bar">
+                <div class="logo">
+                    <img src="..\Resources\Navigation-Bar\logo.png"  alt="Cakes R Us logo">
+                </div>
+                <div class="menu">
+                    <a href="#">Home</a>
+                    <div class="dropdown">
+                        <div class="dropbtn">About
+                            <i class="fa fa-caret-down"></i>
+                        </div>
+                        <div class="dropdown-content about-dropdown">
+                            <a href="#">Who We Are</a>
+                            <a href="#">Our History</a>
+                        </div>
+                    </div> 
+                    <a href="#">Shop</a>
+                    <a href="#">Services</a>
+                    <a href="#">Contact</a>
+                </div>
+                <ul class="social-links">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+                <div class="icons">
+                    <div class="dropdown">
+                        <a><img src="..\Resources\Navigation-Bar\search-icon.png"  alt="search"></a>
+                        <div class="dropdown-content ">
+                            <div id="search-container">
+                                <input title="search" type="text" name="search" id="search-bar">
+                                <button title="search button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div> 
+                    <a href="#"><img src="..\Resources\Navigation-Bar\cart-icon.png" alt="Cart"></a>
+                    <a href="#"><img src="..\Resources\Navigation-Bar\profile-icon.png" alt="Profile"></a>
+                </div>
+            </div>
+        </nav>
+    </header>
 
+    <main>
         <section id="checkout-container">
             <div id="progress-status">
                 <p class="progress-state">Shipping</p>
@@ -217,12 +222,12 @@
                         <input title="cardHolder" type="text" name="cardHolder" placeholder="e.g. John Doe">
     
                         <label for="cardNumber">Card Number<span>*</span></label>
-                        <input title="cardNumber" type="number" name="cardNumber" placeholder="e.g. 2424 2424 2424">
+                        <input title="cardNumber" type="text" name="cardNumber" maxlength="19" placeholder="2424 2424 2424 2421" id="credit-card-num">
     
                         <div id="card-details">
                             <div id="details-container">
                                 <label for="cardNumber">Security Pin<span>*</span></label>
-                                <input title="cardNumber" type="number" name="cardNumber" placeholder="e.g. 2424">
+                                <input title="cardNumber" type="number" min="0000" max="9999" name="cardNumber" placeholder="2424" id="security-pin">
                             </div>
                           
                             <div id="details-container">
@@ -467,7 +472,7 @@
                 </div>
             </form>
         </section>
-    
+    </main>
     <script src="../javascript//cart.js" defer></script>
     <script src="../javascript/checkout.js" defer></script>
 </body>
