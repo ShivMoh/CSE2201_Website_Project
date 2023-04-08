@@ -20,6 +20,10 @@ footer {
     color: white;
 }
 
+.column-head {
+    text-align: center;
+}
+
 .top-rectangle-column-sub-menu {
     display: block;
     line-height: 36px;
