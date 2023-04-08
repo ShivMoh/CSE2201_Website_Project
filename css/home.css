@@ -6,6 +6,14 @@ button:hover {
   cursor: pointer;
 }
 
+main button {
+  width: 17vw;
+}
+
+
+main button:hover {
+  background-color: none;
+}
 
 
 .header-image {
@@ -112,6 +120,7 @@ button:hover {
     padding: 1.1vw 3.1vw 1.1vw 3.1vw;
     border-radius: 1.2vw;
     margin-top: 2.5vw;
+    width: 17vw;
   }
 
   #browse-our-collection {

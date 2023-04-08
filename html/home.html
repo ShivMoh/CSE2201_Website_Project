@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<lang lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -38,18 +38,19 @@
         }
     </style>
 </head>
+<body>
     <section id="header">
         <div class="header-image">
-        <img src="../Resources/Images/slide01.jpg" alt="Slide 1" class="active">
-        <img src="../Resources/Images/slide02.jpg" alt="Slide 2">
-        <img src="../Resources/Images/slide03.jpg" alt="Slide 3">
-        <img src="../Resources/Images/slide04.jpg" alt="Slide 4">
-        <img src="../Resources/Images/slide05.jpg" alt="Slide 5">
-    </div>
-    <div class="slideshow-buttons">
-        <button class="prev"><img src="../Resources/Icons/white-arrow.png" alt="Previous"></button>
-        <button class="next"><img src="../Resources/Icons/white-arrow.png" alt="Next"></button>
-    </div>
+            <img src="../Resources/Images/slide01.jpg" alt="Slide 1" class="active">
+            <img src="../Resources/Images/slide02.jpg" alt="Slide 2">
+            <img src="../Resources/Images/slide03.jpg" alt="Slide 3">
+            <img src="../Resources/Images/slide04.jpg" alt="Slide 4">
+            <img src="../Resources/Images/slide05.jpg" alt="Slide 5">
+        </div>
+        <div class="slideshow-buttons">
+            <button class="prev"><img src="../Resources/Icons/white-arrow.png" alt="Previous"></button>
+            <button class="next"><img src="../Resources/Icons/white-arrow.png" alt="Next"></button>
+        </div>
         <nav>
             <div class="navigation-bar">
                 <div class="logo">
@@ -98,9 +99,9 @@
                 </div>
             </div>
             <button id="scroll-to-top" class="circle">
-              <img src="../Resources/Icons/scroll-up.jpg" alt="scroll-to-top">
+                <img src="../Resources/Icons/scroll-up.jpg" alt="scroll-to-top">
             </button>
-          </div>
+
             <!-- Modal -->
             <div id="login-modal" class="modal">
               <div class="modal-content">
@@ -137,7 +138,7 @@
             
             <div id="signup-modal" class="modal">
               <div class="modal-content">
-                <span class="close"><img src="../Resources/Icons/cross.png" alt=""></span>
+                <span class="close">&times;</span>
                 <h2>Sign Up</h2>
                 <div class="modal-container">
                   <div class = "login-options">
@@ -170,152 +171,192 @@
                     <p class = "signup-confirmation-message"> Thanks for signing up!</p>
                     <button id="login-btn" class="ok-button">OK</button>
                   </div>
+                <form>
+                  <label for="new-username">Username:</label>
+                  <input type="text" id="new-username" name="new-username" required>
+            
+                  <label for="new-password">Password:</label>
+                  <input type="password" id="new-password" name="new-password" required>
+            
+                  <button type="submit">Sign Up</button>
+                </form>
+                <div class="signup-confirmation">
+                  <p>Your account has been created successfully. Please click OKAY <a href="#" id="login-btn">OKAY</a> to return to the login page.</p>
                 </div>
               </div>
             </div>
         </nav>			
     </section>
-    <section id="who-we-are">
+
+    <main>
+      <section id="who-we-are">
         <h2>WHO WE ARE</h2>
         <p>At Cakes R Us, we specialize in creating beautiful and delicious cakes for all of life's special occasions! Whether you're looking for an elegant wedding cake, a fun and whimsical birthday cake, or anything in between, our expert bakers and decorators are here to bring your vision to life. We use only the freshest and highest quality ingredients to ensure that every cake we create is not only beautiful but also absolutely delicious. From classic flavors like vanilla and chocolate to unique combinations like lavender honey and raspberry lemonade, we offer a wide variety of flavors and designs to suit every taste and style. Contact us today to place an order for your next celebration!</p>
         <a href="#"><button class="green-button">Read More</button></a>
-    </section>
-    <section id="browse-our-collection">
-        <h2>BROWSE OUR COLLECTION</h2>
-        <h3>See What's In Store For You</h3>
-        <div class="men-and-women">
-          <div class="container01">
-              <div class="item-container01">
-                <img src="../Resources/Images/men.jpg" alt="Men">
-                <a class="overlay"></a>
-                <a class="category">FOR MEN</a>
-                <a href="../Html/product.html"><button class="shop-now">Shop Now</button></a>
+      </section>
+
+      <section id="browse-our-collection">
+          <h2>BROWSE OUR COLLECTION</h2>
+          <h3>See What's In Store For You</h3>
+          <div class="men-and-women">
+              <div class="container01">
+                  <div class="item-container01">
+                      <img src="../Resources/Images/men.jpg" alt="Men">
+                      <a class="overlay"></a>
+                      <a class="category">FOR MEN</a>
+                      <a href="../Html/product.html"><button class="shop-now">Shop Now</button></a>
+                  </div>
+                  <div class="item-container01">
+                      <img src="../Resources/Images/women.jpg" alt="Women">
+                      <a class="overlay"></a>
+                      <a class="category">FOR WOMEN</a>
+                      <a href="../Html/product.html"><button class="shop-now">Shop Now</button></a>
+                  </div>
               </div>
-              <div class="item-container01">
-                <img src="../Resources/Images/women.jpg" alt="Women">
-                <a class="overlay"></a>
-                <a class="category">FOR WOMEN</a>
-                <a href="../Html/product.html"><button class="shop-now">Shop Now</button></a>
+          </div>
+      </section>
+
+      <section id="new-arrivals">
+          <div class="slides01-container">	
+              <div class="slider-buttons02">
+                  <button class="prev02"><img src="../Resources/Icons/white-arrow.png" alt="Previous"></button>
+                  <button class="next02"><img src="../Resources/Icons/white-arrow.png" alt="Next"></button>
               </div>
-            </div>
-        </div>
-    </section>
-    <section id="new-arrivals">
-      <div class="slides01-container">	
-        <div class="slider-buttons02">
-          <button class="prev02"><img src="../Resources/Icons/white-arrow.png" alt="Previous"></button>
-          <button class="next02"><img src="../Resources/Icons/white-arrow.png" alt="Next"></button>
-        </div>
-        <div class="slides01">
-        
-
-          <div class="item-container02" data-id="1">
-            <img src="../Resources/Images/new01.jpg" alt="New-1">
-            <h2 style="display: none;">Graphic T-Shirt</h2>
-            <p class="price" style="display: none;">$4000</p>
-            <p class="description" style="display: none;">This soft and comfortable t-shirt features a minimalist design that's perfect for everyday wear. Made from high-quality cotton, it's easy to care for and will keep you looking stylish all year round.</p>
-            <p class="category" style="display: none;">Clothing</p>
-            <p class="tags" style="display: none;">t-shirt, casual, men's</p>
-            <a><button class="shop-now">Shop Now</button></a>
-          </div>
-
-
-
-          <div class="item-container02">
-            <img src="../Resources/Images/new02.jpg" alt="New-2">
-            <a href="../Html/product.html"><button class="shop-now">Shop Now</button></a>
-          </div>
-          <div class="item-container02">
-            <img src="../Resources/Images/new03.jpg" alt="New-3">
-            <a href="../Html/product.html"><button class="shop-now">Shop Now</button></a>
-          </div>
-          <div class="item-container02">
-            <img src="../Resources/Images/new04.jpg" alt="New-4">
-            <a href="../Html/product.html"><button class="shop-now">Shop Now</button></a>
-          </div>
-          <div class="item-container02">
-            <img src="../Resources/Images/new05.jpg" alt="New-5">
-            <a href="../Html/product.html"><button class="shop-now">Shop Now</button></a>
-          </div>
-            </div>
+              <div class="slides01">
+                  <div class="item-container02" data-id="1">
+                      <img src="../Resources/Images/new01.jpg" alt="New-1">
+                      <h2 style="display: none;">Graphic T-Shirt</h2>
+                      <p class="price" style="display: none;">$4000</p>
+                      <p class="description" style="display: none;">This soft and comfortable t-shirt features a minimalist design that's perfect for everyday wear. Made from high-quality cotton, it's easy to care for and will keep you looking stylish all year round.</p>
+                      <p class="category" style="display: none;">Clothing</p>
+                      <p class="tags" style="display: none;">t-shirt, casual, men's</p>
+                      <a><button class="shop-now">Shop Now</button></a>
+                  </div>
+                  <div class="item-container02" data-id="2">
+                      <img src="../Resources/Images/new02.jpg" alt="New-2">
+                      <h2 style="display: none;">Minimal Leopard Sunglasses</h2>
+                      <p class="price" style="display: none;">$3000</p>
+                      <p class="description" style="display: none">Protect your eyes from the sun in style with these minimal leopard print sunglasses. The circular lens has a light orange tint that adds a pop of color to the black and orange print. Perfect for a day out in the sun.</p>
+                      <p class="category" style="display: none;">Accessories</p>
+                      <p class="tags" style="display: none;">sunglasses, leopard print, orange tint</p>
+                      <a><button class="shop-now">Shop Now</button></a>
+                  </div>
+                  <div class="item-container02" data-id="3">
+                      <img src="../Resources/Images/new03.jpg" alt="New-3">
+                      <h2 style="display: none;">Line Pattern Suit Jacket</h2>
+                      <p class="price" style="display: none;">$120</p>
+                      <p class="description" style="display: none;">Make a statement in this suit top with a pattern made up of lines. The bold print is complemented by a sharp silhouette that's perfect for both formal and casual occasions. Pair it with matching pants or jeans for a complete look.</p>
+                      <p class="category" style="display: none;">Clothing</p>
+                      <p class="tags" style="display: none;">suit top, checkered pattern, lines</p>
+                      <a><button class="shop-now">Shop Now</button></a>
+                  </div>
+                  <div class="item-container02" data-id="4">
+                      <img src="../Resources/Images/new04.jpg" alt="New-4">
+                      <h2 style="display: none;">Backpack</h2>
+                      <p class="price" style="display: none;">$6000</p>
+                      <p class="description" style="display: none;">This stylish backpack features multiple pockets, adjustable straps, and magnetic locks for easy access to your belongings. Its brownish-green color and sleek design make it perfect for any occasion.</p>
+                      <p class="category" style="display: none;">Accessories</p>
+                      <p class="tags" style="display: none;">backpack, travel, unisex</p>
+                      <a><button class="shop-now">Shop Now</button></a>
+                  </div>
+                  <div class="item-container02">
+                      <img src="../Resources/Images/new05.jpg" alt="New-5">
+                      <h2 style="display: none;">Hera halterneck wrap dress
+                      </h2>
+                      <p class="price" style="display: none;">$8000</p>
+                      <p class="description" style="display: none;">Hera halterneck wrap dress from Caravana featuring rose pink, cotton, calf leather, crinkled finish, gathered detailing, contrasting trim, wrap design, halterneck, plunging V-neck, open back, self-tie fastening, crossover shoulder straps, elasticated waistband, maxi skirt and asymmetric hem.</p>
+                      <p class="category" style="display: none;">Clothing</p>
+                      <p class="tags" style="display: none;">dress, formal, women's</p>
+                      <a><button class="shop-now">Shop Now</button></a>
+                  </div>
+              </div>
           </div>
           <div class="double-container01">
               <h4>NEW ARRIVALS</h4>
-      </div>
+          </div>
       </section>
-  
+    
       <section id="sales">
-      <div class="slides02-container">
-        <div class="slider-buttons03">
-          <button class="prev03"><img src="../Resources/Icons/white-arrow.png" alt="Previous"></button>
-          <button class="next03"><img src="../Resources/Icons/white-arrow.png" alt="Next"></button>
-        </div>
+          <div class="slides02-container">
+              <div class="slider-buttons03">
+                  <button class="prev03"><img src="../Resources/Icons/white-arrow.png" alt="Previous"></button>
+                  <button class="next03"><img src="../Resources/Icons/white-arrow.png" alt="Next"></button>
+              </div>
               <div class="slides02">	
-                  <div class="item-container03">
-                    <img src="../Resources/Images/sale01.jpg" alt="Sale-1">
-                    <a href="../Html/product.html"><button class="shop-now">Shop Now</button></a>
+                  <div class="item-container03" data-id="6">
+                      <img src="../Resources/Images/sale01.jpg" alt="Sale-1">
+                      <h2 style="display: none;">Activist T-Shirt</h2>
+                      <p class="price" style="display: none;">$3500</p>
+                      <p class="description" style="display: none;">Make a statement with this bold and powerful t-shirt. Featuring the text "no homophobia, no violence, no racism, no sexism, yes kindness, yes peace, yes equality, yes love" on the back, it's the perfect way to show your support for equality, justice, and human rights. Made from high-quality cotton, it's soft, comfortable, and easy to care for.</p>
+                      <p class="category" style="display: none;">Clothing</p>
+                      <p class="tags" style="display: none;">t-shirt, activist, unisex</p>
+                      <a><button class="shop-now">Shop Now</button></a>
                   </div>
                   <div class="item-container03">
-            <img src="../Resources/Images/sale02.jpg" alt="Sale-2">
-            <a href="../Html/product.html"><button class="shop-now">Shop Now</button></a>
+                      <img src="../Resources/Images/sale02.jpg" alt="Sale-2">
+                      <a href="../Html/product.html"><button class="shop-now">Shop Now</button></a>
                   </div>
                   <div class="item-container03">
-            <img src="../Resources/Images/sale03.jpg" alt="Sale-3">
-            <a href="../Html/product.html"><button class="shop-now">Shop Now</button></a>
+                      <img src="../Resources/Images/sale03.jpg" alt="Sale-3">
+                      <a href="../Html/product.html"><button class="shop-now">Shop Now</button></a>
                   </div>
                   <div class="item-container03">
-            <img src="../Resources/Images/sale04.jpg" alt="Sale-4">
-            <a href="../Html/product.html"><button class="shop-now">Shop Now</button></a>
+                      <img src="../Resources/Images/sale04.jpg" alt="Sale-4">
+                      <a href="../Html/product.html"><button class="shop-now">Shop Now</button></a>
                   </div>
                   <div class="item-container03">
-            <img src="../Resources/Images/sale05.jpg" alt="Sale-5">
-            <a href="../Html/product.html"><button class="shop-now">Shop Now</button></a>
+                      <img src="../Resources/Images/sale05.jpg" alt="Sale-5">
+                      <a href="../Html/product.html"><button class="shop-now">Shop Now</button></a>
                   </div>
-            </div>
+              </div>
           </div> 
           <div class="double-container02">
               <h4>ONGOING SALES</h4>
-      </div>
+          </div>
       </section>
-          <section id="our-services">
-            <h2>OUR SERVICES</h2>
-            <h3>We Aim To Serve Our Customer's Every Need</h3>
-            <div class="services">
-                <div class="service">
+
+      <section id="our-services">
+          <h2>OUR SERVICES</h2>
+          <h3>We Aim To Serve Our Customer's Every Need</h3>
+          <div class="services">
+              <div class="service">
                   <img src="../Resources/Images/service01.jpg" alt="Service-1">
                   <p>Tailoring</p>
-                </div>
-                <div class="service">
+              </div>
+              <div class="service">
                   <img src="../Resources/Images/service02.jpg" alt="Service-2">
                   <p>Gift Wrapping</p>
-                </div>
-                <div class="service">
+              </div>
+              <div class="service">
                   <img src="../Resources/Images/service03.jpg" alt="Service-3">
                   <p>Personal Stylist</p>
-                </div>
-              </div>   
-              <a href="#"><button class="green-button">See More</button></a>
-    </section>
-    <section id="some-more-about-us">
-        <h2>SOME MORE ABOUT US</h2>
-        <h3>A Bit Of Our History</h3>
-        <p>At Cakes R Us, we specialize in creating beautiful and delicious cakes for all of life's special occasions! Whether you're looking for an elegant wedding cake, a fun and whimsical birthday cake, or anything in between, our expert bakers and decorators are here honey and raspberry lemonade, we offer a wide variety of flavors and designs to suit every taste and style. Contact us today to place an order for your next celebration!</p>
-        <a href="#"><button class="green-button">Read More</button></a>
-    </section>
-    <section id="for-more-information">
-        <div class="content">
-          <h2>FOR MORE INFORMATION</h2>
-          <h3>Feel Free To Leave Us A Message</h3>
-        </div>
-        <img src="../Resources/Images/logo.png" alt="logo">
-        <a href="#"><button class="green-button">Contact Us</button></a>
+              </div>
+          </div>   
+          <a href="#"><button class="green-button">See More</button></a>
+      </section>
+
+      <section id="some-more-about-us">
+          <h2>SOME MORE ABOUT US</h2>
+          <h3>A Bit Of Our History</h3>
+          <p>At Cakes R Us, we specialize in creating beautiful and delicious cakes for all of life's special occasions! Whether you're looking for an elegant wedding cake, a fun and whimsical birthday cake, or anything in between, our expert bakers and decorators are here honey and raspberry lemonade, we offer a wide variety of flavors and designs to suit every taste and style. Contact us today to place an order for your next celebration!</p>
+          <a href="#"><button class="green-button">Read More</button></a>
+      </section>
+
+      <section id="for-more-information">
+          <div class="content">
+              <h2>FOR MORE INFORMATION</h2>
+              <h3>Feel Free To Leave Us A Message</h3>
+          </div>
+          <img src="../Resources/Images/logo.png" alt="logo">
+          <a href="#"><button class="green-button">Contact Us</button></a>
       </section>                
+    </main>
+  
+
+    <script type="text/javascript" src="../Javascript/slideshow.js"></script>
+    <script type="text/javascript" src="../Javascript/scroll-to-top-button.js"></script>
+    <script type="text/javascript" src="../Javascript/sliders.js"></script>
+    <script type="text/javascript" src="../Javascript/login-modal.js"></script>
+    <script type="text/javascript" src="../Javascript/product-selector.js"></script>
 </body>
-<script>
-</script>
-<script type="text/javascript" src="../Javascript/slideshow.js"></script>
-<script type="text/javascript" src="../Javascript/scroll-to-top-button.js"></script>
-<script type="text/javascript" src="../Javascript/sliders.js"></script>
-<script type="text/javascript" src="../Javascript/login-modal.js"></script>
-<script type="text/javascript" src="../Javascript/product-selector.js"></script>
 </html>
