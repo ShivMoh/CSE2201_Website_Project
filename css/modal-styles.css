@@ -1,4 +1,5 @@
 /* Style for the modal */
+
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -9,36 +10,80 @@
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgba(0,0,0,0.4); /* Black with opacity */
-  }
+}
   
   /* Modal Content/Box */
   .modal-content {
+    width: 40%;
+    height: 45vw;
     background-color: #fefefe;
     margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-    max-width: 500px;
-    font-family: Ubuntu, Arial;
+    font-family: 'Ubuntu', 'Arial', sans-serif;
+    border-radius: 1vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .modal-content h2 {
-    margin-bottom: 35px;
+    margin-top: -2vw;
+    align-self: center;
+    font-size: 2vw;
+    font-family: 'Open Sans', 'Ariel', sans-serif;
+  }
+
+  .modal-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* margin-left: 3vw; */
+  }
+
+  .modal-container h3 {
+    margin-top: 3vw;
+    align-self: center;
+    font-family: 'Roboto', 'Ariel', sans-serif;
+    font-size: 1vw;
+    font-weight: 400;
+  }
+
+  .modal-container form {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    margin-left: 200px;
   }
 
   form label {
-    display: block;
-    margin-bottom: 10px; 
+    font-size: 1vw;
+    align-self: flex-start;
+  }
+
+  form input {
+    height: 1.5vw;
+  }
+
+  form button {
+    margin-top: 2vw;
+    border-radius: 1vw;
   }
   
   /* Close button */
   .close {
-    color: #ec1818;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+    align-self: flex-end;
+    position: relative;
+    top: -3.2vw;
+  }
+
+  .close img {
+    margin-top: 0vw;
+    margin-right: 1vw;
+    width: 2vw;
+    height: 2vw;
+  }
+
+  .close img:hover {
+    transform: scale(1.04);
   }
   
   .close:hover,
@@ -50,9 +95,9 @@
   
   /* Signup link */
   .signup { 
-    font-family: Ubuntu, Arial;
+    font-family: 'Ubuntu', 'Arial';
     text-align: center;
-    margin-top: 20px;
+    align-self: center;
   }
   
   .signup a {
@@ -64,48 +109,50 @@
     position: relative;
   }
 
-  .login-options {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+  .login-gmail img {
+    height: 3vw;
   }
-
-  .login-options > div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-  }
-
-  .login-options img {
-    height: 50px;
-  }
-
-  .login-options span {
-    margin-top: 10px;
-    font-size: 14px;
-    font-weight: bold;
-    text-align: center;
-    display: inline-flex;
-  }
-
-  #login-btn {
-    position: absolute;
-    bottom: -35px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: green;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    text-decoration: none;
+  
+  .login-facebook img {
+    height: 2vw;
+    margin-left: 0.4vw;
   }
   
   #login-btn:hover {
     background-color: darkgreen;
   }
+.login-options {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1vw;
+}
 
+.login-gmail, .login-facebook {
+  width: 25.5vw;
+  height: 3vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  border: solid black 0.1vw;
+}
 
+.login-gmail:hover, .login-facebook:hover {
+  transform: scale(1.02);
+}
+
+.login-gmail span, .login-facebook span{
+  margin-left: 6vw;
+}
+
+#signup-modal .modal-content h2 {
+  margin-top: 0vw;
+}
+
+#signup-modal .modal-content .close {
+  margin-top: -5vw;
+}
+
+#signup-modal .modal-content {
+  height: 60vw;
+}

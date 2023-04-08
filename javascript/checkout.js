@@ -35,19 +35,22 @@ function stepTransition(n)
     if(current_status == 0) {
         if(sub_stage!="") removeValidate();
         sub_stage = document.getElementsByClassName("shipping");
-        manageState(0);
+        // manageState(0);
         switchTabs(0);
     } else if (current_status == 1) {
         if(sub_stage.className == "shipping") removeValidate();
         sub_stage = document.getElementsByClassName("payment");
-        manageState(1);
+        // manageState(1);
         switchTabs(0);
     } else if (current_status == 2) {
         sub_stage = document.getElementsByClassName("payment-confirm");
+        // manageState(2);
     } else {
         sub_stage = document.getElementsByClassName("review");
-        manageState(2);
+        
     }
+
+    manageState(current_status)
 
     progress(n)  
 }
@@ -93,7 +96,7 @@ function removeValidate() {
 }
 function switchTabs(n) {
 
-    removeValidate();
+    // removeValidate();
 
     sub_stage[current_tab].style.display = "none";
     sub_stage[n].style.display = "flex";
@@ -139,13 +142,57 @@ function switchTabs(n) {
         }
     }
 
-    addValidate();
+    if(current_tab == 1) {
+        const creditCardNum = document.getElementById('credit-card-num');
+        const securityPin = document.getElementById('security-pin');
+
+        creditCardNum.addEventListener('input', (e) => {
+            // Get the input value and remove any non-numeric characters
+            let value = e.target.value.replace(/\D/g, '');
+            
+            // Add dashes between every 4 digits
+            value = value.replace(/(\d{4})(?=\d)/g, '$1-');
+            
+            // Set the input value to the formatted value
+            e.target.value = value;
+        })
+
+        securityPin.addEventListener('input', (e) => {
+            // Get the input value and limit the length to 4 digits
+            let value = e.target.value.slice(0, 4);
+            
+            // Set the input value to the limited value
+            e.target.value = value;
+        });
+    }
+
+    // addValidate();
 }
 
 // the unmodified version of this code was sourced from w3schools. 
 // code was altered and modified for use in project
 // W3Schools. (n.d.). How To Create a Form With Multiple Steps. Retrieved March 29, 2023, from https://www.w3schools.com/howto/howto_js_form_steps.asp
 function progress(n) {
+
+    // checks to see if length of credit card num and security pin are valid
+    if(current_tab == 1) {
+        const creditCardNum = document.getElementById('credit-card-num');
+        const securityPin = document.getElementById('security-pin');
+
+        if(creditCardNum.value.length != 19 && n>0)
+        {
+            alert("Please ensure that your credit card number is valid");
+            current_status-=n;
+            return
+        }
+
+        if(securityPin.value.length != 4 && n > 0) {
+            alert("Please ensure that your security pin is valid");
+            current_status-=n;
+            return
+        }
+    }
+
     if(n==0) {
        
         stage[step].style.display = "flex";
@@ -172,27 +219,17 @@ function progress(n) {
     if (step == 0) {
         document.getElementById("prev-btn").style.display = "none"
         document.getElementById("back-to-cart").style.display = "inline"
+        document.getElementById("next-btn").innerText = "Next";
+    } else if(step == (stage.length - 1)) {
+        console.log("hello?")
+        document.getElementById("next-btn").innerText = "Confirm";
     } else {
         document.getElementById("prev-btn").style.display = "inline"
         document.getElementById("back-to-cart").style.display = "none"
+        document.getElementById("next-btn").innerText = "Next";
     } 
 
-    // // this handles the final confirm (submit) button
-    // if (currentTab == (x.length - 1)) {
-    //   document.getElementById("nextBtn").innerHTML = "Confirm";
-    //   document.getElementById("nextBtn").onclick = () => {
-    //       alert("Your purchase has been confirmed. Have a nice day :)")
-    //       window.location.href = "../Html/shop.html"
-    //   }
-    // } else {
-    //   document.getElementById("nextBtn").innerHTML = "Next";
-    // }
-
-    // updates the progress bar
-    // update(n)
-
-    // // changes title of form appropriately 
-    // titleChange(currentTab)
+    
 
 }
 // step(1);

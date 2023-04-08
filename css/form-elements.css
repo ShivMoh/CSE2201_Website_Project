@@ -18,7 +18,7 @@ form label {
 
 button {
     width: 9vw;
-    background-color: #C54040;
+    background-color: #29D53A;
     border: none;
     margin-top: 0.5vw;
     color: #fff;
@@ -31,3 +31,4 @@ button:hover {
     background-color: #5bd667;
     transform: scale(1.02);
 }
+
