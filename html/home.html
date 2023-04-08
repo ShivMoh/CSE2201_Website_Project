@@ -11,8 +11,12 @@
     <link rel="stylesheet" type="text/css" href="../CSS/scroll-to-top.css">
 
     <link rel="stylesheet" type="text/css" href="../CSS/home.css">
-    <link rel ="stylesheet" href="../css/modal-styles.css">
+
     <link rel = "stylesheet" href="../css/cart-hover-and-dropdown.css">
+    <link rel="stylesheet" href="../css/form-elements.css">
+    <link rel ="stylesheet" href="../css/modal-styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans">
     <style>
         .navigation-bar::before {
             content: "";
@@ -100,48 +104,68 @@
             <!-- Modal -->
             <div id="login-modal" class="modal">
               <div class="modal-content">
-                <span class="close">&times;</span>
+                <span class="close"><img src="../Resources/Icons/cross.png" alt=""></span>
                 <h2>Login</h2>
-                <div class = "login-options">
-                  <div class = "login-gmail">
-                    <img src ="../Resources/Logos/gmail.png" alt ="Gmail Logo"/>
-                    <span>Login with Gmail</span>
+                <div class="modal-container">
+                  <div class = "login-options">
+                    <div class = "login-gmail">
+                      <img src ="../Resources/Logos/gmail.png" alt ="Gmail Logo"/>
+                      <span>Login with Gmail</span>
+                    </div>
+                    <div class ="login-facebook">
+                      <img src="../Resources/Logos/fb.png" alt="Facebook Logo"/>
+                      <span>Login with Facebook</span>
+                    </div>
                   </div>
-                  <div class ="login-facebook">
-                    <img src="../Resources/Logos/fb.png" alt="Facebook Logo"/>
-                    <span>Login with Facebook</span>
+                  <h3>- or via Username and Password - </h3>
+                  <form>
+                    <label for="username">Username</label>
+                    <input type="text" placeholder="Username" name="username" required>
+              
+                    <label for="password">Password</label>
+                    <input type="password" placeholder="Password" name="password" required>
+              
+                    <button type="submit">Login</button>
+                  </form>
+                  <div id = "signup-link" class="signup">
+                    <p>Don't have an account? <a href="#" id="signup-btn">Sign Up</a></p>
                   </div>
                 </div>
-                <form>
-                  <label for="username"></label>
-                  <input type="text" placeholder="Username" id="username" name="username" required>
-            
-                  <label for="password"></label>
-                  <input type="password" placeholder="Password" id="password" name="password" required>
-            
-                  <button type="submit">Login</button>
-                </form>
-                <div id = "signup-link" class="signup">
-                  <p>Don't have an account? <a href="#" id="signup-btn">Sign Up</a></p>
-                </div>
+         
               </div>
             </div>
             
             <div id="signup-modal" class="modal">
               <div class="modal-content">
-                <span class="close">&times;</span>
+                <span class="close"><img src="../Resources/Icons/cross.png" alt=""></span>
                 <h2>Sign Up</h2>
-                <form>
-                  <label for="new-username">Username:</label>
-                  <input type="text" id="new-username" name="new-username" required>
-            
-                  <label for="new-password">Password:</label>
-                  <input type="password" id="new-password" name="new-password" required>
-            
-                  <button type="submit">Sign Up</button>
-                </form>
-                <div class="signup-confirmation">
-                  <p>Your account has been created successfully. Please click OKAY <a href="#" id="login-btn">OKAY</a> to return to the login page.</p>
+                <div class="modal-container">
+                  <div class = "login-options">
+                    <div class = "login-gmail">
+                      <img src ="../Resources/Logos/gmail.png" alt ="Gmail Logo"/>
+                      <span>Sign up with Gmail</span>
+                    </div>
+                    <div class ="login-facebook">
+                      <img src="../Resources/Logos/fb.png" alt="Facebook Logo"/>
+                      <span>Sign up with Facebook</span>
+                    </div>
+                  </div>
+                  <h3>- or via Gmail - </h3>
+                  <form>
+                    <label for="username">Gmail</label>
+                    <input type="text" placeholder="Gmail" name="gmail" required>
+
+                    <label for="username">Username</label>
+                    <input type="text" placeholder="Username"  name="username" required>
+              
+                    <label for="password">Password</label>
+                    <input type="password" placeholder="Password" name="password" required>
+              
+                    <button type="submit">Sign Up</button>
+                  </form>
+                  <div id = "signup-link" class="signup">
+                    <p><a href="#" id="signup-btn">Back To Login Page</a></p>
+                  </div>
                 </div>
               </div>
             </div>
