@@ -232,25 +232,8 @@ color: black;
         </nav>
         </ul>
     </main>
-    <script>
-const items = document.querySelectorAll('.grid-item');
-items.forEach(item => {
-  const id = item.getAttribute('data-id');
-  const image = item.querySelector('img').getAttribute('src');
-  const title = item.querySelector('h2').innerHTML;
-  const price = item.querySelector('.price').innerHTML;
-  const description = item.querySelector('.description').innerHTML;
-  const category = item.querySelector('.category').innerHTML;
-  const tags = item.querySelector('.tags').innerHTML;
-  item.querySelector('img').addEventListener('click', () => viewItem(id, encodeURIComponent(image), encodeURIComponent(title), encodeURIComponent(price), encodeURIComponent(description), encodeURIComponent(category), encodeURIComponent(tags)));
-  item.querySelector('h2').addEventListener('click', () => viewItem(id, encodeURIComponent(image), encodeURIComponent(title), encodeURIComponent(price), encodeURIComponent(description), encodeURIComponent(category), encodeURIComponent(tags)));
-});
 
-function viewItem(id, image, title, price, description, category, tags) {
-  window.location.href = `product.html?id=${id}&image=${image}&title=${title}&price=${price}&description=${description}&category=${category}&tags=${tags}`;
-}
-
-    </script>
-</body>
+    <script type="text/javascript" src="../Javascript/product-selector.js"></script>
+    </body>
 
 </html>

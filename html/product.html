@@ -129,7 +129,9 @@ color: white;
             </div>
 
             <div class="product-image">
-              <img id="product-image01" src="" alt="Product Image">
+              <div class="zoom-image" style="background-image: url('product-image01.jpg')"></div>
+
+              <!--<img id="product-image01" src="" alt="Product Image">-->
             </div>
             <div class="product-info">
               <h1 id="product-title">Product Title</h1>
@@ -208,9 +210,13 @@ const description = decodeURIComponent(params.get('description'));
 const category = decodeURIComponent(params.get('category'));
 const tags = decodeURIComponent(params.get('tags'));
 
+const zoomImage = document.querySelector('.zoom-image');
+zoomImage.style.backgroundImage = `url('${image}')`;
+
 // set product details
+/*
 const productImage01 = document.querySelector('#product-image01');
-productImage01.setAttribute('src', image);
+productImage01.setAttribute('src', image);*/
 
 // create a second image element and set its src attribute
 const productImage02 = document.querySelector('#product-image02');
@@ -221,6 +227,26 @@ document.querySelector('#product-description').innerHTML = description;
 document.querySelector('#product-category').innerHTML = category;
 document.querySelector('#product-tags').innerHTML = tags;
 
+
+zoomImage.addEventListener('mousemove', (event) => {
+  const rect = event.target.getBoundingClientRect();
+  const x = event.clientX - rect.left;
+  const y = event.clientY - rect.top;
+
+  const xPercent = ((x / rect.width) * 100);
+  const yPercent = ((y / rect.height) * 100);
+
+  zoomImage.style.backgroundPosition = `${xPercent}% ${yPercent}%`;
+});
+
+zoomImage.addEventListener('mouseenter', () => {
+  zoomImage.style.backgroundSize = '200%';
+});
+
+zoomImage.addEventListener('mouseleave', () => {
+  zoomImage.style.backgroundPosition = 'center';
+  zoomImage.style.backgroundSize = '100%';
+});
     </script>
 
 
