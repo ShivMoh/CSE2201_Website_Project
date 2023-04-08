@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Purchase Cakes</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/navigation.css">
+    <link rel="stylesheet" href="../CSS/product.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="stylesheet" href="../CSS/scroll-to-top.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abhaya+Libre&display=swap">
+    <link rel ="stylesheet" href="../css/scroll-to-top.css">
+    <link rel ="stylesheet" href="../css/modal-styles.css">
+    <link rel = "stylesheet" href="../css/cart-hover-and-dropdown.css">
+</head>
+<style>
+    
+.navigation-bar {
+  background-color: #0581F4;
+}
+.menu a {
+  color: white;
+}
+
+.dropbtn {
+color: white;
+}
+
+</style>
+<body>
+    <header>
+        <nav>
+            <div class="navigation-bar">
+                <div class="logo">
+                    <img src="..\Resources\Navigation-Bar\logo.png"  alt="Cakes R Us logo">
+                </div>
+                <div class="menu">
+                    <a href="../Html/home.html">Home</a>
+                    <div class="dropdown">
+                        <div class="dropbtn">About
+                            <i class="fa fa-caret-down"></i>
+                        </div>
+                        <div class="dropdown-content about-dropdown">
+                            <a href="#">Who We Are</a>
+                            <a href="#">Our History</a>
+                        </div>
+                    </div> 
+                    <a href="../Html/shop.html">Shop</a>
+                    <a href="../Html/services.html">Services</a>
+                    <a href="../Html/contact.html">Contact</a>
+                </div>
+                <ul class="social-links">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+                <div class="icons">
+                    <div class="dropdown">
+                        <a><img src="..\Resources\Navigation-Bar\search-icon.png"  alt="search"></a>
+                        <div class="dropdown-content ">
+                            <div id="search-container">
+                                <input title="search" type="text" name="search" id="search-bar">
+                                <button title="search button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div> 
+                    <a href="../Html/cart.html" class="cart-link" title="Subtotal: $50.00, Delivery Option: Standard (free)">
+                      <div class="cart-icon">
+                        <img src="..\Resources\Navigation-Bar\cart-icon.png" alt="Cart">
+                        <span class="cart-count">2</span>
+                      </div>
+                      <div class="cart-details">
+                        <div class="cart-summary">
+                          <span class="subtotal-label">Subtotal:</span>
+                          <span class="subtotal-value">$50.00</span>
+                          <br>
+                          <span class="delivery-label">Delivery Option:</span>
+                          <span class="delivery-value">Standard (free)</span>
+                        </div>
+                        <div class="cart-delivery">
+                          <span class="delivery-type">Delivery Type:</span>
+                          <select class="delivery-options">
+                            <option value="standard">Standard (FREE) </option>
+                            <option value="express">Express ($25000.00)</option>
+                          </select>
+                          <button type="button" onclick="window.location.href='../Html/cart.html'" class="checkout-btn">Checkout</button>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="#"><img src="..\Resources\Navigation-Bar\profile-icon.png" alt="Profile" id = "modal-trigger"></a>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div id="login-modal" class="modal">
+                <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Login</h2>
+                <form>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+
+                    <button type="submit">Login</button>
+                </form>
+                </div>
+            </div>
+        </nav>	       
+    </header>
+
+    <main>
+        <div class="product-path">
+            Home &gt; Shop &gt; Category &gt; Shirt
+          </div>
+        <div class="product-page">
+            
+            <div class="product-image-mini">
+                <img id="product-image02" src="" alt="Product Image Mini">
+            </div>
+
+            <div class="product-image">
+              <img id="product-image01" src="" alt="Product Image">
+            </div>
+            <div class="product-info">
+              <h1 id="product-title">Product Title</h1>
+              <div class="product-rating">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">☆</span>
+                <span class="star">☆</span>
+              </div>
+              
+              <p id="product-description">Product description goes here.</p>
+              <div class="product-dropdowns">
+                <select name="color" id="color">
+                    <option value="black">Black</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                </select>
+                <span class="dropdown-separator">|</span>
+                <select name="size" id="size">
+                    <option value="small">S</option>
+                    <option value="medium">M</option>
+                    <option value="large">L</option>
+                </select>
+                <span class="dropdown-separator">|</span>
+                <label for="quantity">Qty:</label>
+                <select name="quantity" id="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                </div>
+            
+              <button class="add-to-cart">Add to Cart</button>
+              <div class="product-category-listing">
+                <span class="category-heading">Category:</span>
+                <a id="product-category" href="#">Category Name</a>
+              </div>
+              <div class="product-category-listing">
+                <span class="tags-heading">Tags:</span>
+                <a id="product-tags" href="#">Product Tags</a>
+              </div>
+              
+              
+              
+            </div>
+          </div>
+		</section>
+		<script>
+      // Define a function to show/hide custom quantity input field based on the selected value of the quantity dropdown
+			function showCustomQuantity() {
+			  var quantityDropdown = document.getElementById("quantity");
+			  var customQuantityDiv = document.getElementById("custom-quantity");
+			  if (quantityDropdown.value == "custom") {
+				customQuantityDiv.style.display = "block";
+			  } else {
+				customQuantityDiv.style.display = "none";
+			  }
+			}		  
+			var quantityDropdown = document.getElementById("quantity");
+			quantityDropdown.addEventListener("change", showCustomQuantity);
+		</script>
+	</main>
+
+    <script>
+const params = new URLSearchParams(window.location.search);
+const id = params.get('id');
+const image = decodeURIComponent(params.get('image'));
+const title = decodeURIComponent(params.get('title'));
+const price = decodeURIComponent(params.get('price'));
+const description = decodeURIComponent(params.get('description'));
+const category = decodeURIComponent(params.get('category'));
+const tags = decodeURIComponent(params.get('tags'));
+
+// set product details
+const productImage01 = document.querySelector('#product-image01');
+productImage01.setAttribute('src', image);
+
+// create a second image element and set its src attribute
+const productImage02 = document.querySelector('#product-image02');
+productImage02.setAttribute('src', image);
+
+document.querySelector('#product-title').innerHTML = title;
+document.querySelector('#product-description').innerHTML = description;
+document.querySelector('#product-category').innerHTML = category;
+document.querySelector('#product-tags').innerHTML = tags;
+
+    </script>
+
+
+</body>
+</html>

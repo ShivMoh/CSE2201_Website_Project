@@ -6,38 +6,37 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="../css\shop.css">
     <link rel="stylesheet" href="../css\navigation.css">
-    <link rel="stylesheet" href="../css\hero-no-image.css">
+    <link rel="stylesheet" href="../css/idkwhatyalldoinbutiusethisforhero.css">
     <style>
-        .navigation-bar::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom, #e5e5e5a0 0%, #e5e5e500 100%);
-            z-index: -1;
-            padding-bottom: 200px;
-        }
+.navigation-bar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #e5e5e5a0 0%, #e5e5e500 100%);
+  z-index: -1;
+  padding-bottom: 200px;
+}
+  .menu a {
+  color: black;
+}
 
-        .menu a {
-            color: black;
-        }
-
-        .dropbtn {
-            color: black;
-        }
+.dropbtn {
+color: black;
+}
     </style>
 </head>
 
 <body>
-
+    
     <header>
         <div id="hero">
             <p id="page-title">Shop</p>
             <p id="page-location">Home > Shop</p>
         </div>
-
+         
         <nav>
             <ul>
                 <label for="sort">Sort by:</label>
@@ -68,49 +67,49 @@
             </ul>
         </nav>
     </header>
-    <div class="navigation-bar">
-        <div class="logo">
-            <img src="..\Resources\Navigation-Bar\logo.png" alt="Cakes R Us logo">
-        </div>
-        <div class="menu">
-            <a href="../Html/home.html">Home</a>
-            <div class="dropdown">
-                <div class="dropbtn">About
-                    <i class="fa fa-caret-down"></i>
-                </div>
-                <div class="dropdown-content about-dropdown">
-                    <a href="#">Who We Are</a>
-                    <a href="#">Our History</a>
-                </div>
+        <div class="navigation-bar">
+            <div class="logo">
+                <img src="..\Resources\Navigation-Bar\logo.png"  alt="Cakes R Us logo">
             </div>
-            <a href="../Html/shop.html">Shop</a>
-            <a href="../Html/services.html">Services</a>
-            <a href="../Html/contact.html">Contact</a>
-        </div>
-        <ul class="social-links">
-            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-        </ul>
-        <div class="icons">
-            <div class="dropdown">
-                <a><img src="..\Resources\Navigation-Bar\search-icon.png" alt="search"></a>
-                <div class="dropdown-content ">
-                    <div id="search-container">
-                        <input title="search" type="text" name="search" id="search-bar">
-                        <button title="search button">
-                            <i class="fa fa-search"></i>
-                        </button>
+            <div class="menu">
+                <a href="../Html/home.html">Home</a>
+                <div class="dropdown">
+                    <div class="dropbtn">About
+                        <i class="fa fa-caret-down"></i>
                     </div>
-                </div>
+                    <div class="dropdown-content about-dropdown">
+                        <a href="#">Who We Are</a>
+                        <a href="#">Our History</a>
+                    </div>
+                </div> 
+                <a href="../Html/shop.html">Shop</a>
+                <a href="../Html/services.html">Services</a>
+                <a href="../Html/contact.html">Contact</a>
             </div>
-            <a href="../Html/cart.html"><img src="..\Resources\Navigation-Bar\cart-icon.png" alt="Cart"></a>
-            <a href="#"><img src="..\Resources\Navigation-Bar\profile-icon.png" alt="Profile" id="modal-trigger"></a>
+            <ul class="social-links">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+            <div class="icons">
+                <div class="dropdown">
+                    <a><img src="..\Resources\Navigation-Bar\search-icon.png"  alt="search"></a>
+                    <div class="dropdown-content ">
+                        <div id="search-container">
+                            <input title="search" type="text" name="search" id="search-bar">
+                            <button title="search button">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div> 
+                <a href="../Html/cart.html"><img src="..\Resources\Navigation-Bar\cart-icon.png" alt="Cart"></a>
+                <a href="#"><img src="..\Resources\Navigation-Bar\profile-icon.png" alt="Profile" id = "modal-trigger"></a>
+            </div>
         </div>
-    </div>
     <main>
         <div class="grid-container">
-            <a href="product1.html" class="grid-item">
+            <a class="grid-item" data-id="1">
                 <img src="../Resources\Images\graphic tee.jpg" alt="Item Image">
                 <h2>Graphic T-Shirt</h2>
                 <p class="price">$4000</p>
@@ -121,8 +120,11 @@
                     <span class="star">&#9734;</span>
                     <span class="star">&#9734;</span>
                 </div>
+                <p class="description" style="display: none;">This soft and comfortable t-shirt features a minimalist design that's perfect for everyday wear. Made from high-quality cotton, it's easy to care for and will keep you looking stylish all year round.</p>
+                <p class="category" style="display: none;">Clothing</p>
+                <p class="tags" style="display: none;">t-shirt, casual, men's</p>
             </a>
-            <a href="product1.html" class="grid-item">
+            <a class="grid-item" data-id="2">
                 <img src="../Resources\Images\Stock-Hoodie-Grey-1-500x500.jpg" alt="Item Image">
                 <h2>Hoodie</h2>
                 <p class="price">$7000</p>
@@ -134,7 +136,7 @@
                     <span class="star">&#9734;</span>
                 </div>
             </a>
-            <a href="product1.html" class="grid-item">
+            <a class="grid-item" data-id="3">
                 <img src="../Resources\Images\jeans.jpeg" alt="Item Image">
                 <h2>Jeans</h2>
                 <p class="price">$10000</p>
@@ -146,7 +148,7 @@
                     <span class="star">&#9734;</span>
                 </div>
             </a>
-            <a href="product1.html" class="grid-item">
+            <a class="grid-item" data-id="4">
                 <img src="../Resources\Images\plain-joggers-pants-500x500.jpg" alt="Item Image">
                 <h2>Joggers</h2>
                 <p class="price">$6000</p>
@@ -158,7 +160,7 @@
                     <span class="star">&#9734;</span>
                 </div>
             </a>
-            <a href="product1.html" class="grid-item">
+            <a class="grid-item" data-id="5">
                 <img src="../Resources\Images\bomber jacket.jpg" alt="Item Image">
                 <h2>Bomber Jacket</h2>
                 <p class="price">$12000</p>
@@ -170,7 +172,7 @@
                     <span class="star">&#9734;</span>
                 </div>
             </a>
-            <a href="product1.html" class="grid-item">
+            <a class="grid-item" data-id="6">
                 <img src="../Resources\Images\sneakers.jpg" alt="Item Image">
                 <h2>Sneakers</h2>
                 <p class="price">$14000</p>
@@ -182,7 +184,7 @@
                     <span class="star">&#9734;</span>
                 </div>
             </a>
-            <a href="product1.html" class="grid-item">
+            <a class="grid-item" data-id="7">
                 <img src="../Resources\Images\backpack.jpg" alt="Item Image">
                 <h2>Backpack</h2>
                 <p class="price">$5000</p>
@@ -194,7 +196,7 @@
                     <span class="star">&#9734;</span>
                 </div>
             </a>
-            <a href="product1.html" class="grid-item">
+            <a class="grid-item" data-id="8">
                 <img src="../Resources\Images\sunglasses.jpg" alt="Item Image">
                 <h2>Sunglasses</h2>
                 <p class="price">$3000</p>
@@ -206,7 +208,7 @@
                     <span class="star">&#9734;</span>
                 </div>
             </a>
-            <a href="product1.html" class="grid-item">
+            <a class="grid-item" data-id="9">
                 <img src="../Resources\Images\watch.jpg" alt="Item Image">
                 <h2>Watch</h2>
                 <p class="price">$8000</p>
@@ -230,7 +232,25 @@
         </nav>
         </ul>
     </main>
-    <script src="../javascript/shop.js"></script>
+    <script>
+const items = document.querySelectorAll('.grid-item');
+items.forEach(item => {
+  const id = item.getAttribute('data-id');
+  const image = item.querySelector('img').getAttribute('src');
+  const title = item.querySelector('h2').innerHTML;
+  const price = item.querySelector('.price').innerHTML;
+  const description = item.querySelector('.description').innerHTML;
+  const category = item.querySelector('.category').innerHTML;
+  const tags = item.querySelector('.tags').innerHTML;
+  item.querySelector('img').addEventListener('click', () => viewItem(id, encodeURIComponent(image), encodeURIComponent(title), encodeURIComponent(price), encodeURIComponent(description), encodeURIComponent(category), encodeURIComponent(tags)));
+  item.querySelector('h2').addEventListener('click', () => viewItem(id, encodeURIComponent(image), encodeURIComponent(title), encodeURIComponent(price), encodeURIComponent(description), encodeURIComponent(category), encodeURIComponent(tags)));
+});
+
+function viewItem(id, image, title, price, description, category, tags) {
+  window.location.href = `product.html?id=${id}&image=${image}&title=${title}&price=${price}&description=${description}&category=${category}&tags=${tags}`;
+}
+
+    </script>
 </body>
 
 </html>
