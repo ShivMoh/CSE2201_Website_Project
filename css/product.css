@@ -131,7 +131,7 @@ border: none;
   }
   
   .product-path {
-    color: #000000;
+    color: #65707a;
     margin-left: 3.7vw;
     margin-top: 10vw;
     font-weight: bold;
@@ -140,4 +140,8 @@ border: none;
     font-size: 1.2vw;
     line-height: 2;
     letter-spacing: 0.1em;
+  }
+
+  .product-path img {
+    height: 1vw;
   }
