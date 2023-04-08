@@ -25,14 +25,14 @@
     font-family: 'Playfair Display', serif;
     font-weight: 600;
     color: #FFFFFF;
-    font-size: 12vw;
+    font-size: 7vw;
     align-self: center;
     position: relative; /* Add this to make the text appear above the pseudo-element */
     z-index: 2; /* Set a higher z-index value to make the text appear above the pseudo-element */
   }
   
   #page-location {
-    top: -10vw;
+    top: -5vw;
     font-size: 1.4vw;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;

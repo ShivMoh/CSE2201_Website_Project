@@ -81,6 +81,7 @@ body {
     margin: 0 2vw;
     text-decoration: none;
     transition: all 0.3s ease; 
+    color: #000000;
   }
   
   .menu a:hover {
