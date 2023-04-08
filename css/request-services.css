@@ -29,9 +29,11 @@ li {
 }
 
 h2 {
-    font-size: 30px;
-    color: #45a1f6;
-    font-family: Ubuntu, Arial; 
+    font-family: 'Ubuntu', 'Ariel', sans-serif;
+    font-size: 3vw;
+    font-weight: 800;
+    letter-spacing: 0.1vw;
+    color: #0581F4;
 }
 
 .page-location-text {
