@@ -1,10 +1,12 @@
 .confirmation-div {
-    margin: 8vh 30vw;
+    margin: 6vh 30vw;
     border-style: solid;
     border-width: 2px;
     border-radius: 20px;
     height: 22.5vh;
     display: block;
+    font-size: 18px;
+    text-align: center;
 }
 
 .thank-you-text {
@@ -29,9 +31,3 @@ p {
     font-family: Open Sans, Arial;
 }
 
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
