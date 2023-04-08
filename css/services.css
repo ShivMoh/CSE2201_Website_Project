@@ -1,33 +1,17 @@
-.navigation-bar {
-    background-color: #0581F4;
-}
-
-.menu a {
-    color: white;
-}
-
-.dropbtn {
-    color: white;
-}
-
-ul {
-    display: inline;
-    list-style: none;
-}
-
-li {
-    float: left;
-    margin: 20px;
-}
-
 h2 {
-    font-size: 30px;
-    color: #45a1f6
+    font-family: 'Ubuntu', 'Ariel', sans-serif;
+    font-size: 3vw;
+    font-weight: 800;
+    letter-spacing: 0.1vw;
+    color: #0581F4;
+}
+
+p {
+    font-size: 20px;
 }
 
 .services,
 .customer-rewards {
-    margin-top: 9vw;
     text-align: center;
     line-height: 10px;
     color: rgb(43, 140, 172);
