@@ -37,7 +37,6 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    /* margin-left: 3vw; */
   }
 
   .modal-container h3 {
@@ -104,10 +103,37 @@
     color: blue;
   }
 
+  /* Style for the confirmation message */
   .signup-confirmation {
     display: none;
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 120%);
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   }
+  
+  .signup-confirmation-message {
+    font-family: 'Ubuntu', 'Arial', sans-serif;
+    padding: 20px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+  }
+
+.ok-button {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 5px;
+}
+
+.ok-button:hover {
+  background-color: darkgreen;
+}
 
   .login-gmail img {
     height: 3vw;

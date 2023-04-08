@@ -37,6 +37,14 @@ signupForm.addEventListener('submit', function(event) {
     confirmationMessage.style.display = 'block';
 });
 
+// Adding an event listener to the "back to login page" button so that it returns the user to the login modal 
+const returnToSignUp = document.getElementById("return-to-login-btn");
+
+returnToSignUp.onclick = function () {
+  signupModal.style.display = "none";
+  loginModal.style.display = "block";
+}
+
 // When the user clicks the OK button in the confirmation message, hide the sign-up modal and show the login modal
 const okButton = confirmationMessage.querySelector("#login-btn");
 
