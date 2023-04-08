@@ -135,11 +135,13 @@ main {
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .pagination ul {
     display: flex;
     list-style: none;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .pagination ul li {
@@ -152,6 +154,7 @@ main {
     border-radius: 5px;
     padding: 5px 10px;
     margin: 0 5px;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .pagination ul li a:hover {
@@ -163,6 +166,7 @@ main {
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .prev-page,
