@@ -57,6 +57,17 @@
     letter-spacing: 0.07em;
   }
 
+  #product-price {
+    margin-top: -0.3vw;
+    margin-bottom: 1vw;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: normal;
+    color: #000000;
+    line-height: 1.5;
+    font-size: 2.2vw;
+    letter-spacing: 0.07em;
+  }
+
   .product-rating {
     margin-top: -0.4vw;
     display: flex;
@@ -67,8 +78,8 @@
 
   
   #product-description {
-    margin-top: 1.5vw;
-    margin-bottom: 3vw;
+    margin-top: 0.4vw;
+    margin-bottom: 2vw;
     font-family: 'Open Sans', sans-serif;
     font-size: 1.2vw;
     font-weight: normal;
@@ -116,7 +127,7 @@ border: none;
     padding: 1vw 3vw 1vw 3vw;
     border-radius: 2vw;
     margin-top: 1vw;
-    margin-bottom: 3vw;
+    margin-bottom: 2vw;
   }
 
   .add-to-cart:hover {
