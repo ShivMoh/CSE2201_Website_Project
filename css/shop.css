@@ -17,60 +17,54 @@ nav {
     justify-content: center;
     align-items: center;
     margin: 1rem 0;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    float: left;
+
 }
 
 nav ul {
     display: flex;
     list-style: none;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 nav ul li {
-    margin: 0 1rem;
-    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    margin: 2 1rem;
+    font-family: 'Roboto', sans-serif;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #000;
-    font-family: 'Ubuntu', sans-serif;
-}
-
-.dropdown ul {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    padding: 1rem;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    font-family: 'Ubuntu', sans-serif;
-}
-
-.dropdown:hover ul {
-    display: block;
+    font-family: 'Roboto', sans-serif;
 }
 
 .search form {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+    float: right;
 }
 
 .search input[type="text"] {
-    padding: 0.5rem;
-    border: none;
-    border-bottom: 2px solid #000;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
 }
 
 .search button {
-    padding: 0.25rem;
+    padding: 0.1rem;
     background-color: rgb(255, 255, 255);
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 1px;
     cursor: pointer;
     margin-left: 1rem;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Roboto', sans-serif;
 
 }
 
@@ -108,13 +102,13 @@ main {
 .grid-item h2 {
     font-size: 1.5rem;
     margin: 1rem 0;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color: #000;
 }
 
 .price {
     font-weight: bold;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .star-rating {
@@ -135,13 +129,13 @@ main {
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .pagination ul {
     display: flex;
     list-style: none;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .pagination ul li {
@@ -151,10 +145,11 @@ main {
 .pagination ul li a {
     border: none;
     /* Remove the borders */
+    color: rgb(97, 93, 93);
     border-radius: 5px;
     padding: 5px 10px;
     margin: 0 5px;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .pagination ul li a:hover {
@@ -166,10 +161,25 @@ main {
     display: flex;
     justify-content: center;
     margin-top: 20px;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
-.prev-page,
+.pagination a {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 0 5px;
+    color: #999;
+    /* Set the color for inactive page number links */
+}
+
+.pagination a.active {
+    color: #999;
+    /* Set the color for the active page number link */
+    border-color: #000;
+}
+
+
 .next-page {
     padding: 5px 5px;
     border: 1px solid #ccc;
@@ -178,19 +188,11 @@ main {
     color: #333;
     text-decoration: none;
     transition: background-color 0.2s ease-out;
+
 }
 
-.prev-page:hover,
 .next-page:hover {
     background-color: #f5f5f5;
-}
-
-.prev-page {
-    margin-right: 10px;
-}
-
-.next-page {
-    margin-left: 5px;
 }
 
 .next-page img {
