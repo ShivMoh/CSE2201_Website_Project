@@ -1,50 +1,45 @@
-//Select all the images in the header section
-const images = document.querySelectorAll('.header-image img');
-let currentImageIndex = 0;
-let timerId;
+const headerImages = document.querySelectorAll('.header-image img');
+let headerCurrentImageIndex = 0;
+let headerTimerId;
 
-//Show the next image in the header section
-function showNextImage() {
-  const currentImage = images[currentImageIndex];
+function headerShowNextImage() {
+  const currentImage = headerImages[headerCurrentImageIndex];
   currentImage.classList.remove('active');
-  currentImageIndex = (currentImageIndex + 1) % images.length;
-  const nextImage = images[currentImageIndex];
+  headerCurrentImageIndex = (headerCurrentImageIndex + 1) % headerImages.length;
+  const nextImage = headerImages[headerCurrentImageIndex];
   nextImage.classList.add('active');
 }
 
-function showPrevImage() {
-  const currentImage = images[currentImageIndex];
+function headerShowPrevImage() {
+  const currentImage = headerImages[headerCurrentImageIndex];
   currentImage.classList.remove('active');
-  currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-  const prevImage = images[currentImageIndex];
+  headerCurrentImageIndex = (headerCurrentImageIndex - 1 + headerImages.length) % headerImages.length;
+  const prevImage = headerImages[headerCurrentImageIndex];
   prevImage.classList.add('active');
 }
 
-//Start the timer to show the next image automatically every 7 seconds
-function startTimer() {
-  timerId = setInterval(showNextImage, 7000); 
+function headerStartTimer() {
+  headerTimerId = setInterval(headerShowNextImage, 7000); 
 }
 
-// Stop the timer
-function stopTimer() {
-  clearInterval(timerId);
+function headerStopTimer() {
+  clearInterval(headerTimerId);
 }
 
-// Select the previous and next buttons in the header section
-const prevButton = document.querySelector('.prev');
-const nextButton = document.querySelector('.next');
+const headerPrevButton = document.querySelector('.prev');
+const headerNextButton = document.querySelector('.next');
 
-prevButton.addEventListener('click', () => {
-  stopTimer();
-  showPrevImage();
-  startTimer();
+headerPrevButton.addEventListener('click', () => {
+  headerStopTimer();
+  headerShowPrevImage();
+  headerStartTimer();
 });
 
-nextButton.addEventListener('click', () => {
-  stopTimer();
-  showNextImage();
-  startTimer();
+headerNextButton.addEventListener('click', () => {
+  headerStopTimer();
+  headerShowNextImage();
+  headerStartTimer();
 });
 
-// Start the timer initially to show the first image
-startTimer();
+headerStartTimer();
+
