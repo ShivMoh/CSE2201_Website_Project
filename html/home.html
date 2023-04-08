@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="../CSS/home.css">
 
     <link rel = "stylesheet" href="../css/cart-hover-and-dropdown.css">
-    <link rel="stylesheet" href="../css/form-elements.css">
+    <link rel="stylesheet" href="../css/form-elements2.css">
     <link rel ="stylesheet" href="../css/modal-styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans">
@@ -103,79 +103,79 @@
             </button>
 
             <!-- Modal -->
-            <div id="login-modal" class="modal">
-              <div class="modal-content">
-                <span class="close"><img src="../Resources/Icons/cross.png" alt=""></span>
-                <h2>Login</h2>
-                <div class="modal-container">
-                  <div class = "login-options">
-                    <div class = "login-gmail">
-                      <img src ="../Resources/Logos/gmail.png" alt ="Gmail Logo"/>
-                      <span>Login with Gmail</span>
-                    </div>
-                    <div class ="login-facebook">
-                      <img src="../Resources/Logos/fb.png" alt="Facebook Logo"/>
-                      <span>Login with Facebook</span>
-                    </div>
-                  </div>
-                  <h3>- or via Username and Password - </h3>
-                  <form>
-                    <label for="username">Username</label>
-                    <input type="text" placeholder="Username" name="username" required>
-              
-                    <label for="password">Password</label>
-                    <input type="password" placeholder="Password" name="password" required>
-              
-                    <button type="submit">Login</button>
-                  </form>
-                  <div id = "signup-link" class="signup">
-                    <p>Don't have an account? <a href="#" id="signup-btn">Sign Up</a></p>
-                  </div>
-                </div>
-         
-              </div>
-            </div>
-            
-            <div id="signup-modal" class="modal">
-              <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2>Sign Up</h2>
-                <div class="modal-container">
-                  <div class = "login-options">
-                    <div class = "login-gmail">
-                      <img src ="../Resources/Logos/gmail.png" alt ="Gmail Logo"/>
-                      <span>Sign up with Gmail</span>
-                    </div>
-                    <div class ="login-facebook">
-                      <img src="../Resources/Logos/fb.png" alt="Facebook Logo"/>
-                      <span>Sign up with Facebook</span>
-                    </div>
-                  </div>
-                  <h3>- or via Gmail - </h3>
-                  <form>
-                    <label for="username">Gmail</label>
-                    <input type="text" placeholder="Gmail" name="gmail" required>
-
-                    <label for="username">Username</label>
-                    <input type="text" placeholder="Username"  name="username" required>
-              
-                    <label for="password">Password</label>
-                    <input type="password" placeholder="Password" name="password" required>
-              
-                    <button type="submit">Sign Up</button>
-                  </form>
-                  <div id = "signup-link" class="signup">
-                    <p><a href="#" id="return-to-login-btn">Back To Login Page</a></p>
-                  </div>
-                  <div class="signup-confirmation">
-                    <p class = "signup-confirmation-message"> Thanks for signing up!</p>
-                    <button id="login-btn" class="ok-button">OK</button>
-                  </div>
-                <div class="signup-confirmation">
-                  <p>Your account has been created successfully. Please click OKAY <a href="#" id="login-btn">OKAY</a> to return to the login page.</p>
-                </div>
-              </div>
-            </div>
+ <div id="login-modal" class="modal">
+    <div class="modal-content">
+      <span class="close"><img src="../Resources/Icons/cross.png" alt=""></span>
+      <h2>Login</h2>
+      <div class="modal-container">
+        <div class = "login-options">
+          <div class = "login-gmail">
+            <img src ="../Resources/Logos/gmail.png" alt ="Gmail Logo"/>
+            <span>Login with Gmail</span>
+          </div>
+          <div class ="login-facebook">
+            <img src="../Resources/Logos/fb.png" alt="Facebook Logo"/>
+            <span>Login with Facebook</span>
+          </div>
+        </div>
+        <h3>- or via Username and Password - </h3>
+        <form>
+          <label class="form-label" for="username">Username</label>
+          <input class="form-input" type="text" placeholder="Username" name="username" required>
+    
+          <label for="password" class="form-label">Password</label>
+          <input class="form-input" type="password" placeholder="Password" name="password" required>
+    
+          <button type="submit" class="form-button">Login</button>
+        </form>
+        <div id = "signup-link" class="signup">
+          <p>Don't have an account? <a href="#" id="signup-btn">Sign Up</a></p>
+        </div>
+      </div>
+ 
+    </div>
+  </div>
+  
+  <div id="signup-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Sign Up</h2>
+      <div class="modal-container">
+        <div class = "login-options">
+          <div class = "login-gmail">
+            <img src ="../Resources/Logos/gmail.png" alt ="Gmail Logo"/>
+            <span>Sign up with Gmail</span>
+          </div>
+          <div class ="login-facebook">
+            <img src="../Resources/Logos/fb.png" alt="Facebook Logo"/>
+            <span>Sign up with Facebook</span>
+          </div>
+        </div>
+        <h3>- or via Gmail - </h3>
+        <form>
+          <label class="form-label" for="username">Gmail</label>
+          <input class="form-input" type="text" placeholder="Gmail" name="gmail" required>
+ 
+          <label class="form-label" for="username">Username</label>
+          <input class="form-input" type="text" placeholder="Username"  name="username" required>
+    
+          <label class="form-label" for="password">Password</label>
+          <input class="form-input" type="password" placeholder="Password" name="password" required>
+    
+          <button class="form-button" type="submit">Sign Up</button>
+        </form>
+        <div id = "signup-link" class="signup">
+          <p><a href="#" id="return-to-login-btn">Back To Login Page</a></p>
+        </div>
+        <div class="signup-confirmation">
+          <p class = "signup-confirmation-message"> Thanks for signing up!</p>
+          <button id="login-btn" class="ok-button">OK</button>
+        </div>
+      <div class="signup-confirmation">
+        <p>Your account has been created successfully. Please click OKAY <a href="#" id="login-btn">OKAY</a> to return to the login page.</p>
+      </div>
+    </div>
+  </div>
         </nav>			
     </section>
 
@@ -283,10 +283,15 @@
                       <p class="tags" style="display: none;">t-shirt, activist, unisex</p>
                       <a><button class="shop-now">Shop Now</button></a>
                   </div>
-                  <div class="item-container03">
+                  <div class="item-container03" data-id="7">
                       <img src="../Resources/Images/sale02.jpg" alt="Sale-2">
-                      <a href="../Html/product.html"><button class="shop-now">Shop Now</button></a>
-                  </div>
+                      <h2 style="display: none;">Glossy Red Purse</h2>
+    <p class="price" style="display: none;">$7500</p>
+    <p class="description" style="display: none;">Make a statement with this stunning red purse. The glossy finish and gold hardware give it an elegant and sophisticated look, while the gems on the top trim add a touch of glamour. The spacious interior is perfect for carrying all your essentials, and the detachable gold chain strap allows you to wear it as a shoulder or crossbody bag. Whether you're dressing up for a special occasion or adding some flair to your everyday look, this purse is sure to turn heads.</p>
+    <p class="category" style="display: none;">Accessories</p>
+    <p class="tags" style="display: none;">purse, red, gold, gems, women's</p>
+    <a><button class="shop-now">Shop Now</button></a>
+</div>
                   <div class="item-container03">
                       <img src="../Resources/Images/sale03.jpg" alt="Sale-3">
                       <a href="../Html/product.html"><button class="shop-now">Shop Now</button></a>

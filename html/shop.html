@@ -8,38 +8,39 @@
     <link rel="stylesheet" href="../css\navigation.css">
     <link rel="stylesheet" href="../css/idkwhatyalldoinbutiusethisforhero.css">
     <style>
-.navigation-bar::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, #e5e5e5a0 0%, #e5e5e500 100%);
-  z-index: -1;
-  padding-bottom: 200px;
-}
-  .menu a {
-  color: black;
-}
+        .navigation-bar::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, #e5e5e5a0 0%, #e5e5e500 100%);
+            z-index: -1;
+            padding-bottom: 200px;
+        }
 
-.dropbtn {
-color: black;
-}
+        .menu a {
+            color: black;
+        }
+
+        .dropbtn {
+            color: black;
+        }
     </style>
 </head>
 
 <body>
-    
+
     <header>
         <div id="hero">
             <p id="page-title">Shop</p>
             <p id="page-location">Home > Shop</p>
         </div>
-         
+
         <nav>
             <ul>
-                <label for="sort">Sort by:</label>
+                <label for="sort">Sort by: </label>
                 <select id="sort">
                     <option value="name-asc">Name (A-Z)</option>
                     <option value="name-desc">Name (Z-A)</option>
@@ -47,15 +48,15 @@ color: black;
                     <option value="price-desc">Price (High to Low)</option>
                 </select>
 
-                <li class="dropdown">
-                    <a href="#">Categories</a>
-                    <ul>
-                        <li><a href="#">Shirts</a></li>
-                        <li><a href="#">Pants</a></li>
-                        <li><a href="#">Dresses</a></li>
-                        <li><a href="#">Accessories</a></li>
-                    </ul>
-                </li>
+                <label for="category">Categories: </label>
+                <select id="categories">
+                    <option>...</option>
+                    <option>Shirts</option>
+                    <option>Pants</option>
+                    <option>Dresses</option>
+                    <option>Accessories</option>
+                </select>
+
                 <li class="search">
                     <form>
                         <input type="text" placeholder="Search">
@@ -67,52 +68,50 @@ color: black;
             </ul>
         </nav>
     </header>
-        <div class="navigation-bar">
-            <div class="logo">
-                <img src="..\Resources\Navigation-Bar\logo.png"  alt="Cakes R Us logo">
-            </div>
-            <div class="menu">
-                <a href="../Html/home.html">Home</a>
-                <div class="dropdown">
-                    <div class="dropbtn">About
-                        <i class="fa fa-caret-down"></i>
-                    </div>
-                    <div class="dropdown-content about-dropdown">
-                        <a href="#">Who We Are</a>
-                        <a href="#">Our History</a>
-                    </div>
-                </div> 
-                <a href="../Html/shop.html">Shop</a>
-                <a href="../Html/services.html">Services</a>
-                <a href="../Html/contact.html">Contact</a>
-            </div>
-            <ul class="social-links">
-                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-            </ul>
-            <div class="icons">
-                <div class="dropdown">
-                    <a><img src="..\Resources\Navigation-Bar\search-icon.png"  alt="search"></a>
-                    <div class="dropdown-content ">
-                        <div id="search-container">
-                            <input title="search" type="text" name="search" id="search-bar">
-                            <button title="search button">
-                                <i class="fa fa-search"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div> 
-                <a href="../Html/cart.html"><img src="..\Resources\Navigation-Bar\cart-icon.png" alt="Cart"></a>
-                <a href="#"><img src="..\Resources\Navigation-Bar\profile-icon.png" alt="Profile" id = "modal-trigger"></a>
-            </div>
+    <div class="navigation-bar">
+        <div class="logo">
+            <img src="..\Resources\Navigation-Bar\logo.png" alt="Cakes R Us logo">
         </div>
+        <div class="menu">
+            <a href="../Html/home.html">Home</a>
+            <div class="dropdown">
+                <div class="dropbtn">About
+                    <i class="fa fa-caret-down"></i>
+                </div>
+                <div class="dropdown-content about-dropdown">
+                    <a href="#">Who We Are</a>
+                    <a href="#">Our History</a>
+                </div>
+            </div>
+            <a href="../Html/shop.html">Shop</a>
+            <a href="../Html/services.html">Services</a>
+            <a href="../Html/contact.html">Contact</a>
+        </div>
+        <ul class="social-links">
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+        <div class="icons">
+            <div class="dropdown">
+                <a><img src="..\Resources\Navigation-Bar\search-icon.png" alt="search"></a>
+                <div class="dropdown-content ">
+                    <div id="search-container">
+                        <input title="search" type="text" name="search" id="search-bar">
+                        <button title="search button">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <a href="../Html/cart.html"><img src="..\Resources\Navigation-Bar\cart-icon.png" alt="Cart"></a>
+            <a href="#"><img src="..\Resources\Navigation-Bar\profile-icon.png" alt="Profile" id="modal-trigger"></a>
+        </div>
+    </div>
     <main>
         <div class="grid-container">
             <a class="grid-item" data-id="1">
-                <img src="../Resources\Images\graphic tee.jpg" alt="Item Image">
-                <h2>Graphic T-Shirt</h2>
-                <p class="price">$4000</p>
+                <img src="../Resources/Images/graphic tee.jpg" alt="Item Image">
                 <div class="star-rating">
                     <span class="star">&#9733;</span>
                     <span class="star">&#9733;</span>
@@ -120,14 +119,17 @@ color: black;
                     <span class="star">&#9734;</span>
                     <span class="star">&#9734;</span>
                 </div>
-                <p class="description" style="display: none;">This soft and comfortable t-shirt features a minimalist design that's perfect for everyday wear. Made from high-quality cotton, it's easy to care for and will keep you looking stylish all year round.</p>
+                <h2>Graphic T-Shirt</h2>
+                <p class="price">$4000</p>
+
+                <p class="description" style="display: none">This soft and comfortable t-shirt features a minimalist
+                    design that's perfect for everyday wear. Made from high-quality cotton, it's easy to care for and
+                    will keep you looking stylish all year round.</p>
                 <p class="category" style="display: none;">Clothing</p>
                 <p class="tags" style="display: none;">t-shirt, casual, men's</p>
             </a>
             <a class="grid-item" data-id="2">
                 <img src="../Resources\Images\Stock-Hoodie-Grey-1-500x500.jpg" alt="Item Image">
-                <h2>Hoodie</h2>
-                <p class="price">$7000</p>
                 <div class="star-rating">
                     <span class="star">&#9733;</span>
                     <span class="star">&#9733;</span>
@@ -135,11 +137,12 @@ color: black;
                     <span class="star">&#9734;</span>
                     <span class="star">&#9734;</span>
                 </div>
+                <h2>Hoodie</h2>
+                <p class="price">$7000</p>
+
             </a>
             <a class="grid-item" data-id="3">
                 <img src="../Resources\Images\jeans.jpeg" alt="Item Image">
-                <h2>Jeans</h2>
-                <p class="price">$10000</p>
                 <div class="star-rating">
                     <span class="star">&#9733;</span>
                     <span class="star">&#9733;</span>
@@ -147,11 +150,12 @@ color: black;
                     <span class="star">&#9734;</span>
                     <span class="star">&#9734;</span>
                 </div>
+                <h2>Jeans</h2>
+                <p class="price">$10000</p>
+
             </a>
             <a class="grid-item" data-id="4">
                 <img src="../Resources\Images\plain-joggers-pants-500x500.jpg" alt="Item Image">
-                <h2>Joggers</h2>
-                <p class="price">$6000</p>
                 <div class="star-rating">
                     <span class="star">&#9733;</span>
                     <span class="star">&#9733;</span>
@@ -159,11 +163,12 @@ color: black;
                     <span class="star">&#9734;</span>
                     <span class="star">&#9734;</span>
                 </div>
+                <h2>Joggers</h2>
+                <p class="price">$6000</p>
+
             </a>
             <a class="grid-item" data-id="5">
                 <img src="../Resources\Images\bomber jacket.jpg" alt="Item Image">
-                <h2>Bomber Jacket</h2>
-                <p class="price">$12000</p>
                 <div class="star-rating">
                     <span class="star">&#9733;</span>
                     <span class="star">&#9733;</span>
@@ -171,11 +176,12 @@ color: black;
                     <span class="star">&#9734;</span>
                     <span class="star">&#9734;</span>
                 </div>
+                <h2>Bomber Jacket</h2>
+                <p class="price">$12000</p>
+
             </a>
             <a class="grid-item" data-id="6">
                 <img src="../Resources\Images\sneakers.jpg" alt="Item Image">
-                <h2>Sneakers</h2>
-                <p class="price">$14000</p>
                 <div class="star-rating">
                     <span class="star">&#9733;</span>
                     <span class="star">&#9733;</span>
@@ -183,11 +189,12 @@ color: black;
                     <span class="star">&#9734;</span>
                     <span class="star">&#9734;</span>
                 </div>
+                <h2>Sneakers</h2>
+                <p class="price">$14000</p>
+
             </a>
             <a class="grid-item" data-id="7">
                 <img src="../Resources\Images\backpack.jpg" alt="Item Image">
-                <h2>Backpack</h2>
-                <p class="price">$5000</p>
                 <div class="star-rating">
                     <span class="star">&#9733;</span>
                     <span class="star">&#9733;</span>
@@ -195,11 +202,12 @@ color: black;
                     <span class="star">&#9734;</span>
                     <span class="star">&#9734;</span>
                 </div>
+                <h2>Backpack</h2>
+                <p class="price">$5000</p>
+
             </a>
             <a class="grid-item" data-id="8">
                 <img src="../Resources\Images\sunglasses.jpg" alt="Item Image">
-                <h2>Sunglasses</h2>
-                <p class="price">$3000</p>
                 <div class="star-rating">
                     <span class="star">&#9733;</span>
                     <span class="star">&#9733;</span>
@@ -207,11 +215,12 @@ color: black;
                     <span class="star">&#9734;</span>
                     <span class="star">&#9734;</span>
                 </div>
+                <h2>Sunglasses</h2>
+                <p class="price">$3000</p>
+
             </a>
             <a class="grid-item" data-id="9">
                 <img src="../Resources\Images\watch.jpg" alt="Item Image">
-                <h2>Watch</h2>
-                <p class="price">$8000</p>
                 <div class="star-rating">
                     <span class="star">&#9733;</span>
                     <span class="star">&#9733;</span>
@@ -219,6 +228,9 @@ color: black;
                     <span class="star">&#9734;</span>
                     <span class="star">&#9734;</span>
                 </div>
+                <h2>Watch</h2>
+                <p class="price">$8000</p>
+
             </a>
         </div>
         <nav class="pagination">
@@ -227,13 +239,14 @@ color: black;
                 <li><a href="#">2</a></li>
                 <li><a href="#">3</a></li>
                 <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <a class="next-page" href="#"><img src="..\Resources/Navigation-Bar/back.png" alt="back" &gt;</a>
+                <li><a class="next-page" href="#"><img src="..\Resources/Navigation-Bar/back.png"></a>
+                </li>
+            </ul>
         </nav>
-        </ul>
+
     </main>
 
     <script type="text/javascript" src="../Javascript/product-selector.js"></script>
-    </body>
+</body>
 
 </html>

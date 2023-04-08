@@ -47,7 +47,7 @@
   }
   
   #product-title {
-    margin-top: 0.5vw;
+    margin-top: -1vw;
     margin-bottom: 0vw;
     font-family: 'Ubuntu', sans-serif;
     font-weight: bolder;
@@ -161,7 +161,7 @@ border: none;
   .product-path {
     color: #65707a;
     margin-left: 3.7vw;
-    margin-top: 10vw;
+    margin-top: 9vw;
     font-weight: bold;
 
     font-family: 'Outfit', sans-serif;
