@@ -96,9 +96,24 @@ main {
     margin-left: -0.5vw;
 }
 
-#quantity {
+.quantity {
+    width: 10vw;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.quantity label {
+    color: #676363;
+    font-size: 1.1vw;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 0vw;
+    margin-left: 0.5vw;
+}
+
+.quantity select {
     border: none;
-    width: 4.5vw;
+    width: 1.4vw;
     color: #676363;
     font-size: 1.1vw;
     font-family: 'Open Sans', sans-serif;
