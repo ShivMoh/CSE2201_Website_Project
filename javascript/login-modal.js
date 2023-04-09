@@ -8,6 +8,7 @@ var facebook = document.querySelectorAll(".facebook")
 var profile = document.getElementById("profile")
 var loggedIn = false
 
+console.log(loginModal)
 function login() {
   signupModal.style.display = "none";
   loginModal.style.display = "none";
