@@ -1,3 +1,4 @@
+//Contact form submission functionality
 var form = document.querySelector("#contact-form");
 
 form.onsubmit = (e) => {

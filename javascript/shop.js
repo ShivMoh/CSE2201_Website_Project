@@ -1,12 +1,12 @@
-// Get elements
+//Get elements
 const productsContainer = document.getElementById('products');
 const sortSelect = document.getElementById('sort-by');
-    const categorySelect = document.getElementById('category');
-    const products = document.getElementsByClassName('product');
+const categorySelect = document.getElementById('category');
+const products = document.getElementsByClassName('product');
 
 
 
-// Sort products based on the selected option
+//Sort products based on the selected option
 sortSelect.addEventListener('change', () => {
   const sortBy = sortSelect.value;
 
@@ -47,11 +47,11 @@ function filterProducts() {
 }
 
 
-    // Get the value of the category parameter from the URL
+//Get the value of the category parameter from the URL
 const urlParams = new URLSearchParams(window.location.search);
 const category = urlParams.get('category');
 
-// Set the value of the category select based on the category parameter value
+//Set the value of the category select based on the category parameter value
 if (category === 'men') {
 categorySelect.value = 'men';
 }
@@ -72,8 +72,7 @@ filterProducts();
 
 
 
-
-
+//Get relevant elements required for product search
 const productList = document.getElementById('products');
 const searchInput = document.getElementById('search-input');
 
@@ -94,7 +93,7 @@ searchInput.addEventListener('input', searchProducts);
 
 
 
-
+//Precious arrow functionality
 const prevArrow = document.querySelector('.prev-arrow');
 const currentPage = 1;
 
