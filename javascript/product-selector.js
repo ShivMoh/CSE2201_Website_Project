@@ -1,4 +1,4 @@
-const items = document.querySelectorAll('.grid-item, .item-container02, .item-container03');
+const items = document.querySelectorAll('.product, .item-container02, .item-container03');
 items.forEach(item => {
   const id = item.getAttribute('data-id');
   const image = item.querySelector('img').getAttribute('src');
@@ -12,6 +12,7 @@ items.forEach(item => {
     // Add event listener to h2 element on shop page
     item.querySelector('h2').addEventListener('click', () => viewItem(id, encodeURIComponent(image), encodeURIComponent(title), encodeURIComponent(price), encodeURIComponent(description), encodeURIComponent(category), encodeURIComponent(tags)));
     item.querySelector('img').addEventListener('click', () => viewItem(id, encodeURIComponent(image), encodeURIComponent(title), encodeURIComponent(price), encodeURIComponent(description), encodeURIComponent(category), encodeURIComponent(tags)));
+    item.querySelector('.price').addEventListener('click', () => viewItem(id, encodeURIComponent(image), encodeURIComponent(title), encodeURIComponent(price), encodeURIComponent(description), encodeURIComponent(category), encodeURIComponent(tags)));
   } else if (location.href.includes('home.html')) {
     // Add event listener to .shop-now button on home page
     item.querySelector('.shop-now').addEventListener('click', () => viewItem(id, encodeURIComponent(image), encodeURIComponent(title), encodeURIComponent(price), encodeURIComponent(description), encodeURIComponent(category), encodeURIComponent(tags)));

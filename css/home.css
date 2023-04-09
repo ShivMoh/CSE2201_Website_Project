@@ -1,6 +1,4 @@
-.green-button:hover {
-  transform: scale(1.05);
-}
+
 
 button:hover {
   cursor: pointer;
@@ -548,4 +546,10 @@ button:hover {
   padding: 1.1vw 3.1vw 1.1vw 3.1vw;
   border-radius: 1.2vw;
   margin-top: 2.5vw;
+}
+
+.green-button:hover {
+  background-color: #5bd667 !important;
+ !important;
+  transform: scale(1.05);
 }
