@@ -15,10 +15,3 @@ scrollBtn.addEventListener('click', function() {
     behavior: 'smooth'
   });
 });
-/*
-scroll-to-top-button.js:17 
-        
-       Uncaught TypeError: Cannot read properties of null (reading 'addEventListener')
-    at scroll-to-top-button.js:17:11
-(anonymous) @ scroll-to-top-button.js:17
-*/
