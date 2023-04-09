@@ -49,4 +49,3 @@ headerNextButton.addEventListener('click', () => {
 
 //Always start the timer
 headerStartTimer();
-

@@ -13,4 +13,3 @@ form.onsubmit = (e) => {
     alert("Your request has been made")
     window.location.href = '../html/home.html'
 }
-

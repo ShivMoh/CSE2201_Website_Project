@@ -48,4 +48,3 @@ function setPerimeter(lat = centerLat, lng = centerLong, dis = 2) {
     }
     return arr
 }
-

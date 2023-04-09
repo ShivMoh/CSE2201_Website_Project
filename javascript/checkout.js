@@ -231,7 +231,4 @@ function progress(n) {
         document.getElementById("back-to-cart").style.display = "none"
         document.getElementById("next-btn").innerText = "Next";
     } 
-
-    
-
 }
