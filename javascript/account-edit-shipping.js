@@ -3,6 +3,7 @@ var back = document.getElementById('prev-btn')
 var form = document.getElementById('form-content')
 var current_tab = 0;
 
+
 switchTabs(current_tab);
 
 form.onsubmit = (e) => {

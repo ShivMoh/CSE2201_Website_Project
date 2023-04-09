@@ -2,7 +2,6 @@
 const cartLink = document.querySelector('.cart-link');
 const deliveryDropdown = document.querySelectorAll('.cart-delivery'); 
 
-
 deliveryDropdown.forEach(element => {
   element.addEventListener('mouseenter', () => {
     cartLink.dataset.hovering = 'true';
@@ -14,9 +13,9 @@ deliveryDropdown.forEach(element => {
     });
 });
 
-cartLink.mouseenter = () => {
-  console.log("Hello?")
-}
+// cartLink.mouseenter = () => {
+//   console.log("Hello?")
+// }
 // deliveryDropdown.addEventListener('mouseenter', () => {
 // cartLink.dataset.hovering = 'true';
 // });
