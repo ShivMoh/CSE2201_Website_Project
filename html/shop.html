@@ -266,8 +266,14 @@
         <!-- Navigation buttons for different product pages -->
         <section style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
             <div id="pagination">
-                <button class="btn" id="prev-page" onclick="pageToggle(-1)">Previous</button>
-                <button class="btn" id="next-page" onclick="pageToggle(1)">Next</button>
+                <button class="btn" id="prev-page" onclick="pageToggle(-1)"><img src="../Resources/Icons/prev-arrow.png" alt="Previous"></button>
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+
+                
+                <button class="btn" id="next-page" onclick="pageToggle(1)"><img src="../Resources/Icons/next-arrow.png" alt="Next"></button>
             </div>
             <p id="page-num" style="color: black; font-size: large;">Page 1</p>
         </section>

@@ -1,29 +1,35 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Request Service</title>
-    <link rel="stylesheet" href="../css/header-blue-no-image.css">
+    <title>Joe's Store - Services</title>
+    <link rel="stylesheet" href="../css/services.css">
+    <link rel="stylesheet" href="../css/who-we-are.css">
+    <link rel="stylesheet" href="../css/hero.css">
     <link rel="stylesheet" href="../css/navigation.css">
-    <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/form-elements.css">
-    <link rel="stylesheet" href="../css/request-services.css">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Outfit">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
 </head>
+
 <body>
     <nav>
+        <div id="hero">
+            <h1 id="page-title">WHO ARE WE</h1>
+            <p id="page-location">
+                Home 
+                <span><img src="../Resources/Icons/arrow-white.png" alt="arrow"></span> 
+                Who are we
+            </p>
+        </div>
         <div class="navigation-bar">
             <div class="logo">
                 <img src="..\Resources\Navigation-Bar\logo.png"  alt="Cakes R Us logo">
-            </div>  
+            </div>
             <div class="menu">
                 <a href="#">Home</a>
                 <div class="dropdown">
@@ -39,11 +45,10 @@
                 <a href="#">Services</a>
                 <a href="#">Contact</a>
             </div>
-            
-            <ul>
-                <li><a href="#"><img src="/Resources/Header-Assets/facebook-icon.png" alt=""></a></li>
-                <li><a href="#"><img src="/Resources/Header-Assets/twitter-icon.png" alt=""></a></li>
-                <li><a href="#"><img src="/Resources/Header-Assets/instagram-icon.png" alt=""></a></li>
+            <ul class="social-links">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
             </ul>
             <div class="icons">
                 <div class="dropdown">
@@ -63,47 +68,66 @@
         </div>
     </nav>
 
-    <!--Form-->
-    <div class="title-with-location">
-        <h2>REQUEST SERVICE</h2>
-        <p class="page-location-text">
-            Home > Services > <span>Request Service</span></p>
+    <!--Body-->
+    <div class="who-we-are">
+        <h2>W<span class="underline">HO WE AR</span>E</h2>
+    </div>
+    <div class="text-and-photo-div">
+        <p>Welcome to Joe's Fashion Store! Established in 1990, we specialize in unique and curated modern clothing. Our passion for fashion drives us to provide trendy and authentic modern clothing. Let us help you complete your modern look with our friendly and knowledgeable staff.</p>
+        <p class="motto">"Modern Style. Curated Fashion. Exceptional Service."</p>
+        <img src="../Resources/Images/who-we-are-image.jpg" alt="5 people">
+    </div>
+    <div class="text-and-photo-div">
+        <h2>OUR EXECUTIVE TEAM</h2>
+        <p class="sub-heading-text">The people at the heart of it all</p>
     </div>
 
-    <div class="request-form">
-        <p class="form-head-text">Please fill in the required information below:</p>
-        <div class="inner-request-form">
-            <div class="service-div">
-                <label for="services">Service:</label>
-                <select name="service-options" id="services" required >
-                    <option value="clothing-adjustments">Clothing Adjustments</option>
-                    <option value="custom-clothing">Custom Clothing</option>
-                    <option value="embroidery">Embroidery</option>
-                </select>
+    <div class="executive-team-grid">
+        <div class="executive">
+            <img class="executive-team-img" src="../Resources/Images/person1.jpg" alt="Executive1">
+            <p class="executive-name">Bob Hanks</p>
+            <p>DESIGN HEAD</p>
+            <button>See More</button>
+        </div>
+        <div class="executive">
+            <img class="executive-team-img" src="../Resources/Images/person2.jpg" alt="Executive2">
+            <p class="executive-name">Mary Jane</p>
+            <p>OWNER</p>
+            <button>See More</button>
+        </div>
+        <div class="executive">
+            <img class="executive-team-img" src="../Resources/Images/person3.jpg" alt="Executive3">
+            <p class="executive-name">Clark Kent</p>
+            <p>MANAGER</p>
+            <button>See More</button>
+        </div>
+    </div>
+
+    <div class="text-and-photo-div">
+        <h2>Our Objectives</h2>
+        <p class="sub-heading-text">Some aspirations for the future</p>
+        <div class="aspirations-grid">
+            <div class="aspiration-element">
+                <img class="aspirations-number" src="../Resources/Images/number1.jpg" alt="Number 1">
+                <p class="aspiration-text">To become a go-to destination <br> for fashion-forward individuals <br> modern and curated clothing.</p>
             </div>
-            <div class="first-name-div">
-                <label for="first-name">First Name:</label>
-                <input type="text" name="first-name-text" id="first-name" required>
+            <div class="aspiration-element">
+                <img class="aspirations-number" src="../Resources/Images/number2.jpg" alt="Number 2">
+                <p class="aspiration-text">To continuously source and offer <br> unique and trendy pieces that <br> reflect the latest fashion <br> trends and customer preferences.</p>
             </div>
-            <div class="last-name-div">
-                <label for="last-name">Last Name:</label>
-                <input type="text" name="last-name-text" id="last-name" required>
+            <div class="aspiration-element">
+                <img class="aspirations-number" src="../Resources/Images/number3.jpg" alt="Number 3">
+                <p class="aspiration-text">To provide exceptional customer <br> service, building lasting <br> relationships with our customers <br> based on trust and satisfaction.</p>
             </div>
-            <div class="email-div">
-                <label for="email">Email:</label>
-                <input type="text" name="email-text" id="email" required>
-            </div>
-            <div class="phone-number-div">
-                <label for="phone-number">Phone Number (Optional):</label>
-                <input type="text" name="phone-number-text" id="phone-number">
-            </div>
-            <div class="request-details-div">
-                <label for="request-details">Request Details:</label>
-                <input type="text" name="request-details-text" id="request-details" required>
+            <div class="aspiration-element">
+                <img class="aspirations-number" src="../Resources/Images/number4.jpg" alt="Number 4">
+                <p class="aspiration-text">To become a go-to destination for <br> fashion-forward individuals <br> seeking modern and curated clothing.</p>
             </div>
         </div>
-        <a href="request-services-confirmation.html"><button>Submit</button></a>
     </div>
+    
+
+    
 
     <!--Footer-->
     <footer>
