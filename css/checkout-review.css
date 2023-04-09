@@ -89,9 +89,6 @@
 }
 
 #shipping {
-    /* display: grid;
-    grid-template-columns: 35% 32% 33%;
-    column-gap: 3vw; */
     display: flex;
     flex-direction: row;
     justify-content: flex-start;

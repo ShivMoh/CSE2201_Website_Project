@@ -148,25 +148,3 @@ p {
 .connector-left-right .connecting-lines-2 {
     border-left: solid black 0.2vw;
 }
-
-/* @keyframes slide-in-right {
-    0%   {left:-100vw;}
-    100% {left:0vw;}
-  }
-
-@keyframes slide-in-left {
-    0%   {
-        left: 100vw;
-    }
-    100% {left:0vw;}
-}
-
-.img-left {
-    position: relative;
-    animation: slide-in-right 1s linear;
-}
-
-.img-right {
-    position: relative;
-    animation: slide-in-left 1s linear;
-} */
