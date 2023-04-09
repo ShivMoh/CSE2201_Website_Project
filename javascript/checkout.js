@@ -23,8 +23,6 @@ myFunction = function(e) {
     // prevents default action to happen
     e.preventDefault();
     
-    // do what ever you want to do here
-    // i.e. perform a AJAX call
 }
 
 stepTransition(0);
@@ -235,40 +233,3 @@ function progress(n) {
     
 
 }
-// step(1);
-
-// validates form by checking that required fields are inputted before proceeding
-// function validateForm(n) {
-//     var x, y, i, valid = true;
-//     x = sub_stage[current_tab];
-//     y = sub_stage[current_tab].getElementsByTagName("label");
-//     z = sub_stage[current_tab].getElementsByTagName("input")
-
-//     if(n < 0) return valid
-   
-//     // A loop that checks every input field in the current tab:
-//     for (i = 0; i < y.length; i++) {
-//       // If a field is empty...
-//       if((y[i].innerText).includes("*")) {
-     
-//         if (z[i].value == "") {
-//             // add an "invalid" class to the field:
-//             z[i].className += "invalid";
-
-//             // and set the current valid status to false:
-//             valid = false;
-//           }
-//         }
-//     } 
-
-//     // checks for required fields and adds invalid if not filled
-//     if(valid) {
-//         for (i = 0; i < y.length; i++) {
-//             if((y[i].innerText).includes("*")) {
-//                 z[i].classList.remove("invalid")
-//             }
-//         } 
-//     }
-
-//     return valid; // return the valid status
-//   }

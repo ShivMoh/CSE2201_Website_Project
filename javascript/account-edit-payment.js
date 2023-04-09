@@ -6,7 +6,6 @@ switchTabs(current_tab);
 
 form.onsubmit = (e) => {
     e.preventDefault(); 
-    console.log("hello?")
     alert("Information Successfully updated")
     window.location.href = "../html/account.html"
 }

@@ -155,16 +155,6 @@ h2 {
   margin: 0 10px;
 }
 
-/* #profile-menu {
-  visibility: hidden;
-  display: none;
-} */
-
-/* .cart-link {
-  display: inline-block;
-  position: relative;
-} */
-
 #profile .cart-details {
   width: 8vw;
   height: 3vw;
@@ -188,3 +178,7 @@ h2 {
   transform: scale(1.04);
 }
 
+#profile img {
+  height: 2.4vw;
+  margin-top: -0.3vw;
+}

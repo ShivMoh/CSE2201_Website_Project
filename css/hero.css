@@ -10,9 +10,7 @@
     flex-direction: column;
     justify-content: center;
   }
-  
 
-  
   #page-title {
     font-family: 'Playfair Display', serif;
     font-weight: 600;
@@ -35,7 +33,7 @@
     z-index: 1; /* Set a higher z-index value to make the text appear above the pseudo-element */
   }
   
-  /* #page-location img {
+  #page-location img {
     width: 1.4vw;
     height: auto;
-  } */
+  }
