@@ -67,6 +67,10 @@ button {
     text-decoration: none;
 }
 
+.social-media-button {
+    background-color: white;
+}
+
 .aspirations-grid {
     margin-top: 50px;
     display: grid;
