@@ -52,12 +52,21 @@
     margin-top: 0.5vw;
 }
 
-.review .cart-item #color {
+.review .cart-item .color {
+    border: none;
+    width: 4vw;
+    color: #676363;
+    font-family: 'Open Sans', sans-serif;
+  
     width: 3.2vw;
     font-size: 0.9vw;
 }
 
-.review .cart-item #size {
+.review .cart-item .size {
+    border: none;
+    width: 2.2vw;
+    color: #676363;
+    font-family: 'Open Sans', sans-serif;
     width: 2vw;
     font-size: 0.9vw;
     margin-left: -0.7vw;

@@ -78,13 +78,13 @@
             <div id="cart-items">
                 <span id="divider"></span>
                 <div class="cart-item">
-                    <img  src="../Resources/Images/CheckeredShirt.png" alt="product 1">
-                    <div id="item-details" style="grid-area: auto;">
+                    <img  src="../Resources/Images/new04.jpg" alt="product 1">
+                    <div id="item-details">
                         <img class="exit" src="../Resources/Icons/cross.png" alt="exit">
-                        <h2>$xxxx</h2>
-                        <h4>Checkered Shirt</h4>
+                        <h2>$6000</h2>
+                        <h4>Backpack</h4>
                         <div id="selectors">  
-                            <select title="color" name="color" id="color">
+                            <select title="color" name="color" class="color">
                                 <option value="Blue">Blue</option>
                                 <option value="Green">Green</option>
                                 <option value="Red">Red</option>
@@ -93,7 +93,7 @@
                                 <option value="White">White</option>
                             </select>  
                             <span id="vertical-divider"></span>
-                            <select title="size" name="size" id="size">
+                            <select title="size" name="size" class="size">
                                 <option value="S">S</option>
                                 <option value="M">M</option>
                                 <option value="L">L</option>
@@ -114,13 +114,13 @@
                 <span id="divider"></span>
                     
                 <div class="cart-item">
-                    <img  src="../Resources/Images/YellowTShirt.png" alt="product 2">
-                    <div id="item-details" style="grid-area: auto;">
+                    <img  src="../Resources/Images/sale01.jpg" alt="product 2">
+                    <div id="item-details">
                         <img class="exit" src="../Resources/Icons/cross.png" alt="exit">
-                        <h2>$xxxx</h2>
-                        <h4>Yellow T-Shirt</h4>
+                        <h2>$3500</h2>
+                        <h4>Activist T-Shirt</h4>
                         <div id="selectors">  
-                            <select title="color" name="color" id="color">
+                            <select title="color" name="color" class="color">
                                 <option value="Blue">Blue</option>
                                 <option value="Green">Green</option>
                                 <option value="Red">Red</option>
@@ -129,7 +129,7 @@
                                 <option value="White">White</option>
                             </select>  
                             <span id="vertical-divider"></span>
-                            <select title="size" name="size" id="size">
+                            <select title="size" name="size" class="size">
                                 <option value="S">S</option>
                                 <option value="M">M</option>
                                 <option value="L">L</option>
@@ -152,10 +152,10 @@
             </div>
                 
         <div id="total-container">
-            <p>Sub-Total <span id="sub-total">$xxxx</span></p>
+            <p>Sub-Total <span id="sub-total">$9500</span></p>
         </div>
         
-        <div id="button-container">
+        <div class="form" id="button-container">
             <div id="cart-button">
                 <button type="button" onclick="cartCheckoutTransition(0)">Proceed to checkout</button>
             </div>
@@ -167,6 +167,19 @@
         // this script helps to make the cart a litte more interactive
         // get all elements with the "exit" class
         const exitButtons = document.querySelectorAll('.exit');
+        const subTotal = document.getElementById('sub-total')
+        const items = document.querySelectorAll('.cart-item')
+
+        // this here simply computes the sum of the item prices and adds sets it as the subtotal
+        {
+            var total = 0;
+            items.forEach( element => {
+                total += Number((element.children[1].children[1].innerText).replace(/[^0-9.-]+/g,""))
+            })
+            subTotal.innerText = '$' + total.toFixed(0)
+            console.log("Init", subTotal.innerText)
+        }
+        
 
         // add click event listener to all "exit" buttons
         exitButtons.forEach((exitButton) => {
@@ -176,9 +189,15 @@
         exitButton.addEventListener('click', (event) => {
             // get the parent element of the "exit" button that has the "items" class
             const itemElement = event.target.parentNode.parentNode
-            
-            // remove the parent element
-            console.log(itemElement.children[0])
+   
+            // here the price will be deducted from the total
+            var priceRemoved = Number((itemElement.children[1].children[1].innerText).replace(/[^0-9.-]+/g,""));
+            var total = Number((subTotal.innerText).replace(/[^0-9.-]+/g,""))
+            var new_total = '$' + (total - priceRemoved).toFixed(0)
+
+            subTotal.innerText = new_total
+
+            // hide the parent element
             itemElement.style.display = "none"
         });
         });

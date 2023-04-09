@@ -11,7 +11,10 @@
     <link rel="stylesheet" href="../css/modal-styles.css">
     <link rel="stylesheet" href="../css/hero.css">
     <link rel="stylesheet" href="../css/navigation.css">
+    <link rel="stylesheet" href="../css/scroll-to-top.css">
+    <link rel="stylesheet" href="../css/footer.css">
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -53,7 +56,7 @@
                 </ul>
                 <div class="icons">
                     <div class="dropdown">
-                        <a><img src="..\Resources\Navigation-Bar\search-icon.png"  alt="search"></a>
+                        <a><img src="..\Resources\Navigation-Bar\search-icon.png"  alt="search" id="search"></a>
                         <div class="dropdown-content ">
                             <form id="search-container">
                                 <input title="search" type="text" name="search" id="search-bar" placeholder="Search...">
@@ -128,6 +131,9 @@
                     <!-- <a href="#"><img src="..\Resources\Navigation-Bar\profile-icon.png" alt="Profile" id="modal-trigger"></a> -->
                 </div>
             </div>
+            <button id="scroll-to-top" class="circle">
+              <img src="../Resources/Icons/scroll-up.jpg" alt="scroll-to-top">
+            </button>
         </nav>
     </header>
     <section>
@@ -267,7 +273,76 @@
             </div>
         </section>
     </main>
+
+        <!--Footer-->
+        <footer>
+          <div class="top-rectangle">
+              <div class="top-rectangle-column">
+                  <a class="top-rectangle-column-head" href="#"><p  class="column-head">SHOP</p></a>
+                  <a class="top-rectangle-column-sub-menu" href="#">What's New</a>
+                  <a class="top-rectangle-column-sub-menu" href="#">Popular</a>
+                  <a class="top-rectangle-column-sub-menu" href="#">Sales</a>
+                  <a class="top-rectangle-column-sub-menu" href="#">Cart</a>
+              </div>
+              <div class="top-rectangle-column">
+                  <a class="top-rectangle-column-head" href=""><p class="column-head">SERVICES</p></a>
+                  <a class="top-rectangle-column-sub-menu" href="services.html"></a>
+                  <a class="top-rectangle-column-sub-menu" href="customer-rewards.html">Reward's Signup</a>
+                  <a class="top-rectangle-column-sub-menu" href="request-services.html">Request a Service</a>
+              </div>
+              <div class="top-rectangle-column">
+                  <a class="top-rectangle-column-head" href=""><p class="column-head">ABOUT</p></a>
+                  <a class="top-rectangle-column-sub-menu" href="#">Who We Are</a>
+                  <a class="top-rectangle-column-sub-menu" href="our-history.html">Our History</a>
+              </div>
+              <div class="top-rectangle-column">
+                <a class="top-rectangle-column-head" href=""><p class="column-head">LEAVE A MESSAGE</p></a>
+                  <a class="top-rectangle-column-sub-menu" href="#">Contact us</a>
+              </div>
+          </div>
+  
+          <div class="bottom-rectangle">
+              <div class="bottom-rectangle-column">
+                  <h2 class="find-us-at">Find Us At</h2>
+                  <p class="address">Lot 1337</p>
+                  <p class="address">Watermelon Street</p>
+                  <p class="address">Georgetown</p>
+                  <p class="address">Guyana</p>
+              </div>
+              <div class="bottom-rectangle-column">
+                  <h2 class="follow-us">Follow Us:</h2>
+                  <button class="social-media-button">
+                      <img class="social-media-icon" src="../Resources/Header-Assets/facebook-icon.png" alt="facebook">
+                  </button>
+                  <button class="social-media-button">
+                      <img class="social-media-icon" src="../Resources/Header-Assets/instagram-icon.png" alt="instagram">
+                  </button>
+                  <button class="social-media-button">
+                      <img class="social-media-icon" src="../Resources/Header-Assets/twitter-icon.png" alt="twitter">
+                  </button>
+              </div>
+              <div class="bottom-rectangle-column">
+                  <h2 class="call-or-whatsapp">Call or Whatsapp</h2>
+                  <p class="phone-number">+592 223 2323</p>
+              </div>
+              <div class="bottom-rectangle-column">
+                  <h2 class="email">Email</h2>
+                  <p class="email-address">joesStoresx11@gmail.com</p>
+              </div>
+  
+              <div class="copyright">
+                  <p><strong>Secure Shopping Online</strong></p>
+                  <p>@copyrightTeam22023</p>
+              </div>
+              <div class="payment-options">
+                  <img class="payment-img" src="../Resources/Logos/paypal.png" alt="Paypal">
+                  <img class="payment-img" src="../Resources/Logos/visa.png" alt="Visa Card">
+                  <img class="payment-img" src="../Resources/Logos/wipay.png" alt="Wipay">
+              </div>
+          </div>
+      </footer>
 </body>
 <script src="../javascript/login-modal.js" defer></script>
 <script src="../javascript/cart-hover-over.js" defer></script>
+<script src="../javascript/scroll-to-top-button.js" defer></script>
 </html>

@@ -113,13 +113,13 @@ main {
 
 .quantity select {
     border: none;
-    width: 1.4vw;
+    width: 1.9vw;
     color: #676363;
     font-size: 1.1vw;
     font-family: 'Open Sans', sans-serif;
 }
 
-#size {
+#cart .size {
     border: none;
     width: 2.2vw;
     color: #676363;
@@ -127,7 +127,7 @@ main {
     font-family: 'Open Sans', sans-serif;
 }
 
-#color {
+#cart .color {
     border: none;
     width: 4vw;
     color: #676363;
