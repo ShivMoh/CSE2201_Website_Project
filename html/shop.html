@@ -6,8 +6,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="../css\shop.css">
     <link rel="stylesheet" href="../css\navigation.css">
-    <link rel="stylesheet" href="../css/idkwhatyalldoinbutiusethisforhero.css">
+    <link rel="stylesheet" href="../css/hero.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <style>
+        
         .navigation-bar::before {
             content: "";
             position: absolute;
@@ -40,8 +42,12 @@
 
     <header>
         <div id="hero">
-            <p id="page-title">Shop</p>
-            <p id="page-location">Home > Shop</p>
+            <h1 id="page-title">SHOP</h1>
+            <p id="page-location">
+                Home 
+                <span><img src="../Resources/Icons/arrow-white.png" alt="arrow"></span> 
+                Shop
+            </p>
         </div>
 
     </header>
@@ -87,17 +93,18 @@
     </div>
     <main>
         <div class="filters">
-            <div id="sort-by-container">
-                <label for="sort-by">Sort by:</label>
+            <div class="filter">
+                <label for="sort-by">Sort By</label>
                 <select id="sort-by">
-                  <option value="price-low-to-high">Price: Low to High</option>
-                  <option value="price-high-to-low">Price: High to Low</option>
-                  <option value="rating-high-to-low">Rating: High to Low</option>
-                  <option value="rating-low-to-high">Rating: Low to High</option>
+                    <option value="" disabled selected>Select Option</option>
+                    <option value="price-low-to-high">Price: Low to High</option>
+                    <option value="price-high-to-low">Price: High to Low</option>
+                    <option value="rating-high-to-low">Rating: High to Low</option>
+                    <option value="rating-low-to-high">Rating: Low to High</option>
                 </select>
             </div>
-            <div>
-                <label for="category">Filter by Category:</label>
+            <div class="filter">
+                <label for="category">Categories</label>
                 <select id="category">
                     <option value="all">All</option>
                     <option value="accessories">Accessories</option>
@@ -106,12 +113,12 @@
                     <option value="women">Women</option>
                 </select>
             </div>
-            <div class="search">
-            </div>
-                <label for="search-input">Search:</label>
+            <div class="filter">
                 <input type="text" id="search-input" name="search-input">
+                <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
             </div>
-          </div>
+        </div>
+          
           
           
 
@@ -264,19 +271,85 @@
         </div>
 
         <!-- Navigation buttons for different product pages -->
-        <section style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-            <div id="pagination">
-                <button class="btn" id="prev-page" onclick="pageToggle(-1)"><img src="../Resources/Icons/prev-arrow.png" alt="Previous"></button>
-                <span>1</span>
-                <span>2</span>
-                <span>3</span>
-                <span>4</span>
-
-                
-                <button class="btn" id="next-page" onclick="pageToggle(1)"><img src="../Resources/Icons/next-arrow.png" alt="Next"></button>
-            </div>
-            <p id="page-num" style="color: black; font-size: large;">Page 1</p>
+        <section>
+            <div class="pagination">
+                <a href="#" class="prev-arrow"><img src="..\Resources\Icons\prev-arrow.png" alt="Previous"></a>
+                <a href="#" class="page-number active">1</a>
+                <a href="#" class="page-number">2</a>
+                <a href="#" class="page-number">3</a>
+                <a href="#" class="page-number">4</a>
+                <a href="#" class="page-number">5</a>
+                <a href="#" class="next-arrow"><img src="..\Resources\Icons\next-arrow.png" alt="Next"></a>
+            </div>                     
         </section>
+
+        <!--Footer-->
+    <footer>
+        <div class="top-rectangle">
+            <div class="top-rectangle-column">
+                <a class="top-rectangle-column-head" href="#"><p>SHOP</p></a>
+                <a class="top-rectangle-column-sub-menu" href="#">What's New</a>
+                <a class="top-rectangle-column-sub-menu" href="#">Popular</a>
+                <a class="top-rectangle-column-sub-menu" href="#">Sales</a>
+                <a class="top-rectangle-column-sub-menu" href="#">Cart</a>
+            </div>
+            <div class="top-rectangle-column">
+                <p class="column-head">SERVICES</p>
+                <a class="top-rectangle-column-sub-menu" href="services.html">Our Services</a>
+                <a class="top-rectangle-column-sub-menu" href="customer-rewards.html">Reward's Signup</a>
+                <a class="top-rectangle-column-sub-menu" href="request-services.html">Request a Service</a>
+            </div>
+            <div class="top-rectangle-column">
+                <p class="column-head">ABOUT</p>
+                <a class="top-rectangle-column-sub-menu" href="#">Who We Are</a>
+                <a class="top-rectangle-column-sub-menu" href="our-history.html">Our History</a>
+            </div>
+            <div class="top-rectangle-column">
+                <a class="top-rectangle-column-head" href="#"><p>LEAVE A MESSAGE</p></a>
+                <a class="top-rectangle-column-sub-menu" href="#">Contact us</a>
+            </div>
+        </div>
+
+        <div class="bottom-rectangle">
+            <div class="bottom-rectangle-column">
+                <p class="find-us-at">Find Us At</p>
+                <p class="address">Lot 1337</p>
+                <p class="address">Watermelon Street</p>
+                <p class="address">Georgetown</p>
+                <p class="address">Guyana</p>
+            </div>
+            <div class="bottom-rectangle-column">
+                <p class="follow-us">Follow Us:</p>
+                <button class="social-media-button">
+                    <img class="social-media-icon" src="../Resources/Header-Assets/facebook-icon.png" alt="facebook">
+                </button>
+                <button class="social-media-button">
+                    <img class="social-media-icon" src="../Resources/Header-Assets/instagram-icon.png" alt="instagram">
+                </button>
+                <button class="social-media-button">
+                    <img class="social-media-icon" src="../Resources/Header-Assets/twitter-icon.png" alt="twitter">
+                </button>
+            </div>
+            <div class="bottom-rectangle-column">
+                <p class="call-or-whatsapp">Call or Whatsapp</p>
+                <p class="phone-number">+592 223 2323</p>
+            </div>
+            <div class="bottom-rectangle-column">
+                <p class="email">Email</p>
+                <p class="email-address">joesStoresx11@gmail.com</p>
+            </div>
+
+            <div class="copyright">
+                <p><strong>Secure Shopping Online</strong></p>
+                <p>@copyrightTeam22023</p>
+            </div>
+            <div class="payment-options">
+                <img class="payment-img" src="../Resources/Logos/paypal.png" alt="Paypal">
+                <img class="payment-img" src="../Resources/Logos/visa.png" alt="Visa Card">
+                <img class="payment-img" src="../Resources/Logos/wipay.png" alt="Wipay">
+            </div>
+        </div>
+    </footer>
        
     </main>
 
@@ -349,6 +422,15 @@ categorySelect.addEventListener('change', filterProducts);
 
 		searchInput.addEventListener('input', searchProducts);
 	</script>
+    <script>
+        const prevArrow = document.querySelector('.prev-arrow');
+const currentPage = 1;
+
+if (currentPage === 1) {
+  prevArrow.classList.add('disabled');
+}
+
+    </script>
 </body>
 
 </html>
