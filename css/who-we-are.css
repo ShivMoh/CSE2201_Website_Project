@@ -4,6 +4,7 @@ h2 {
     font-weight: 800;
     letter-spacing: 0.1vw;
     color: #0581F4;
+    margin-bottom: 10px;
 }
 
 .who-we-are {
@@ -13,10 +14,6 @@ h2 {
 .underline {
     text-decoration: underline;
     text-underline-offset: 30px;
-}
-
-h2 {
-    margin-bottom: 10px;
 }
 
 .text-and-photo-div {
@@ -57,7 +54,7 @@ p {
     width: 300px;
     height: 300px;
     object-fit: cover;
-    border-radius: 150px;
+    border-radius: 50%;
 }
 
 .executive-name {
@@ -77,11 +74,12 @@ button {
 
 .social-media-button {
     margin: 5px 8px;
-    border-radius:40px;
     height: 40px;
     width: 40px;
     object-fit: cover;
-}
+    border-radius: 50% !important;
+  }
+  
 
 .aspirations-grid {
     margin-top: 50px;
