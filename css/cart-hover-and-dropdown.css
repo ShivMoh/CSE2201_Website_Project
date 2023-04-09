@@ -169,20 +169,23 @@
   justify-content: center;
 }
 
-#login-profile-options {
+#profile-menu {
+  height: 3vw;
+  min-width: 7vw;
   margin-top: 0;
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
+  row-gap: 1vw;
 }
-
-/* #login-profile-options #profile-options {
-  font-size: 1vw;
-}
-
-#login-profile-options #profile-options:hover {
-  transform: scale(1.02);
-} */
-
 .account-option:hover {
-  transform: scale(1.02);
+  transform: scale(1.05);
+}
+
+.account-option {
+  width: 100%;
+  height: 100%;
+  font-family: 'Outfit', 'Ariel', sans-serif;
+  font-size: 1vw;
+  font-weight: 600;
 }
