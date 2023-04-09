@@ -1,7 +1,6 @@
 .cart-link {
   display: inline-block;
   position: relative;
-  margin: 0 20px;
 }
 
 .cart-icon {
@@ -170,3 +169,20 @@
   justify-content: center;
 }
 
+#login-profile-options {
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* #login-profile-options #profile-options {
+  font-size: 1vw;
+}
+
+#login-profile-options #profile-options:hover {
+  transform: scale(1.02);
+} */
+
+.account-option:hover {
+  transform: scale(1.02);
+}
