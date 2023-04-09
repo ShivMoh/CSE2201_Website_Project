@@ -44,7 +44,7 @@ footer {
 
 .top-rectangle-column-sub-menu:hover {
     cursor: pointer;
-    transform: scale(1.04);
+    color: #cccccc;
 }
 
 .bottom-rectangle {
