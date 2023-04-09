@@ -1,3 +1,40 @@
+#progress-status {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#checkout-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.multi-stage-form {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+#form-content {
+    width: 40%;
+    border: solid black 0.1vw;
+    border-radius: 0.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#instructions-guide-options {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 button:hover {
     background-color: #5bd667;
     transform: scale(1.02);
@@ -56,14 +93,24 @@ label {
 
 }
 
-
-
-
 .progress-state {
-    color: grey;
+    font-family: 'Outfit', 'Ariel', sans-serif;
+    font-size: 0.8vw;
+    font-weight: 800;
+    letter-spacing: 0.2vw;
+    color: #65707A;
 }
 
 #progress-status span img {
-    width: 2vw;
+    width: 7vw;
     height: auto;
+}
+
+span {
+    margin: 0 1vw 0 1vw;
+}
+
+label span {
+    position: relative;
+    left: 0.3vw;
 }
