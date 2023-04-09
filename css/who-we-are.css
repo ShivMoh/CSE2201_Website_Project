@@ -107,3 +107,7 @@ button {
     font-size: 20px;
     color: #056ccc;
 }
+
+.btn {
+    margin-top: 2vw;
+}

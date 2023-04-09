@@ -94,3 +94,14 @@ label {
 input#request-details {
     height: 13vh;
 }
+
+#prev-btn {
+    background-color: #C54040;
+    margin-right: 1vw;
+    display: inline-block;
+}
+
+
+#prev-btn:hover {
+    background-color: #d16464;
+}
