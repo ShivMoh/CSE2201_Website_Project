@@ -126,9 +126,11 @@
   }
 
 .ok-button {
+  background-color: rgb(41, 187, 70);
   display: block;
   margin: 20px auto 0;
-  padding: 10px 5px;
+  padding: 10px 9px;
+  border-radius: 5px;
 }
 
 .ok-button:hover {
