@@ -20,7 +20,7 @@
     font-size: 7vw;
     align-self: center;
     position: relative; /* Add this to make the text appear above the pseudo-element */
-    z-index: 2; /* Set a higher z-index value to make the text appear above the pseudo-element */
+    z-index: 1; /* Set a higher z-index value to make the text appear above the pseudo-element */
   }
   
   #page-location {
@@ -32,7 +32,7 @@
     color: #FFFFFF;
     margin-top: 0em;
     position: relative; /* Add this to make the text appear above the pseudo-element */
-    z-index: 2; /* Set a higher z-index value to make the text appear above the pseudo-element */
+    z-index: 1; /* Set a higher z-index value to make the text appear above the pseudo-element */
   }
   
   /* #page-location img {
