@@ -1,5 +1,5 @@
 /*product styles*/
-.products {
+#products {
     display: grid;
     grid-template-columns: 23vw 23vw 23vw;
     grid-template-rows: auto;
@@ -50,23 +50,22 @@
     cursor: pointer;
 }
 
-/*filter styles*/
-.filter-div {
-	display: inline-block;
-}
-
-label {
-	font-family: 'Lucidia Sans';
-	font-size: 18px;
-	margin-right: 10px;
-}
-
-select {
-	border-radius: 10px;
-	height: 30px;
-	margin-right: 30px;
-	padding: 0 10px 0 10px;
-}
+.filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .filter-group {
+    display: flex;
+    align-items: center;
+  }
+  
+  label {
+    margin-right: 10px;
+  }
+  
 
 /*page navigation styles*/
 #pagination {
@@ -103,3 +102,6 @@ select {
 	background-color: #ff8ab5;
 	transform: scale(1.04);
 }
+
+
+
