@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joe's Fashion</title>
+
+    <!--Stylesheets-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abhaya+Libre&display=swap">
     <link rel="stylesheet" type="text/css" href="../CSS/navigation.css">
@@ -16,6 +18,8 @@
     <link rel="stylesheet" type="text/css" href="../CSS/footer.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans">
+
+    <!--Internal CSS-->
     <style>
         .navigation-bar::before {
             content: "";
@@ -38,6 +42,7 @@
     </style>
 </head>
 <body>
+    <!--Header (Slideshow)-->
     <section id="header">
         <div class="header-image">
             <img src="../Resources/Images/slide01.jpg" alt="Slide 1" class="active">
@@ -50,6 +55,8 @@
             <button class="prev"><img src="../Resources/Icons/white-arrow.png" alt="Previous"></button>
             <button class="next"><img src="../Resources/Icons/white-arrow.png" alt="Next"></button>
         </div>
+        
+        <!--Navagation Bar-->
         <nav>
             <div class="navigation-bar">
                 <div class="logo">
@@ -138,6 +145,7 @@
                 </div>
             </div>
 
+            <!--Login and Sign-Up Modals-->
             <section>
                 <div id="login-modal" class="modal">
                     <div class="modal-content">
@@ -207,202 +215,209 @@
                     </div>
                 </div>
             </section>  
+
+            <!--Scroll-Up Button-->
             <button id="scroll-to-top" class="circle">
                 <img src="../Resources/Icons/scroll-up.jpg" alt="scroll-to-top">
             </button>    
         </nav>			
     </section>
 
-    
-
+    <!--Who We Are-->
     <section id="who-we-are">
         <h2>WHO WE ARE</h2>
         <p>We are a clothing store that prides itself on offering high-quality clothing at affordable prices. We believe that everyone should have access to stylish and comfortable clothing, regardless of their income. Our goal is to provide our customers with a shopping experience that is both enjoyable and affordable. At Joe's Fashion, we are more than just a clothing store. We are a community. We believe that fashion should be fun and accessible to everyone, and we strive to create an environment where our customers feel comfortable and welcome. Whether you are looking for the latest fashion trends or a classic wardrobe staple, we have something for everyone. Come visit us and see what makes Joe's Fashion so special!</p>
         <a href="../html/who-we-are.html"><button class="green-button">Read More</button></a>
-      </section>
+    </section>
 
-      <section id="browse-our-collection">
-          <h2>BROWSE OUR COLLECTION</h2>
-          <h3>See What's In Store For You</h3>
-          <div class="men-and-women">
-              <div class="container01">
-                  <div class="item-container01">
-                      <img src="../Resources/Images/men.jpg" alt="Men">
-                      <a class="overlay"></a>
-                      <a class="category">FOR MEN</a>
-                      <a href="../html/shop.html?category=men"><button class="shop-now">Shop Now</button></a>
-                  </div>
-                  <div class="item-container01">
-                      <img src="../Resources/Images/women.jpg" alt="Women">
-                      <a class="overlay"></a>
-                      <a class="category">FOR WOMEN</a>
-                      <a href="../html/shop.html?category=women"><button class="shop-now">Shop Now</button></a>
-                  </div>
-              </div>
-          </div>
-      </section>
+    <!--Browse Our Collection-->
+    <section id="browse-our-collection">
+        <h2>BROWSE OUR COLLECTION</h2>
+        <h3>See What's In Store For You</h3>
+        <div class="men-and-women">
+            <div class="container01">
+                <div class="item-container01">
+                    <img src="../Resources/Images/men.jpg" alt="Men">
+                    <a class="overlay"></a>
+                    <a class="category">FOR MEN</a>
+                    <a href="../html/shop.html?category=men"><button class="shop-now">Shop Now</button></a>
+                </div>
+                <div class="item-container01">
+                    <img src="../Resources/Images/women.jpg" alt="Women">
+                    <a class="overlay"></a>
+                    <a class="category">FOR WOMEN</a>
+                    <a href="../html/shop.html?category=women"><button class="shop-now">Shop Now</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <section id="new-arrivals">
-          <div class="slides01-container">	
-              <div class="slider-buttons02">
-                  <button class="prev02"><img src="../Resources/Icons/white-arrow.png" alt="Previous"></button>
-                  <button class="next02"><img src="../Resources/Icons/white-arrow.png" alt="Next"></button>
-              </div>
-              <div class="slides01">
-                  <div class="item-container02" data-id="1">
-                      <img src="../Resources/Images/new01.jpg" alt="New-1">
-                      <h2 style="display: none;">Embroidered White Purse</h2>
-                      <p class="price" style="display: none;">$8000</p>
-                      <p class="description" style="display: none;">This elegant white purse bag is perfect for adding a touch of sophistication to your outfit. It features gold bead details on the edges and beautiful red floral embroidery for a pop of color. The bag hangs at your waist from your shoulder for easy carrying.</p>
-                      <p class="category" style="display: none;">Accessories</p>
-                      <p class="tags" style="display: none;">purse, bag, women's, embroidered</p>
-                      <a><button class="shop-now">Shop Now</button></a>
-                  </div>
-                  <div class="item-container02" data-id="2">
-                      <img src="../Resources/Images/new02.jpg" alt="New-2">
-                      <h2 style="display: none;">Leopard Sunglasses</h2>
-                      <p class="price" style="display: none;">$3000</p>
-                      <p class="description" style="display: none">Protect your eyes from the sun in style with these minimal leopard print sunglasses. The circular lens has a light orange tint that adds a pop of color to the black and orange print. Perfect for a day out in the sun.</p>
-                      <p class="category" style="display: none;">Accessories</p>
-                      <p class="tags" style="display: none;">sunglasses, leopard print, orange tint</p>
-                      <a><button class="shop-now">Shop Now</button></a>
-                  </div>
-                  <div class="item-container02" data-id="3">
-                      <img src="../Resources/Images/new03.jpg" alt="New-3">
-                      <h2 style="display: none;">Line Pattern Suit Jacket</h2>
-                      <p class="price" style="display: none;">$120</p>
-                      <p class="description" style="display: none;">Make a statement in this suit top with a pattern made up of lines. The bold print is complemented by a sharp silhouette that's perfect for both formal and casual occasions. Pair it with matching pants or jeans for a complete look.</p>
-                      <p class="category" style="display: none;">Clothing</p>
-                      <p class="tags" style="display: none;">suit top, checkered pattern, lines</p>
-                      <a><button class="shop-now">Shop Now</button></a>
-                  </div>
-                  <div class="item-container02" data-id="4">
-                      <img src="../Resources/Images/new04.jpg" alt="New-4">
-                      <h2 style="display: none;">Backpack</h2>
-                      <p class="price" style="display: none;">$6000</p>
-                      <p class="description" style="display: none;">This stylish backpack features multiple pockets, adjustable straps, and magnetic locks for easy access to your belongings. Its brownish-green color and sleek design make it perfect for any occasion.</p>
-                      <p class="category" style="display: none;">Accessories</p>
-                      <p class="tags" style="display: none;">backpack, travel, unisex</p>
-                      <a><button class="shop-now">Shop Now</button></a>
-                  </div>
-                  <div class="item-container02">
-                      <img src="../Resources/Images/new05.jpg" alt="New-5">
-                      <h2 style="display: none;">Hera halterneck wrap dress
-                      </h2>
-                      <p class="price" style="display: none;">$8000</p>
-                      <p class="description" style="display: none;">Hera halterneck wrap dress from Caravana featuring rose pink, cotton, calf leather, crinkled finish, gathered detailing, contrasting trim, wrap design, halterneck, plunging V-neck, open back, self-tie fastening, crossover shoulder straps, elasticated waistband, maxi skirt and asymmetric hem.</p>
-                      <p class="category" style="display: none;">Clothing</p>
-                      <p class="tags" style="display: none;">dress, formal, women's</p>
-                      <a><button class="shop-now">Shop Now</button></a>
-                  </div>
-              </div>
-          </div>
-          <div class="double-container01">
-              <h4>NEW ARRIVALS</h4>
-          </div>
-      </section>
+    <!--New Arrivals (Five Product Carousel)-->
+    <section id="new-arrivals">
+        <div class="slides01-container">	
+            <div class="slider-buttons02">
+                <button class="prev02"><img src="../Resources/Icons/white-arrow.png" alt="Previous"></button>
+                <button class="next02"><img src="../Resources/Icons/white-arrow.png" alt="Next"></button>
+            </div>
+            <div class="slides01">
+                <div class="item-container02" data-id="1">
+                    <img src="../Resources/Images/new01.jpg" alt="New-1">
+                    <h2 style="display: none;">Embroidered White Purse</h2>
+                    <p class="price" style="display: none;">$8000</p>
+                    <p class="description" style="display: none;">This elegant white purse bag is perfect for adding a touch of sophistication to your outfit. It features gold bead details on the edges and beautiful red floral embroidery for a pop of color. The bag hangs at your waist from your shoulder for easy carrying.</p>
+                    <p class="category" style="display: none;">Accessories</p>
+                    <p class="tags" style="display: none;">purse, bag, women's, embroidered</p>
+                    <a><button class="shop-now">Shop Now</button></a>
+                </div>
+                <div class="item-container02" data-id="2">
+                    <img src="../Resources/Images/new02.jpg" alt="New-2">
+                    <h2 style="display: none;">Leopard Sunglasses</h2>
+                    <p class="price" style="display: none;">$3000</p>
+                    <p class="description" style="display: none">Protect your eyes from the sun in style with these minimal leopard print sunglasses. The circular lens has a light orange tint that adds a pop of color to the black and orange print. Perfect for a day out in the sun.</p>
+                    <p class="category" style="display: none;">Accessories</p>
+                    <p class="tags" style="display: none;">sunglasses, leopard print, orange tint</p>
+                    <a><button class="shop-now">Shop Now</button></a>
+                </div>
+                <div class="item-container02" data-id="3">
+                    <img src="../Resources/Images/new03.jpg" alt="New-3">
+                    <h2 style="display: none;">Line Pattern Suit Jacket</h2>
+                    <p class="price" style="display: none;">$120</p>
+                    <p class="description" style="display: none;">Make a statement in this suit top with a pattern made up of lines. The bold print is complemented by a sharp silhouette that's perfect for both formal and casual occasions. Pair it with matching pants or jeans for a complete look.</p>
+                    <p class="category" style="display: none;">Clothing</p>
+                    <p class="tags" style="display: none;">suit top, checkered pattern, lines</p>
+                    <a><button class="shop-now">Shop Now</button></a>
+                </div>
+                <div class="item-container02" data-id="4">
+                    <img src="../Resources/Images/new04.jpg" alt="New-4">
+                    <h2 style="display: none;">Backpack</h2>
+                    <p class="price" style="display: none;">$6000</p>
+                    <p class="description" style="display: none;">This stylish backpack features multiple pockets, adjustable straps, and magnetic locks for easy access to your belongings. Its brownish-green color and sleek design make it perfect for any occasion.</p>
+                    <p class="category" style="display: none;">Accessories</p>
+                    <p class="tags" style="display: none;">backpack, travel, unisex</p>
+                    <a><button class="shop-now">Shop Now</button></a>
+                </div>
+                <div class="item-container02">
+                    <img src="../Resources/Images/new05.jpg" alt="New-5">
+                    <h2 style="display: none;">Hera halterneck wrap dress
+                    </h2>
+                    <p class="price" style="display: none;">$8000</p>
+                    <p class="description" style="display: none;">Hera halterneck wrap dress from Caravana featuring rose pink, cotton, calf leather, crinkled finish, gathered detailing, contrasting trim, wrap design, halterneck, plunging V-neck, open back, self-tie fastening, crossover shoulder straps, elasticated waistband, maxi skirt and asymmetric hem.</p>
+                    <p class="category" style="display: none;">Clothing</p>
+                    <p class="tags" style="display: none;">dress, formal, women's</p>
+                    <a><button class="shop-now">Shop Now</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="double-container01">
+            <h4>NEW ARRIVALS</h4>
+        </div>
+    </section>
     
-      <section id="sales">
-          <div class="slides02-container">
-              <div class="slider-buttons03">
-                  <button class="prev03"><img src="../Resources/Icons/white-arrow.png" alt="Previous"></button>
-                  <button class="next03"><img src="../Resources/Icons/white-arrow.png" alt="Next"></button>
-              </div>
-              <div class="slides02">	
-                  <div class="item-container03" data-id="6">
-                      <img src="../Resources/Images/sale01.jpg" alt="Sale-1">
-                      <h2 style="display: none;">Activist T-Shirt</h2>
-                      <p class="price" style="display: none;">$3500</p>
-                      <p class="description" style="display: none;">Make a statement with this bold and powerful t-shirt. Featuring the text "no homophobia, no violence, no racism, no sexism, yes kindness, yes peace, yes equality, yes love" on the back, it's the perfect way to show your support for equality, justice, and human rights. Made from high-quality cotton, it's soft, comfortable, and easy to care for.</p>
-                      <p class="category" style="display: none;">Clothing</p>
-                      <p class="tags" style="display: none;">t-shirt, activist, unisex</p>
-                      <a><button class="shop-now">Shop Now</button></a>
-                  </div>
-                  <div class="item-container03" data-id="7">
-                      <img src="../Resources/Images/sale02.jpg" alt="Sale-2">
-                      <h2 style="display: none;">Glossy Red Purse</h2>
-    <p class="price" style="display: none;">$7500</p>
-    <p class="description" style="display: none;">Make a statement with this stunning red purse. The glossy finish and gold hardware give it an elegant and sophisticated look, while the gems on the top trim add a touch of glamour. The spacious interior is perfect for carrying all your essentials, and the detachable gold chain strap allows you to wear it as a shoulder or crossbody bag. Whether you're dressing up for a special occasion or adding some flair to your everyday look, this purse is sure to turn heads.</p>
-    <p class="category" style="display: none;">Accessories</p>
-    <p class="tags" style="display: none;">purse, red, gold, gems, women's</p>
-    <a><button class="shop-now">Shop Now</button></a>
-</div>
+    <!--Sales (Five Product Carousel)-->
+    <section id="sales">
+        <div class="slides02-container">
+            <div class="slider-buttons03">
+                <button class="prev03"><img src="../Resources/Icons/white-arrow.png" alt="Previous"></button>
+                <button class="next03"><img src="../Resources/Icons/white-arrow.png" alt="Next"></button>
+            </div>
+            <div class="slides02">	
+                <div class="item-container03" data-id="6">
+                    <img src="../Resources/Images/sale01.jpg" alt="Sale-1">
+                    <h2 style="display: none;">Activist T-Shirt</h2>
+                    <p class="price" style="display: none;">$3500</p>
+                    <p class="description" style="display: none;">Make a statement with this bold and powerful t-shirt. Featuring the text "no homophobia, no violence, no racism, no sexism, yes kindness, yes peace, yes equality, yes love" on the back, it's the perfect way to show your support for equality, justice, and human rights. Made from high-quality cotton, it's soft, comfortable, and easy to care for.</p>
+                    <p class="category" style="display: none;">Clothing</p>
+                    <p class="tags" style="display: none;">t-shirt, activist, unisex</p>
+                    <a><button class="shop-now">Shop Now</button></a>
+                </div>
+                <div class="item-container03" data-id="7">
+                    <img src="../Resources/Images/sale02.jpg" alt="Sale-2">
+                    <h2 style="display: none;">Glossy Red Purse</h2>
+                    <p class="price" style="display: none;">$7500</p>
+                    <p class="description" style="display: none;">Make a statement with this stunning red purse. The glossy finish and gold hardware give it an elegant and sophisticated look, while the gems on the top trim add a touch of glamour. The spacious interior is perfect for carrying all your essentials, and the detachable gold chain strap allows you to wear it as a shoulder or crossbody bag. Whether you're dressing up for a special occasion or adding some flair to your everyday look, this purse is sure to turn heads.</p>
+                    <p class="category" style="display: none;">Accessories</p>
+                    <p class="tags" style="display: none;">purse, red, gold, gems, women's</p>
+                    <a><button class="shop-now">Shop Now</button></a>
+                </div>
 
-<div class="item-container03" data-id="8">
-    <img src="../Resources/Images/sale03.jpg" alt="Sale-3">
-    <h2 style="display: none;">Gold Bracelet Set</h2>
-    <p class="price" style="display: none;">$8000</p>
-    <p class="description" style="display: none;">This stunning gold bracelet set includes three bangles with delicate pendants that can also be worn as earrings. The set is versatile and perfect for adding a touch of elegance to any outfit.</p>
-    <p class="category" style="display: none;">Accessories</p>
-    <p class="tags" style="display: none;">bracelet, earrings, pendant, gold, women's</p>
-    <a><button class="shop-now">Shop Now</button></a>
-  </div>
+                <div class="item-container03" data-id="8">
+                    <img src="../Resources/Images/sale03.jpg" alt="Sale-3">
+                    <h2 style="display: none;">Gold Bracelet Set</h2>
+                    <p class="price" style="display: none;">$8000</p>
+                    <p class="description" style="display: none;">This stunning gold bracelet set includes three bangles with delicate pendants that can also be worn as earrings. The set is versatile and perfect for adding a touch of elegance to any outfit.</p>
+                    <p class="category" style="display: none;">Accessories</p>
+                    <p class="tags" style="display: none;">bracelet, earrings, pendant, gold, women's</p>
+                    <a><button class="shop-now">Shop Now</button></a>
+                </div>
 
-  <div class="item-container03" data-id="9">
-    <img src="../Resources/Images/sale04.jpg" alt="Sale-4">
-    <h2 style="display: none;">High-Waisted Blue Jeans</h2>
-    <p class="price" style="display: none;">$6000</p>
-    <p class="description" style="display: none;">These high-waisted blue jeans are a must-have for any wardrobe. They're made from comfortable and durable denim and feature a tight fit that's both flattering and comfortable. Perfect for dressing up or down!</p>
-    <p class="category" style="display: none;">Clothing</p>
-    <p class="tags" style="display: none;">jeans, women's, high-waisted, blue</p>
-    <a><button class="shop-now">Shop Now</button></a>
-  </div>
+                <div class="item-container03" data-id="9">
+                    <img src="../Resources/Images/sale04.jpg" alt="Sale-4">
+                    <h2 style="display: none;">High-Waisted Blue Jeans</h2>
+                    <p class="price" style="display: none;">$6000</p>
+                    <p class="description" style="display: none;">These high-waisted blue jeans are a must-have for any wardrobe. They're made from comfortable and durable denim and feature a tight fit that's both flattering and comfortable. Perfect for dressing up or down!</p>
+                    <p class="category" style="display: none;">Clothing</p>
+                    <p class="tags" style="display: none;">jeans, women's, high-waisted, blue</p>
+                    <a><button class="shop-now">Shop Now</button></a>
+                </div>
 
-  <div class="item-container03" data-id="10">
-    <img src="../Resources/Images/sale05.jpg" alt="Sale-5">
-    <h2 style="display: none;">Bee Print Handbag</h2>
-    <p class="price" style="display: none;">$8000</p>
-    <p class="description" style="display: none;">This stylish handbag features a vibrant yellow color and a fun bee print. The brown leather straps and details add a touch of sophistication to this playful accessory. With its roomy interior and adjustable straps, it's perfect for carrying all your essentials on the go.</p>
-    <p class="category" style="display: none;">Accessories</p>
-    <p class="tags" style="display: none;">handbag, bees, pattern, women's</p>
-    <a><button class="shop-now">Shop Now</button></a>
-</div>
+                <div class="item-container03" data-id="10">
+                    <img src="../Resources/Images/sale05.jpg" alt="Sale-5">
+                    <h2 style="display: none;">Bee Print Handbag</h2>
+                    <p class="price" style="display: none;">$8000</p>
+                    <p class="description" style="display: none;">This stylish handbag features a vibrant yellow color and a fun bee print. The brown leather straps and details add a touch of sophistication to this playful accessory. With its roomy interior and adjustable straps, it's perfect for carrying all your essentials on the go.</p>
+                    <p class="category" style="display: none;">Accessories</p>
+                    <p class="tags" style="display: none;">handbag, bees, pattern, women's</p>
+                    <a><button class="shop-now">Shop Now</button></a>
+                </div>
 
-              </div>
-          </div> 
-          <div class="double-container02">
-              <h4>ONGOING SALES</h4>
-          </div>
-      </section>
+            </div>
+        </div> 
+        <div class="double-container02">
+            <h4>ONGOING SALES</h4>
+        </div>
+    </section>
 
-      <section id="our-services">
-          <h2>OUR SERVICES</h2>
-          <h3>We Aim To Serve Our Customer's Every Need</h3>
-          <div class="services">
-              <div class="service">
-                  <img src="../Resources/Images/service01.jpg" alt="Service-1">
-                  <p>Tailoring</p>
-              </div>
-              <div class="service">
-                  <img src="../Resources/Images/service02.jpg" alt="Service-2">
-                  <p>Gift Wrapping</p>
-              </div>
-              <div class="service">
-                  <img src="../Resources/Images/service03.jpg" alt="Service-3">
-                  <p>Personal Stylist</p>
-              </div>
-          </div>   
-          <a href="../html/services.html"><button class="green-button">See More</button></a>
-      </section>
+    <!--Our Services-->
+    <section id="our-services">
+        <h2>OUR SERVICES</h2>
+        <h3>We Aim To Serve Our Customer's Every Need</h3>
+        <div class="services">
+            <div class="service">
+                <img src="../Resources/Images/service01.jpg" alt="Service-1">
+                <p>Tailoring</p>
+            </div>
+            <div class="service">
+                <img src="../Resources/Images/service02.jpg" alt="Service-2">
+                <p>Gift Wrapping</p>
+            </div>
+            <div class="service">
+                <img src="../Resources/Images/service03.jpg" alt="Service-3">
+                <p>Personal Stylist</p>
+            </div>
+        </div>   
+        <a href="../html/services.html"><button class="green-button">See More</button></a>
+    </section>
 
-      <section id="some-more-about-us">
-          <h2>SOME MORE ABOUT US</h2>
-          <h3>A Bit Of Our History</h3>
-          <p>The story of this clothing store begins in the early 1990s when it started out as a small thrift shop in a rundown neighborhood. The store was filled with old furniture, mats, and mirrors, and it catered mostly to low-income families. Despite its humble beginnings, the store quickly gained a loyal following among the locals, who appreciated the store's unique selection and affordable prices.
-          </p>
-          <a href="../html/our-history.html"><button class="green-button">Read More</button></a>
-      </section>
+    <!--Some More About Us-->
+    <section id="some-more-about-us">
+        <h2>SOME MORE ABOUT US</h2>
+        <h3>A Bit Of Our History</h3>
+        <p>The story of this clothing store begins in the early 1990s when it started out as a small thrift shop in a rundown neighborhood. The store was filled with old furniture, mats, and mirrors, and it catered mostly to low-income families. Despite its humble beginnings, the store quickly gained a loyal following among the locals, who appreciated the store's unique selection and affordable prices.
+        </p>
+        <a href="../html/our-history.html"><button class="green-button">Read More</button></a>
+    </section>
 
-      <section id="for-more-information">
-          <div class="content">
-              <h2>FOR MORE INFORMATION</h2>
-              <h3>Feel Free To Leave Us A Message</h3>
-          </div>
-          <img src="../Resources/Images/logo.png" alt="logo">
-          <a href="../html/contact.html"><button class="green-button">Contact Us</button></a>
-      </section> 
+    <!--For More Information-->
+    <section id="for-more-information">
+        <div class="content">
+            <h2>FOR MORE INFORMATION</h2>
+            <h3>Feel Free To Leave Us A Message</h3>
+        </div>
+        <img src="../Resources/Images/logo.png" alt="logo">
+        <a href="../html/contact.html"><button class="green-button">Contact Us</button></a>
+    </section> 
       
-          <!--Footer-->
+    <!--Footer-->
     <footer>
         <div class="top-rectangle">
             <div class="top-rectangle-column">
@@ -470,6 +485,7 @@
         </div>
     </footer>
   
+    <!--Scripts-->
     <script type="text/javascript" src="../Javascript/login-modal.js"></script>
     <script type="text/javascript" src="../Javascript/cart-hover-over.js"></script>
     <script type="text/javascript" src="../Javascript/slideshow.js"></script>
