@@ -89,6 +89,9 @@ footer {
 }
 
 .payment-img {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
     justify-content: center;
     align-items: center;
     margin-right: 30px;
