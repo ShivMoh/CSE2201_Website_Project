@@ -96,15 +96,30 @@ main {
     margin-left: -0.5vw;
 }
 
-#quantity {
+.quantity {
+    width: 10vw;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.quantity label {
+    color: #676363;
+    font-size: 1.1vw;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 0vw;
+    margin-left: 0.5vw;
+}
+
+.quantity select {
     border: none;
-    width: 4.5vw;
+    width: 1.9vw;
     color: #676363;
     font-size: 1.1vw;
     font-family: 'Open Sans', sans-serif;
 }
 
-#size {
+#cart .size {
     border: none;
     width: 2.2vw;
     color: #676363;
@@ -112,7 +127,7 @@ main {
     font-family: 'Open Sans', sans-serif;
 }
 
-#color {
+#cart .color {
     border: none;
     width: 4vw;
     color: #676363;
@@ -184,3 +199,7 @@ main {
     color: #0581F4;
 }
 
+button:hover {
+    background-color: #5bd667;
+    transform: scale(1.02);
+}

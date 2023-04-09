@@ -1,4 +1,5 @@
 footer {
+    width: 100%;
     margin-top: 50px;
     color: white;
     font-family: 'Ubuntu', sans-serif;
@@ -19,20 +20,31 @@ footer {
 
 .top-rectangle-column-head {
     text-align: center;
-    font-size: 26px;
-    color: white;
+    font-size: 10vw;
+    text-decoration: none;
 }
 
 .column-head {
     text-align: center;
+    font-size: 1.5vw;
+    color: #D9D9D9;
+    font-family: 'Lato', 'Ariel', sans-serif;
+    font-weight: 600;
 }
 
 .top-rectangle-column-sub-menu {
     display: block;
     line-height: 36px;
     text-align: center;
-    font-size: 16px;
-    color: rgb(185, 207, 214);
+    font-family: 'Open Sans', 'Ariel', sans-serif;
+    font-weight: 500;
+    font-size: 1vw;
+    color: #7B92A8;
+}
+
+.top-rectangle-column-sub-menu:hover {
+    cursor: pointer;
+    transform: scale(1.04);
 }
 
 .bottom-rectangle {
@@ -44,8 +56,25 @@ footer {
     bottom: 0;
     grid-row-gap: 30px;
     row-gap: 150px;
-    align-items: center;
+    align-items: start;
     line-height: 36px;
+}
+
+.bottom-rectangle-column h2 {
+    font-size: 1.5vw;
+    font-family: 'Lato', 'Ariel', sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    
+}
+
+
+.bottom-rectangle-column p {
+    font-size: 1vw;
+    font-family: 'Open Sans', 'Ariel', sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+    
 }
 
 .email,
@@ -65,9 +94,13 @@ footer {
 }
 
 .social-media-icon {
-    width: 40px;
-    height: 40px;
+    width: 2.5vw;
+    height: 2.5vw;
     vertical-align: top;
+}
+
+.social-media-icon:hover {
+    transform: scale(1.07);
 }
 
 .social-media-button {
@@ -88,7 +121,15 @@ footer {
     grid-column: span 3;
 }
 
+footer .payment-options {
+    align-self: self-end;
+    margin-bottom: 1vw;
+}
+
 .payment-img {
+    height: 3vw;
+    width: 3vw;
+    object-fit: contain;
     justify-content: center;
     align-items: center;
     margin-right: 30px;

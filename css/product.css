@@ -27,6 +27,21 @@
     width: 32vw;
     height: 32vw;
   }
+
+  .product-image {
+    flex-direction: column;
+  }
+  
+  .product-image p {
+    margin-bottom: -5vw;
+    color: #515151;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1vw;
+    font-weight: normal;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+  }
+  
   
   .zoom-image {
     width: 100%;
@@ -160,8 +175,16 @@ border: none;
   
   .product-path {
     color: #65707a;
-    margin-left: 3.7vw;
     margin-top: 9vw;
+    margin-left: 3.7vw;
+    font-weight: bold;
+  }
+
+  .product-path a{
+    text-decoration: none;
+    color: #65707a;
+    margin-left: 1vw;
+    margin-right: 1vw;
     font-weight: bold;
 
     font-family: 'Outfit', sans-serif;
@@ -173,3 +196,76 @@ border: none;
   .product-path img {
     height: 1vw;
   }
+
+
+  #popup-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+  }
+  
+  #popup-container h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5vw;
+    font-weight: bold;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+  }
+  
+  #popup-container h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2vw;
+    font-weight: normal;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+  }
+  
+  #popup {
+    width: 35vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 3vw;
+    text-align: center;
+  }
+  
+  #popup-buttons button {
+    background-color: #29D53A;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 1.1vw;
+    letter-spacing: 0.1em;
+    border: none;
+    padding: 1vw 3vw 1vw 3vw;
+    border-radius: 1vw;
+    margin-top: 1vw;
+    margin-bottom: 2vw;
+  }
+  
+  #popup-buttons button:hover {
+    background-color: #24b232;
+  }
+  
+  /* Position the close button in the top right corner */
+  #popup .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  /* Style the close button */
+  #popup .close img {
+    width: 1.7vw;
+    height: 1.7vw;
+  }
+  

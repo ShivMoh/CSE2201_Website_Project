@@ -18,6 +18,10 @@
     margin-left: 0;
 }
 
+#review #selectors {
+    transform: scale(0.8);
+}
+
 .review .cart-item img {
     width: 10vw;
     height: 10vw;
@@ -48,21 +52,35 @@
     margin-top: 0.5vw;
 }
 
-.review .cart-item #color {
+.review .cart-item .color {
+    border: none;
+    width: 4vw;
+    color: #676363;
+    font-family: 'Open Sans', sans-serif;
+  
     width: 3.2vw;
     font-size: 0.9vw;
 }
 
-.review .cart-item #size {
+.review .cart-item .size {
+    border: none;
+    width: 2.2vw;
+    color: #676363;
+    font-family: 'Open Sans', sans-serif;
     width: 2vw;
     font-size: 0.9vw;
     margin-left: -0.7vw;
 }
 
-.review .cart-item #quantity  {
+.review .cart-item .quantity select {
+    width: 2.2vw;
+    font-size: 0.9vw;
+    margin-left: -1.7vw;
+}
+.review .cart-item .quantity label {
     width: 3.4vw;
     font-size: 0.9vw;
-    margin-left: -0.7vw;
+    margin-left: -0.4vw;
 }
 
 #shipping {
@@ -76,9 +94,6 @@
 }
 
 #payment {
-    /* display: grid;
-    grid-template-columns: 35% 32% 33%;
-    column-gap: 3vw; */
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -155,6 +170,8 @@
 #billing-address {
     display: flex;
     flex-direction: column;
+    position: relative;
+    left: 1vw;
 }
 
 #contact-information h3, #billing-address h3 {

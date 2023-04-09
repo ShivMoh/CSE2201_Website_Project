@@ -1,0 +1,85 @@
+#main-profile {
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+    padding-bottom: 3vw;
+}
+
+#divider {
+    /* Applies a solid border at the bottom and adds padding to the element with the ID "divider" */
+    width: 75%;
+    height: 0.1vw;
+    background-color: #676363;
+    opacity: 61%;
+
+}
+
+
+#profile-items {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-item {
+    /* Styles all elements with the class "profile-item" */
+    width: 75%;
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 20em;
+    padding: 1em;
+}
+
+
+.profile-item h4 {
+    margin-top: 0.8vw;
+    font-family: 'Open Sans', sans-serif;
+    color: black;
+    font-size: 1.5vw;
+}
+
+
+.textstyle {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+
+.textnormal {
+    font-family: 'Open Sans', sans-serif;
+    color: black;
+    font-weight: normal;
+}
+
+.textnormal p{
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 0.1em;
+}
+
+
+.link p {
+    color: #0581F4;
+    text-align: center;
+    margin-left: -1.5em;
+}
+
+.link a {
+    text-decoration: none;  
+}
+
+.align1{
+    padding-left: 20em;
+    
+}
+
+.align2{
+    margin-left: -2em;    
+}
+
+.align1 img {
+    width: 4vw;
+    height: 3vw;
+}
+
+

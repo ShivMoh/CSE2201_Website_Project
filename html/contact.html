@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="stylesheet" href="../css/form-elements.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+    crossorigin=""/>
+   
+</head>
+<body>
+    <main id="contact" class="form">
+      
+        <form id="contact-form" action="">
+            <label for="name">First Name<span>*</span></label>
+            <input title="name" type="text" name="name" placeholder="name" required>
+
+            <label for="email">Email <span>*</span></label>
+            <input title="email" type="email" name="email" placeholder="e.g johndoe@gmail.com" required>
+
+            <label for="phoneNumber">Phone Number (Optional)</label>
+            <input title="phoneNumber" type="number" name="phoneNumber" placeholder="e.g 634 2442">
+
+            <label for="message">Message: <span>*</span></label>
+            <textarea id="message" name="message" placeholder="How can we help you?" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+        <div id="map">
+
+        </div>
+    </main>
+</body>
+<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+crossorigin=""></script>
+<script src="../javascript/contact.js" defer></script>
+<script src="../javascript/map.js" defer></script>
+
+</html>

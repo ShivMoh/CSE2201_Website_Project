@@ -1,0 +1,95 @@
+.who-we-are {
+    text-align: center;
+}
+
+.underline {
+    text-decoration: underline;
+    text-underline-offset: 30px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+.text-and-photo-div {
+    margin: 10vh 20vw;
+    text-align: center;
+}
+
+p {
+    font-size: 18px;
+    font-family: Open Sans, Arial;
+}
+
+.motto {
+    margin-top: 5vh;
+    font-size: 30px;
+    font-family: Ubuntu, Arial;
+}
+
+.photo {
+    width: 100%;
+}
+
+.sub-heading-text {
+    font-size: 22px;
+    font-family: Open Sans, Arial;
+    color: #0581F4;
+    margin: 0;
+}
+
+.executive-team-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 40px;
+    text-align: center;
+}
+
+.executive-team-img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 150px;
+}
+
+.executive-name {
+    font-weight: 700;
+}
+
+button {
+    width: 9vw;
+    background-color: #29D53A;
+    border: none;
+    margin-top: 0.5vw;
+    color: #fff;
+    padding: 1vw 2vw;
+    border-radius: 0.5vw;
+    text-decoration: none;
+}
+
+.aspirations-grid {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 60px;
+}
+
+.aspiration-element {
+    margin: 0 60px;
+    height: 350px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #0581F4;
+    border-radius: 30px;
+}
+
+.aspirations-number {
+    margin:30px 0;
+    width: 150px;
+}
+
+.aspiration-text {
+    font-family: Open Sans;
+    font-size: 20px;
+    color: #056ccc;
+}

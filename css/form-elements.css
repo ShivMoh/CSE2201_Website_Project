@@ -1,6 +1,5 @@
 /* form styles */
-input,
-form input {
+.form input {
     height: 5%;
     margin-top: 0.5vw;
     padding: 0.8vw;
@@ -11,12 +10,11 @@ form input {
     border-radius: 0.5vw;
 }
 
-label,
-form label {
+.form label {
     margin-top: 2vw;
 }
 
-button {
+.btn, .form button {
     width: 9vw;
     background-color: #29D53A;
     border: none;
@@ -27,8 +25,20 @@ button {
     text-decoration: none;
 }
 
-/* button:hover {
-    background-color: #5bd667;
-    transform: scale(1.02);
+textarea {
+    /*Styles the textarea to use the Raleway font family and have a solid banner*/
+    width: 24.5vw;
+    height: 8vw;
+    border: solid #aaaaaa 1px;
+    border-radius: 0.5em;
+    font-size: 1vw;
+    font-family: Raleway;
+    padding: 0.5vw;
 }
- */
+
+label span {
+    color: red;
+    margin-left: -1%;
+    font-size: 0.9vw;
+
+}

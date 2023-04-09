@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joe's Store</title>
+
+    <!--   #hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Set a higher z-index value to make the pseudo-element appear on top of the text */
+  } -->
+  
+    <link rel="stylesheet" href="../css/hero.css">
+    <link rel="stylesheet" href="../css/form-elements.css">
+    <link rel="stylesheet" href="../css/checkout.css">
+    <link rel="stylesheet" href="../css/checkout-shipping.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/navigation.css">
+    <link rel="stylesheet" href="../css/header-blue-no-image.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abhaya+Libre">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* modifies the margin top to better suite this page */
+        nav {
+            margin-bottom: -12vw;
+        }
+
+        #center {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-top: 7vw;
+        }
+
+        .multi-stage-form {
+            display: flex;
+        }
+
+        #prev-btn {
+            display: block;
+        }
+
+        .payment input {
+            height: 1.3vw;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <div id="hero">
+            <h1 id="page-title">MY CART</h1>
+            <p id="page-location">
+                Home 
+                <span><img src="../Resources/Icons/arrow-grey.png" alt="arrow"></span> 
+                Shop 
+                <span><img src="../Resources/Icons/arrow-grey.png" alt="arrow"></span> 
+                Cart
+            </p>
+        </div>
+        <nav>
+            <div class="navigation-bar">
+                <div class="logo">
+                    <img src="..\Resources\Navigation-Bar\logo.png"  alt="Cakes R Us logo">
+                </div>
+                <div class="menu">
+                    <a href="#">Home</a>
+                    <div class="dropdown">
+                        <div class="dropbtn">About
+                            <i class="fa fa-caret-down"></i>
+                        </div>
+                        <div class="dropdown-content about-dropdown">
+                            <a href="#">Who We Are</a>
+                            <a href="#">Our History</a>
+                        </div>
+                    </div> 
+                    <a href="#">Shop</a>
+                    <a href="#">Services</a>
+                    <a href="#">Contact</a>
+                </div>
+                <ul class="social-links">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+                <div class="icons">
+                    <div class="dropdown">
+                        <a><img src="..\Resources\Navigation-Bar\search-icon.png"  alt="search"></a>
+                        <div class="dropdown-content ">
+                            <div id="search-container">
+                                <input title="search" type="text" name="search" id="search-bar">
+                                <button title="search button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div> 
+                    <a href="#"><img src="..\Resources\Navigation-Bar\cart-icon.png" alt="Cart"></a>
+                    <a href="#"><img src="..\Resources\Navigation-Bar\profile-icon.png" alt="Profile"></a>
+                </div>
+            </div>
+        </nav>
+ 
+    </header>
+    <main id="center">
+            <form id="form-content" class="form">
+    
+                <div class="multi-stage-form">
+                    <div id="instructions-guide-options">
+                        <h3>How would you like to get your order?</h3>
+                        <div id="shipping-options">
+                            <div id="box-container-1" onclick="switchTabs(0)">
+                                <p>I'd like it delivered!</p>
+                            </div>
+                            <div id="box-container-2" onclick="switchTabs(1)">
+                                <p>I'll pick it up</p>
+                            </div>
+                        </div>
+                        <h3>Edit the information below: </h3>
+                    </div>
+    
+                    <div class="shipping">
+                        <label for="lastName">First Name <span>*</span></label>
+                        <input title="firstName" type="text" name="firstName" placeholder="John">
+    
+                        <label for="lastName">Last Name <span>*</span></label>
+                        <input title="lastName" type="text" name="lastName" placeholder="Doe">
+    
+                        <label for="email">Email <span>*</span></label>
+                        <input title="email" type="email" name="email" placeholder="loremipsum123@gmail.com">
+    
+                        <label for="phoneNumber">Phone Number (Optional)</label>
+                        <input title="email" type="number" name="phoneNumber" placeholder="+592 643 1324">
+    
+                        <label for="addressLine1">Address Line 1 <span>*</span></label>
+                        <input title="addressLine1" type="text" name="addressLine1" placeholder="123 Twinkle Toes Drive">
+    
+                        <label for="addressLine2">Address Line 2 <span>*</span></label>
+                        <input title="addressLine2" type="text" name="addressLine2" placeholder="West Promenade">
+    
+                        <label for="cityVillage">City/Village <span>*</span></label>
+                        <input title="cityVillage" type="text" name="cityVillage" placeholder="Juice State">
+    
+                        <label for="region">Region (Optional) </label>
+                        <input title="region" list="regions" type="text" name="region" placeholder="Narnia">
+                        <datalist id="regions">
+                            <option value="1: Barima-Waini">
+                            <option value="2: Pomeroon-Supenaam">
+                            <option value="3: Essequibo Islands-West Demerara">
+                            <option value="4: Demerara-Mahaica">
+                            <option value="5: Mahaica-Berbice">
+                            <option value="6: East Berbice-Corentyne">
+                            <option value="7: Cuyuni-Mazaruni">
+                            <option value="8: Potaro-Siparuni">
+                            <option value="9: Upper Takutu-Upper Essequibo">
+                            <option value="10: Upper Demerara-Berbice">
+                            <option value="11:  Narnia">
+                        </datalist>
+                    </div>
+
+                    <div class="shipping">
+                        <label for="lastName">First Name<span>*</span></label>
+                        <input title="firstName" type="text" name="firstName" placeholder="First Name">
+    
+                        <label for="lastName">Last Name<span>*</span></label>
+                        <input title="lastName" type="text" name="lastName" placeholder="Last Name">
+    
+                        <label for="email">Email <span>*</span></label>
+                        <input title="email" type="email" name="email" placeholder="e.g johndoe@gmail.com">
+    
+                        <label for="phoneNumber">Phone Number (Optional)</label>
+                        <input title="email" type="number" name="phoneNumber" placeholder="e.g 634 2442">
+    
+                        <label for="pickUpDate">Pickup Date<span>*</span></label>
+                        <input title="pickUpDate" type="date" name="pickUpDate" placeholder="Pickup Date">
+    
+                        <label for="pickUpTime">Pickup Time<span>*</span></label>
+                        <input title="pickUpTime" type="time" name="pickUpTime" placeholder="Pickup Time">
+                       
+                    </div>
+                </div>
+    
+                    
+                </div>
+        
+                <div id="button-container">
+                    <div id="buttons">
+                        <button type="button" id="prev-btn">Back</button>
+                        <button type="submit" id="next-btn" >Save</button>
+                    </div>
+                </div>
+            </form>
+    </main>
+    
+    
+    <!--Footer-->
+    <footer>
+        <div class="top-rectangle">
+            <div class="top-rectangle-column">
+                <a class="top-rectangle-column-head" href="#"><p>SHOP</p></a>
+                <a class="top-rectangle-column-sub-menu" href="#">What's New</a>
+                <a class="top-rectangle-column-sub-menu" href="#">Popular</a>
+                <a class="top-rectangle-column-sub-menu" href="#">Sales</a>
+                <a class="top-rectangle-column-sub-menu" href="#">Cart</a>
+            </div>
+            <div class="top-rectangle-column">
+                <p class="column-head">SERVICES</p>
+                <a class="top-rectangle-column-sub-menu" href="services.html">Our Services</a>
+                <a class="top-rectangle-column-sub-menu" href="customer-rewards.html">Reward's Signup</a>
+                <a class="top-rectangle-column-sub-menu" href="request-services.html">Request a Service</a>
+            </div>
+            <div class="top-rectangle-column">
+                <p class="column-head">ABOUT</p>
+                <a class="top-rectangle-column-sub-menu" href="#">Who We Are</a>
+                <a class="top-rectangle-column-sub-menu" href="our-history.html">Our History</a>
+            </div>
+            <div class="top-rectangle-column">
+                <a class="top-rectangle-column-head" href="#"><p>LEAVE A MESSAGE</p></a>
+                <a class="top-rectangle-column-sub-menu" href="#">Contact us</a>
+            </div>
+        </div>
+
+        <div class="bottom-rectangle">
+            <div class="bottom-rectangle-column">
+                <p class="find-us-at">Find Us At</p>
+                <p class="address">Lot 1337</p>
+                <p class="address">Watermelon Street</p>
+                <p class="address">Georgetown</p>
+                <p class="address">Guyana</p>
+            </div>
+            <div class="bottom-rectangle-column">
+                <p class="follow-us">Follow Us:</p>
+                <button class="social-media-button">
+                    <img class="social-media-icon" src="../Resources/Header-Assets/facebook-icon.png" alt="facebook">
+                </button>
+                <button class="social-media-button">
+                    <img class="social-media-icon" src="../Resources/Header-Assets/instagram-icon.png" alt="instagram">
+                </button>
+                <button class="social-media-button">
+                    <img class="social-media-icon" src="../Resources/Header-Assets/twitter-icon.png" alt="twitter">
+                </button>
+            </div>
+            <div class="bottom-rectangle-column">
+                <p class="call-or-whatsapp">Call or Whatsapp</p>
+                <p class="phone-number">+592 223 2323</p>
+            </div>
+            <div class="bottom-rectangle-column">
+                <p class="email">Email</p>
+                <p class="email-address">joesStoresx11@gmail.com</p>
+            </div>
+
+            <div class="copyright">
+                <p><strong>Secure Shopping Online</strong></p>
+                <p>@copyrightTeam22023</p>
+            </div>
+            <div class="payment-options">
+                <img class="payment-img" src="../Resources/Logos/paypal.png" alt="Paypal">
+                <img class="payment-img" src="../Resources/Logos/visa.png" alt="Visa Card">
+                <img class="payment-img" src="../Resources/Logos/wipay.png" alt="Wipay">
+            </div>
+        </div>
+    </footer>
+    <script src="../javascript/account-edit-shipping.js" defer></script>
+  
+    
+</body>
+</html>
