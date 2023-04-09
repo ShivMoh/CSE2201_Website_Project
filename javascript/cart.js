@@ -1,4 +1,4 @@
-// transitions between the cart and checkout content
+//Transitions between the cart and checkout content
 function cartCheckoutTransition(n) {
 
     if(n == 0) {

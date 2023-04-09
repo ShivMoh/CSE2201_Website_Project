@@ -1,9 +1,11 @@
+//Initializing variables
 var stage = document.getElementsByClassName("multi-stage-form")
 var state = document.getElementsByClassName("progress-state")
 var sub_stage = "";
 var current_tab = 0;
 var step = 0;
 var current_status = 0;
+
 
 function editReview(n) {
     if(n == 0) {
@@ -19,8 +21,8 @@ function editReview(n) {
     }
 }
 
+//Prevents default action to happen
 myFunction = function(e) {
-    // prevents default action to happen
     e.preventDefault();
     
 }

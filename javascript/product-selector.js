@@ -1,5 +1,7 @@
+//Get the relevant information required for the selector function
 const items = document.querySelectorAll('.product, .item-container02, .item-container03');
 
+//Select products based on certain criteria
 items.forEach(item => {
   const id = item.getAttribute('data-id');
   const image = item.querySelector('img').getAttribute('src');
@@ -21,6 +23,7 @@ items.forEach(item => {
   }
 });
 
+//Display the queried product
 function viewItem(id, image, title, price, description, category, tags, rating) {
   window.location.href = `product.html?id=${id}&image=${image}&title=${title}&price=${price}&description=${description}&category=${category}&tags=${tags}&rating=${rating}`;
 }

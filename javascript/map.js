@@ -1,14 +1,16 @@
+//Initialization of variables
 var address = "Georgetown Guyana"
 var key = "89223c37cb6c40ccb0b278dc2c7c66f7"
 let centerLat = 6.810062
 let centerLong = -58.1471139
 
 let boundArr = new Array(); // array to store boundaries
-let temp_store = new Array() // array temporary storage object. Probs will replace with database.
+let temp_store = new Array() // array temporary storage object.
 
 boundArr = setPerimeter(dis = 100) // initialize boundaries to perimeter
 createMap()
 
+//Map functionality
 function createMap() {
     map = L.map('map').setView([centerLat, centerLong], 13);
 
@@ -20,7 +22,7 @@ function createMap() {
     marker = L.marker([centerLat, centerLong]).addTo(map);
 }
 
-
+//Additional map functionality
 function setPerimeter(lat = centerLat, lng = centerLong, dis = 2) {
     let arr = new Array()
     lng1 = lng + dis/111  

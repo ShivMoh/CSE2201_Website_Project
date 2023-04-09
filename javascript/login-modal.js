@@ -1,4 +1,4 @@
-// Get the modal and the trigger element
+// Initialization of the variables that get the modal and the trigger element
 var loginModal = document.getElementById("login-modal");
 var signupModal = document.getElementById("signup-modal");
 var trigger = document.getElementById("modal-trigger");
@@ -25,13 +25,13 @@ function login() {
     element.onclick = login
   });
   
-  // window.location.href = "../html/account.html"
+  //Submission of login form
   loginForm.onsubmit = (e) => {
     e.preventDefault();
     login()
   }
   
-  // When the user clicks the trigger, show the modal
+  //When the user clicks the trigger, show the modal
   trigger.addEventListener("click", function() {
     if(loggedIn) return
     loginModal.style.display = "block";
@@ -50,17 +50,17 @@ function login() {
       signupModal.style.display = "none";
   });
   
-  // Get the sign-up link
+  //Get the sign-up link
   const signupLink = document.getElementById("signup-link");
   
-  // When the user clicks on the sign-up link, show the sign-up modal
+  //When the user clicks on the sign-up link, show the sign-up modal
   signupLink.onclick = function() {
       if(loggedIn) return
       loginModal.style.display = "none";
       signupModal.style.display = "block";
     }
   
-  // Controlling the visibility of the "OK" button
+  //Controlling the visibility of the "OK" button
   const signupForm = document.querySelector('#signup-modal form');
   const confirmationMessage = document.querySelector('.signup-confirmation');
   const okayButton = document.querySelector('.ok-button');
@@ -76,7 +76,7 @@ function login() {
     login()
   }
   
-  // Adding an event listener to the "back to login page" button so that it returns the user to the login modal 
+  //Adding an event listener to the "back to login page" button so that it returns the user to the login modal 
   const returnToSignUp = document.getElementById("return-to-login-btn");
   
   returnToSignUp.onclick = function () {
@@ -97,16 +97,3 @@ logout.addEventListener('click', () => {
   window.location.reload()
   trigger.src = "../Resources/Navigation-Bar/profile-icon.png"
 })
-
-
-// When the user clicks the OK button in the confirmation message, hide the sign-up modal and show the login modal
-// const okButton = confirmationMessage.querySelector("#login-btn");
-
-// okButton.addEventListener("click", function() {
-//   signupModal.style.display = "none";
-//   loginModal.style.display = "block";
-//   confirmationMessage.style.display = "none";
-// });
-
-// // Add a class name to the OK button
-// okButton.classList.add("ok-button");

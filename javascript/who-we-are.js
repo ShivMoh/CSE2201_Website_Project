@@ -1,3 +1,4 @@
+//Get elements to set up dummy buttons 
 var buttons = document.querySelectorAll(".btn")
 
 buttons.forEach(element => {
