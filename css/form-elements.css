@@ -27,8 +27,20 @@ button {
     text-decoration: none;
 }
 
-/* button:hover {
-    background-color: #5bd667;
-    transform: scale(1.02);
+textarea {
+    /*Styles the textarea to use the Raleway font family and have a solid banner*/
+    width: 24.5vw;
+    height: 8vw;
+    border: solid #aaaaaa 1px;
+    border-radius: 0.5em;
+    font-size: 1vw;
+    font-family: Raleway;
+    padding: 0.5vw;
 }
- */
+
+label span {
+    color: red;
+    margin-left: -1%;
+    font-size: 0.9vw;
+
+}
