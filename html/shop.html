@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Shop Page</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shop - Joe's Fashion</title>
    
     <link rel="stylesheet" href="../css/shop.css">
-
     <link rel="stylesheet" href="../css/form-elements.css">
     <link rel="stylesheet" href="../css/modal-styles.css">
     <link rel="stylesheet" href="../css/hero.css">
@@ -14,185 +16,178 @@
     <link rel="stylesheet" href="../css/cart-hover-and-dropdown.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
-    <style>
-    /* Add an animation when hovering over products */
-    .product:hover {
-        transform: scale(1.01);
-    }
-    </style>
 </head>
-    <body>
+<body>
     <header>
-            <div id="hero">
-                <h1 id="page-title">Shop</h1>
-                <p id="page-location">
-                    Home 
-                    <span><img src="../Resources/Icons/arrow-white.png" alt="arrow"></span> 
-                    Shop
-                </p>
-            </div>
-            <nav>
-                <div class="navigation-bar">
-                    <div class="logo">
-                        <img src="..\Resources\Navigation-Bar\logo.png"  alt="Cakes R Us logo">
-                    </div>
-                    <div class="menu">
-                        <a href="../Html/home.html">Home</a>
-                        <div class="dropdown">
-                            <div class="dropbtn">About
-                                <i class="fa fa-caret-down"></i>
-                            </div>
-                            <div class="dropdown-content about-dropdown">
-                                <a href="../html/who-we-are.html">Who We Are</a>
-                                <a href="../html/our-history.html">Our History</a>
-                            </div>
-                        </div> 
-                        <a href="../Html/shop.html">Shop</a>
-                        <a href="../Html/services.html">Services</a>
-                        <a href="../Html/contact.html">Contact</a>
-                    </div>
-                    <ul class="social-links">
-                        <li><a href="https://www.facebook.com/MrBean"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="https://twitter.com/RepAOC"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="https://www.instagram.com/leomessi"><i class="fab fa-instagram"></i></a></li>
-                    </ul>  
-                    <div class="icons">
-                        <div class="dropdown">
-                            <a><img src="..\Resources\Navigation-Bar\search-icon.png"  alt="search"></a>
-                            <div class="dropdown-content ">
-                                <div id="search-container">
-                                    <input title="search" type="text" name="search" id="search-bar" placeholder="Search...">
-                                    <button title="search button">
-                                        <i class="fa fa-search"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div> 
-                        <a class="cart-link">
-                            <div class="cart-icon">
-                                <img href="../html/cart.html" src="..\Resources\Navigation-Bar\cart-icon.png" alt="Cart">
-                                <span class="cart-count">2</span>
-                            </div>
-                            <div class="cart-details">
-                                <div class="cart-summary">
-                                    <h2>TOTAL</h2>
-                                    <div class="summary-row">
-                                        <span class="subtotal-label">Subtotal</span>
-                                        <span class="subtotal-amount">$10,500.00</span>
-                                    </div>
-                                    <div class="summary-row">
-                                        <span class="delivery-label">Delivery</span>
-                                        <span class="delivery-icon">
-                                            <i class="fas fa-info-circle"></i>
-                                            <span class="tooltip">Express delivery guarantees your order arrives in 1-3 days.</span>
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="cart-delivery">
-                                    <select class="delivery-options">
-                                        <option value="standard">Standard Delivery(FREE)</option>
-                                        <option value="express">Express ($25000.00)</option>
-                                    </select>
-                                    <button type="button" onclick="window.location.href='../Html/cart.html'" class="checkout-btn">Checkout</button>
-                                    <p>We Accept:</p>
-                                    <div class = "payment-options">
-                                        <img class = "visa" src = "../Resources/Logos/visa.png" alt="Visa Logo">
-                                        <img class = "wipay" src = "../Resources/Logos/wipay.png" alt ="Wipay Logo">
-                                        <img class = "paypal" src = "../Resources/Logos/paypal.png" alt ="Paypal Logo"> 
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <a id="profile">
-                            <div>
-                                <img src="../Resources/Navigation-Bar/profile-icon.png" alt="Cart" id="modal-trigger">
-                            </div>
-                            <div class="cart-details space">
-                                <div class="account-option">
-                                    <span id="view-profile">View Profile</span>
-                                </div>
-                                <div class="account-option space">
-                                    <span id="logout">Log out</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+        <div id="hero">
+            <h1 id="page-title">Shop</h1>
+            <p id="page-location">
+                Home 
+                <span><img src="../Resources/Icons/arrow-white.png" alt="arrow"></span> 
+                Shop
+            </p>
+        </div>
+        <nav>
+            <div class="navigation-bar">
+                <div class="logo">
+                    <img src="..\Resources\Navigation-Bar\logo.png"  alt="Cakes R Us logo">
                 </div>
-    
-                <section>
-                    <div id="login-modal" class="modal">
-                        <div class="modal-content">
-                            <span class="close"><img src="../Resources/Icons/cross.png" alt="exit"></span>
-                            <h2>Login</h2>
-                            <div class="modal-container">
-                                <div class = "options">
-                                    <div class = "gmail">
-                                        <img src ="../Resources/Logos/gmail.png" alt ="Gmail Logo"/>
-                                        <span>Login with Gmail</span>
-                                    </div>
-                                    <div class ="facebook">
-                                        <img src="../Resources/Logos/fb.png" alt="Facebook Logo"/>
-                                        <span>Login with Facebook</span>
-                                    </div>
-                                </div>
-                                <h3>- or via Username and Password - </h3>
-                                <form class="form login">
-                                    <label class="form-label" for="username">Username</label>
-                                    <input class="form-input" type="text" placeholder="Username" name="username" required>
-                                    <label for="password" class="form-label">Password</label>
-                                    <input class="form-input" type="password" placeholder="Password" name="password" required>
-                                    <button type="submit" class="form-button">Login</button>
-                                </form>
-                                <div id = "signup-link" class="signup">
-                                    <p>Don't have an account? <a href="#" id="signup-btn">Sign Up</a></p>
-                                </div>
+                <div class="menu">
+                    <a href="../Html/home.html">Home</a>
+                    <div class="dropdown">
+                        <div class="dropbtn">About
+                            <i class="fa fa-caret-down"></i>
+                        </div>
+                        <div class="dropdown-content about-dropdown">
+                            <a href="../html/who-we-are.html">Who We Are</a>
+                            <a href="../html/our-history.html">Our History</a>
+                        </div>
+                    </div> 
+                    <a href="../Html/shop.html">Shop</a>
+                    <a href="../Html/services.html">Services</a>
+                    <a href="../Html/contact.html">Contact</a>
+                </div>
+                <ul class="social-links">
+                    <li><a href="https://www.facebook.com/MrBean"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://twitter.com/RepAOC"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/leomessi"><i class="fab fa-instagram"></i></a></li>
+                </ul>  
+                <div class="icons">
+                    <div class="dropdown">
+                        <a><img src="..\Resources\Navigation-Bar\search-icon.png"  alt="search"></a>
+                        <div class="dropdown-content ">
+                            <div id="search-container">
+                                <input title="search" type="text" name="search" id="search-bar" placeholder="Search...">
+                                <button title="search button">
+                                    <i class="fa fa-search"></i>
+                                </button>
                             </div>
                         </div>
                     </div> 
-                    <div id="signup-modal" class="modal">
-                        <div class="modal-content">
-                            <span class="close"><img src="../Resources/Icons/cross.png" alt="exit"></span>
-                            <h2>Sign Up</h2>
-                            <div class="modal-container">
-                                <div class = "options">
-                                    <div class = "gmail">
-                                        <img src ="../Resources/Logos/gmail.png" alt ="Gmail Logo"/>
-                                        <span>Sign up with Gmail</span>
-                                    </div>
-                                    <div class ="facebook">
-                                        <img src="../Resources/Logos/fb.png" alt="Facebook Logo"/>
-                                        <span>Sign up with Facebook</span>
-                                    </div>
+                    <a class="cart-link">
+                        <div class="cart-icon">
+                            <img href="../html/cart.html" src="..\Resources\Navigation-Bar\cart-icon.png" alt="Cart">
+                            <span class="cart-count">2</span>
+                        </div>
+                        <div class="cart-details">
+                            <div class="cart-summary">
+                                <h2>TOTAL</h2>
+                                <div class="summary-row">
+                                    <span class="subtotal-label">Subtotal</span>
+                                    <span class="subtotal-amount">$10,500.00</span>
                                 </div>
-                                <h3>- or via Gmail - </h3>
-                                <form class="form signup">
-                                    <label class="form-label" for="username">Gmail</label>
-                                    <input class="form-input" type="text" placeholder="Gmail" name="gmail" required>
-                                    <label class="form-label" for="username">Username</label>
-                                    <input class="form-input" type="text" placeholder="Username"  name="username" required>
-                                    <label class="form-label" for="password">Password</label>
-                                    <input class="form-input" type="password" placeholder="Password" name="password" required>
-                                    <button class="form-button" type="submit">Sign Up</button>
-                                </form>
-                                <div id = "signup-link" class="signup">
-                                    <p><a href="#" id="return-to-login-btn">Back To Login Page</a></p>
+                                <div class="summary-row">
+                                    <span class="delivery-label">Delivery</span>
+                                    <span class="delivery-icon">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span class="tooltip">Express delivery guarantees your order arrives in 1-3 days.</span>
+                                    </span>
                                 </div>
-                                <div class="signup-confirmation">
-                                    <p class = "signup-confirmation-message"> Thanks for signing up!</p>
-                                    <button class="ok-button">OK</button>
-                                </div>
-                                <div class="signup-confirmation">
-                                    <p>Your account has been created successfully. Please click OKAY <a href="#" id="login-btn">OKAY</a> to return to the login page.</p>
+                            </div>
+                            <div class="cart-delivery">
+                                <select class="delivery-options">
+                                    <option value="standard">Standard Delivery(FREE)</option>
+                                    <option value="express">Express ($25000.00)</option>
+                                </select>
+                                <button type="button" onclick="window.location.href='../Html/cart.html'" class="checkout-btn">Checkout</button>
+                                <p>We Accept:</p>
+                                <div class = "payment-options">
+                                    <img class = "visa" src = "../Resources/Logos/visa.png" alt="Visa Logo">
+                                    <img class = "wipay" src = "../Resources/Logos/wipay.png" alt ="Wipay Logo">
+                                    <img class = "paypal" src = "../Resources/Logos/paypal.png" alt ="Paypal Logo"> 
                                 </div>
                             </div>
                         </div>
+                    </a>
+                    <a id="profile">
+                        <div>
+                            <img src="../Resources/Navigation-Bar/profile-icon.png" alt="Cart" id="modal-trigger">
+                        </div>
+                        <div class="cart-details space">
+                            <div class="account-option">
+                                <span id="view-profile">View Profile</span>
+                            </div>
+                            <div class="account-option space">
+                                <span id="logout">Log out</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <section>
+                <div id="login-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close"><img src="../Resources/Icons/cross.png" alt="exit"></span>
+                        <h2>Login</h2>
+                        <div class="modal-container">
+                            <div class = "options">
+                                <div class = "gmail">
+                                    <img src ="../Resources/Logos/gmail.png" alt ="Gmail Logo"/>
+                                    <span>Login with Gmail</span>
+                                </div>
+                                <div class ="facebook">
+                                    <img src="../Resources/Logos/fb.png" alt="Facebook Logo"/>
+                                    <span>Login with Facebook</span>
+                                </div>
+                            </div>
+                            <h3>- or via Username and Password - </h3>
+                            <form class="form login">
+                                <label class="form-label" for="username">Username</label>
+                                <input class="form-input" type="text" placeholder="Username" name="username" required>
+                                <label for="password" class="form-label">Password</label>
+                                <input class="form-input" type="password" placeholder="Password" name="password" required>
+                                <button type="submit" class="form-button">Login</button>
+                            </form>
+                            <div id = "signup-link" class="signup">
+                                <p>Don't have an account? <a href="#" id="signup-btn">Sign Up</a></p>
+                            </div>
+                        </div>
                     </div>
-                </section>  
-                <button id="scroll-to-top" class="circle">
-                    <img src="../Resources/Icons/scroll-up.jpg" alt="scroll-to-top">
-                </button>    
-            </nav>
+                </div> 
+                <div id="signup-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close"><img src="../Resources/Icons/cross.png" alt="exit"></span>
+                        <h2>Sign Up</h2>
+                        <div class="modal-container">
+                            <div class = "options">
+                                <div class = "gmail">
+                                    <img src ="../Resources/Logos/gmail.png" alt ="Gmail Logo"/>
+                                    <span>Sign up with Gmail</span>
+                                </div>
+                                <div class ="facebook">
+                                    <img src="../Resources/Logos/fb.png" alt="Facebook Logo"/>
+                                    <span>Sign up with Facebook</span>
+                                </div>
+                            </div>
+                            <h3>- or via Gmail - </h3>
+                            <form class="form signup">
+                                <label class="form-label" for="username">Gmail</label>
+                                <input class="form-input" type="text" placeholder="Gmail" name="gmail" required>
+                                <label class="form-label" for="username">Username</label>
+                                <input class="form-input" type="text" placeholder="Username"  name="username" required>
+                                <label class="form-label" for="password">Password</label>
+                                <input class="form-input" type="password" placeholder="Password" name="password" required>
+                                <button class="form-button" type="submit">Sign Up</button>
+                            </form>
+                            <div id = "signup-link" class="signup">
+                                <p><a href="#" id="return-to-login-btn">Back To Login Page</a></p>
+                            </div>
+                            <div class="signup-confirmation">
+                                <p class = "signup-confirmation-message"> Thanks for signing up!</p>
+                                <button class="ok-button">OK</button>
+                            </div>
+                            <div class="signup-confirmation">
+                                <p>Your account has been created successfully. Please click OKAY <a href="#" id="login-btn">OKAY</a> to return to the login page.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>  
+            <button id="scroll-to-top" class="circle">
+                <img src="../Resources/Icons/scroll-up.jpg" alt="scroll-to-top">
+            </button>    
+        </nav>
 
     </header>
     <main>
@@ -222,13 +217,9 @@
                 <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
             </div>
         </div>
-          
-          
-          
 
         <!-- Grid layout of products -->
         <div id="products">
-            <!-- First Row -->
             <div class="product" data-id="1" data-price="8000" data-category="accessories,women" data-rating="5">
                 <img src="../Resources/Images/new01.jpg" alt="Product-1">
                 <div class="product-rating">
@@ -237,7 +228,7 @@
                     <span class="star">★</span>
                     <span class="star">★</span>
                     <span class="star">★</span>
-                  </div>
+                </div>
                 <h2 class="product-title">Embroidered White Purse</h2>
                 <p class="price">$8000</p>
                 <p class="description" style="display: none;">This elegant white purse bag is perfect for adding a touch of sophistication to your outfit. It features gold bead details on the edges and beautiful red floral embroidery for a pop of color. The bag hangs at your waist from your shoulder for easy carrying.</p>
@@ -253,7 +244,7 @@
                     <span class="star">☆</span>
                     <span class="star">☆</span>
                     <span class="star">☆</span>
-                  </div>
+                </div>
                 <h2 class="product-title">Leopard Sunglasses</h2>
                 <p class="price">$3000</p>
                 <p class="description" style="display: none;">Protect your eyes from the sun in style with these minimal leopard print sunglasses. The circular lens has a light orange tint that adds a pop of color to the black and orange print. Perfect for a day out in the sun.</p>
@@ -269,12 +260,12 @@
                     <span class="star">★</span>
                     <span class="star">★</span>
                     <span class="star">☆</span>
-                  </div>
-                  <h2 class="product-title">Line Pattern Suit Jacket</h2>
-                  <p class="price">$120</p>
-                  <p class="description" style="display: none;">Make a statement in this suit top with a pattern made up of lines. The bold print is complemented by a sharp silhouette that's perfect for both formal and casual occasions. Pair it with matching pants or jeans for a complete look.</p>
-                  <p class="category" style="display: none;">Clothing</p>
-                  <p class="tags" style="display: none;">suit top, checkered pattern, lines</p>
+                </div>
+                <h2 class="product-title">Line Pattern Suit Jacket</h2>
+                <p class="price">$120</p>
+                <p class="description" style="display: none;">Make a statement in this suit top with a pattern made up of lines. The bold print is complemented by a sharp silhouette that's perfect for both formal and casual occasions. Pair it with matching pants or jeans for a complete look.</p>
+                <p class="category" style="display: none;">Clothing</p>
+                <p class="tags" style="display: none;">suit top, checkered pattern, lines</p>
             </div>
 
             <div class="product" data-id="4" data-price="6000" data-category="accessories,men,women" data-rating="5">
@@ -304,9 +295,9 @@
                 </div>
                 <h2 class="product-title">Hera halterneck wrap dress</h2>
                 <p class="price">$8000</p>
-                    <p class="description" style="display: none;">Hera halterneck wrap dress from Caravana featuring rose pink, cotton, calf leather, crinkled finish, gathered detailing, contrasting trim, wrap design, halterneck, plunging V-neck, open back, self-tie fastening, crossover shoulder straps, elasticated waistband, maxi skirt and asymmetric hem.</p>
-                    <p class="category" style="display: none;">Clothing</p>
-                    <p class="tags" style="display: none;">dress, formal, women's</p>
+                <p class="description" style="display: none;">Hera halterneck wrap dress from Caravana featuring rose pink, cotton, calf leather, crinkled finish, gathered detailing, contrasting trim, wrap design, halterneck, plunging V-neck, open back, self-tie fastening, crossover shoulder straps, elasticated waistband, maxi skirt and asymmetric hem.</p>
+                <p class="category" style="display: none;">Clothing</p>
+                <p class="tags" style="display: none;">dress, formal, women's</p>
             </div>
 
             <div class="product" data-id="6" data-price="3500" data-category="clothing,men,women" data-rating="5">
@@ -388,179 +379,76 @@
         </section>
 
         <!--Footer-->
-    <footer>
-        <div class="top-rectangle">
-            <div class="top-rectangle-column">
-                <p class="column-head">SHOP</p>
-                <a class="top-rectangle-column-sub-menu" href="product.html">What's New</a>
-                <a class="top-rectangle-column-sub-menu" href="product.html">Popular</a>
-                <a class="top-rectangle-column-sub-menu" href="product.html">Sales</a>
-                <a class="top-rectangle-column-sub-menu" href="cart.html">Cart</a>
-            </div>
-            <div class="top-rectangle-column">
-                <p class="column-head">SERVICES</p>
-                <a class="top-rectangle-column-sub-menu" href="services.html">Our Services</a>
-                <a class="top-rectangle-column-sub-menu" href="customer-rewards.html">Reward's Signup</a>
-                <a class="top-rectangle-column-sub-menu" href="request-services.html">Request a Service</a>
-            </div>
-            <div class="top-rectangle-column">
-                <p class="column-head">ABOUT</p>
-                <a class="top-rectangle-column-sub-menu" href="who-we-are.html">Who We Are</a>
-                <a class="top-rectangle-column-sub-menu" href="our-history.html">Our History</a>
-            </div>
-            <div class="top-rectangle-column">
-                <p class="column-head">LEAVE A MESSAGE</p>
-                <a class="top-rectangle-column-sub-menu" href="contact.html">Contact us</a>
-            </div>
-        </div>
-
-        <div class="bottom-rectangle">
-            <div class="bottom-rectangle-column">
-                <p class="find-us-at">Find Us At</p>
-                <p class="address">Lot 1337</p>
-                <p class="address">Watermelon Street</p>
-                <p class="address">Georgetown</p>
-                <p class="address">Guyana</p>
-            </div>  
-            <div class="bottom-rectangle-column">
-                <p class="follow-us">Follow Us:</p>
-                <button class="social-media-button">
-                    <img class="social-media-icon" src="../Resources/Header-Assets/facebook-icon.png" alt="facebook">
-                </button>
-                <button class="social-media-button">
-                    <img class="social-media-icon" src="../Resources/Header-Assets/instagram-icon.png" alt="instagram">
-                </button>
-                <button class="social-media-button">
-                    <img class="social-media-icon" src="../Resources/Header-Assets/twitter-icon.png" alt="twitter">
-                </button>
-            </div>
-            <div class="bottom-rectangle-column">
-                <p class="call-or-whatsapp">Call or Whatsapp</p>
-                <p class="phone-number">+592 223 2323</p>
-            </div>
-            <div class="bottom-rectangle-column">
-                <p class="email">Email</p>
-                <p class="email-address">joesStoresx11@gmail.com</p>
+        <footer>
+            <div class="top-rectangle">
+                <div class="top-rectangle-column">
+                    <p class="column-head">SHOP</p>
+                    <a class="top-rectangle-column-sub-menu" href="product.html">What's New</a>
+                    <a class="top-rectangle-column-sub-menu" href="product.html">Popular</a>
+                    <a class="top-rectangle-column-sub-menu" href="product.html">Sales</a>
+                    <a class="top-rectangle-column-sub-menu" href="cart.html">Cart</a>
+                </div>
+                <div class="top-rectangle-column">
+                    <p class="column-head">SERVICES</p>
+                    <a class="top-rectangle-column-sub-menu" href="services.html">Our Services</a>
+                    <a class="top-rectangle-column-sub-menu" href="customer-rewards.html">Reward's Signup</a>
+                    <a class="top-rectangle-column-sub-menu" href="request-services.html">Request a Service</a>
+                </div>
+                <div class="top-rectangle-column">
+                    <p class="column-head">ABOUT</p>
+                    <a class="top-rectangle-column-sub-menu" href="who-we-are.html">Who We Are</a>
+                    <a class="top-rectangle-column-sub-menu" href="our-history.html">Our History</a>
+                </div>
+                <div class="top-rectangle-column">
+                    <p class="column-head">LEAVE A MESSAGE</p>
+                    <a class="top-rectangle-column-sub-menu" href="contact.html">Contact us</a>
+                </div>
             </div>
 
-            <div class="copyright">
-                <p><strong>Secure Shopping Online</strong></p>
-                <p>@copyrightTeam22023</p>
+            <div class="bottom-rectangle">
+                <div class="bottom-rectangle-column">
+                    <p class="find-us-at">Find Us At</p>
+                    <p class="address">Lot 1337</p>
+                    <p class="address">Watermelon Street</p>
+                    <p class="address">Georgetown</p>
+                    <p class="address">Guyana</p>
+                </div>  
+                <div class="bottom-rectangle-column">
+                    <p class="follow-us">Follow Us:</p>
+                    <button class="social-media-button">
+                        <img class="social-media-icon" src="../Resources/Header-Assets/facebook-icon.png" alt="facebook">
+                    </button>
+                    <button class="social-media-button">
+                        <img class="social-media-icon" src="../Resources/Header-Assets/instagram-icon.png" alt="instagram">
+                    </button>
+                    <button class="social-media-button">
+                        <img class="social-media-icon" src="../Resources/Header-Assets/twitter-icon.png" alt="twitter">
+                    </button>
+                </div>
+                <div class="bottom-rectangle-column">
+                    <p class="call-or-whatsapp">Call or Whatsapp</p>
+                    <p class="phone-number">+592 223 2323</p>
+                </div>
+                <div class="bottom-rectangle-column">
+                    <p class="email">Email</p>
+                    <p class="email-address">joesStoresx11@gmail.com</p>
+                </div>
+
+                <div class="copyright">
+                    <p><strong>Secure Shopping Online</strong></p>
+                    <p>@copyrightTeam22023</p>
+                </div>
+                <div class="payment-options">
+                    <img class="payment-img" src="../Resources/Logos/paypal.png" alt="Paypal">
+                    <img class="payment-img" src="../Resources/Logos/visa.png" alt="Visa Card">
+                    <img class="payment-img" src="../Resources/Logos/wipay.png" alt="Wipay">
+                </div>
             </div>
-            <div class="payment-options">
-                <img class="payment-img" src="../Resources/Logos/paypal.png" alt="Paypal">
-                <img class="payment-img" src="../Resources/Logos/visa.png" alt="Visa Card">
-                <img class="payment-img" src="../Resources/Logos/wipay.png" alt="Wipay">
-            </div>
-        </div>
-    </footer>
-       
+        </footer>   
     </main>
-
     <script type="text/javascript" src="../Javascript/product-selector.js"></script>
     <script type="text/javascript" src="../javascript/login-modal.js"></script>
-    <script type="text/javascript" src="../javascript/scroll-to-top"></script>
-	<script>
-		// Get elements
-		const productsContainer = document.getElementById('products');
-		const sortSelect = document.getElementById('sort-by');
-        const categorySelect = document.getElementById('category');
-        const products = document.getElementsByClassName('product');
-
-
-
-// Sort products based on the selected option
-sortSelect.addEventListener('change', () => {
-      const sortBy = sortSelect.value;
-
-      const sortedProducts = Array.from(productsContainer.children)
-        .sort((a, b) => {
-          if (sortBy === 'price-low-to-high') {
-            return a.dataset.price - b.dataset.price;
-          } else if (sortBy === 'price-high-to-low') {
-            return b.dataset.price - a.dataset.price;
-          } else if (sortBy === 'rating-high-to-low') {
-            return b.dataset.rating - a.dataset.rating;
-          } else if (sortBy === 'rating-low-to-high') {
-            return a.dataset.rating - b.dataset.rating;
-          }
-        });
-
-      productsContainer.innerHTML = '';
-      sortedProducts.forEach((product) => {
-        productsContainer.appendChild(product);
-      });
-    });
-
-categorySelect.addEventListener('change', filterProducts);
-
-		function filterProducts() {
-			const selectedCategory = categorySelect.value.toLowerCase();
-
-			for (let i = 0; i < products.length; i++) {
-				const product = products[i];
-				const categories = product.dataset.category.split(',');
-
-				if (selectedCategory === 'all' || categories.includes(selectedCategory)) {
-					product.style.display = 'block';
-				} else {
-					product.style.display = 'none';
-				}
-			}
-		}
-
-
-        // Get the value of the category parameter from the URL
-const urlParams = new URLSearchParams(window.location.search);
-const category = urlParams.get('category');
-
-// Set the value of the category select based on the category parameter value
-if (category === 'men') {
-  categorySelect.value = 'men';
-}
-
-if (category === 'women') {
-  categorySelect.value = 'women';
-}
-
-if (category === 'clothing') {
-  categorySelect.value = 'clothing';
-}
-
-if (category === 'accessories') {
-  categorySelect.value = 'accessories';
-}
-
-filterProducts();
-	</script>
-    <script>
-		const productList = document.getElementById('products');
-		const searchInput = document.getElementById('search-input');
-
-		function searchProducts() {
-			const searchValue = searchInput.value.toLowerCase();
-
-			Array.from(productList.children).forEach(product => {
-				const title = product.querySelector('.product-title').textContent.toLowerCase();
-				if (title.includes(searchValue)) {
-					product.style.display = 'block';
-				} else {
-					product.style.display = 'none';
-				}
-			});
-		}
-
-		searchInput.addEventListener('input', searchProducts);
-	</script>
-    <script>
-        const prevArrow = document.querySelector('.prev-arrow');
-const currentPage = 1;
-
-if (currentPage === 1) {
-  prevArrow.classList.add('disabled');
-}
-
-    </script>
+    <script type="text/javascript" src="../javascript/scroll-to-top.js"></script>
+    <script type="text/javascript" src="../javascript/shop.js"></script>
 </body>
-
 </html>

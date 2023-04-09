@@ -163,4 +163,6 @@
     display: none;
   }
   
-  
+  .product:hover {
+    transform: scale(1.01);
+}
