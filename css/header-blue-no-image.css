@@ -32,3 +32,9 @@
             font-size: 1.3vw;
             color: #65707A;
         }
+
+        .current {
+            color: #000000;
+            margin-left: 0.5vw;
+        }
+

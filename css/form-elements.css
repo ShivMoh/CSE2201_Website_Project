@@ -14,6 +14,10 @@
     margin-top: 2vw;
 }
 
+main .form label {
+    align-self: auto;
+}
+
 .btn, .form button {
     width: 9vw;
     background-color: #29D53A;
