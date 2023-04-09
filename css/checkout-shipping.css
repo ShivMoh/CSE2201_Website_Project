@@ -1,11 +1,10 @@
-#shipping-options {
+ #shipping-options {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
-
-#box-container-1 {
+ #box-container-1 {
     width: 40%;
     height: 4vw;
     border: solid black 0.1vw;
@@ -13,8 +12,7 @@
     text-align: center;
     background-color: #F5FDFF;
 }
-
-#box-container-2 {
+ #box-container-2 {
     width: 40%;
     height: 4vw;
     border: solid black 0.1vw;
@@ -23,7 +21,7 @@
     background-color: #F5FDFF;
 }
 
-#box-container-1 p, #box-container-2 p {
+ #box-container-1 p, #box-container-2 p {
     font-family: 'Abhaya Libre', 'Times New Roman';
     font-weight: 500;
     letter-spacing: 0.02vw;

@@ -7,11 +7,12 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/our-history.css">
     <link rel="stylesheet" href="../css/form-elements.css">
-    <link rel="stylesheet" href="../css/cart-hover-and-dropdown.css">
+  
     <link rel="stylesheet" href="../css/modal-styles.css">
     <link rel="stylesheet" href="../css/hero.css">
     <link rel="stylesheet" href="../css/navigation.css">
     <link rel="stylesheet" href="../css/scroll-to-top.css">
+    <link rel="stylesheet" href="../css/cart-hover-and-dropdown.css">
     <link rel="stylesheet" href="../css/footer.css">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
@@ -65,53 +66,54 @@
                                 </button>
                             </form>
                         </div>
-                    </div> 
-                    <!-- <a href="#"><img src="..\Resources\Navigation-Bar\cart-icon.png" alt="Cart" class="cart-link"> -->
-                        
+                    </div> </a>
+                    <a class="cart-link">
+                      <div class="cart-icon">
+                        <img src="..\Resources\Navigation-Bar\cart-icon.png" alt="Cart">
+                       <span class="cart-count">2</span>
+                      </div>
+                      <div class="cart-details">
+                        <div class="cart-summary">
+                          <h2>TOTAL</h2>
+                          <div class="summary-row">
+                            <span class="subtotal-label">Subtotal</span>
+                            <span class="subtotal-amount">$10,500.00</span>
+                          </div>
+                          <div class="summary-row">
+                            <span class="delivery-label">Delivery</span>
+                            <span class="delivery-icon">
+                              <i class="fas fa-info-circle"></i>
+                              <span class="tooltip">Express delivery guarantees your order arrives in 1-3 days.</span>
+                            </span>
+                          </div>
+                        </div>
+                        <div class="cart-delivery">
+                          <select class="delivery-options">
+                            <option value="standard">Standard Delivery(FREE)</option>
+                            <option value="express">Express ($25000.00)</option>
+                          </select>
+                          <button type="button" onclick="window.location.href='../Html/cart.html'" class="checkout-btn">Checkout</button>
+                          <p>We Accept:</p>
+                          <div class = "payment-options">
+                            <img class = "visa" src = "../Resources/Logos/visa.png" alt="Visa Logo">
+                            <img class = "wipay" src = "../Resources/Logos/wipay.png" alt ="Wipay Logo">
+                            <img class = "paypal" src = "../Resources/Logos/paypal.png" alt ="Paypal Logo"> 
+                          </div>
+                        </div>
+                      </div>
                     </a>
-                    <a href="../Html/cart.html" class="cart-link">
-                        <div class="cart-icon">
-                          <img src="..\Resources\Navigation-Bar\cart-icon.png" alt="Cart">
-                          <span class="cart-count">2</span>
-                        </div>
-                        <div class="cart-details">
-                          <div class="cart-summary">
-                            <h2>TOTAL</h2>
-                            <span class="subtotal-label">Subtotal<p>$10,500.00</p></span>
-                            <br>
-                            <span class="delivery-label">Delivery <span class = "info-icon">
-                              <i class = "fas fa-info-circle"></i>
-                              <span class = "tooltip">Express delivery gurantees your order arrives in 1-3 days.</span>
-                            </span>
-                            </span>
-                          </div>
-                          <div class="cart-delivery">
-                            <span class="delivery-type">Delivery Type:</span>
-                            <select title="delivery" class="delivery-options">
-                              <option value="standard">Standard (FREE) </option>
-                              <option value="express">Express ($25000.00)</option>
-                            </select>
-                            <button type="button" onclick="window.location.href='../Html/cart.html'" class="checkout-btn">Checkout</button>
-                            <p>We Accept:</p>
-                            <div class = "payment-options">
-                              <img class = "visa" src = "../Resources/Logos/visa.png" alt="Visa Logo">
-                              <img class = "wipay" src = "../Resources/Logos/wipay.png" alt ="Wipay Logo">
-                              <img class = "paypal" src = "../Resources/Logos/paypal.png" alt ="Paypal Logo"> 
-                            </div>
-                          </div>
-                        </div>
-                      </a>
 
                       <a id="profile">
-                        <img src="..\Resources\Navigation-Bar\profile-icon.png" alt="Profile" id="modal-trigger">
-                        <div class="cart-details " id="profile-menu">
-                            <div class="account-option">
-                                <span id="view-profile">View Profile</span>
-                            </div>
-                            <div class="account-option">
-                                <span id="logout">Log out</span>
-                            </div>
+                        <div>
+                          <img src="../Resources/Navigation-Bar/profile-icon.png" alt="Cart" id="modal-trigger">
                         </div>
+                        <div class="cart-details space">
+                          <div class="account-option">
+                            <span id="view-profile">View Profile</span>
+                          </div>
+                          <div class="account-option space">
+                            <span id="logout">Log out</span>
+                          </div>
                         </div>
                       </a>
 

@@ -13,9 +13,7 @@ function login() {
   loginModal.style.display = "none";
   trigger.src = "../Resources/Icons/Logged-In.png"
   loggedIn = true
-  profile.classList.add("cart-link");
-  console.log(loggedIn)
-
+  profile.children[0].classList.add('cart-icon')
 }
 
   gmail.forEach(element => {
@@ -94,9 +92,9 @@ viewProfile.onclick = () => window.location.href = '../html/account.html'
 
 logout.addEventListener('click', () => {
   loggedIn = false
-  profile.classList.remove("cart-link")
+  profile.children[0].classList.remove('cart-icon')
+  window.location.reload()
   trigger.src = "../Resources/Navigation-Bar/profile-icon.png"
-  console.log("It worked")
 })
 
 
