@@ -1,3 +1,7 @@
+h2 {
+  font-family: 'Ubuntu', 'Ariel', sans-serif;
+}
+
 .cart-link {
   display: inline-block;
   position: relative;

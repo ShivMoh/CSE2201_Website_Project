@@ -28,14 +28,6 @@ li {
     height: 70px;
 }
 
-h2 {
-    font-family: 'Ubuntu', 'Ariel', sans-serif;
-    font-size: 3vw;
-    font-weight: 800;
-    letter-spacing: 0.1vw;
-    color: #0581F4;
-}
-
 .page-location-text {
     font-size: 20px;
     margin-bottom: 10px;
@@ -74,7 +66,7 @@ h2 {
     margin-bottom: 5vw;
 }
 
-select {
+/*select {
     height: 5%;
     margin-top: 0.5vw;
     padding: 0.8vw;
@@ -84,7 +76,7 @@ select {
     color: #676363;
     border: 0.1vw solid #aaaaaa;;
     border-radius: 0.5vw;
-}
+}*/
 
 
 
