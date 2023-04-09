@@ -74,14 +74,13 @@
                     <li><a href="https://www.facebook.com/MrBean"><i class="fab fa-facebook-f"></i></a></li>
                     <li><a href="https://twitter.com/RepAOC"><i class="fab fa-twitter"></i></a></li>
                     <li><a href="https://www.instagram.com/leomessi"><i class="fab fa-instagram"></i></a></li>
-                  </ul>
-                  
+                </ul>  
                 <div class="icons">
                     <div class="dropdown">
                         <a><img src="..\Resources\Navigation-Bar\search-icon.png"  alt="search"></a>
                         <div class="dropdown-content ">
                             <div id="search-container">
-                                <input title="search" type="text" name="search" id="search-bar">
+                                <input title="search" type="text" name="search" id="search-bar" placeholder="Search...">
                                 <button title="search button">
                                     <i class="fa fa-search"></i>
                                 </button>
@@ -90,84 +89,81 @@
                     </div> 
                     <a class="cart-link">
                         <div class="cart-icon">
-                          <img href="../html/cart.html" src="..\Resources\Navigation-Bar\cart-icon.png" alt="Cart">
-                         <span class="cart-count">2</span>
+                            <img href="../html/cart.html" src="..\Resources\Navigation-Bar\cart-icon.png" alt="Cart">
+                            <span class="cart-count">2</span>
                         </div>
                         <div class="cart-details">
-                          <div class="cart-summary">
-                            <h2>TOTAL</h2>
-                            <div class="summary-row">
-                              <span class="subtotal-label">Subtotal</span>
-                              <span class="subtotal-amount">$10,500.00</span>
+                            <div class="cart-summary">
+                                <h2>TOTAL</h2>
+                                <div class="summary-row">
+                                    <span class="subtotal-label">Subtotal</span>
+                                    <span class="subtotal-amount">$10,500.00</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span class="delivery-label">Delivery</span>
+                                    <span class="delivery-icon">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span class="tooltip">Express delivery guarantees your order arrives in 1-3 days.</span>
+                                    </span>
+                                </div>
                             </div>
-                            <div class="summary-row">
-                              <span class="delivery-label">Delivery</span>
-                              <span class="delivery-icon">
-                                <i class="fas fa-info-circle"></i>
-                                <span class="tooltip">Express delivery guarantees your order arrives in 1-3 days.</span>
-                              </span>
+                            <div class="cart-delivery">
+                                <select class="delivery-options">
+                                    <option value="standard">Standard Delivery(FREE)</option>
+                                    <option value="express">Express ($25000.00)</option>
+                                </select>
+                                <button type="button" onclick="window.location.href='../Html/cart.html'" class="checkout-btn">Checkout</button>
+                                <p>We Accept:</p>
+                                <div class = "payment-options">
+                                    <img class = "visa" src = "../Resources/Logos/visa.png" alt="Visa Logo">
+                                    <img class = "wipay" src = "../Resources/Logos/wipay.png" alt ="Wipay Logo">
+                                    <img class = "paypal" src = "../Resources/Logos/paypal.png" alt ="Paypal Logo"> 
+                                </div>
                             </div>
-                          </div>
-                          <div class="cart-delivery">
-                            <select class="delivery-options">
-                              <option value="standard">Standard Delivery(FREE)</option>
-                              <option value="express">Express ($25000.00)</option>
-                            </select>
-                            <button type="button" onclick="window.location.href='../Html/cart.html'" class="checkout-btn">Checkout</button>
-                            <p>We Accept:</p>
-                            <div class = "payment-options">
-                              <img class = "visa" src = "../Resources/Logos/visa.png" alt="Visa Logo">
-                              <img class = "wipay" src = "../Resources/Logos/wipay.png" alt ="Wipay Logo">
-                              <img class = "paypal" src = "../Resources/Logos/paypal.png" alt ="Paypal Logo"> 
-                            </div>
-                          </div>
                         </div>
                     </a>
                     <a id="profile">
                         <div>
-                          <img src="../Resources/Navigation-Bar/profile-icon.png" alt="Cart" id="modal-trigger">
+                            <img src="../Resources/Navigation-Bar/profile-icon.png" alt="Cart" id="modal-trigger">
                         </div>
                         <div class="cart-details space">
-                          <div class="account-option">
-                            <span id="view-profile">View Profile</span>
-                          </div>
-                          <div class="account-option space">
-                            <span id="logout">Log out</span>
-                          </div>
+                            <div class="account-option">
+                                <span id="view-profile">View Profile</span>
+                            </div>
+                            <div class="account-option space">
+                                <span id="logout">Log out</span>
+                            </div>
                         </div>
-                      </a>
+                    </a>
                 </div>
             </div>
-            <button id="scroll-to-top" class="circle">
-                <img src="../Resources/Icons/scroll-up.jpg" alt="scroll-to-top">
-            </button>
 
             <section>
                 <div id="login-modal" class="modal">
                     <div class="modal-content">
-                      <span class="close"><img src="../Resources/Icons/cross.png" alt="exit"></span>
-                      <h2>Login</h2>
-                      <div class="modal-container">
-                        <div class = "options">
-                          <div class = "gmail">
-                            <img src ="../Resources/Logos/gmail.png" alt ="Gmail Logo"/>
-                            <span>Login with Gmail</span>
-                          </div>
-                          <div class ="facebook">
-                            <img src="../Resources/Logos/fb.png" alt="Facebook Logo"/>
-                            <span>Login with Facebook</span>
-                          </div>
-                        </div>
-                        <h3>- or via Username and Password - </h3>
-                        <form class="form login">
-                          <label class="form-label" for="username">Username</label>
-                          <input class="form-input" type="text" placeholder="Username" name="username" required>
-                    
-                          <label for="password" class="form-label">Password</label>
-                          <input class="form-input" type="password" placeholder="Password" name="password" required>
-                    
-                          <button type="submit" class="form-button">Login</button>
-                        </form>
+                        <span class="close"><img src="../Resources/Icons/cross.png" alt="exit"></span>
+                        <h2>Login</h2>
+                        <div class="modal-container">
+                            <div class = "options">
+                                <div class = "gmail">
+                                    <img src ="../Resources/Logos/gmail.png" alt ="Gmail Logo"/>
+                                    <span>Login with Gmail</span>
+                                </div>
+                                <div class ="facebook">
+                                    <img src="../Resources/Logos/fb.png" alt="Facebook Logo"/>
+                                    <span>Login with Facebook</span>
+                                </div>
+                            </div>
+                            <h3>- or via Username and Password - </h3>
+                            <form class="form login">
+                            <label class="form-label" for="username">Username</label>
+                            <input class="form-input" type="text" placeholder="Username" name="username" required>
+                        
+                            <label for="password" class="form-label">Password</label>
+                            <input class="form-input" type="password" placeholder="Password" name="password" required>
+                        
+                            <button type="submit" class="form-button">Login</button>
+                            </form>
                         <div id = "signup-link" class="signup">
                           <p>Don't have an account? <a href="#" id="signup-btn">Sign Up</a></p>
                         </div>
@@ -218,6 +214,9 @@
                   </div>
         </nav>			
     </section>
+    <button id="scroll-to-top" class="circle">
+        <img src="../Resources/Icons/scroll-up.jpg" alt="scroll-to-top">
+    </button>
 
       <section id="who-we-are">
         <h2>WHO WE ARE</h2>
