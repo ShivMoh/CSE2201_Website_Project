@@ -1,3 +1,26 @@
+.cart-link {
+  display: inline-block;
+  position: relative;
+}
+
+.cart-icon {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ff4500;
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
 .cart-details {
   display: none;
   position: absolute;
@@ -126,4 +149,25 @@
 .payment-options img {
   display: inline-block;
   margin: 0 10px;
+}
+
+#profile-menu {
+  height: 3vw;
+  min-width: 7vw;
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  row-gap: 1vw;
+}
+.account-option:hover {
+  transform: scale(1.05);
+}
+
+.account-option {
+  width: 100%;
+  height: 100%;
+  font-family: 'Outfit', 'Ariel', sans-serif;
+  font-size: 1vw;
+  font-weight: 600;
 }
