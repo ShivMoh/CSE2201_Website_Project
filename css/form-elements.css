@@ -38,7 +38,12 @@ textarea {
 
 label span {
     color: red;
-    margin-left: -1%;
+    margin-left: 0.1vw;
     font-size: 0.9vw;
 
+}
+
+.btn:hover, .form button:hover {
+    background-color: #5bd667;
+    transform: scale(1.02);
 }

@@ -1,22 +1,28 @@
-h2 {
-    font-family: 'Ubuntu', 'Ariel', sans-serif;
-    font-size: 3vw;
-    font-weight: 800;
-    letter-spacing: 0.1vw;
-    color: #0581F4;
-}
 
-p {
-    font-size: 20px;
-}
 
 .services,
 .customer-rewards {
+    margin-top: 8vw;
     text-align: center;
-    line-height: 10px;
-    color: rgb(43, 140, 172);
-    font-family: Ubuntu, Arial;
+    line-height: 1.4vw;
+    
 }
+
+.services h2, .customer-rewards h2 {
+    
+    color: #0581F4;
+    font-family: 'Ubuntu', Arial;
+    font-size: 3vw;
+    letter-spacing: 0.1vw;
+    font-weight: 800;
+}
+
+.services p, .customer-rewards p {
+    color: #0581F4;
+    font-family: 'Abhaya Libre', Arial;
+    font-size: 1.7vw;
+}
+
 
 .services {
     margin-top: 8vw;
@@ -31,30 +37,24 @@ p {
     font-family: Open Sans, Arial;
 }
 
-.service-item,
-.rewards-item {
+.service-item p,
+.rewards-item p {
+    font-size: 1.2vw;
     color: black;
-    line-height: 20px;
+    line-height: 8vw;
+    font-weight: 500;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 }
 
 .service-img,
 .rewards-img {
-    height: 400px;
-    width: 400px;
+    height: 20vw;
+    width: 20vw;
     object-fit: cover;
     border-radius: 200px;
 }
 
-.request-services-button,
-.sign-up-button {
-    height: 50px;
-    width: 150px;
-    background-color: rgb(40, 149, 40);
-    color: white;
-    border-style: none;
-    border-radius: 20px;
-    margin: 0 auto;
-    display: block;
-    cursor: pointer;
-    font-family: Ubuntu;
+.btn {
+    width: 13vw;
+    margin-top: 0.5vw;
 }
