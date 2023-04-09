@@ -29,9 +29,9 @@
         <div id="hero">
             <h2 id="page-title">Edit Shipping Details</h2>
             <p id="page-location">
-                Home 
+                <span style="font-weight: normal;"> Home </span>
                 <span><img src="../Resources/Icons/arrow-grey.png" alt="arrow"></span> 
-                Profile
+                <span style="font-weight: normal;"> Profile </span>
                 <span><img src="../Resources/Icons/arrow-grey.png" alt="arrow"></span> 
                 Edit Shipping
             </p>
@@ -83,7 +83,7 @@
     <main>
         <section id="checkout-container" style=" margin-bottom: 5vw;">
             
-            <form id="form-content">
+            <form id="form-content" action="../html/account.html" onsubmit="success();">
     
                 <div class="multi-stage-form">
                     <div id="instructions-guide-options">
@@ -134,7 +134,7 @@
                             <option value="8: Potaro-Siparuni">
                             <option value="9: Upper Takutu-Upper Essequibo">
                             <option value="10: Upper Demerara-Berbice">
-                            <option value="11: Narnia">
+                            <option value="11:  Narnia">
                         </datalist>
     
                         <label class="container">  Save my details for later
@@ -225,6 +225,11 @@
             </div>
         </div>
     </footer>
+    <script>
+        function success(){
+            alert("Shipping Details Successfully Updated");
+        }
+    </script>
 
     <script src="../javascript//cart.js" defer></script>
     <script src="../javascript/checkout.js" defer></script>
