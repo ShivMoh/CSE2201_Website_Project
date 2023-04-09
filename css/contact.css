@@ -29,6 +29,11 @@
     align-self: center;
 }
 
+#contact-form button:hover {
+    background-color: #5bd667;
+    transform: scale(1.02);
+}
+
 #contact-form label span {
     margin-left: 0.1vw;
 }
