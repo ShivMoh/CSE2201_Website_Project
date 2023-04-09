@@ -4,7 +4,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services</title>
-    
 
     
     <link rel="stylesheet" href="../css/form-elements.css">
@@ -26,7 +25,6 @@
 
 <body>
     <header>
-        <nav>
             <div id="hero">
                 <h1 id="page-title">Services</h1>
                 <p id="page-location">
@@ -35,97 +33,167 @@
                     Services
                 </p>
             </div>
-            <div class="navigation-bar">
-                <a class="logo" href="./home.html">
-                    <img src="..\Resources\Navigation-Bar\logo.png"  alt="Cakes R Us logo">
-                </a>
-                <div class="menu">
-                    <a href="./home.html">Home</a>
-                    <div class="dropdown">
-                        <div class="dropbtn">About
-                            <i class="fa fa-caret-down"></i>
-                        </div>
-                        <div class="dropdown-content about-dropdown">
-                            <a href="./who-we-are.html">Who We Are</a>
-                            <a href="./our-history.html">Our History</a>
-                        </div>
-                    </div> 
-                    <a href="./shop.html">Shop</a>
-                    <a href="./services.html">Services</a>
-                    <a href="./contact.html">Contact</a>
-                </div>
-                <ul class="social-links">
-                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                </ul>
-                <div class="icons">
-                    <div class="dropdown">
-                        <a><img src="..\Resources\Navigation-Bar\search-icon.png"  alt="search" id="search"></a>
-                        <div class="dropdown-content ">
-                            <form id="search-container">
-                                <input title="search" type="text" name="search" id="search-bar" placeholder="Search...">
-                                <button title="search-button">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </form>
-                        </div>
-                    </div> </a>
-                    <a class="cart-link">
-                      <div class="cart-icon">
-                        <img src="..\Resources\Navigation-Bar\cart-icon.png" alt="Cart">
-                       <span class="cart-count">2</span>
-                      </div>
-                      <div class="cart-details">
-                        <div class="cart-summary">
-                          <h2>TOTAL</h2>
-                          <div class="summary-row">
-                            <span class="subtotal-label">Subtotal</span>
-                            <span class="subtotal-amount">$10,500.00</span>
+            <nav>
+              <div class="navigation-bar">
+                  <div class="logo">
+                      <img src="..\Resources\Navigation-Bar\logo.png"  alt="Cakes R Us logo">
+                  </div>
+                  <div class="menu">
+                      <a href="../Html/home.html">Home</a>
+                      <div class="dropdown">
+                          <div class="dropbtn">About
+                              <i class="fa fa-caret-down"></i>
                           </div>
-                          <div class="summary-row">
-                            <span class="delivery-label">Delivery</span>
-                            <span class="delivery-icon">
-                              <i class="fas fa-info-circle"></i>
-                              <span class="tooltip">Express delivery guarantees your order arrives in 1-3 days.</span>
-                            </span>
+                          <div class="dropdown-content about-dropdown">
+                              <a href="../html/who-we-are.html">Who We Are</a>
+                              <a href="../html/our-history.html">Our History</a>
                           </div>
-                        </div>
-                        <div class="cart-delivery">
-                          <select class="delivery-options">
-                            <option value="standard">Standard Delivery(FREE)</option>
-                            <option value="express">Express ($25000.00)</option>
-                          </select>
-                          <button type="button" onclick="window.location.href='../Html/cart.html'" class="checkout-btn">Checkout</button>
-                          <p>We Accept:</p>
-                          <div class = "payment-options">
-                            <img class = "visa" src = "../Resources/Logos/visa.png" alt="Visa Logo">
-                            <img class = "wipay" src = "../Resources/Logos/wipay.png" alt ="Wipay Logo">
-                            <img class = "paypal" src = "../Resources/Logos/paypal.png" alt ="Paypal Logo"> 
+                      </div> 
+                      <a href="../Html/shop.html">Shop</a>
+                      <a href="../Html/services.html">Services</a>
+                      <a href="../Html/contact.html">Contact</a>
+                  </div>
+                  <ul class="social-links">
+                      <li><a href="https://www.facebook.com/MrBean"><i class="fab fa-facebook-f"></i></a></li>
+                      <li><a href="https://twitter.com/RepAOC"><i class="fab fa-twitter"></i></a></li>
+                      <li><a href="https://www.instagram.com/leomessi"><i class="fab fa-instagram"></i></a></li>
+                  </ul>  
+                  <div class="icons">
+                      <div class="dropdown">
+                          <a><img src="..\Resources\Navigation-Bar\search-icon.png"  alt="search"></a>
+                          <div class="dropdown-content ">
+                              <div id="search-container">
+                                  <input title="search" type="text" name="search" id="search-bar" placeholder="Search...">
+                                  <button title="search button">
+                                      <i class="fa fa-search"></i>
+                                  </button>
+                              </div>
                           </div>
-                        </div>
-                      </div>
-                    </a>
-
-                      <a id="profile">
-                        <div>
-                          <img src="../Resources/Navigation-Bar/profile-icon.png" alt="Cart" id="modal-trigger">
-                        </div>
-                        <div class="cart-details space">
-                          <div class="account-option">
-                            <span id="view-profile">View Profile</span>
+                      </div> 
+                      <a class="cart-link">
+                          <div class="cart-icon">
+                              <img href="../html/cart.html" src="..\Resources\Navigation-Bar\cart-icon.png" alt="Cart">
+                              <span class="cart-count">2</span>
                           </div>
-                          <div class="account-option space">
-                            <span id="logout">Log out</span>
+                          <div class="cart-details">
+                              <div class="cart-summary">
+                                  <h2>TOTAL</h2>
+                                  <div class="summary-row">
+                                      <span class="subtotal-label">Subtotal</span>
+                                      <span class="subtotal-amount">$10,500.00</span>
+                                  </div>
+                                  <div class="summary-row">
+                                      <span class="delivery-label">Delivery</span>
+                                      <span class="delivery-icon">
+                                          <i class="fas fa-info-circle"></i>
+                                          <span class="tooltip">Express delivery guarantees your order arrives in 1-3 days.</span>
+                                      </span>
+                                  </div>
+                              </div>
+                              <div class="cart-delivery">
+                                  <select class="delivery-options">
+                                      <option value="standard">Standard Delivery(FREE)</option>
+                                      <option value="express">Express ($25000.00)</option>
+                                  </select>
+                                  <button type="button" onclick="window.location.href='../Html/cart.html'" class="checkout-btn">Checkout</button>
+                                  <p>We Accept:</p>
+                                  <div class = "payment-options">
+                                      <img class = "visa" src = "../Resources/Logos/visa.png" alt="Visa Logo">
+                                      <img class = "wipay" src = "../Resources/Logos/wipay.png" alt ="Wipay Logo">
+                                      <img class = "paypal" src = "../Resources/Logos/paypal.png" alt ="Paypal Logo"> 
+                                  </div>
+                              </div>
                           </div>
-                        </div>
                       </a>
-                </div>
-            </div>
-            <button id="scroll-to-top" class="circle">
-              <img src="../Resources/Icons/scroll-up.jpg" alt="scroll-to-top">
-            </button>
-        </nav>
+                      <a id="profile">
+                          <div>
+                              <img src="../Resources/Navigation-Bar/profile-icon.png" alt="Cart" id="modal-trigger">
+                          </div>
+                          <div class="cart-details space">
+                              <div class="account-option">
+                                  <span id="view-profile">View Profile</span>
+                              </div>
+                              <div class="account-option space">
+                                  <span id="logout">Log out</span>
+                              </div>
+                          </div>
+                      </a>
+                  </div>
+              </div>
+  
+              <section>
+                  <div id="login-modal" class="modal">
+                      <div class="modal-content">
+                          <span class="close"><img src="../Resources/Icons/cross.png" alt="exit"></span>
+                          <h2>Login</h2>
+                          <div class="modal-container">
+                              <div class = "options">
+                                  <div class = "gmail">
+                                      <img src ="../Resources/Logos/gmail.png" alt ="Gmail Logo"/>
+                                      <span>Login with Gmail</span>
+                                  </div>
+                                  <div class ="facebook">
+                                      <img src="../Resources/Logos/fb.png" alt="Facebook Logo"/>
+                                      <span>Login with Facebook</span>
+                                  </div>
+                              </div>
+                              <h3>- or via Username and Password - </h3>
+                              <form class="form login">
+                                  <label class="form-label" for="username">Username</label>
+                                  <input class="form-input" type="text" placeholder="Username" name="username" required>
+                                  <label for="password" class="form-label">Password</label>
+                                  <input class="form-input" type="password" placeholder="Password" name="password" required>
+                                  <button type="submit" class="form-button">Login</button>
+                              </form>
+                              <div id = "signup-link" class="signup">
+                                  <p>Don't have an account? <a href="#" id="signup-btn">Sign Up</a></p>
+                              </div>
+                          </div>
+                      </div>
+                  </div> 
+                  <div id="signup-modal" class="modal">
+                      <div class="modal-content">
+                          <span class="close"><img src="../Resources/Icons/cross.png" alt="exit"></span>
+                          <h2>Sign Up</h2>
+                          <div class="modal-container">
+                              <div class = "options">
+                                  <div class = "gmail">
+                                      <img src ="../Resources/Logos/gmail.png" alt ="Gmail Logo"/>
+                                      <span>Sign up with Gmail</span>
+                                  </div>
+                                  <div class ="facebook">
+                                      <img src="../Resources/Logos/fb.png" alt="Facebook Logo"/>
+                                      <span>Sign up with Facebook</span>
+                                  </div>
+                              </div>
+                              <h3>- or via Gmail - </h3>
+                              <form class="form signup">
+                                  <label class="form-label" for="username">Gmail</label>
+                                  <input class="form-input" type="text" placeholder="Gmail" name="gmail" required>
+                                  <label class="form-label" for="username">Username</label>
+                                  <input class="form-input" type="text" placeholder="Username"  name="username" required>
+                                  <label class="form-label" for="password">Password</label>
+                                  <input class="form-input" type="password" placeholder="Password" name="password" required>
+                                  <button class="form-button" type="submit">Sign Up</button>
+                              </form>
+                              <div id = "signup-link" class="signup">
+                                  <p><a href="#" id="return-to-login-btn">Back To Login Page</a></p>
+                              </div>
+                              <div class="signup-confirmation">
+                                  <p class = "signup-confirmation-message"> Thanks for signing up!</p>
+                                  <button class="ok-button">OK</button>
+                              </div>
+                              <div class="signup-confirmation">
+                                  <p>Your account has been created successfully. Please click OKAY <a href="#" id="login-btn">OKAY</a> to return to the login page.</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </section>  
+              <button id="scroll-to-top" class="circle">
+                  <img src="../Resources/Icons/scroll-up.jpg" alt="scroll-to-top">
+              </button>    
+          </nav>
           <div id="login-modal" class="modal">
               <div class="modal-content">
                 <span class="close"><img src="../Resources/Icons/cross.png" alt="exit"></span>
