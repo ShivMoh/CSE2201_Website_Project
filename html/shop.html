@@ -363,6 +363,7 @@
         const products = document.getElementsByClassName('product');
 
 
+
 // Sort products based on the selected option
 sortSelect.addEventListener('change', () => {
       const sortBy = sortSelect.value;
@@ -402,6 +403,22 @@ categorySelect.addEventListener('change', filterProducts);
 				}
 			}
 		}
+
+
+        // Get the value of the category parameter from the URL
+const urlParams = new URLSearchParams(window.location.search);
+const category = urlParams.get('category');
+
+// Set the value of the category select based on the category parameter value
+if (category === 'men') {
+  categorySelect.value = 'men';
+}
+
+if (category === 'women') {
+  categorySelect.value = 'women';
+}
+
+filterProducts();
 	</script>
     <script>
 		const productList = document.getElementById('products');
