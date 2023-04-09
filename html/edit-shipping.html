@@ -4,33 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
-    <link rel="stylesheet" href="../css/account.css">
+    <title>Joe's Store</title>
+    <link rel="stylesheet" href="../css/checkout-shipping.css">
+    <link rel="stylesheet" href="../css/checkout.css">
+    <link rel="stylesheet" href="../css/form-elements.css">
+    <link rel="stylesheet" href="../css/cart.css">
     <link rel="stylesheet" href="../css/hero.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/navigation.css">
     <link rel="stylesheet" href="../css/header-blue-no-image.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Outfit">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abhaya+Libre">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* modifies the margin top to better suite this page */
+        nav {
+            margin-bottom: -12vw;
+        }
+    </style>
 </head>
 <body>
     <header>
-      
         <div id="hero">
-            <h1 id="page-title">Your Profile</h1>
+            <h2 id="page-title">Edit Shipping Details</h2>
             <p id="page-location">
-                <span style="font-weight: normal;">Home</span>
+                Home 
                 <span><img src="../Resources/Icons/arrow-grey.png" alt="arrow"></span> 
                 Profile
+                <span><img src="../Resources/Icons/arrow-grey.png" alt="arrow"></span> 
+                Edit Shipping
             </p>
         </div>
-
         <nav>
             <div class="navigation-bar">
                 <div class="logo">
-                    <img src="..\Resources\Navigation-Bar\logo.png"  alt="Joe's Fashion logo">
+                    <img src="..\Resources\Navigation-Bar\logo.png"  alt="Cakes R Us logo">
                 </div>
                 <div class="menu">
                     <a href="../html/home.html">Home</a>
@@ -39,12 +48,12 @@
                             <i class="fa fa-caret-down"></i>
                         </div>
                         <div class="dropdown-content about-dropdown">
-                            <a href="">Who We Are</a>
+                            <a href="#">Who We Are</a>
                             <a href="../html/our-history.html">Our History</a>
                         </div>
                     </div> 
-                    <a href="../html/shop.html">Shop</a>
-                    <a href="../html/services.html">Services</a>
+                    <a href="#">Shop</a>
+                    <a href="#">Services</a>
                     <a href="#">Contact</a>
                 </div>
                 <ul class="social-links">
@@ -69,69 +78,87 @@
                 </div>
             </div>
         </nav>
- 
     </header>
 
-    <main id="main-profile">
-        <div id="profile">
-            <div id="profile-items">
-                <span id="divider"></span>
-                <div class="profile-item">
-                    <div class="textstyle">
-                        <p>Username:</p>
-                        <p>First Name:</p>
-                        <p>Last Name:</p>
-                        <p>Email:</p>
-                        <p>Phone Number:</p>
+    <main>
+        <section id="checkout-container" style=" margin-bottom: 5vw;">
+            
+            <form id="form-content">
+    
+                <div class="multi-stage-form">
+                    <div id="instructions-guide-options">
+                        <h3>How would you like to get your order?</h3>
+                        <div id="shipping-options">
+                            <div id="box-container-1" onclick="switchTabs(0)">
+                                <p>I'd like it delivered!</p>
+                            </div>
+                            <div id="box-container-2" onclick="switchTabs(1)">
+                                <p>I'll pick it up</p>
+                            </div>
+                        </div>
+                        <h3>Edit the information below: </h3>
                     </div>
-                    <div class="align1 textstyle">
-                        <p>leemavis134</p>
-                        <p>Lee</p>
-                        <p>Mavis</p>
-                        <p>loremipsum123@gmail.com</p>
-                        <p>+592 643 1324</p>       
+    
+                    <div class="shipping">
+                        <label for="lastName">First Name <span>*</span></label>
+                        <input title="firstName" type="text" name="firstName" placeholder="John">
+    
+                        <label for="lastName">Last Name <span>*</span></label>
+                        <input title="lastName" type="text" name="lastName" placeholder="Doe">
+    
+                        <label for="email">Email <span>*</span></label>
+                        <input title="email" type="email" name="email" placeholder="loremipsum123@gmail.com">
+    
+                        <label for="phoneNumber">Phone Number (Optional)</label>
+                        <input title="email" type="number" name="phoneNumber" placeholder="+592 643 1324">
+    
+                        <label for="addressLine1">Address Line 1 <span>*</span></label>
+                        <input title="addressLine1" type="text" name="addressLine1" placeholder="123 Twinkle Toes Drive">
+    
+                        <label for="addressLine2">Address Line 2 <span>*</span></label>
+                        <input title="addressLine2" type="text" name="addressLine2" placeholder="West Promenade">
+    
+                        <label for="cityVillage">City/Village <span>*</span></label>
+                        <input title="cityVillage" type="text" name="cityVillage" placeholder="Juice State">
+    
+                        <label for="region">Region (Optional) </label>
+                        <input title="region" list="regions" type="text" name="region" placeholder="Mahaica-Berbice">
+                        <datalist id="regions">
+                            <option value="1: Barima-Waini">
+                            <option value="2: Pomeroon-Supenaam">
+                            <option value="3: Essequibo Islands-West Demerara">
+                            <option value="4: Demerara-Mahaica">
+                            <option value="5: Mahaica-Berbice">
+                            <option value="6: East Berbice-Corentyne">
+                            <option value="7: Cuyuni-Mazaruni">
+                            <option value="8: Potaro-Siparuni">
+                            <option value="9: Upper Takutu-Upper Essequibo">
+                            <option value="10: Upper Demerara-Berbice">
+                        </datalist>
+    
+                        <label class="container">  Save my details for later
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark"></span>
+                        </label>
                     </div>
-                </div>
-                <span id="divider"></span>
+    
                     
-                <div class="profile-item">
-                    <div class="link">
-                        <h4>Shipping Details</h4>
-                        <a href="../html/edit-shipping.html"><p style="margin-left: -3.4em;">Edit</p></a>
-                    </div>
-                    <div class="align1 align2" style="padding-left: 18em;">
-                        <p class = "textstyle">Delivers To:</p>
-                        <div class="textnormal">
-                          <p>John Doe</p>
-                          <p>123 Twinkle Toes Drives,</p>
-                          <p>West Promehade,</p>
-                          <p>Juice State, Narnia</p>       
-                        </div> 
-                        <p style="font-family: 'Open Sans', sans-serif;">*** *****92</p>   
+                </div>
+            
+        
+                <div id="button-container">
+                    <div id="buttons">
+                        <a href="../html/account.html"><button type="button" id="back-to-cart">Back To Profile</button></a>
+                        <button type="submit" id="next-btn" >Save</button>
                     </div>
                 </div>
-                <span id="divider"></span>
-                <div class="profile-item">
-                    <div class="link">
-                        <h4>Payment Details</h4>
-                        <a href="#"><p>Edit</p></a>
-                        <a href="#"><p>Edit</p></a>
-                        <a href="#"><p>Add New</p></a>
-                    </div>
-                    <div class="align1 align2">
-                        <p class = "textstyle">Connected Payment Options</p>
-                        <div><img class="payment-img" src="../Resources/Logos/visa.png" alt="Visa Card"></div>  
-                        <div><img class="payment-img" src="../Resources/Logos/paypal.png" alt="Paypal"></div>   
-                    </div>
-                </div>
-                <span id="divider"></span>
-                    
-            </div>          
-        </div>
+            </form>
+        </section>
     </main>
-   
-     <!--Footer-->
-     <footer>
+    
+    
+    <!--Footer-->
+    <footer>
         <div class="top-rectangle">
             <div class="top-rectangle-column">
                 <a class="top-rectangle-column-head" href="#"><p>SHOP</p></a>
@@ -197,5 +224,9 @@
             </div>
         </div>
     </footer>
+
+    <script src="../javascript//cart.js" defer></script>
+    <script src="../javascript/checkout.js" defer></script>
+    
 </body>
 </html>
