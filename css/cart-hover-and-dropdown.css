@@ -184,3 +184,7 @@
   transform: scale(1.04);
 }
 
+#profile img {
+  height: 2.4vw;
+  margin-top: -0.3vw;
+}
