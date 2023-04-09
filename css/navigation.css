@@ -220,11 +220,15 @@ body {
     color: black;
     text-decoration: none;
     height: 2vw;
-    margin-top: 0.1vw;
+    margin-top: 0.8vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  
   }
   
   #search-container input {
-    width: 13vw;
+    width: 12vw;
     height: 2vw;
     font-size: 1vw;
     float: left;
@@ -232,8 +236,8 @@ body {
   }
   
   #search-container button {
-    width: auto;
-    height: 2vw;
+    width: 2.3;
+    height: 2.25vw;
     font-size: 1.5vw;
     float: left;
     background-color: transparent;
@@ -242,4 +246,18 @@ body {
     padding: 0 0;
     border-radius: 0;
     text-decoration: none;
+    border: none;
+    background-color: #ffffff;
+    padding-right: 0.2vw;
+    padding-left: 0.2vw;
+  }
+
+  #search-container button:hover {
+    transform: scale(1.02);
+  }
+
+  #search-container i {
+    width: 2vw;
+    height: auto;
+    
   }

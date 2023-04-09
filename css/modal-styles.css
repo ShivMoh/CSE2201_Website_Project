@@ -53,16 +53,16 @@
     align-items: center;
   }
 
-  form label {
+  .form label {
     font-size: 1vw;
     align-self: flex-start;
   }
 
-  form input {
+  .form input {
     height: 1.5vw;
   }
 
-  form button {
+  .form button {
     margin-top: 2vw;
     border-radius: 1vw;
   }
@@ -71,7 +71,7 @@
   .close {
     align-self: flex-end;
     position: relative;
-    top: -3.2vw;
+    top: -2vw;
   }
 
   .close img {
@@ -135,11 +135,11 @@
   background-color: darkgreen;
 }
 
-  .login-gmail img {
+  .gmail img {
     height: 3vw;
   }
   
-  .login-facebook img {
+  .facebook img {
     height: 2vw;
     margin-left: 0.4vw;
   }
@@ -147,13 +147,13 @@
   #login-btn:hover {
     background-color: darkgreen;
   }
-.login-options {
+.options {
   display: flex;
   flex-direction: column;
   row-gap: 1vw;
 }
 
-.login-gmail, .login-facebook {
+.gmail, .facebook {
   width: 25.5vw;
   height: 3vw;
   display: flex;
@@ -163,11 +163,11 @@
   border: solid black 0.1vw;
 }
 
-.login-gmail:hover, .login-facebook:hover {
+.gmail:hover, .facebook:hover {
   transform: scale(1.02);
 }
 
-.login-gmail span, .login-facebook span{
+.gmail span, .facebook span{
   margin-left: 6vw;
 }
 
