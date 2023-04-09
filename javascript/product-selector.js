@@ -1,4 +1,5 @@
 const items = document.querySelectorAll('.product, .item-container02, .item-container03');
+
 items.forEach(item => {
   const id = item.getAttribute('data-id');
   const image = item.querySelector('img').getAttribute('src');
@@ -7,19 +8,19 @@ items.forEach(item => {
   const description = item.querySelector('.description').innerHTML;
   const category = item.querySelector('.category').innerHTML;
   const tags = item.querySelector('.tags').innerHTML;
+  const rating = item.getAttribute('data-rating');
 
   if (location.href.includes('shop.html')) {
     // Add event listener to h2 element on shop page
-    item.querySelector('h2').addEventListener('click', () => viewItem(id, encodeURIComponent(image), encodeURIComponent(title), encodeURIComponent(price), encodeURIComponent(description), encodeURIComponent(category), encodeURIComponent(tags)));
-    item.querySelector('img').addEventListener('click', () => viewItem(id, encodeURIComponent(image), encodeURIComponent(title), encodeURIComponent(price), encodeURIComponent(description), encodeURIComponent(category), encodeURIComponent(tags)));
-    item.querySelector('.price').addEventListener('click', () => viewItem(id, encodeURIComponent(image), encodeURIComponent(title), encodeURIComponent(price), encodeURIComponent(description), encodeURIComponent(category), encodeURIComponent(tags)));
+    item.querySelector('h2').addEventListener('click', () => viewItem(id, encodeURIComponent(image), encodeURIComponent(title), encodeURIComponent(price), encodeURIComponent(description), encodeURIComponent(category), encodeURIComponent(tags), encodeURIComponent(rating)));
+    item.querySelector('img').addEventListener('click', () => viewItem(id, encodeURIComponent(image), encodeURIComponent(title), encodeURIComponent(price), encodeURIComponent(description), encodeURIComponent(category), encodeURIComponent(tags), encodeURIComponent(rating)));
+    item.querySelector('.price').addEventListener('click', () => viewItem(id, encodeURIComponent(image), encodeURIComponent(title), encodeURIComponent(price), encodeURIComponent(description), encodeURIComponent(category), encodeURIComponent(tags), encodeURIComponent(rating)));
   } else if (location.href.includes('home.html')) {
     // Add event listener to .shop-now button on home page
-    item.querySelector('.shop-now').addEventListener('click', () => viewItem(id, encodeURIComponent(image), encodeURIComponent(title), encodeURIComponent(price), encodeURIComponent(description), encodeURIComponent(category), encodeURIComponent(tags)));
+    item.querySelector('.shop-now').addEventListener('click', () => viewItem(id, encodeURIComponent(image), encodeURIComponent(title), encodeURIComponent(price), encodeURIComponent(description), encodeURIComponent(category), encodeURIComponent(tags), encodeURIComponent(rating)));
   }
-
 });
 
-function viewItem(id, image, title, price, description, category, tags) {
-  window.location.href = `product.html?id=${id}&image=${image}&title=${title}&price=${price}&description=${description}&category=${category}&tags=${tags}`;
+function viewItem(id, image, title, price, description, category, tags, rating) {
+  window.location.href = `product.html?id=${id}&image=${image}&title=${title}&price=${price}&description=${description}&category=${category}&tags=${tags}&rating=${rating}`;
 }

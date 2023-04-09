@@ -115,13 +115,14 @@ color: white;
     </header>
 
     <main>
-        <div class="product-path">
-          Home 
-          <span><img src="../Resources/Icons/arrow-grey.png" alt="arrow"></span> 
-          Shop 
-          <span><img src="../Resources/Icons/arrow-grey.png" alt="arrow"></span> 
-          Product
-          </div>
+      <div class="product-path">
+        <a href="../html/home.html">Home</a>
+        <span><img src="../Resources/Icons/arrow-grey.png" alt="arrow"></span> 
+        <a href="../html/shop.html">Shop</a>
+        <span><img src="../Resources/Icons/arrow-grey.png" alt="arrow"></span> 
+        <a href="#" id="reload-page-link">Product</a>
+      </div>
+      
         <div class="product-page">
             
             <div class="product-image-mini">
@@ -130,18 +131,24 @@ color: white;
 
             <div class="product-image">
               <div class="zoom-image" style="background-image: url('product-image01.jpg')"></div>
-
-              <!--<img id="product-image01" src="" alt="Product Image">-->
+              <p class="product-caption">Roll over image to zoom in</p>
             </div>
+            
+<!-- Popup Container -->
+<div id="popup-container">
+  <div id="popup">
+    <span class="close"><img src="../Resources/Icons/cross.png" alt=""></span>
+    <h2>Added to cart</h2>
+    <h3 id="popup-title"></h3>
+    <div id="popup-buttons">
+      <button id="popup-goto-cart">Go to Cart</button>
+    </div>
+  </div>
+</div>
             <div class="product-info">
               <h1 id="product-title">Product Title</h1>
               <p id="product-price">Product price goes here.</p>
               <div class="product-rating">
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">☆</span>
-                <span class="star">☆</span>
               </div>
               
               <p id="product-description">Product description goes here.</p>
@@ -171,6 +178,8 @@ color: white;
                 </div>
             
               <button class="add-to-cart">Add to Cart</button>
+
+
               <div class="product-category-listing">
                 <span class="category-heading">Category:</span>
                 <a id="product-category" href="#">Category Name</a>
@@ -178,7 +187,7 @@ color: white;
               <div class="product-category-listing">
                 <span class="tags-heading">Tags:</span>
                 <a id="product-tags" href="#">Product Tags</a>
-              </div>
+              </div>            
               
               
               
@@ -210,20 +219,29 @@ const price = decodeURIComponent(params.get('price'));
 const description = decodeURIComponent(params.get('description'));
 const category = decodeURIComponent(params.get('category'));
 const tags = decodeURIComponent(params.get('tags'));
+const rating = parseInt(params.get('rating')); // parse the rating value as an integer
+const productRating = document.querySelector('.product-rating');
 
 const zoomImage = document.querySelector('.zoom-image');
 zoomImage.style.backgroundImage = `url('${image}')`;
 
-// set product details
-/*
-const productImage01 = document.querySelector('#product-image01');
-productImage01.setAttribute('src', image);*/
-
-// create a second image element and set its src attribute
 const productImage02 = document.querySelector('#product-image02');
 productImage02.setAttribute('src', image);
 
 document.querySelector('#product-title').innerHTML = title;
+
+// set the appropriate number of filled and empty stars based on the rating value
+for (let i = 1; i <= 5; i++) {
+  const star = document.createElement('span');
+  star.classList.add('star');
+  if (i <= rating) {
+    star.innerHTML = '★';
+  } else {
+    star.innerHTML = '☆';
+  }
+  productRating.appendChild(star);
+}
+
 document.querySelector('#product-price').innerHTML = price;
 document.querySelector('#product-description').innerHTML = description;
 document.querySelector('#product-category').innerHTML = category;
@@ -249,6 +267,61 @@ zoomImage.addEventListener('mouseleave', () => {
   zoomImage.style.backgroundPosition = 'center';
   zoomImage.style.backgroundSize = '100%';
 });
+    </script>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+const id = params.get('id');
+const image = decodeURIComponent(params.get('image'));
+const title = decodeURIComponent(params.get('title'));
+const price = decodeURIComponent(params.get('price'));
+const description = decodeURIComponent(params.get('description'));
+const category = decodeURIComponent(params.get('category'));
+const tags = decodeURIComponent(params.get('tags'));
+
+const zoomImage = document.querySelector('.zoom-image');
+zoomImage.style.backgroundImage = `url('${image}')`;
+
+const productImage02 = document.querySelector('#product-image02');
+productImage02.setAttribute('src', image);
+
+document.querySelector('#product-title').innerHTML = title;
+document.querySelector('#product-price').innerHTML = price;
+document.querySelector('#product-description').innerHTML = description;
+document.querySelector('#product-category').innerHTML = category;
+document.querySelector('#product-tags').innerHTML = tags;
+
+
+    </script>
+    <script>
+const addToCartButton = document.querySelector('.add-to-cart');
+const popupContainer = document.getElementById('popup-container');
+const closeButton = document.querySelector('.close');
+const goToCartButton = document.getElementById('popup-goto-cart');
+const productTitle = document.getElementById('product-title');
+
+addToCartButton.addEventListener('click', function() {
+  popupContainer.style.display = 'block';
+  document.getElementById('popup-title').textContent = productTitle.textContent + ' added to cart successfully';
+});
+
+closeButton.addEventListener('click', function() {
+  popupContainer.style.display = 'none';
+});
+
+document.getElementById("popup-goto-cart").addEventListener("click", function() {
+  window.location.href = "../html/cart.html";
+});
+
+document.querySelector("#popup .close").addEventListener("click", function() {
+  document.getElementById("popup-container").style.display = "none";
+});
+
+const reloadLink = document.getElementById('reload-page-link');
+reloadLink.addEventListener('click', function(event) {
+  event.preventDefault(); // Prevent the default link behavior
+  location.reload(); // Reload the page
+});
+
     </script>
 
 
