@@ -1,67 +1,103 @@
-// Get the dropdown menu
-const sortDropdown = document.getElementById('sort');
+// Get elements
+const productsContainer = document.getElementById('products');
+const sortSelect = document.getElementById('sort-by');
+    const categorySelect = document.getElementById('category');
+    const products = document.getElementsByClassName('product');
 
-// Add an event listener to the dropdown menu
-sortDropdown.addEventListener('change', () => {
-  // Get the selected sort option
-  const sortOption = sortDropdown.value;
 
-  // Get the grid container and an array of the grid items
-  const gridContainer = document.querySelector('.grid-container');
-  const gridItems = Array.from(gridContainer.children);
 
-  // Sort the grid items based on the selected sort option
-  if (sortOption === 'name-asc') {
-    // Sort by name (A-Z)
-    gridItems.sort((a, b) => {
-      const aName = a.querySelector('h2').textContent;
-      const bName = b.querySelector('h2').textContent;
-      return aName.localeCompare(bName);
-    });
-  } else if (sortOption === 'name-desc') {
-    // Sort by name (Z-A)
-    gridItems.sort((a, b) => {
-      const aName = a.querySelector('h2').textContent;
-      const bName = b.querySelector('h2').textContent;
-      return bName.localeCompare(aName);
-    });
-  } else if (sortOption === 'price-asc') {
-    // Sort by price (Low to High)
-    gridItems.sort((a, b) => {
-      const aPrice = parseFloat(a.querySelector('.price').textContent.replace('$', ''));
-      const bPrice = parseFloat(b.querySelector('.price').textContent.replace('$', ''));
-      return aPrice - bPrice;
-    });
-  } else if (sortOption === 'price-desc') {
-    // Sort by price (High to Low)
-    gridItems.sort((a, b) => {
-      const aPrice = parseFloat(a.querySelector('.price').textContent.replace('$', ''));
-      const bPrice = parseFloat(b.querySelector('.price').textContent.replace('$', ''));
-      return bPrice - aPrice;
-    });
-  }
+// Sort products based on the selected option
+sortSelect.addEventListener('change', () => {
+  const sortBy = sortSelect.value;
 
-  // Append the sorted grid items back to the grid container
-  gridItems.forEach((item) => {
-    gridContainer.appendChild(item);
+  const sortedProducts = Array.from(productsContainer.children)
+    .sort((a, b) => {
+      if (sortBy === 'price-low-to-high') {
+        return a.dataset.price - b.dataset.price;
+      } else if (sortBy === 'price-high-to-low') {
+        return b.dataset.price - a.dataset.price;
+      } else if (sortBy === 'rating-high-to-low') {
+        return b.dataset.rating - a.dataset.rating;
+      } else if (sortBy === 'rating-low-to-high') {
+        return a.dataset.rating - b.dataset.rating;
+      }
+    });
+
+  productsContainer.innerHTML = '';
+  sortedProducts.forEach((product) => {
+    productsContainer.appendChild(product);
   });
 });
 
+categorySelect.addEventListener('change', filterProducts);
 
-// Get the grid container
-const gridContainer = document.querySelector('.grid-container');
+function filterProducts() {
+  const selectedCategory = categorySelect.value.toLowerCase();
 
-// Get an array of the grid items
-const gridItems = Array.from(gridContainer.children);
+  for (let i = 0; i < products.length; i++) {
+    const product = products[i];
+    const categories = product.dataset.category.split(',');
 
-// Sort the grid items by name (A-Z)
-gridItems.sort((a, b) => {
-  const aName = a.querySelector('h2').textContent;
-  const bName = b.querySelector('h2').textContent;
-  return aName.localeCompare(bName);
-});
+    if (selectedCategory === 'all' || categories.includes(selectedCategory)) {
+      product.style.display = 'block';
+    } else {
+      product.style.display = 'none';
+    }
+  }
+}
 
-// Append the sorted grid items back to the grid container
-gridItems.forEach((item) => {
-  gridContainer.appendChild(item);
-});
+
+    // Get the value of the category parameter from the URL
+const urlParams = new URLSearchParams(window.location.search);
+const category = urlParams.get('category');
+
+// Set the value of the category select based on the category parameter value
+if (category === 'men') {
+categorySelect.value = 'men';
+}
+
+if (category === 'women') {
+categorySelect.value = 'women';
+}
+
+if (category === 'clothing') {
+categorySelect.value = 'clothing';
+}
+
+if (category === 'accessories') {
+categorySelect.value = 'accessories';
+}
+
+filterProducts();
+
+
+
+
+
+const productList = document.getElementById('products');
+const searchInput = document.getElementById('search-input');
+
+function searchProducts() {
+  const searchValue = searchInput.value.toLowerCase();
+
+  Array.from(productList.children).forEach(product => {
+    const title = product.querySelector('.product-title').textContent.toLowerCase();
+    if (title.includes(searchValue)) {
+      product.style.display = 'block';
+    } else {
+      product.style.display = 'none';
+    }
+  });
+}
+
+searchInput.addEventListener('input', searchProducts);
+
+
+
+
+const prevArrow = document.querySelector('.prev-arrow');
+const currentPage = 1;
+
+if (currentPage === 1) {
+prevArrow.classList.add('disabled');
+}
