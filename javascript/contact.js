@@ -1,7 +1,6 @@
-var form = document.querySelector("form");
+var form = document.querySelector("#contact-form");
 
-form.addEventListener('submit', (e) => {
+form.onsubmit = (e) => {
     e.preventDefault();
-    console.log("Hello?")
     window.location.href = "../html/contact-confirmation.html";
-})
+}

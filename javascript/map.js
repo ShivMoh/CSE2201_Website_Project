@@ -9,8 +9,6 @@ let temp_store = new Array() // array temporary storage object. Probs will repla
 boundArr = setPerimeter(dis = 100) // initialize boundaries to perimeter
 createMap()
 
-
-
 function createMap() {
     map = L.map('map').setView([centerLat, centerLong], 13);
 
