@@ -4,10 +4,6 @@ button:hover {
   cursor: pointer;
 }
 
-main button {
-  width: 17vw;
-}
-
 .header-image {
   position: relative;
   height: 100vh;
@@ -112,7 +108,6 @@ main button {
     padding: 1.1vw 3.1vw 1.1vw 3.1vw;
     border-radius: 1.2vw;
     margin-top: 2.5vw;
-    width: 17vw;
   }
 
   #browse-our-collection {
