@@ -60,7 +60,7 @@ function manageState(n)
     for(var x = 0; x < state.length; x++)
     {
         if(x != n) {
-            state[x].style.color = "grey"
+            state[x].style.color = "#65707A"
         } else {
             state[x].style.color = "black"
         }
@@ -96,7 +96,7 @@ function removeValidate() {
 }
 function switchTabs(n) {
 
-    // removeValidate();
+    removeValidate();
 
     sub_stage[current_tab].style.display = "none";
     sub_stage[n].style.display = "flex";
@@ -166,7 +166,7 @@ function switchTabs(n) {
         });
     }
 
-    // addValidate();
+    addValidate();
 }
 
 // the unmodified version of this code was sourced from w3schools. 
@@ -221,8 +221,11 @@ function progress(n) {
         document.getElementById("back-to-cart").style.display = "inline"
         document.getElementById("next-btn").innerText = "Next";
     } else if(step == (stage.length - 1)) {
-        console.log("hello?")
         document.getElementById("next-btn").innerText = "Confirm";
+        document.getElementById("form-content").onsubmit = (e) => {
+            e.preventDefault();
+            window.location.href = "../html/home.html";
+        }
     } else {
         document.getElementById("prev-btn").style.display = "inline"
         document.getElementById("back-to-cart").style.display = "none"
