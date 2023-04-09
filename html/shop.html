@@ -193,79 +193,7 @@
                     <img src="../Resources/Icons/scroll-up.jpg" alt="scroll-to-top">
                 </button>    
             </nav>
-        <div id="login-modal" class="modal">
-            <div class="modal-content">
-                <span class="close"><img src="../Resources/Icons/cross.png" alt="exit"></span>
-                <h2>Login</h2>
-                <div class="modal-container">
-                <div class = "options">
-                    <div class = "gmail">
-                    <img src ="../Resources/Logos/gmail.png" alt ="Gmail Logo"/>
-                    <span>Login with Gmail</span>
-                    </div>
-                    <div class ="facebook">
-                    <img src="../Resources/Logos/fb.png" alt="Facebook Logo"/>
-                    <span>Login with Facebook</span>
-                    </div>
-                </div>
-                <h3>- or via Username and Password - </h3>
-                <form class="form login">
-                    <label class="form-label" for="username">Username</label>
-                    <input class="form-input" type="text" placeholder="Username" name="username" required>
-            
-                    <label for="password" class="form-label">Password</label>
-                    <input class="form-input" type="password" placeholder="Password" name="password" required>
-            
-                    <button type="submit" class="form-button">Login</button>
-                </form>
-                <div id = "signup-link" class="signup">
-                    <p>Don't have an account? <a href="#" id="signup-btn">Sign Up</a></p>
-                </div>
-                </div>
-        
-            </div>
-            </div>
-            
-            <div id="signup-modal" class="modal">
-            <div class="modal-content">
-                <span class="close"><img src="../Resources/Icons/cross.png" alt="exit"></span>
-                <h2>Sign Up</h2>
-                <div class="modal-container">
-                <div class = "options">
-                    <div class = "gmail">
-                    <img src ="../Resources/Logos/gmail.png" alt ="Gmail Logo"/>
-                    <span>Sign up with Gmail</span>
-                    </div>
-                    <div class ="facebook">
-                    <img src="../Resources/Logos/fb.png" alt="Facebook Logo"/>
-                    <span>Sign up with Facebook</span>
-                    </div>
-                </div>
-                <h3>- or via Gmail - </h3>
-                <form class="form signup">
-                    <label class="form-label" for="username">Gmail</label>
-                    <input class="form-input" type="text" placeholder="Gmail" name="gmail" required>
-        
-                    <label class="form-label" for="username">Username</label>
-                    <input class="form-input" type="text" placeholder="Username"  name="username" required>
-            
-                    <label class="form-label" for="password">Password</label>
-                    <input class="form-input" type="password" placeholder="Password" name="password" required>
-            
-                    <button class="form-button" type="submit">Sign Up</button>
-                </form>
-                <div id = "signup-link" class="signup">
-                    <p><a href="#" id="return-to-login-btn">Back To Login Page</a></p>
-                </div>
-                <div class="signup-confirmation">
-                    <p class = "signup-confirmation-message"> Thanks for signing up!</p>
-                    <button class="ok-button">OK</button>
-                </div>
-                <div class="signup-confirmation">
-                <p>Your account has been created successfully. Please click OKAY <a href="#" id="login-btn">OKAY</a> to return to the login page.</p>
-                </div>
-            </div>
-            </div>
+
     </header>
     <main>
         <div class="filters">
@@ -531,6 +459,7 @@
 
     <script type="text/javascript" src="../Javascript/product-selector.js"></script>
     <script type="text/javascript" src="../javascript/login-modal.js"</script>
+    <script type="text/javascript" src="../javascript/scroll-to-top"></script>
 	<script>
 		// Get elements
 		const productsContainer = document.getElementById('products');
