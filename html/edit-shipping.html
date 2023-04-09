@@ -5,11 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joe's Store</title>
-    <link rel="stylesheet" href="../css/checkout-shipping.css">
-    <link rel="stylesheet" href="../css/checkout.css">
-    <link rel="stylesheet" href="../css/form-elements.css">
-    <link rel="stylesheet" href="../css/cart.css">
+
+    <!--   #hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Set a higher z-index value to make the pseudo-element appear on top of the text */
+  } -->
+  
     <link rel="stylesheet" href="../css/hero.css">
+    <link rel="stylesheet" href="../css/form-elements.css">
+    <link rel="stylesheet" href="../css/checkout.css">
+    <link rel="stylesheet" href="../css/checkout-shipping.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/navigation.css">
     <link rel="stylesheet" href="../css/header-blue-no-image.css">
@@ -22,18 +32,40 @@
         nav {
             margin-bottom: -12vw;
         }
+
+        #center {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-top: 7vw;
+        }
+
+        .multi-stage-form {
+            display: flex;
+        }
+
+        #prev-btn {
+            display: block;
+        }
+
+        .payment input {
+            height: 1.3vw;
+        }
     </style>
 </head>
 <body>
+    
     <header>
         <div id="hero">
-            <h2 id="page-title">Edit Shipping Details</h2>
+            <h1 id="page-title">MY CART</h1>
             <p id="page-location">
-                <span style="font-weight: normal;"> Home </span>
+                Home 
                 <span><img src="../Resources/Icons/arrow-grey.png" alt="arrow"></span> 
-                <span style="font-weight: normal;"> Profile </span>
+                Shop 
                 <span><img src="../Resources/Icons/arrow-grey.png" alt="arrow"></span> 
-                Edit Shipping
+                Cart
             </p>
         </div>
         <nav>
@@ -42,14 +74,14 @@
                     <img src="..\Resources\Navigation-Bar\logo.png"  alt="Cakes R Us logo">
                 </div>
                 <div class="menu">
-                    <a href="../html/home.html">Home</a>
+                    <a href="#">Home</a>
                     <div class="dropdown">
                         <div class="dropbtn">About
                             <i class="fa fa-caret-down"></i>
                         </div>
                         <div class="dropdown-content about-dropdown">
                             <a href="#">Who We Are</a>
-                            <a href="../html/our-history.html">Our History</a>
+                            <a href="#">Our History</a>
                         </div>
                     </div> 
                     <a href="#">Shop</a>
@@ -78,12 +110,10 @@
                 </div>
             </div>
         </nav>
+ 
     </header>
-
-    <main>
-        <section id="checkout-container" style=" margin-bottom: 5vw;">
-            
-            <form id="form-content" action="../html/account.html" onsubmit="success();">
+    <main id="center">
+            <form id="form-content" class="form">
     
                 <div class="multi-stage-form">
                     <div id="instructions-guide-options">
@@ -136,25 +166,40 @@
                             <option value="10: Upper Demerara-Berbice">
                             <option value="11:  Narnia">
                         </datalist>
-    
-                        <label class="container">  Save my details for later
-                            <input type="checkbox" checked="checked">
-                            <span class="checkmark"></span>
-                        </label>
                     </div>
+
+                    <div class="shipping">
+                        <label for="lastName">First Name<span>*</span></label>
+                        <input title="firstName" type="text" name="firstName" placeholder="First Name">
+    
+                        <label for="lastName">Last Name<span>*</span></label>
+                        <input title="lastName" type="text" name="lastName" placeholder="Last Name">
+    
+                        <label for="email">Email <span>*</span></label>
+                        <input title="email" type="email" name="email" placeholder="e.g johndoe@gmail.com">
+    
+                        <label for="phoneNumber">Phone Number (Optional)</label>
+                        <input title="email" type="number" name="phoneNumber" placeholder="e.g 634 2442">
+    
+                        <label for="pickUpDate">Pickup Date<span>*</span></label>
+                        <input title="pickUpDate" type="date" name="pickUpDate" placeholder="Pickup Date">
+    
+                        <label for="pickUpTime">Pickup Time<span>*</span></label>
+                        <input title="pickUpTime" type="time" name="pickUpTime" placeholder="Pickup Time">
+                       
+                    </div>
+                </div>
     
                     
                 </div>
-            
         
                 <div id="button-container">
                     <div id="buttons">
-                        <a href="../html/account.html"><button type="button" id="back-to-cart">Back To Profile</button></a>
+                        <button type="button" id="prev-btn">Back</button>
                         <button type="submit" id="next-btn" >Save</button>
                     </div>
                 </div>
             </form>
-        </section>
     </main>
     
     
@@ -225,14 +270,8 @@
             </div>
         </div>
     </footer>
-    <script>
-        function success(){
-            alert("Shipping Details Successfully Updated");
-        }
-    </script>
-
-    <script src="../javascript//cart.js" defer></script>
-    <script src="../javascript/checkout.js" defer></script>
+    <script src="../javascript/account-edit-shipping.js" defer></script>
+  
     
 </body>
 </html>
