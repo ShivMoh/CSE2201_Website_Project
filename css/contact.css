@@ -1,0 +1,75 @@
+#contact {
+    display: flex;
+    flex-direction: row;
+    margin-right: 10vw;
+    margin-left: 10vw;
+    column-gap: 5vw;
+    align-items: flex-start;
+}
+
+#map {
+    width: 50vw;
+    height: 40vw;
+    justify-self: flex-end;
+    border: solid black 0.1vw;
+}
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-self: flex-start;
+    margin-top: -2vw;
+}
+
+#contact-form input {
+    height: 1.5vw;
+}
+
+#contact-form button {
+    margin-top: 2vw;
+    align-self: center;
+}
+
+#contact-form label span {
+    margin-left: 0.1vw;
+}
+
+#contact-confirm {
+    width: 100%;
+    height: 20vw;
+    margin-top: 10vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact-confirm-box {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: solid black 0.1vw;
+    border-radius: 2vw;
+    padding: 5vw
+}
+#contact-confirm-box h2 {
+    font-family: 'Ubuntu', 'Ariel', sans-serif;
+    font-size: 2vw;
+    font-weight: 700;
+    letter-spacing: 0.2vw;
+}
+
+#contact-confirm-box p {
+    font-family: 'Abhaya Libre', 'Gill Sans', sans-serif;
+    font-size: 1.7vw;
+    font-weight: 500;
+    letter-spacing: 0.2vw;
+}
+
+#contact-confirm-box a {
+    color: #1FB9E9;
+    text-decoration: none;
+    cursor: pointer;
+    margin-bottom: 0.5vw;
+}

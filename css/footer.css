@@ -8,6 +8,9 @@ footer {
     background-color: #09345B;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 110px 1fr 110px;
+    grid-gap: 5px;
+    grid-row-gap: 30px;
 }
 
 .top-rectangle a {
@@ -35,10 +38,14 @@ footer {
 .bottom-rectangle {
     background-color: #15141A;
     display: grid;
+    align-items: first baseline;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     text-align: center;
     bottom: 0;
-    row-gap: 75px;
+    grid-row-gap: 30px;
+    row-gap: 150px;
+    align-items: center;
+    line-height: 36px;
 }
 
 .email,
@@ -48,6 +55,7 @@ footer {
     margin-top: 20px;
     font-weight: 600;
     font-size: 22px;
+    padding: 2pt;
 }
 
 .phone-number,
@@ -59,14 +67,15 @@ footer {
 .social-media-icon {
     width: 40px;
     height: 40px;
+    vertical-align: top;
 }
 
 .social-media-button {
     border-style: none;
     border-radius: 20px;
     margin: 0;
-    padding: 0;
-    background-color: black;
+    padding: 8px;
+    background-color: #15141A;
     cursor: pointer;
     width: auto;
     height: auto;
@@ -80,5 +89,8 @@ footer {
 }
 
 .payment-img {
+    justify-content: center;
+    align-items: center;
     margin-right: 30px;
+    vertical-align: middle;
 }
