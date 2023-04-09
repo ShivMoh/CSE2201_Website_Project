@@ -184,3 +184,7 @@ main {
     color: #0581F4;
 }
 
+button:hover {
+    background-color: #5bd667;
+    transform: scale(1.02);
+}

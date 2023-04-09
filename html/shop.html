@@ -27,6 +27,43 @@
         .dropbtn {
             color: black;
         }
+
+
+
+
+            /* Style the product filters */
+    #filters {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto;
+        margin: 0 10em 0 10em;
+        justify-content: center;
+        column-gap: 9em;
+        
+    }
+
+    /* Set the color for checked stars */
+    .checked {
+        color: #F572A1;
+    }
+
+    /* Set the size of stars */
+    .fa-star {
+        width: 2em;
+        height: 2em;
+    }
+
+    /* Add an animation when hovering over products */
+    .product:hover {
+        transform: scale(1.01);
+    }
+
+    /* Style the input fields for filters */
+    #filters input {
+        height: 2em;
+        width: 17em;
+        margin-top: -1em;
+    }
     </style>
 </head>
 
@@ -38,35 +75,6 @@
             <p id="page-location">Home > Shop</p>
         </div>
 
-        <nav>
-            <ul>
-                <label for="sort">Sort by: </label>
-                <select id="sort">
-                    <option value="name-asc">Name (A-Z)</option>
-                    <option value="name-desc">Name (Z-A)</option>
-                    <option value="price-asc">Price (Low to High)</option>
-                    <option value="price-desc">Price (High to Low)</option>
-                </select>
-
-                <label for="category">Categories: </label>
-                <select id="categories">
-                    <option>...</option>
-                    <option>Shirts</option>
-                    <option>Pants</option>
-                    <option>Dresses</option>
-                    <option>Accessories</option>
-                </select>
-
-                <li class="search">
-                    <form>
-                        <input type="text" placeholder="Search">
-                        <button type="submit"><img src="..\Resources/Navigation-Bar/search-icon.png" alt="buttonpng"
-                                border="0" />
-                        </button>
-                    </form>
-                </li>
-            </ul>
-        </nav>
     </header>
     <div class="navigation-bar">
         <div class="logo">
@@ -109,141 +117,190 @@
         </div>
     </div>
     <main>
-        <div class="grid-container">
-            <a class="grid-item" data-id="1">
-                <img src="../Resources/Images/graphic tee.jpg" alt="Item Image">
-                <div class="star-rating">
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9734;</span>
-                    <span class="star">&#9734;</span>
-                </div>
-                <h2>Graphic T-Shirt</h2>
-                <p class="price">$4000</p>
+        <section id="filters">
+            <div class="filter-div">
+                <label for="sort-by">Sort by:</label>
+                <select id="sort-by" name="sort-by">
+                    <option value="price-asc">Price: Low to High</option>
+                    <option value="price-desc">Price: High to Low</option>
+                    <option value="name-asc">Name: A to Z</option>
+                    <option value="name-desc">Name: Z to A</option>
+                    <option value="Newest">Ratings</option>
+                </select>
+            </div>
+            <div class="filter-div">
+                <label for="category">Category:</label>
+                <select id="category" name="category">
+                    <option value="all">All</option>
+                    <option value="cakes">Cakes</option>
+                    <option value="cookies">Cookies</option>
+                    <option value="cupcakes">Cupcakes</option>
+                    <!-- add any additional categories as needed -->
+                </select>
+            </div>
+            <div class="search-container">
+                <input type="text" placeholder="Search.." name="search" value="">
+                <button onclick="search()" style="margin-top: 0;"type="submit" title="search" ><i class="fa fa-search" ></i></button>
+            </div>
+        </section>
 
-                <p class="description" style="display: none">This soft and comfortable t-shirt features a minimalist
-                    design that's perfect for everyday wear. Made from high-quality cotton, it's easy to care for and
-                    will keep you looking stylish all year round.</p>
+        <!-- Grid layout of products -->
+        <section class="products">
+            <!-- First Row -->
+            <div class="product" data-id="1">
+                <img src="../Resources/Images/new01.jpg" alt="Product-1">
+                <div class="product-rating">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">☆</span>
+                    <span class="star">☆</span>
+                  </div>
+                <h2 class="product-title">Graphic T-Shirt</h2>
+                <p class="price">$4000</p>
+                <p class="description" style="display: none;">This soft and comfortable t-shirt features a minimalist design that's perfect for everyday wear. Made from high-quality cotton, it's easy to care for and will keep you looking stylish all year round.</p>
                 <p class="category" style="display: none;">Clothing</p>
                 <p class="tags" style="display: none;">t-shirt, casual, men's</p>
-            </a>
-            <a class="grid-item" data-id="2">
-                <img src="../Resources\Images\Stock-Hoodie-Grey-1-500x500.jpg" alt="Item Image">
-                <div class="star-rating">
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9734;</span>
-                    <span class="star">&#9734;</span>
-                </div>
-                <h2>Hoodie</h2>
-                <p class="price">$7000</p>
+            </div>
 
-            </a>
-            <a class="grid-item" data-id="3">
-                <img src="../Resources\Images\jeans.jpeg" alt="Item Image">
-                <div class="star-rating">
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9734;</span>
-                    <span class="star">&#9734;</span>
-                </div>
-                <h2>Jeans</h2>
-                <p class="price">$10000</p>
-
-            </a>
-            <a class="grid-item" data-id="4">
-                <img src="../Resources\Images\plain-joggers-pants-500x500.jpg" alt="Item Image">
-                <div class="star-rating">
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9734;</span>
-                    <span class="star">&#9734;</span>
-                </div>
-                <h2>Joggers</h2>
-                <p class="price">$6000</p>
-
-            </a>
-            <a class="grid-item" data-id="5">
-                <img src="../Resources\Images\bomber jacket.jpg" alt="Item Image">
-                <div class="star-rating">
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9734;</span>
-                    <span class="star">&#9734;</span>
-                </div>
-                <h2>Bomber Jacket</h2>
-                <p class="price">$12000</p>
-
-            </a>
-            <a class="grid-item" data-id="6">
-                <img src="../Resources\Images\sneakers.jpg" alt="Item Image">
-                <div class="star-rating">
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9734;</span>
-                    <span class="star">&#9734;</span>
-                </div>
-                <h2>Sneakers</h2>
-                <p class="price">$14000</p>
-
-            </a>
-            <a class="grid-item" data-id="7">
-                <img src="../Resources\Images\backpack.jpg" alt="Item Image">
-                <div class="star-rating">
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9734;</span>
-                    <span class="star">&#9734;</span>
-                </div>
-                <h2>Backpack</h2>
-                <p class="price">$5000</p>
-
-            </a>
-            <a class="grid-item" data-id="8">
-                <img src="../Resources\Images\sunglasses.jpg" alt="Item Image">
-                <div class="star-rating">
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9734;</span>
-                    <span class="star">&#9734;</span>
-                </div>
-                <h2>Sunglasses</h2>
+            <div class="product" data-id="2">
+                <img src="../Resources/Images/new02.jpg" alt="Product-2">
+                <div class="product-rating">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">☆</span>
+                    <span class="star">☆</span>
+                  </div>
+                <h2 class="product-title">Leopard Sunglasses</h2>
                 <p class="price">$3000</p>
+                <p class="description" style="display: none;">Protect your eyes from the sun in style with these minimal leopard print sunglasses. The circular lens has a light orange tint that adds a pop of color to the black and orange print. Perfect for a day out in the sun.</p>
+                <p class="category" style="display: none;">Accessories</p>
+                <p class="tags" style="display: none;">sunglasses, leopard print, orange tint</p>
+            </div>
 
-            </a>
-            <a class="grid-item" data-id="9">
-                <img src="../Resources\Images\watch.jpg" alt="Item Image">
-                <div class="star-rating">
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9734;</span>
-                    <span class="star">&#9734;</span>
+            <div class="product" data-id="3">
+                <img src="../Resources/Images/new03.jpg" alt="Product-3">
+                <div class="product-rating">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">☆</span>
+                    <span class="star">☆</span>
+                  </div>
+                  <h2 class="product-title">Line Pattern Suit Jacket</h2>
+                  <p class="price">$120</p>
+                  <p class="description" style="display: none;">Make a statement in this suit top with a pattern made up of lines. The bold print is complemented by a sharp silhouette that's perfect for both formal and casual occasions. Pair it with matching pants or jeans for a complete look.</p>
+                  <p class="category" style="display: none;">Clothing</p>
+                  <p class="tags" style="display: none;">suit top, checkered pattern, lines</p>
+            </div>
+
+            <div class="product" data-id="4">
+                <img src="../Resources/Images/new04.jpg" alt="Product-4">
+                <div class="product-rating">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">☆</span>
+                    <span class="star">☆</span>
                 </div>
-                <h2>Watch</h2>
+                <h2 class="product-title">Backpack</h2>
+                <p class="price">$6000</p>
+                <p class="description" style="display: none;">This stylish backpack features multiple pockets, adjustable straps, and magnetic locks for easy access to your belongings. Its brownish-green color and sleek design make it perfect for any occasion.</p>
+                <p class="category" style="display: none;">Accessories</p>
+                <p class="tags" style="display: none;">backpack, travel, unisex</p>
+            </div>
+
+            <div class="product" data-id="5">
+                <img src="../Resources/Images/new05.jpg" alt="Product-5">
+                <div class="product-rating">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">☆</span>
+                    <span class="star">☆</span>
+                </div>
+                <h2 class="product-title">Hera halterneck wrap dress</h2>
                 <p class="price">$8000</p>
+                    <p class="description" style="display: none;">Hera halterneck wrap dress from Caravana featuring rose pink, cotton, calf leather, crinkled finish, gathered detailing, contrasting trim, wrap design, halterneck, plunging V-neck, open back, self-tie fastening, crossover shoulder straps, elasticated waistband, maxi skirt and asymmetric hem.</p>
+                    <p class="category" style="display: none;">Clothing</p>
+                    <p class="tags" style="display: none;">dress, formal, women's</p>
+            </div>
 
-            </a>
-        </div>
-        <nav class="pagination">
-            <ul>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a class="next-page" href="#"><img src="..\Resources/Navigation-Bar/back.png"></a>
-                </li>
-            </ul>
-        </nav>
+            <div class="product" data-id="6">
+                <img src="../Resources/Images/sale01.jpg" alt="Product-6">
+                <div class="product-rating">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">☆</span>
+                    <span class="star">☆</span>
+                </div>
+                <h2 class="product-title">Activist T-Shirt</h2>
+                <p class="price">$3500</p>
+                <p class="description" style="display: none;">Make a statement with this bold and powerful t-shirt. Featuring the text "no homophobia, no violence, no racism, no sexism, yes kindness, yes peace, yes equality, yes love" on the back, it's the perfect way to show your support for equality, justice, and human rights. Made from high-quality cotton, it's soft, comfortable, and easy to care for.</p>
+                <p class="category" style="display: none;">Clothing</p>
+                <p class="tags" style="display: none;">t-shirt, activist, unisex</p>
+            </div>
 
+            <div class="product" data-id="7">
+                <img src="../Resources/Images/sale02.jpg" alt="Product-7">
+                <div class="product-rating">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">☆</span>
+                    <span class="star">☆</span>
+                </div>
+                <h2 class="product-title">Glossy Red Purse</h2>
+                <p class="price">$7500</p>
+                <p class="description" style="display: none">Make a statement with this stunning red purse. The glossy finish and gold hardware give it an elegant and sophisticated look, while the gems on the top trim add a touch of glamour. The spacious interior is perfect for carrying all your essentials, and the detachable gold chain strap allows you to wear it as a shoulder or crossbody bag. Whether you're dressing up for a special occasion or adding some flair to your everyday look, this purse is sure to turn heads.</p>
+                <p class="category" style="display: none;">Accessories</p>
+                <p class="tags" style="display: none;">purse, red, gold, gems, women's</p>
+            </div>
+
+            <div class="product" data-id="8">
+                <img src="../Resources/Images/sale03.jpg" alt="Product-8">
+                <div class="product-rating">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">☆</span>
+                    <span class="star">☆</span>
+                </div>
+                <h2 class="product-title">Gold Bracelet Set</h2>
+                <p class="price">$8000</p>
+                <p class="description" style="display: none;">This stunning gold bracelet set includes three bangles with delicate pendants that can also be worn as earrings. The set is versatile and perfect for adding a touch of elegance to any outfit.</p>
+                <p class="category" style="display: none;">Accessories</p>
+                <p class="tags" style="display: none;">bracelet, earrings, pendant, gold, women's</p>
+            </div>
+
+            <div class="product" data-id="9">
+                <img src="../Resources/Images/sale05.jpg" alt="Product-9">
+                <div class="product-rating">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">☆</span>
+                    <span class="star">☆</span>
+                </div>
+                <h2 class="product-title">Bee Print Handbag</h2>
+                <p class="price">$8000</p>
+                <p class="description" style="display: none;">This stylish handbag features a vibrant yellow color and a fun bee print. The brown leather straps and details add a touch of sophistication to this playful accessory. With its roomy interior and adjustable straps, it's perfect for carrying all your essentials on the go.</p>
+                <p class="category" style="display: none;">Accessories</p>
+                <p class="tags" style="display: none;">handbag, bees, pattern, women's</p>
+            </div>
+        </section>
+
+        <!-- Navigation buttons for different product pages -->
+        <section style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <div id="pagination">
+                <button class="btn" id="prev-page" onclick="pageToggle(-1)">Previous</button>
+                <button class="btn" id="next-page" onclick="pageToggle(1)">Next</button>
+            </div>
+            <p id="page-num" style="color: black; font-size: large;">Page 1</p>
+        </section>
+       
     </main>
 
     <script type="text/javascript" src="../Javascript/product-selector.js"></script>
