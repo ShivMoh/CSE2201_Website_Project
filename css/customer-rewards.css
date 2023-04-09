@@ -10,13 +10,95 @@
 
 .condition-text {
     font-size: 16px;
-    font-family: Open Sans, Arial;
+    font-family: 'Open Sans', Arial;
     color: black;
-    display: inline-block;
-    line-height: 16px;
 }
 
 .condition-checkbox {
-    width: 20px;
-    height: 20px;
+    width: 2vw;
+    height: 2vw;
+    position:relative;
+    top: 0.7vw;
+
+}
+
+.form-element-3  {
+    width: 100%;
+    height: 20vw;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: -8vw;
+    margin-top: -14vw;
+} 
+.form-element-2 {
+    width: 100%;
+    height: 20vw;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: -5vw;
+    margin-top: 2vw;
+    /* background-color: aqua; */
+}
+
+
+/* W3schools custom checkbox code */
+.container {
+    width: 58%;
+    display: flex;
+    position: relative; 
+    padding-left: 2vw;
+    cursor: pointer;
+    font-size: 1.1vw;
+    text-align: left;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0.1vw;
+    left: 0.5vw;
+    height: 1.2vw;
+    width: 1.2vw;
+    background-color: #746c6c;
+    border-radius: 0.1vw;
+  }
+
+  /* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  /* Style the checkmark/indicator */
+.container .checkmark:after {
+    left: 0.25vw;
+    top: 0.2vw;
+    width: 0.5vw;
+    height: 0.3vw;
+    border: solid white;
+    border-width: 0vw 0.2vw 0.2vw 0vw;
+    transform: rotate(145deg) scaleY(-1); 
 }

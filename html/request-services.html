@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/request-services.css">
+    <link rel="stylesheet" href="../css/form-elements.css">
     
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Outfit">
@@ -75,40 +76,40 @@
         </p>
     </div>
 
-    <div class="request-form">
+    <form class="request-form form">
         <p class="form-head-text">Please fill in the required information below:</p>
         <div class="inner-request-form">
             <div class="service-div">
-                <label for="services">Service:</label>
+                <label for="services">Service:<span>*</span></label>
                 <select name="service-options" id="services" required >
                     <option value="clothing-adjustments">Clothing Adjustments</option>
                     <option value="custom-clothing">Custom Clothing</option>
                     <option value="embroidery">Embroidery</option>
                 </select>
             </div>
-            <div class="first-name-div">
-                <label for="first-name">First Name:</label>
+            <div class="form-element">
+                <label for="first-name">First Name:<span>*</span></label>
                 <input type="text" name="first-name-text" id="first-name" required>
             </div>
-            <div class="last-name-div">
-                <label for="last-name">Last Name:</label>
+            <div class="form-element">
+                <label for="last-name">Last Name<span>*</span>:</label>
                 <input type="text" name="last-name-text" id="last-name" required>
             </div>
-            <div class="email-div">
-                <label for="email">Email:</label>
-                <input type="text" name="email-text" id="email" required>
+            <div class="form-element">
+                <label for="email">Email:<span>*</span></label>
+                <input type="text" name="email-text" id="email" placeholder="Email" required>
             </div>
-            <div class="phone-number-div">
+            <div class="form-element">
                 <label for="phone-number">Phone Number (Optional):</label>
                 <input type="text" name="phone-number-text" id="phone-number">
             </div>
-            <div class="request-details-div">
-                <label for="request-details">Request Details:</label>
+            <div class="form-element">
+                <label for="request-details">Request Details:<span>*</span></label>
                 <input type="text" name="request-details-text" id="request-details" required>
             </div>
         </div>
-        <a href="request-services-confirmation.html"><button>Submit</button></a>
-    </div>
+        <button type="submit">Submit</button>
+    </form>
 
     <!--Footer-->
     <footer>
@@ -178,4 +179,5 @@
         </div>
     </footer>
 </body>
+<script src="../javascript/form.js"></script>
 </html>
