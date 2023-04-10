@@ -255,7 +255,6 @@ border: none;
     background-color: #24b232;
   }
   
-  /* Position the close button in the top right corner */
   #popup .close {
     position: absolute;
     top: 10px;
@@ -263,7 +262,6 @@ border: none;
     cursor: pointer;
   }
   
-  /* Style the close button */
   #popup .close img {
     width: 1.7vw;
     height: 1.7vw;
