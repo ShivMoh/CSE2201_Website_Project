@@ -6,6 +6,12 @@ body {
   
 }
 
+main h2 {
+    font-family: 'Ubuntu', 'Ariel', sans-serif;
+    font-size: 3vw;
+    font-weight: 700;
+    color: #0581F4;
+}
 
 .divider {
     height: 0.5vw;
@@ -52,6 +58,7 @@ p {
 }
 
 #timeline-title h2 {
+    
     margin-top: -15vw;
 }
 
@@ -92,7 +99,7 @@ p {
 }
 
 .time-block-right h2 {
-    margin-left: calc(100% - 12.5vw);
+    margin-left: calc(100% - 14vw);
 }
 
 .block-left, .block-right {
