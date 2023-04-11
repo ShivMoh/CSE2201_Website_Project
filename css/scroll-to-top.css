@@ -6,12 +6,12 @@
   border-radius: 50%;
   cursor: pointer;
   background-color: transparent;
-  transition: top 0.3s ease-in-out; /* add a transition effect for a smoother animation */
-  top: -20%; /* set the initial position of the button */
+  transition: top 0.3s ease-in-out; 
+  top: -20%; 
 }
 
 #scroll-to-top.show {
-  top: 20px; /* show the button when it has the 'show' class */
+  top: 20px; 
 }
 
 #scroll-to-top img {

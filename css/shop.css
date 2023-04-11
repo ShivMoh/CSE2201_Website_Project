@@ -1,4 +1,3 @@
-/*product styles*/
 #products {
     display: grid;
     grid-template-columns: 23vw 23vw 23vw;

@@ -3,7 +3,6 @@ main {
 }
 
 #divider {
-    /* Applies a solid border at the bottom and adds padding to the element with the ID "divider" */
     width: 60%;
     height: 0.1vw;
     background-color: #676363;
@@ -15,7 +14,6 @@ main {
     width: 0.01vw;
     height: auto;
     background-color: #676363;
-    /* border: 0 0.1vw 0 0; */
     margin-left: 0.3vw;
 }
 
@@ -28,14 +26,9 @@ main {
 }
 
 .cart-item img {
-    /* Styles all images inside elements with the class "cart-item" */
     width: 20vw;
     height: 20vw;
 }
-/* 
-.cart-item img:hover {
-    transform: scale(1.01);
-} */
 
 .cart-item h2 {
     margin-top: -1vw;
@@ -53,7 +46,6 @@ main {
 }
 
 .cart-item select {
-    /* Styles all select elements */
     width: 50px;
     border-radius: 0.5em;
     font-size: medium;
@@ -62,7 +54,6 @@ main {
 }
 
 .cart-item {
-    /* Styles all elements with the class "cart-item" */
     width: 60%;
     display: grid;
     grid-template-columns: 2vw auto;
@@ -71,9 +62,6 @@ main {
 }
 
 .cart-item:hover {
-    /* color: white;
-    background-color: #4898D3;
-    background-color: rgb(155, 207, 255);  */
     transform: scale(1.04);
 }
 
@@ -136,7 +124,6 @@ main {
 }
 
 #cart-review {
-    /* Styles the element with the ID "cart-review" */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -144,14 +131,12 @@ main {
 }
 
 #cart-review-section h1 {
-    /* Styles all h1 elements inside the element with the ID "cart-review-section" */
     width: 100%;
     text-align: center;
    
 }
 
 #cart-review-section h5 {
-    /* Styles all h5 elements inside the element with the ID "cart-review-section" */
     width: 100%;
     text-align: center;
    

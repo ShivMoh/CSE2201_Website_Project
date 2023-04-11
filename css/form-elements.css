@@ -1,4 +1,3 @@
-/* form styles */
 .form input {
     height: 5%;
     margin-top: 0.5vw;
@@ -30,7 +29,6 @@ main .form label {
 }
 
 textarea {
-    /*Styles the textarea to use the Raleway font family and have a solid banner*/
     width: 24.5vw;
     height: 8vw;
     border: solid #aaaaaa 1px;

@@ -5,7 +5,6 @@
 }
 
 #divider {
-    /* Applies a solid border at the bottom and adds padding to the element with the ID "divider" */
     width: 75%;
     height: 0.1vw;
     background-color: #676363;
@@ -23,7 +22,6 @@
 }
 
 .profile-item {
-    /* Styles all elements with the class "profile-item" */
     width: 75%;
     display: grid;
     grid-template-columns: auto auto;
